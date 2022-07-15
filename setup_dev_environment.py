@@ -3,6 +3,7 @@ import ctypes.wintypes
 from pathlib import Path
 import os
 import sys
+
 import user_paths
 
 def is_admin():

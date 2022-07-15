@@ -203,6 +203,54 @@
       <Key ID="STR_vn_mf_respawn_acav_altis">
         <Original>FOB 1 - ACAV</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_tigerforce">
+        <Original>TIGER FORCE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_daccong">
+        <Original>NVA HQ - DAC CONG</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_tunnel_1">
+        <Original>POW TUNNEL 1</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_satansangels">
+        <Original>SATANS ANGELS</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_presscorp">
+        <Original>PRESS CORP</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_macv">
+        <Original>MACV</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_shooting_range">
+        <Original>GUN RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_militarypolice">
+        <Original>MILITARY POLICE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_montagnard">
+        <Original>MONTAGNARD</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_7thcav">
+        <Original>GARRYOWEN</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_71stmeu">
+        <Original>GUNSLINGERS</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_blackhawk">
+        <Original>BLACK HAWK</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_muskets">
+        <Original>MUSKETS</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_frogmen">
+        <Original>FROGMEN</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_633rdcsg">
+        <Original>633RD CSG</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_sasr">
+        <Original>SASR</Original>
+      </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>
       </Key>
@@ -214,6 +262,9 @@
       </Key>
       <Key ID="STR_vn_mf_helicopters">
         <Original>Helicopters</Original>
+      </Key>
+      <Key ID="STR_vn_mf_cas_helicopters">
+        <Original>CAS Helicopters</Original>
       </Key>
       <Key ID="STR_vn_mf_wreck_recovery">
         <Original>Wreck Recovery</Original>
