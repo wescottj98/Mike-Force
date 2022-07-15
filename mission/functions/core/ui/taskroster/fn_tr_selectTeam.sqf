@@ -42,6 +42,21 @@ VN_TR_SELECTTEAM_TEAM_NAME_CTRL ctrlSetStructuredText parsetext _groupNameFull;
 //Img on the lext side
 VN_TR_SELECTTEAM_TEAM_LOGO_CTRL ctrlSetText _groupIcon;
 
+private _acceptButtonEnabled = false;
+private _uid = getPlayerUID player;
+
+if(_team in ["MikeForce", "ACAV", "GreenHornets", "SpikeTeam"])then {
+	_acceptButtonEnabled = true;
+} else {
+	private _teamArray = missionNamespace getVariable [format["whitelist_%1", _team], []];
+	private _dodArray = missionNamespace getVariable["whitelist_DoD", []];
+
+	if(_uid in _teamArray) then { _acceptButtonEnabled = true; };
+	if(_uid in _dodArray) then { _acceptButtonEnabled = true; };
+};
+
+VN_TR_SELECTTEAM_ACCEPT_CTRL ctrlEnable _acceptButtonEnabled;
+
 private _playerCount = count (missionNamespace getVariable [_team, []]);
 
 VN_TR_SELECTTEAM_TEAM_PLAYERCOUNT_CTRL ctrlSetStructuredText parsetext format["Active Players: %1", _playerCount];
