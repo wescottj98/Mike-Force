@@ -6,7 +6,7 @@ class MikeForce
     shortname = "Mike Force";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
-    colorRGBA = {0, 0, 1, 1};
+    colorRGBA[] = {0, 0, 1, 1};
 
     class rolelimits 
     {
@@ -42,7 +42,7 @@ class SpikeTeam
     shortname = "Spike Team";
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
-    colorRGBA = {1, 0, 0, 1};
+    colorRGBA[] = {1, 0, 0, 1};
 
     class rolelimits 
     {
@@ -79,7 +79,7 @@ class ACAV
     shortname = "ACAV";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
-    colorRGBA = {0.85, 0.4, 0, 1};
+    colorRGBA[] = {0.85, 0.4, 0, 1};
 
     class rolelimits 
     {
@@ -115,7 +115,7 @@ class GreenHornets
     shortname = "Green Hornets";
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
-    colorRGBA = {0, 1, 0, 1};
+    colorRGBA[] = {0, 1, 0, 1};
     
     class rolelimits 
     {
@@ -151,7 +151,7 @@ class 71stMEU
     shortname = "Gunslingers";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
-    colorRGBA = {0, 0.3, 0.6, 1};
+    colorRGBA[] = {0, 0.3, 0.6, 1};
 
     class rolelimits 
     {
@@ -187,7 +187,7 @@ class MilitaryPolice
     shortname = "Military Police";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
-    colorRGBA = {0, 0, 1, 1};
+    colorRGBA[] = {0, 0, 1, 1};
 
     class rolelimits 
     {
@@ -223,7 +223,7 @@ class BlackHawk
     shortname = "Black Hawk";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
-    colorRGBA = {0.85, 0.4, 0, 1};
+    colorRGBA[] = {0.85, 0.4, 0, 1};
 
     class rolelimits 
     {
@@ -259,7 +259,7 @@ class Frogmen
     shortname = "Frogmen";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
-    colorRGBA = {0.85, 0.4, 0, 1};
+    colorRGBA[] = {0.85, 0.4, 0, 1};
 
     class rolelimits 
     {
@@ -295,7 +295,7 @@ class Muskets
     shortname = "Muskets";
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
-    colorRGBA = {0, 1, 0, 1};
+    colorRGBA[] = {0, 1, 0, 1};
     
     class rolelimits 
     {
@@ -331,7 +331,7 @@ class SatansAngels
     shortname = "Satans Angels";
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
-    colorRGBA = {0, 1, 0, 1};
+    colorRGBA[] = {0, 1, 0, 1};
     
     class rolelimits 
     {
@@ -367,7 +367,7 @@ class 633rdCSG
     shortname = "Crossbow";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
-    colorRGBA = {0, 1, 0, 1};
+    colorRGBA[] = {0, 1, 0, 1};
     
     class rolelimits 
     {
@@ -403,7 +403,7 @@ class 7thCAV
     shortname = "Garryowen";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
-    colorRGBA = {0.85, 0.4, 0, 1};
+    colorRGBA[] = {0.85, 0.4, 0, 1};
     
     class rolelimits 
     {
@@ -439,7 +439,7 @@ class TigerForce
     shortname = "Tiger Force";
     unit = "vn_b_men_army_01";
     color = "ColorRed";
-    colorRGBA = {1, 0, 0, 1};
+    colorRGBA[] = {1, 0, 0, 1};
     
     class rolelimits 
     {
@@ -475,7 +475,7 @@ class Montagnard
     shortname = "Montagnard";
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
-    colorRGBA = {0, 1, 0, 1};
+    colorRGBA[] = {0, 1, 0, 1};
     
     class rolelimits 
     {
@@ -511,7 +511,7 @@ class SASR
     shortname = "SASR";
     unit = "vn_b_men_army_01";
     color = "ColorRed";
-    colorRGBA = {1, 0, 0, 1};
+    colorRGBA[] = {1, 0, 0, 1};
     
     class rolelimits 
     {
@@ -547,7 +547,7 @@ class MACV
     shortname = "MACV";
     unit = "vn_b_men_army_01";
     color = "ColorYellow";
-    colorRGBA = {0.85, 0.85, 0, 1};
+    colorRGBA[] = {0.85, 0.85, 0, 1};
     
     class rolelimits 
     {
@@ -583,7 +583,7 @@ class DacCong
     shortname = "Dac Cong";
     unit = "vn_b_men_army_01";
     color = "ColorOPFOR";
-    colorRGBA = {1, 0, 0, 1};
+    colorRGBA[] = {1, 0, 0, 1};
     
     class rolelimits 
     {
@@ -619,7 +619,7 @@ class PressCorp
     shortname = "Press Corp";
     unit = "C_journalist_F";
     color = "ColorCIV";
-    colorRGBA = {0.4, 0, 0.5, 1};
+    colorRGBA[] = {0.4, 0, 0.5, 1};
     
     class rolelimits 
     {
