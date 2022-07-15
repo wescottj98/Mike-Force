@@ -15,6 +15,7 @@
 */
 
 vn_mf_markers_base_respawns = [];
+vn_mf_dc_markers_base_respawns = [];
 vn_mf_markers_blocked_areas = [];
 vn_mf_markers_zones = [];
 vn_mf_markers_connectors = [];
@@ -27,6 +28,11 @@ vn_mf_markers_no_harass = [];
 	if (_x find "mf_respawn_" isEqualTo 0) then {
 		vn_mf_markers_base_respawns pushBack _x;
 	};
+
+	if (_x find "mf_dc_respawn_" isEqualTo 0)then {
+		vn_mf_dc_markers_base_respawns pushBack _x;
+	};
+
 	if (_x find "blocked_area" isEqualTo 0) then {
 		_x setMarkerAlpha 0;
 		vn_mf_markers_blocked_areas pushBack _x;

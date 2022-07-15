@@ -62,7 +62,7 @@ if (!isClass (configFile >> "CfgPatches" >> "tfar_core") && isClass (configFile 
 		_x setVariable ["tf_sw_frequency", tf_freq_west, true];
 		_x setVariable ["tf_lr_frequency", tf_freq_west_lr, true];
 		_x setVariable ["tf_dd_frequency", tf_freq_west_dd, true];
-	} forEach (allGroups select {side _x == west});
+	} forEach (allGroups select {(side _x == west || side _x == independent)});
 
 	TF_defaultWestBackpack = "";
 	publicVariable "TF_defaultWestBackpack";

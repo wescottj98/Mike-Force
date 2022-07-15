@@ -17,5 +17,10 @@
 */
 
 vn_mf_respawn_points = vn_mf_markers_base_respawns apply {
-	[west, _x, markerText _x] call BIS_fnc_addRespawnPosition
+	[west, _x, markerText _x] call BIS_fnc_addRespawnPosition;
+  [independent, _x, markerText _x] call BIS_fnc_addRespawnPosition;
+};
+
+vn_dc_respawn_points = vn_mf_dc_markers_base_respawns apply { 
+	[east, _x, markerText _x] call BIS_fnc_addRespawnPosition;
 };

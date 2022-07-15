@@ -125,13 +125,6 @@ class CfgHints
 	class Environment {
 		displayName = "Environment";
 
-		class Snakes {
-			displayName = "Snakes";
-			displayNameShort = "Snake Bite!";
-			description = "Snake Bite! Snakes are a major hazard in jungles of Vietnam. Make sure to keep an eye out, as a snake bite at the wrong time could have some serious consequences. For now, consume some food and drink to get your strength back.";
-			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\snake.paa";
-		};
-
 		class Night {
 			displayName = "Night Fighting";
 			displayNameShort = "Night Fighting";

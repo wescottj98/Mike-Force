@@ -16,13 +16,7 @@ class CfgItemInteractions
 			{"diarrhea", 1.0}
 		};
 	};
-	class snake_bite
-	{
-		attributes[] =
-		{
-			{"poison", 1.0} //
-		};
-	};
+
 	class dirty_water
 	{
 		attributes[] =
@@ -30,6 +24,7 @@ class CfgItemInteractions
 			{"diarrhea", 0.5} // diuretic, diarrhea
 		};
 	};
+	
 	class vn_prop_med_antivenom
 	{
 		disallowRepack = 1;

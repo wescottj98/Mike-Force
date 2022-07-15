@@ -68,7 +68,7 @@ _taskDataStore setVariable ["defeat_hostile_forces", {
 
 	private _zone = (_taskDataStore getVariable "taskMarker");
 
-	private _playersInZone = {alive _x and side _x == west} count (allUnits inAreaArray _zone);
+	private _playersInZone = {alive _x and (side _x == west || side _x == independent)} count (allUnits inAreaArray _zone);
 	private _enemyInZone = {alive _x and side _x == east} count (allUnits inAreaArray _zone);
 
 	private _defendObjective = _taskDataStore getVariable "defendObjective";

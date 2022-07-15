@@ -45,7 +45,7 @@ _taskDataStore setVariable ["defend_zone", {
 	private _zone = (_taskDataStore getVariable "taskMarker");
 
 	//Side check - downed players don't count. Nor do players in aircraft. Ground vehicles are fair game.
-	private _alivePlayersInZone = allPlayers inAreaArray _zone select {alive _x && side _x == west && !(vehicle _x isKindOf "Air")};
+	private _alivePlayersInZone = allPlayers inAreaArray _zone select {alive _x && (side _x == west || side _x == independent) && !(vehicle _x isKindOf "Air")};
 	private _aliveEnemyInZone = allUnits inAreaArray _zone select {alive _x && side _x == east};
 
 	private _enemyOwnZoneStartTime = _taskDataStore getVariable "enemyOwnZoneStartTime";

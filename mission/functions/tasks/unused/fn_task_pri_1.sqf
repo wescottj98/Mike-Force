@@ -31,7 +31,7 @@ _taskDataStore setVariable ["setup_checkpoints", {
 
 	private _zone = (_taskDataStore getVariable "taskMarker");
 	
-	if !((allUnits inAreaArray _zone) select {alive _x && side _x == west} isEqualTo []) then {
+	if !((allUnits inAreaArray _zone) select {alive _x && (side _x == west || side _x == independent)} isEqualTo []) then {
 		private _defaultPosition = getMarkerPos (_taskDataStore getVariable "taskMarker");
 		private _checkpointPosition = _taskDataStore getVariable ["pos", _defaultPosition];
 

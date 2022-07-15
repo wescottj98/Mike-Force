@@ -232,12 +232,7 @@ class CfgFunctions
 			class sites_subsystem_client_init {};
 			class sites_discovery_job {};
 		};
-
-		class system_snakes {
-			file = "functions\systems\snakes";
-			class snake_handler {};
-		};
-
+		
 		class system_supplies {
 			file = "functions\systems\supplies";
 			class action_supplies {};
