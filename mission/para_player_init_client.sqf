@@ -87,6 +87,16 @@ uiSleep 0.4;
 progressLoadingScreen 0.9;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
 
+private _lastTeamName = player getVariable ["vn_mf_db_player_group", "MikeForce"];
+
+private _respawnMarker = format ["mf_respawn_%1", _lastTeamName]; 
+if (side player == east) then 
+{
+	_respawnMarker = format ["mf_dc_respawn_%1", _lastTeamName]; 
+};
+
+player setPos getMarkerPos _respawnMarker;
+
 uiSleep 0.4;
 progressLoadingScreen 1.0;
 //Setup teleporters
@@ -139,6 +149,8 @@ call vn_mf_fnc_enable_arsenal_food_drink_overlay;
 
 //LOADING COMPLETE
 //Start tidying up ready for play.
+
+enableEnvironment false;
 
 // end loading screen
 uiSleep 0.4;

@@ -43,14 +43,22 @@ debriefing = 0;
 enableDebugConsole[] = {
 	//Spoffy
 	"76561198011383725",
-	//Eggbeast
-	"76561197974575839",
-	//Asaayu
-	"76561198027397386",
-	//Aceb
-	"76561198022706949",
-	//dent
-	"76561198017256167"
+	//HARRY
+	"76561198140282519",
+	//Stalker
+	"76561198006446539",
+	//ferrous
+	"76561198084982129",
+	//leal
+	"76561198173293466",
+	//cerebral
+	"76561199195828749",
+	//zod
+	"76561198808129773",
+	//cypher
+	"76561199175533497",
+	//rogier
+	"76561198007206066"
 };
 
 allowFunctionsLog = 1;
@@ -100,6 +108,26 @@ class CfgDebriefing
 		title = "ERROR";
 		subtitle = "Server Timeout";
 		description = "If you see this message please reconnect";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class ReservedDacCong
+	{
+		title = "WHITELISTED SIDE";
+		subtitle = "Not whitelisted for Dac Cong.";
+		description = "<t align='center'>You are trying to join a reserved team for Dac Cong Commandos. <br/> <t align='center'>Join the Dac Cong Commandos by applying at this link</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/3wdfV6c8td'>BRO-NATION UNITS DISCORD</a></t>";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class ReservedPress
+	{
+		title = "RESERVED";
+		subtitle = "NOT approved for Press Corp.";
+		description = "<t align='center'>You are trying to join a reserved slot for Press Corp. <br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/> <t align='center'>Join the BRO-NATION Units and be considered for Press by applying at this link</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/3wdfV6c8td'>BRO-NATION UNITS DISCORD</a></t> <br/> <t align='center'>Join the Civilian Press by inquirijng within discord</t>";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0.0,0.3,0.6,1};
