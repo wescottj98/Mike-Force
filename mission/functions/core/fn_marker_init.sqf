@@ -78,8 +78,9 @@ vn_mf_markers_no_harass = [];
 
 		if (_x find "baseflag_" isEqualTo 0) then {
 		_str = _x splitString "_";
-		private _team = getArray(missionConfigFile >> "gamemode" >> "settings" >> "teams" >> (_str#1));
-		_x setMarkerColor _team # 5;
+		private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _str#1);
+		private _groupColor = getText(_groupConfig >> "color");
+		_x setMarkerColor _groupColor;
 		_x setMarkerAlpha 1;
 	};
 } forEach allMapMarkers;
