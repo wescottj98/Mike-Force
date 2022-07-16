@@ -771,6 +771,11 @@
         <Original>In ACav</Original>
         <English>In ACav</English>
       </Key>
+
+      <Key ID="STR_vn_mf_buildingMenu_condition_inDacCong">
+        <Original>In Dac Cong</Original>
+        <English>In Dac Cong</English>
+      </Key>
     </Container>
     <Container name="params">
       <Key ID="STR_vn_mf_param_wipe_save">
