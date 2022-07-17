@@ -27,12 +27,12 @@ private _fnc_useExplosives = {
 	true;
 };
 
+private _usedExplosives = call _fnc_useExplosives;
+if !(_usedExplosives) exitWith { ["NoExplosives"] call para_c_fnc_show_notification; };
 
 private _building = _buildingObject getVariable ["para_g_building", objNull];
-if !(_building isEqualTo objNull) then
+if (!(_building isEqualTo objNull) && _usedExplosives) then
 {
-	private _usedExplosives = call _fnc_useExplosives;
-	if !(_usedExplosives) exitWith { ["NoExplosives"] call para_c_fnc_show_notification; };
 
 	private _nearPlayers = (getPos _buildingObject) nearObjects ["Man", 50];
 	{

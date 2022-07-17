@@ -150,6 +150,7 @@ class CfgFunctions
 			class action_init {};
 			class action_destroy_respawn {};
 			class action_destroy_task {};
+			class action_gather_intel {};
 			class action_capture_player {};
 			class action_drink_water {};
 			class action_eat_food {};
@@ -195,6 +196,7 @@ class CfgFunctions
 			class director_check_mission_end {};
 			class director_open_connected_zones {};
 			class director_open_zone {};
+			class director_open_closest_zone {};
 			class director_zones_in_range_of_bases {};
 		};
 
@@ -232,13 +234,22 @@ class CfgFunctions
 			//Specific types of site
 			class sites_create_aa_site {};
 			class sites_create_artillery_site {};
+			class sites_create_camp_site {};
+			class sites_create_water_supply_site {};
+			class sites_create_tunnel {};
+			class sites_create_tunnel_site {};
 			class sites_create_hq {};
+			class sites_create_factory {};
+			class sites_create_radar {};
 
 			// Composition and entity spawning
-			class create_aa_emplacement {};
+			class create_aa_buildings {};
 			class create_camp_buildings {};
 			class create_hq_buildings {};
-			class create_mortar {};
+			class create_factory_buildings {};
+			class create_mortar_buildings {};
+			class create_radar_buildings {};
+			class create_tunnel_buildings {};
 
 			//Supporting functions
 			class sites_aa_reveal_targets {};
@@ -247,6 +258,10 @@ class CfgFunctions
 			class scout_action {};
 			class sites_subsystem_client_init {};
 			class sites_discovery_job {};
+
+			// Placement functions
+			class sites_get_safe_location {};
+			class sites_find_area_gradient {};
 
 			class destroy_task {};
 		};
@@ -383,6 +398,7 @@ class CfgFunctions
 
 			class task_pri_build_fob { file = "functions\tasks\primary\fn_task_pri_build_fob.sqf"; };
 			class task_pri_capture { file = "functions\tasks\primary\fn_task_pri_capture.sqf"; };
+			class task_pri_prepare { file = "functions\tasks\primary\fn_task_pri_prepare.sqf"; };
 
 			class task_sec_spike_wiretap { file = "functions\tasks\secondary\fn_task_sec_spike_wiretap.sqf";};
 

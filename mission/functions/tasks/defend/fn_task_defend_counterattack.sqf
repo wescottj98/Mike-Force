@@ -27,16 +27,18 @@ _taskDataStore setVariable ["INIT", {
 
 	//Required parameters
 	private _marker = _taskDataStore getVariable "taskMarker";
-	private _hqs = (localNamespace getVariable ["sites_hq", []]) inAreaArray _marker;
+	private _zonePosition = getMarkerPos _marker;
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
-	private _attackPos = if (count _hqs > 0) then { getPos (_hqs select 0) } else { markerPos _marker };
+	private _hq = (missionNamespace getVariable ["current_hq", objNull]);
+	private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_zonePosition};
+
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
 	_taskDataStore setVariable ["attackTime", _attackTime];
 	_taskDataStore setVariable ["attackPos", _attackPos];
 	_taskDataStore setVariable ["attackAreaSize", markerSize _marker];
 
-	if (_prepTime > 0) then
+	if (_prepTime > 0) then 
 	{
 		["CounterAttackPreparing", ["", (_prepTime / 60) toFixed 0]] remoteExec ["para_c_fnc_show_notification", 0];
 		["Counterattack In", _attackTime, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
@@ -54,9 +56,11 @@ _taskDataStore setVariable ["prepare_zone", {
 
 	["CounterAttackImminent", []] remoteExec ["para_c_fnc_show_notification", 0];
 	[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
+	["Counter Attack Imminent", serverTime + 180, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 
 	//Default to X waves.
 	private _baseMultiplier = 5;//PLACEHOLDER VALUE
+	//Add a wave for each camp in our origin zone.
 	private _infantryMultiplier = _baseMultiplier;
 
 	private _attackObjective = [
@@ -80,12 +84,12 @@ _taskDataStore setVariable ["defend_zone", {
 	private _areaDescriptor = [_attackPos, _areaSize select 0, _areaSize select 1, 0, false];
 
 	//Side check - downed players don't count. Nor do players in aircraft. Ground vehicles are fair game.
-	private _alivePlayersInZone =
+	private _alivePlayersInZone = 
 		allPlayers inAreaArray _areaDescriptor
 		select {alive _x && (side _x == west || side _x == independent) && !(vehicle _x isKindOf "Air") && !(_x getVariable ["vn_revive_incapacitated", false])};
 
-	private _aliveEnemyInZone =
-		allUnits inAreaArray _areaDescriptor
+	private _aliveEnemyInZone = 
+		allUnits inAreaArray _areaDescriptor 
 		select {alive _x && side _x == east};
 
 	private _enemyZoneHeldTime = _taskDataStore getVariable "enemyZoneHeldTime";
@@ -111,18 +115,15 @@ _taskDataStore setVariable ["defend_zone", {
 		_taskDataStore setVariable ["lastCheck", _lastCheck];
 	};
 
-
 	private _startTime = _taskDataStore getVariable "startTime";
 
 	private _zone = _taskDataStore getVariable "taskMarker";
 	private _garrisonStrength = _taskDataStore getVariable ["attackObjective", objNull] getVariable ["reinforcements_remaining", 0];
 
 	//Zone has been held long enough, or they've killed enough attackers for the AI objective to complete.
-	if (
-		serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 20 * 60]) ||
-		isNull (_taskDataStore getVariable "attackObjective") ||
-		_garrisonStrength <= 0.1
-	) exitWith { //exitWith here to prevent a tie causing the zone to turn green but have new tasks for its capture spawn
+	if (serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 20 * 60]) ||
+		isNull (_taskDataStore getVariable "attackObjective") ) exitWith 
+	{ //exitWith here to prevent a tie causing the zone to turn green but have new tasks for its capture spawn
 		_taskDataStore setVariable ["zoneDefended", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
@@ -135,11 +136,10 @@ _taskDataStore setVariable ["defend_zone", {
 		private _zone = _taskDataStore getVariable "taskMarker";
 		private _selectZone = mf_s_siegedZones findIf {_zone in _x};
 		mf_s_siegedZones deleteAt _selectZone;
+		mf_s_activeZones deleteAt _selectZone;
 
-		private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
-
-		[[_zoneData]] call vn_mf_fnc_sites_generate;
-		[_zone] call vn_mf_fnc_director_open_zone;
+		_zone setMarkerColor "ColorRed";
+		_zone setMarkerBrush "DiagGrid";
 
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;
@@ -151,13 +151,15 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 	if (_taskDataStore getVariable ["zoneDefended", false]
 	) then {
-		private _zone = _taskDataStore getVariable "taskMarker";
-		[_zone] call vn_mf_fnc_zones_capture_zone;
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
 }];
 
 _taskDataStore setVariable ["FINISH", {
 	params ["_taskDataStore"];
+
+	private _zone = _taskDataStore getVariable "taskMarker";
+	[_zone] call vn_mf_fnc_zones_capture_zone;
+
 	[_taskDataStore getVariable "attackObjective"] call para_s_fnc_ai_obj_finish_objective;
 }];

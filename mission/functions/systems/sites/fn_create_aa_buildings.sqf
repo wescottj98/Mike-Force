@@ -1,5 +1,5 @@
 /*
-	File: fn_create_aa_emplacement.sqf
+	File: fn_create_aa_buildings.sqf
 	Author: Savage Game Design
 	Public: No
 	
@@ -13,7 +13,7 @@
 		Array in form of [[Vehicles created, units created, groups created], [AA Guns created]] [Array]
 	
 	Example(s):
-		[[0,0,0], "heavy"] call vn_mf_fnc_create_aa_emplacement
+		[[0,0,0], "heavy"] call vn_mf_fnc_create_aa_buildings
 */
 
 params ["_position", ["_style", "heavy"]];

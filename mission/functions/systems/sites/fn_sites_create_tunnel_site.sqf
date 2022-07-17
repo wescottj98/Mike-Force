@@ -1,27 +1,16 @@
-/*
-	File: fn_zones_create_artillery_site.sqf
-	Author: Savage Game Design
-	Public: No
-	
-	Description:
-		Creates an artillery site in the given zone.
-	
-	Parameter(s):
-		_zone - Zone marker name [STRING]
-	
-	Returns:
-		Task Data store [NAMESPACE]
-	
-	Example(s):
-		["zone_saigon"] call vn_mf_fnc_zones_create_artillery_site
-*/
+params ["_pos", "_zoneName"];
 
-params ["_pos"];
+private _config = missionConfigFile >> "gamemode" >> "settings" >> "aimarkers";
+private _tunnel = getNumber(_config >> "tunnels");
+private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimarkers");
+
+private _tunnelAlpha = 0.5;
+if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 
 [
-	"artillery",
+	"tunnel",
 	_pos,
-	"factory",
+	"hq",
 	//Setup Code
 	{
 		params ["_siteStore"];
@@ -29,36 +18,33 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		private _result = [_spawnPos] call vn_mf_fnc_create_mortar_buildings;
+		private _result = [_spawnPos] call vn_mf_fnc_create_tunnel_buildings;
 		private _createdThings = _result select 0;
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
-		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];
-		_artilleryMarker setMarkerType "o_art";
-		_artilleryMarker setMarkerText "Arty";
-		_artilleryMarker setMarkerAlpha 0;
-
+		private _tunnelMarker = createMarker [format ["Tunnel_%1", _siteId], _markerPos];
+		_tunnelMarker setMarkerType "o_installation";
+		_tunnelMarker setMarkerText "Tunnel";
+		_tunnelMarker setMarkerAlpha 0;
+		
 		private _vehicles = _createdThings select 0;
 		{
 			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
 			_x enableWeaponDisassembly false;
 		} forEach _vehicles;
-		
 		private _groups = _createdThings select 1;
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 		} forEach (_vehicles + _groups);
 
-		private _mortars = _result select 1;
+		private _tunnels = _result select 1;
+
 		private _objectives = [];
-		{
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _mortars;
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
-		_siteStore setVariable ["markers", [_artilleryMarker]];
-		_siteStore setVariable ["mortars", _mortars];
+		_siteStore setVariable ["markers", [_tunnelMarker]];
+		_siteStore setVariable ["tunnels", _tunnels];
 		_siteStore setVariable ["vehicles", _vehicles]; 
 		_siteStore setVariable ["units", (_createdThings select 1)]; 
 		_siteStore setVariable ["groups", _groups];
@@ -72,7 +58,7 @@ params ["_pos"];
 	{
 		params ["_siteStore"];
 		//Teardown when all guns destroyed
-		(_siteStore getVariable "mortars" findIf {alive _x} == -1)
+		(_siteStore getVariable "tunnels" findIf {alive _x} == -1)
 	},
 	//Teardown code
 	{

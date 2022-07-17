@@ -21,6 +21,7 @@ params ["_pos"];
 [
 	"hq",
 	_pos,
+	"hq",
 	//Setup Code
 	{
 		params ["_siteStore"];
@@ -28,50 +29,42 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		//Hide all nearby terrain objects.
-		{
-			_x hideObjectGlobal true;
-		} forEach (nearestTerrainObjects [_spawnPos, ["TREE", "BUSH", "SMALL TREE", "ROCK", "ROCKS"], 50, false, true]);
+		missionNamespace getVariable ["current_hq", _siteStore];
 
-		private _hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
+		_hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {_x isKindOf "land_vn_pavn_ammo"};
+		private _intel = _hqObjects select {typeOf _x == "Land_Map_unfolded_F"};
+		missionNamespace setVariable ["hq_intel", _intel];
+		missionNamespace setVariable ["hqPosition", _pos];
 
 		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
+			private _objectType = typeOf _x;
+
+			if(_objectType in ["Land_vn_pavn_launchers", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack2",
+							   "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"]) then {
+				[_x, true] call para_s_fnc_enable_dynamic_sim;
+			};
 		} forEach _hqObjects;
 
 		//Create a HQ marker.
-		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
+		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
 		private _hqMarker = createMarker [format ["HQ_%1", _siteId], _markerPos];
 		_hqMarker setMarkerType "o_hq";
 		_hqMarker setMarkerText "HQ";
-		// Hide at spawn 0.5
 		_hqMarker setMarkerAlpha 0;
-
-		// create partially discovered marker
-		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
-		private _partialMarker = createMarker [format ["hq_zone_%1_partial", _siteId], _partialPos];
-		_partialMarker setMarkerSize [400, 400];
-		_partialMarker setMarkerShape "ELLIPSE";
-		_partialMarker setMarkerText "Suspected HQ";
-		_partialMarker setMarkerColor "ColorRed";
-		_partialMarker setMarkerAlpha 0; // hiden at spawn 0.3
-
+	
 		private _guns = _hqObjects select {_x isKindOf "StaticWeapon"};
 		private _objectives = [];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
 		} forEach _guns;
-		_objectives pushBack ([_spawnPos, 4, 4] call para_s_fnc_ai_obj_request_defend);
+		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
 		_siteStore setVariable ["markers", [_hqMarker]];
 		_siteStore setVariable ["staticGuns", _guns];
 		_siteStore setVariable ["vehicles", _hqObjects]; 
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
-
-		_siteStore setVariable ["markers", [_hqMarker], true];
-		_siteStore setVariable ["partialMarkers", [_partialMarker], true];
 	},
 	//Teardown condition check code
 	{
@@ -81,19 +74,18 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-		//Teardown when all guns destroyed
-		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
+
+		true
 	},
 	//Teardown code
 	{
 		params ["_siteStore"];
 
-		{
-			deleteMarker _x;
-		} forEach ((_siteStore getVariable "markers") + (_siteStore getVariable "partialMarkers"));
+		private _objectsToDestroy = _siteStore getVariable "objectsToDestroy";
+		private _respawnToDelete = _siteStore getVariable "respawnPointsDC";
 
 		{
-			[_x] call para_s_fnc_ai_obj_finish_objective;
-		} forEach (_siteStore getVariable ["aiObjectives", []]);
+			deleteMarker _x;
+		} forEach (_siteStore getVariable "markers");
 	}
 ] call vn_mf_fnc_sites_create_site;

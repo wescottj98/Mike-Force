@@ -4,6 +4,8 @@ class map_config {
 	max_artillery_per_zone = 4;
 	max_fortifications_per_zone = 0;
 	max_tunnels_per_zone = 3;
+	max_radars_per_zone = 2;
+	max_water_supply_per_zone = 2;
 	max_vehicle_depots_per_zone = 3;
 	starting_zones[] = {"zone_nam_phat", "zone_ban_pakha", "zone_ban_dac_maruk"};
 	class zones {

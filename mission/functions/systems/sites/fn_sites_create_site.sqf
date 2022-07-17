@@ -20,7 +20,7 @@
 	Example(s):
 		[parameter] call vn_fnc_myFunction
 */
-params ["_type", "_pos", "_setup", "_setupTeardownConditionTriggers", "_teardownCondition",  "_teardown"];
+params ["_type", "_pos", "_supplier", "_setup", "_setupTeardownConditionTriggers", "_teardownCondition",  "_teardown"];
 
 //Give the site a unique ID
 private _siteId = missionNamespace getVariable ["site_current_id", 0];
@@ -42,6 +42,7 @@ publicVariable _siteKey;
 // Global properties
 _siteStore setVariable ["site_id", _siteId, true];
 _siteStore setVariable ["site_type", _type, true];
+_siteStore setVariable ["site_supplier", _supplier];
 _siteStore setVariable ["discovered", false, true];
 _siteStore setVariable ["partiallyDiscovered", false, true];
 
@@ -70,5 +71,11 @@ private _allSites = missionNamespace getVariable ["sites", []];
 _allSites pushBack _siteStore;
 missionNamespace setVariable ["sites", _allSites];
 publicVariable "sites";
+
+switch (_supplier) do
+{
+	case "hq": 		{ missionNamespace getVariable "side_sites_hq" pushBack _siteStore; };
+	case "factory": { missionNamespace getVariable "side_sites_factory" pushBack _siteStore; };
+};
 
 _siteStore

@@ -1,5 +1,5 @@
 /*
-	File: fn_create_mortar.sqf
+	File: fn_create_mortar_buildings.sqf
 	Author: Savage Game Design
 	Public: No
 	
@@ -13,7 +13,7 @@
 		Array in from of [[Vehicles created, units created, groups created], [mortars]] [Array]
 	
 	Example(s):
-		[[0,0,0], 10] call vn_mf_fnc_create_aa_emplacement
+		[[0,0,0], 10] call vn_mf_fnc_create_aa_buildings
 */
 
 params ["_position"];

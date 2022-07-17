@@ -21,6 +21,7 @@ params ["_pos"];
 [
 	"aa",
 	_pos,
+	"factory",
 	//Setup Code
 	{
 		params ["_siteStore"];
@@ -28,34 +29,22 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		private _result = [_spawnPos, "HEAVY"] call vn_mf_fnc_create_aa_emplacement;
+		private _result = [_spawnPos, "HEAVY"] call vn_mf_fnc_create_aa_buildings;
 		private _createdThings = _result select 0;
 
 		//Create an AA warning marker.
-		private _markerPos = _spawnPos getPos [5 + random 10, random 360];
+		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _aaZoneMarker = createMarker [format ["AA_zone_%1", _siteId], _markerPos];
-		_aaZoneMarker setMarkerSize [1000, 1000];
+		_aaZoneMarker setMarkerSize [600, 600];
 		_aaZoneMarker setMarkerShape "ELLIPSE";
 		_aaZoneMarker setMarkerBrush "DiagGrid";
 		_aaZoneMarker setMarkerColor "ColorRed";
-		// hiden at spawn 0.3
-		_aaZoneMarker setMarkerAlpha 0;
-
-
-		// create partially discovered marker
-		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
-		private _partialMarker = createMarker [format ["AA_zone_%1_partial", _siteId], _partialPos];
-		_partialMarker setMarkerSize [400, 400];
-		_partialMarker setMarkerShape "ELLIPSE";
-		_partialMarker setMarkerText "Suspected AA";
-		_partialMarker setMarkerColor "ColorRed";
-		_partialMarker setMarkerAlpha 0; // hiden at spawn 0.3
+		_aaZoneMarker setMarkerAlpha 0; //0.3;
 
 		private _aaMarker = createMarker [format ["AA_%1", _siteId], _markerPos];
 		_aaMarker setMarkerType "o_antiair";
 		_aaMarker setMarkerText "AA";
-		// hiden at spawn 0.5
-		_aaMarker setMarkerAlpha 0;
+		_aaMarker setMarkerAlpha 0; //tried 0.3 too light returned to default 
 
 		private _vehicles = _createdThings select 0;
 		private _groups = _createdThings select 1;
@@ -68,17 +57,14 @@ params ["_pos"];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
 		} forEach _guns;
-		_objectives pushBack ([_spawnPos, 2, 3] call para_s_fnc_ai_obj_request_defend);
+		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
+		_siteStore setVariable ["markers", [_aaZoneMarker, _aaMarker]];
 		_siteStore setVariable ["aaGuns", _guns];
 		_siteStore setVariable ["vehicles", _vehicles]; 
 		_siteStore setVariable ["units", (_createdThings select 1)]; 
 		_siteStore setVariable ["groups", _groups];
-
-		
-		_siteStore setVariable ["markers", [_aaZoneMarker, _aaMarker], true];
-		_siteStore setVariable ["partialMarkers", [_partialMarker], true];
 	},
 	//Teardown condition check code
 	{
@@ -95,10 +81,9 @@ params ["_pos"];
 	{
 		params ["_siteStore"];
 
-		//Delete the AA warning marker
 		{
 			deleteMarker _x;
-		} forEach ((_siteStore getVariable "markers") + (_siteStore getVariable "partialMarkers"));
+		} forEach (_siteStore getVariable "markers");
 
 		{
 			deleteVehicle _x;

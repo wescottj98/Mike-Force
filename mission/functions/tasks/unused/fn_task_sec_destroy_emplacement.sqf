@@ -32,7 +32,7 @@ _dataStore setVariable ["buildEmplacement", {
 	private _spawnPosition = _taskDataStore getVariable "aaPosition";
 
 	private _aaType = _taskDataStore getVariable ["aaType", "heavy"];
-	private _result = [_spawnPosition, _aaType] call vn_mf_fnc_create_aa_emplacement;
+	private _result = [_spawnPosition, _aaType] call vn_mf_fnc_create_aa_buildings;
 	private _createdThings = _result select 0;
 
 	//Create an AA warning marker.

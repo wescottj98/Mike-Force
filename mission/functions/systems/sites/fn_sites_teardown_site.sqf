@@ -20,6 +20,7 @@ params ["_siteStore"];
 
 private _id = _siteStore getVariable "site_id";
 private _type = _siteStore getVariable "site_type";
+private _supplier = _siteStore getVariable "site_supplier";
 
 //Call site-specific teardown code
 [_siteStore] call (_siteStore getVariable ["site_teardown", {}]);
@@ -38,9 +39,25 @@ publicVariable _siteTypeKey;
 
 //Register in a global list of sites
 private _allSites = missionNamespace getVariable ["sites", []]; // Add a default hear so that _allSites get gets definied properly.
+private _hqSites = missionNamespace getVariable ["side_sites_hq",[]];
+private _factorySites = missionNamespace getVariable ["side_sites_factory",[]];
+
+switch(_supplier) do 
+{
+	case "hq": { 
+		_hqSites deleteAt (_hqSites find _siteStore);
+	};
+
+	case "factory": {
+		_factorySites deleteAt (_factorySites find _siteStore);
+	};
+};
+
 _allSites deleteAt (_allSites find _siteStore);
 missionNamespace setVariable ["sites", _allSites];
 publicVariable "sites";
+publicVariable "side_sites_hq";
+publicVariable "side_sites_factory";
 
 //Delete the site
 deleteVehicle _siteStore;
