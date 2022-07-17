@@ -175,4 +175,31 @@ class CfgNotifications
 		color[] = {1,0,0,1};
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
+
+	class POWCapturedRed
+	{
+		title = $STR_vn_mf_notification_title_captured_pow;
+		description = "%1";
+		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class POWCapturedBlue
+	{
+		title = $STR_vn_mf_notification_title_captured_pow;
+		description = "%1";
+		priority = 8;
+		color[] = {0.2,0.3,1,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class CagesTooClose
+	{
+		title = $STR_vn_mf_notification_error;
+		description = "%1";
+		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
 };

@@ -140,6 +140,15 @@
       <Key ID="STR_vn_mf_destroy_respawn">
         <Original>Destroy Dac Cong Respawn</Original>
       </Key>
+      <Key ID="STR_vn_mf_capture_player">
+        <Original>Capture</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_error">
+        <Original>Error</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_captured_pow">
+        <Original>Prisoner of War</Original>
+      </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
       </Key>

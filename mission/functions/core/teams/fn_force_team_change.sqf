@@ -22,6 +22,9 @@ private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 private _playerGroupArray = missionNamespace getVariable [_playerGroup,[]];
 private _playerUID = getPlayerUID _player;
 private _isWhitelisted = [_player, _team] call para_g_fnc_db_check_whitelist;
+private _playerSide = side _player;
+
+_player setVariable ["vn_mf_side", _playerSide, true];
 
 if (_isWhitelisted) then {
 	_player setVariable ["vn_mf_db_player_group", _team, true]; 

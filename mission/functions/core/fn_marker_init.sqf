@@ -82,7 +82,7 @@ vn_mf_markers_no_harass = [];
 		vn_mf_markers_supply_officer_initial pushBack _x;
 	};
 
-		if (_x find "baseflag_" isEqualTo 0) then {
+	if (_x find "baseflag_" isEqualTo 0) then {
 		_str = _x splitString "_";
 		private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _str#1);
 		private _groupColor = getText(_groupConfig >> "color");

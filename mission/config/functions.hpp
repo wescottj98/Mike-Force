@@ -13,6 +13,7 @@ class CfgFunctions
 			class end_mission {};
 			class get_gamemode_value {};
 			class marker_init {};
+			class pow_init {};
 			class respawn_points_init {};
 			class save_time_elapsed {};
 			class stats_init {};
@@ -23,6 +24,7 @@ class CfgFunctions
 			file = "functions\core\helpers";
 			class check_enemy_units_alive {};
 			class player_within_radius {};
+			class check_side {};
 		};
 
 		class core_init
@@ -143,6 +145,16 @@ class CfgFunctions
 			class zone_marker_hostile_zone_info {};
 		};
 
+		class system_actions {
+			file = "functions\systems\actions";
+			class action_init {};
+			class action_destroy_respawn {};
+			class action_destroy_task {};
+			class action_capture_player {};
+			class action_drink_water {};
+			class action_eat_food {};
+		};
+
 		class system_ammo_repack {
 			file = "functions\systems\ammo_repack";
 			class ammo_repack {};
@@ -161,8 +173,6 @@ class CfgFunctions
 
 		class system_consumables {
 			file = "functions\systems\consumables";
-			class action_drink_water {};
-			class action_eat_food {};
 			class consume {};
 			class eatdrink {};
 			class enable_arsenal_food_drink_overlay {};
@@ -170,12 +180,11 @@ class CfgFunctions
 			class player_health_stats {};
 		};
 
-		class system_interactables {
-			file = "functions\systems\interactables";
-			class action_init {};
-			class action_destroy_respawn {};
-			class action_destroy_task {};
-		};
+		class system_dac_cong {
+			file = "functions\systems\dac_cong";
+
+			class capture_player {};
+		}
 
 		//Gameplay director, responsible for main game progression and flow.
 		class system_director
