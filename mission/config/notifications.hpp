@@ -148,12 +148,31 @@ class CfgNotifications
 		color[] = {0.7,1,0.3,1};
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 	};
+
 	class EmptyFoodItem
 	{
 		title = $STR_vn_mf_notification_title_empty_food_item;
 		description = $STR_vn_mf_notification_desc_empty_food_item;
 		priority = 7;
 		color[] = {0.8,0.5,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class NoExplosives 
+	{
+		title = "No Explosives";
+		description = "Please a satchel or breaching charge!";
+		priority = 8;
+		color[] = {1,0,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class FireInTheHole
+	{
+		title = "Satchel Charge Set";
+		description = "Get the heck outta dodge, its gonna blow!";
+		priority = 8;
+		color[] = {1,0,0,1};
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 };

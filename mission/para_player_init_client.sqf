@@ -60,9 +60,8 @@ call para_c_fnc_init_player_event_handlers;
 
 uiSleep 0.4;
 progressLoadingScreen 0.5;
-// add self actions
-call vn_mf_fnc_action_drink_water;
-call vn_mf_fnc_action_eat_food;
+call vn_mf_fnc_action_init;
+
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading5"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;

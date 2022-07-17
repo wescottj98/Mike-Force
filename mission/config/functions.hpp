@@ -170,6 +170,13 @@ class CfgFunctions
 			class player_health_stats {};
 		};
 
+		class system_interactables {
+			file = "functions\systems\interactables";
+			class action_init {};
+			class action_destroy_respawn {};
+			class action_destroy_task {};
+		};
+
 		//Gameplay director, responsible for main game progression and flow.
 		class system_director
 		{
@@ -231,6 +238,8 @@ class CfgFunctions
 			class scout_action {};
 			class sites_subsystem_client_init {};
 			class sites_discovery_job {};
+
+			class destroy_task {};
 		};
 		
 		class system_supplies {

@@ -134,6 +134,12 @@
       <Key ID="STR_vn_mf_eat_food">
         <Original>Eat Food</Original>
       </Key>
+      <Key ID="STR_vn_mf_destroy_task">
+        <Original>Destroy Site</Original>
+      </Key>
+      <Key ID="STR_vn_mf_destroy_respawn">
+        <Original>Destroy Dac Cong Respawn</Original>
+      </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
       </Key>
