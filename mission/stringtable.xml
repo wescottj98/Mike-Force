@@ -146,6 +146,9 @@
       <Key ID="STR_vn_mf_notification_error">
         <Original>Error</Original>
       </Key>
+      <Key ID="STR_vn_mf_notification_burnt_camp">
+        <Original>Successfully Destroyed Site</Original>
+      </Key>
       <Key ID="STR_vn_mf_notification_title_captured_pow">
         <Original>Prisoner of War</Original>
       </Key>
