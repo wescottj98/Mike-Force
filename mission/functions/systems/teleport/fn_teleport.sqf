@@ -36,5 +36,9 @@ private _newLocation = _destination findEmptyPosition [3,20,typeOf _player];
 if (_newLocation isEqualTo []) then {_newLocation = _destination};
 
 remoteExecCall ["vn_mf_fnc_display_location_time",_player];
-
-_player setPos _newLocation;
+if(_destinationName isEqualTo "satansangels_base") then 
+{
+  _player setPosATL [20152.6,67.6535,123.54];
+} else {
+  _player setPos _newLocation;
+};

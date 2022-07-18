@@ -152,6 +152,15 @@
       <Key ID="STR_vn_mf_notification_title_captured_pow">
         <Original>Prisoner of War</Original>
       </Key>
+      <Key ID="STR_vn_mf_notification_title_ao_attack">
+        <Original>Attack Operation</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_friendly_fire">
+        <Original>Friendly Fire!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent">
+        <Original>Next Attack Operation in 5 minutes!</Original>
+      </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
       </Key>

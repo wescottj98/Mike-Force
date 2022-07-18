@@ -20,10 +20,11 @@ _taskDataStore setVariable ["INIT", {
 	_taskDataStore setVariable ["startTime", serverTime];
 
 	["AttackPreparing", ["", ((serverTime + 300) / 60) toFixed 0]] remoteExec ["para_c_fnc_show_notification", 0];
+	[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
 	["Attack Operation preparation", serverTime + 300, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 
 	[[
-		["prepare", [15828.5,7069.5,0.00143909]]
+		["prepare", getMarkerPos "starting_point"]
 	]] call _fnc_initialSubtasks;
 }];
 

@@ -172,6 +172,7 @@ class CfgNotifications
 		title = "Satchel Charge Set";
 		description = "Get the heck outta dodge, its gonna blow!";
 		priority = 8;
+		duration = 10;
 		color[] = {1,0,0,1};
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
@@ -208,6 +209,25 @@ class CfgNotifications
 		title = $STR_vn_mf_notification_error;
 		description = "%1";
 		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class AttackPreparing
+	{
+		title = $STR_vn_mf_notification_title_ao_attack;
+		description = $STR_vn_mf_notification_desc_ao_attack_imminent;
+		priority = 8;
+		color[] = {0,0.06,0.8,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class FriendlyFire
+	{
+		title = $STR_vn_mf_notification_title_friendly_fire;
+		description = "%1";
+		priority = 8;
+		duration = 10;
 		color[] = {1,0.3,0.2,1};
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 	};

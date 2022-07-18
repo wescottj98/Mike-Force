@@ -41,6 +41,7 @@ _taskDataStore setVariable ["INIT", {
 	if (_prepTime > 0) then 
 	{
 		["CounterAttackPreparing", ["", (_prepTime / 60) toFixed 0]] remoteExec ["para_c_fnc_show_notification", 0];
+		[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
 		["Counterattack In", _attackTime, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 	};
 

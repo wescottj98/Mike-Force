@@ -8,18 +8,19 @@
 		Implement as a function, so we can optimise it easily later.
 	
 	Parameter(s):
+		_player - Callee [OBJECT];
 		_target - Target player [OBJECT];
 	
 	Returns:
 		False if a player is on the same side [Boolean]
 	
 	Example(s):
-		[_target] call vn_mf_fnc_check_side;
+		[_player, _target] call vn_mf_fnc_check_side;
 */
 
-params ["_target"];
+params ["_player", "_target"];
 
-private _playerSide = player getVariable "vn_mf_side";
+private _playerSide = _player getVariable "vn_mf_side";
 private _targetSide = _target getVariable "vn_mf_side";
 private _result = true;
 
