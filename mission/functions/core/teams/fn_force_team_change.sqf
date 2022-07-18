@@ -50,6 +50,7 @@ publicVariable _nextPlayerGroup;
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;
 	[] call vn_mf_fnc_tr_overview_team_update;
+	[] call vn_mf_fnc_update_channels;
 }] remoteExec ["spawn", _player];
 
 [] remoteExecCall ["vn_mf_fnc_apply_unit_traits", _player];

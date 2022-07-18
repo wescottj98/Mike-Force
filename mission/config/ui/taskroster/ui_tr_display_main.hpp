@@ -294,6 +294,97 @@ class vn_tr_disp_taskRoster_Main
 			onLBSelChanged = "_this call vn_mf_fnc_tr_missions_show";
 			onLBDblClick = "";
 		};
+
+		class mutecomms: vn_mf_RscText
+		{
+			idc = VN_TR_CHARINFO_RANK_IDC;
+			x = UIW(-4);
+			y = UIH(0.25);
+			w = UIW(3);
+			h = UIH(0.65);
+			
+			style = "0x10 + 0x0200";
+			
+			colorText[] = {0.1,0.1,0.1,0.9};
+			colorBackground[] = {0,0,0,0.0};
+			shadow = 0;
+			text = "Mute";
+			font = USEDFONT;
+			sizeEx = TXT_M;
+			tooltip = "Mute communications per force.";
+		};
+		
+		class ccmf_btn: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_CCMF_BTN_IDC;
+			x = UIW(-3);
+			y = UIH(1);
+			w = UIW(1);
+			h = UIH(1);
+			tooltip = "";
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
+			onButtonClick = "1 radioChannelAdd [player];6 enableChannel [true, true];['TaskSucceeded',['','Ground communication enabled!']] call para_c_fnc_show_notification;";
+		};
+
+		class ccmfoff_btn: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_CCMFOFF_BTN_IDC;
+			x = UIW(-4.21);
+			y = UIH(1);
+			w = UIW(1);
+			h = UIH(1);
+			tooltip = "";
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce.paa";
+			onButtonClick = "1 radioChannelRemove [player];['TaskSucceeded',['','Ground communication disabled!']] call para_c_fnc_show_notification;";
+		};
+		
+		class ccac_btn: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_CCAC_BTN_IDC;
+			x = UIW(-3);
+			y = UIH(2.5);
+			w = UIW(1);
+			h = UIH(1);
+			tooltip = "";
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
+			onButtonClick = "3 radioChannelAdd [player];8 enableChannel [true, true];['TaskSucceeded',['','ACAV communication enabled!']] call para_c_fnc_show_notification;";
+		};
+		
+		class ccacoff_btn: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_CCACOFF_BTN_IDC;
+			x = UIW(-4.21);
+			y = UIH(2.5);
+			w = UIW(1);
+			h = UIH(1);
+			tooltip = "";
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV.paa";
+			onButtonClick = "3 radioChannelRemove [player];['TaskSucceeded',['','ACAV communication disabled!']] call para_c_fnc_show_notification;";
+		};
+
+		class ccgh_btn: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_CCGH_BTN_IDC;
+			x = UIW(-3);
+			y = UIH(4);
+			w = UIW(1);
+			h = UIH(1);
+			tooltip = "";
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
+			onButtonClick = "2 radioChannelAdd [player];7 enableChannel [true, true];['TaskSucceeded',['','Air communication enabled!']] call para_c_fnc_show_notification;";
+		};
+
+		class ccghoff_btn: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_CCGHOFF_BTN_IDC;
+			x = UIW(-4.21);
+			y = UIH(4);
+			w = UIW(1);
+			h = UIH(1);
+			tooltip = "";
+			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets.paa";
+			onButtonClick = "2 radioChannelRemove [player];['TaskSucceeded',['','Air communication disabled!']] call para_c_fnc_show_notification;";
+		};
 		
 		//ALWAYS AT THE BOTTOM/LAST OF THE CONTROLS!
 		class folder_cordels: vn_tr_cordels{};

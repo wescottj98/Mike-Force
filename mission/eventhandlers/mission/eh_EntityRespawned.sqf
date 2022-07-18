@@ -73,7 +73,7 @@ if (isPlayer _entity) then
 		}, [_entity], 1] call CBA_fnc_waitAndExecute;
 	};
 
-
+	[_entity] call vn_mf_fnc_curator_init;
 	// wipe out unused data
 	_corpse setVariable ["vn_mf_dyn_weaponholders",nil,true];
 };

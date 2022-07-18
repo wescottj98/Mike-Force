@@ -222,7 +222,6 @@ call vn_mf_fnc_display_location_time;
 //DEV (ToDo): Until client Scheduler is added:
 []spawn
 {
-	systemchat "starting infopanel handler loop";
 	"para_infopanel" cutRsc ["para_infopanel", "PLAIN", -1, true];
 	while{true}do
 	{

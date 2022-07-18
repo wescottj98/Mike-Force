@@ -38,6 +38,9 @@ class CfgFunctions
 			{
 				postinit = 1;
 			};
+
+			class curator_init {};
+			class chat_init {};
 			class adv_revive_params {};
 			class init_mission_handlers {};
 		};
@@ -56,6 +59,7 @@ class CfgFunctions
 			class group_init {};
 			class is_team_full {};
 			class player_on_team {};
+			class update_channels {};
 		};
 
 		class core_workarounds

@@ -54,7 +54,7 @@ if (_is_unit_player) then
 		else
 		{
 			private _sideCheck = [_unit, _instigator] call vn_mf_fnc_check_side;
-			private _message = format ["[MACV] %1 has friendly fired %2.", name _instigator];
+			private _message = format ["[MACV] %1 has friendly fired %2.", name _instigator, name _unit];
 
 			if !(_sideCheck) then {
 				{
