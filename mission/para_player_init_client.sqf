@@ -94,7 +94,11 @@ if (side player == east) then
 	_respawnMarker = format ["mf_dc_respawn_%1", _lastTeamName]; 
 };
 
-player setPos getMarkerPos _respawnMarker;
+if (_lastTeamName == "SatansAngels") then {
+	player setPosATL [20152.6,67.6535,123.54];
+} else {
+	player setPos getMarkerPos _respawnMarker;
+};
 
 uiSleep 0.4;
 progressLoadingScreen 1.0;

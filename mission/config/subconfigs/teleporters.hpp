@@ -275,6 +275,12 @@ class destinations
 		position_marker = "mf_respawn_sasr";
 	};
 
+	class frogmen_base
+	{
+		image = "custom\taskroster\frogmen_HL.paa"; 
+		position_marker = "mf_respawn_frogmen";
+	};
+
 	class vacang { image = "custom\daccong_team.paa"; position_marker = "zone_vacang"; };
 	class mugiapass { image = "custom\daccong_team.paa"; position_marker = "zone_mugiapass"; };
 	class plainofjars { image = "custom\daccong_team.paa"; position_marker = "zone_plainofjars"; };

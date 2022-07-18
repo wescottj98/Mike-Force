@@ -605,7 +605,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorDisabled[] = {0,0,0,0.5};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_M;
-			onButtonClick = "systemchat str [_this,'4. Support Request']; (_this#0) ctrlEnable false; call vn_mf_fnc_tr_supportTask_create;";
+			onButtonClick = "(_this#0) ctrlEnable false; call vn_mf_fnc_tr_supportTask_create;";
 			MouseButtonDown = "";	//No _this param given
 			text = "Create new support task";
 		};

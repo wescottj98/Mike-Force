@@ -15,6 +15,7 @@
 */
 
 vn_mf_markers_base_respawns = [];
+vn_mf_dc_assets = [];
 vn_mf_dc_markers_base_respawns = [];
 vn_mf_markers_blocked_areas = [];
 vn_mf_markers_zones = [];
@@ -80,6 +81,13 @@ vn_mf_markers_no_harass = [];
 
 	if (_x find "supply_officer_initial" isEqualTo 0) then {
 		vn_mf_markers_supply_officer_initial pushBack _x;
+	};
+
+	if (_x find "dac_cong_assets" isEqualTo 0) then {
+		private _vehicles = vehicles inAreaArray _x;
+
+		_x setMarkerAlpha 0;
+		vn_mf_dc_assets = vn_mf_dc_assets + _vehicles;
 	};
 
 	if (_x find "baseflag_" isEqualTo 0) then {
