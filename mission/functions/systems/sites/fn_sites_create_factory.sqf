@@ -38,7 +38,7 @@ params ["_pos"];
 		missionNamespace setVariable ["factoryPosition", _pos];
 
 		{
-			if(typeOf _x == "Land_Map_unfolded_Malden_F" || _x isKindOf "Building" || _x isKindOf "House" || typeOf _x == "Land_vn_wf_vehicle_service_point_east" || typeOf _x == "Land_vn_fuel_tank_stairs" || typeOf _x == "Land_Net_Fence_Gate_F" || _x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
+			if(_x isKindOf "Building" || _x isKindOf "House" || typeOf _x in ["Land_Map_unfolded_Malden_F", "Land_vn_wf_vehicle_service_point_east", "Land_vn_fuel_tank_stairs", "Land_Net_Fence_Gate_F"] || _x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
 		} forEach _factoryObjects;
@@ -79,14 +79,9 @@ params ["_pos"];
 		params ["_siteStore"];
 
 		private _objectsToDestroy = _siteStore getVariable "objectsToDestroy";
-		private _respawnToDelete = _siteStore getVariable "respawnPointsDC";
 
 		{
 			deleteMarker _x;
 		} forEach (_siteStore getVariable "markers");
-
-		if (_objectsToDestroy select {alive _x} isEqualTo []) then {
-			_respawnToDelete call BIS_fnc_removeRespawnPosition;
-		};
 	}
 ] call vn_mf_fnc_sites_create_site;

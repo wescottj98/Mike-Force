@@ -47,7 +47,7 @@ for "_i" from 1 to (1 + ceil random (vn_mf_s_max_artillery_per_zone - 1)) do
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_camps_per_zone - 1)) do
 {
 	//[_zoneData] call vn_mf_fnc_sites_create_camp;
-	private _campSite = [_center, 1000, 0, 30, 8, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _campSite = [_center, 1000, 0, 35, 8, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_campSite, _zone] call vn_mf_fnc_sites_create_camp_site;
 };
 

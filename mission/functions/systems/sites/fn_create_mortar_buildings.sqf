@@ -1,27 +1,250 @@
 /*
 	File: fn_create_mortar_buildings.sqf
-	Author: Savage Game Design
+	Author: Cerebral
 	Public: No
 	
 	Description:
-		Creates a VC mortar at the specified position.
+		Creates a arty encampment at the given position.
 	
 	Parameter(s):
-		_position - Position where to roughly spawn the AA emplacement [Position3D]
+		_position - Position of the arty [Position3D]
 	
 	Returns:
-		Array in from of [[Vehicles created, units created, groups created], [mortars]] [Array]
+		Array containing the aa buildings [Array]
 	
-	Example(s):
-		[[0,0,0], 10] call vn_mf_fnc_create_aa_buildings
+	Example(s): none
 */
 
 params ["_position"];
 
-private _mortar = [[selectRandom vehicles_vc_mortars, _position] call para_g_fnc_create_vehicle, [], grpNull];
+vn_mf_arty_compositions = [
+	[
+		["Land_VehicleTrack_01_left_v1_F",[1.66064,-0.865723,0.0699997],85.231,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_v1_F",[1.71826,1.29395,0.000148773],100.195,1,0,[0,-0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_v1_F",[1.71826,-1.70605,0.000148773],100.195,1,0,[0,-0],"","",false,false], 
+		["Land_VehicleTrack_01_left_v1_F",[1.67627,2.05713,0.0299997],85.231,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_start_F",[2.88281,-0.370117,0],231.522,1,0,[0,0],"","",false,false], 
+		["Land_vn_wheelcart_f",[2.71826,3.29395,0],31.799,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_02",[3.71826,3.29639,0],0,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_start_F",[2.88281,2.62988,0],231.522,1,0,[0,0],"","",false,false], 
+		["Land_Shovel_F",[2.71826,4.29395,0],247.241,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_01",[3.74023,4.30225,0],254.503,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_01",[4.74023,3.30225,0],88.236,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_v1_F",[3.94629,-4.8125,0.000297546],234.898,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_65_static_d44_01",[-6.2666,0.32666,-0.075501],269.161,1,0,[-0.00873126,8.47472e-005],"","",false,false], 
+		["vn_prop_sandbag_01",[4.74023,4.30225,0],196.154,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_start_F",[5.0127,-4.20557,0],219.127,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_colored_yellow_f",[2.69971,6.4375,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[1.74805,7.4707,0],223.369,1,0,[0,0],"","",false,false], 
+		["Land_vn_metalbarrel_f",[-1.34473,-8.09912,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_wheeled_z157_ammo_vcmf",[1.95117,-7.80908,-0.027071],54.3477,1,0,[-0.284586,0.00294489],"","",false,false], 
+		["vn_o_prop_t102e_01",[-1.6333,-8.17969,0.817173],144.67,1,0,[2.22147e-005,-1.19675e-005],"","",false,false], 
+		["Land_VehicleTrack_01_straight_v1_F",[4.94629,-6.8125,0.000148773],49.641,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_straight_start_F",[6.31396,-5.67236,0],216.328,1,0,[0,0],"","",false,false], 
+		["Land_vn_metalbarrel_f",[-1.85059,-8.40137,0],0,1,0,[0,0],"","",false,false], 
+		["CraterLong_small",[5.41113,8.4126,0.657143],32.8403,1,0,[6.83846,-41.0449],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[-3.54883,8.45557,0],1.399,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_colored_yellow_f",[-2.84766,-9.03076,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[4.94629,-9.8125,0],323.099,1,0,[0,0],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[-2.05371,-10.8125,0],231.281,1,0,[0,0],"","",false,false], 
+		["Land_SandbagBarricade_01_half_F",[-9.4502,-6.03076,0],228.263,1,0,[0,0],"","",false,false], 
+		["Land_SandbagBarricade_01_half_F",[-9.67139,6.00928,0],298.635,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_colored_yellow_f",[0.264648,-11.8311,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_colored_yellow_f",[-9.91895,-6.58154,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[1.94629,-11.8125,0],324.101,1,0,[0,0],"","",false,false]
+	],
+	[
+		["vn_o_nva_65_static_d44",[-3.3833,1.00928,-0.0754852],92.6749,1,0,[-0.0088198,-0.00332958],"","",false,false], 
+		["Land_vn_t_pinussylvestris_1f",[-1.50439,-8.05762,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-0.416504,-9.12891,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_millettia_plantation_f",[-1.51367,-9.33105,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-1.65723,-10.4507,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-4.64258,-10.4775,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_pinussylvestris_1f",[-0.941406,11.2964,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[0.411133,11.7988,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-12.0649,0.921875,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_leucaena_f",[-7.68213,-8.61182,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-12.0313,3.91504,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-12.0449,-4.08691,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-7.66162,-10.4561,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_static_pk_high",[-10.438,-7.6001,-0.0837235],273.735,1,0,[0.142334,0.0644374],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-1.03223,13.4063,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_static_pk_high",[-10.3799,9.12793,-0.0837235],273.735,1,0,[0.142329,0.0644464],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-12.0513,-7.06934,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-4.09033,13.5029,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-10.605,-10.4487,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-11.98,8.98438,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-7.16895,13.5601,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["vn_weapon_arifle_type56_bayo",[-14.8491,-4.00732,0.864592],0,1,0,[0,0],"","",false,false], 
+		["vn_weapon_arifle_type56",[-14.7695,-4.39258,0.864592],0,1,0,[0,0],"","",false,false], 
+		["Land_WoodenTable_small_F",[-14.8652,-4.4126,-4.76837e-007],0.000195831,1,0,[-0.00016074,1.15488e-005],"","",false,false], 
+		["vn_weapon_srifle_sks",[-14.8647,-4.8252,0.864592],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_ruvehicleammo",[-15.458,1.979,-0.0264812],0.0605294,1,0,[0.202489,-1.07006],"","",false,false], 
+		["Land_vn_metalbarrel_f",[-14.3818,-6.99316,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_prop_t102e_01",[-14.6704,-7.07373,0.817173],144.67,1,0,[1.67991e-005,-1.22374e-005],"","",false,false], 
+		["Land_vn_metalbarrel_f",[-14.8877,-7.29541,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-11.9727,11.9072,-0.000999928],89.7891,1,0,[0,0],"","",false,false], 
+		["Land_vn_bagfence_long_f",[-10.2334,13.5249,-0.000999928],359.98,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_phoenixc1s_f",[-10.8506,12.5947,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_tent_02_01",[-16.3169,-5.81885,0],90.4868,1,0,[0,-0],"","",false,false], 
+		["Land_vn_t_millettia_f",[-20.6865,1.88037,0],0,1,0,[0,0],"","",false,false]
+	],
+	[
+		["vn_o_nva_static_d44_01",[-0.590332,6.83252,-0.0754828],178.77,1,0,[-0.00843295,-0.00198467],"","",false,false], 
+		["vn_o_wheeled_z157_ammo",[7.9834,2.5835,-0.0271716],15.8496,1,0,[-0.285013,0.00302631],"","",false,false], 
+		["Land_vn_o_shelter_01",[-8.8667,1.0166,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_ammobox_full_10",[-9.67236,1.82861,4.76837e-007],359.99,1,0,[-0.00195536,-0.000441297],"","",false,false], 
+		["vn_o_ammobox_full_10",[-9.87549,-0.141113,-1.90735e-006],359.991,1,0,[-0.00216112,-0.00138229],"","",false,false], 
+		["vn_o_ammobox_full_10",[-9.87256,0.745605,-1.90735e-006],359.991,1,0,[-0.00216112,-0.00138229],"","",false,false], 
+		["vn_o_nva_static_pk_high",[-10.2095,-2.16455,-0.0837235],231.612,1,0.170243,[0.142345,0.0644365],"","",false,false], 
+		["vn_o_nva_static_rpd_high",[10.6392,-0.816895,-0.102457],84.5585,1,0,[-0.108294,-0.0517564],"","",false,false], 
+		["Land_vn_o_bunker_03",[10.2227,-6.75049,0.537429],160.503,1,0,[0,-0],"","",false,false], 
+		["Land_vn_fence_punji_01_05",[5.93701,-9.98877,0],164.07,1,0,[0,-0],"","",false,false], 
+		["vn_o_nva_spiderhole_03",[-0.229004,-12.3013,-0.0752001],90.1016,1,0,[-0.000128838,-0.00609386],"","",false,false], 
+		["Land_vn_fence_punji_01_05",[-7.15723,-10.188,0],203.903,1,0,[0,0],"","",false,false], 
+		["Land_vn_o_bunker_01",[-11.6294,-8.20459,1.07792],46.6412,1,0,[0,0],"","",false,false], 
+		["Land_vn_o_tower_02",[7.7876,12.8438,0],132.872,1,0,[0,-0],"","",false,false], 
+		["Land_vn_o_trench_firing_01",[10.7378,5.354,0],80.6973,1,0,[0,0],"","",false,false], 
+		["Land_vn_o_trench_firing_01",[-10.9658,4.97705,0],271.324,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_static_rpd_high",[5.21924,13.8359,-0.102455],0.0102168,1,0,[-0.108397,-0.0517759],"","",false,false], 
+		["vn_o_nva_static_rpd_high",[-8.97852,12.9355,-0.102455],0.00419537,1,0,[-0.108409,-0.0518004],"","",false,false], 
+		["vn_o_nva_spiderhole_01",[15.4048,-6.83984,-0.0755744],120.095,1,0,[0.000240344,0.0002769],"","",false,false], 
+		["Land_vn_o_trench_firing_01",[-0.630371,14.8442,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_spiderhole_01",[-17.3262,-2.37451,-0.0755486],244.439,1,0,[0.00267545,0.00197455],"","",false,false], 
+		["vn_o_nva_spiderhole_03",[-6.97021,20.5884,-0.0752058],255.226,1,0,[0.00162081,-0.0074201],"","",false,false], 
+		["vn_o_nva_spiderhole_01",[12.1982,18.3838,-0.0755744],41.6281,1,0,[-0.000367719,0.000110087],"","",false,false]
+	],
+	[
+		["vn_o_ammobox_wpn_08",[-0.563477,-1.22656,0],0,1,0,[0,0],"","",false,false], 
+		["Land_PencilRed_F",[-0.507324,-2.53223,0],147.193,1,0,[0,-0],"","",false,false], 
+		["Land_MoneyBills_01_bunch_F",[-0.494141,-2.68896,0.00577259],15.232,1,0,[0,0],"","",false,false], 
+		["Land_vn_woodentable_small_f",[-0.544922,-2.85596,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_prop_t102e_01",[-0.51416,-3.17188,0.858527],111.749,1,0,[-0.00326013,0.000904773],"","",false,false], 
+		["vn_b_ammobox_11",[-1.62891,-4.21973,0],38.006,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_65_static_mortar_type53",[-4.14258,-2.29834,-0.0711031],229.309,1,0,[2.76985e-005,0.000112203],"","",false,false], 
+		["Land_vn_rampart_f",[5.14746,0.103516,0.676258],171.781,1,0,[0,-0],"","",false,false], 
+		["Land_vn_rampart_f",[3.00586,4.83789,0.46763],135.219,1,0,[0,-0],"","",false,false], 
+		["vn_o_nva_65_static_mortar_type53",[-6.07178,0.61084,-0.0711007],237.592,1,0,[3.78074e-005,-9.67719e-005],"","",false,false], 
+		["Land_vn_rampart_f",[-1.34814,6.56104,-1.11973],92.69,1,0,[0,-0],"","",false,false], 
+		["Land_vn_rampart_f",[3.44141,-6.08105,4.76837e-007],218.38,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_01",[-6.5415,-4.21289,0],30.168,1,0,[0,0],"","",false,false], 
+		["Land_vn_wheelcart_f",[-3.56348,-7.22119,0],0,1,0,[0,0],"","",false,false], 
+		["Land_Shovel_F",[-3.56348,-8.22119,0],119.574,1,0,[0,-0],"","",false,false], 
+		["Land_SandbagBarricade_01_half_F",[-6.52246,-6.21191,0],42.01,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_02",[-8.30957,-4.31689,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[-8.25,3.87744,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_nva_65_static_dshkm_low_01",[-9.56396,1.7793,-0.0789695],280.645,1,0,[7.45163e-006,-5.79313e-005],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[-9.56348,-2.22119,0],63.242,1,0,[0,0],"","",false,false], 
+		["Land_vn_bamboo_bush_01",[6.52002,4.56836,0.139119],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bamboo_bush_01",[3.95557,7.40137,-0.148028],216.165,1,0,[0,0],"","",false,false], 
+		["Land_vn_bamboo_bush_01",[3.90283,-6.42041,0.248874],315.261,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_02",[-9.56348,-4.21875,0],247.804,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_beech_big",[-8.49805,-6.32764,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_cycas_f",[-10.5635,-2.22119,0],0,1,0,[0,0],"","",false,false], 
+		["vn_prop_sandbag_01",[-9.5415,-5.21289,0],69.615,1,0,[0,0],"","",false,false], 
+		["Land_vn_bamboo_bush_01",[10.4365,-1.22119,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_vc_spiderhole_02",[-9.56396,5.77881,-0.0755496],288.283,1,0,[-0.00256348,-0.000971038],"","",false,false], 
+		["Land_VehicleTrack_01_left_v2_F",[-4.49072,-10.4502,0],57.618,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[-8.25,6.87744,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_beech_big",[-10.731,3.04736,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_grassdrytall3",[-10.6235,-3.98438,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_cycas_f",[-8.3291,-7.854,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[-7.25,-8.12256,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_vc_spiderhole_02",[-2.56396,-11.2207,-0.075562],192.229,1,0,[0.00210861,0.000134423],"","",false,false], 
+		["Land_vn_c_beech_big",[-11.542,-0.540527,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[11.75,0.877441,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_beech_big",[8.45801,-8.54053,0.0193357],0,1,0,[2.52568,-45.4797],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[7.75,8.87744,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[9.85107,-6.53174,0],0,1,0,[0,0],"","",false,false], 
+		["Land_VehicleTrack_01_left_v2_F",[-7.52881,-9.45898,0],66.921,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[9.75,6.87744,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_vc_spiderhole_02",[-1.55371,11.8535,-0.0704656],5.9461,1,0,[-0.485326,-0.0964084],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[4.75,10.8774,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[0.666016,11.5435,0],63.191,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_grassdrytall",[-6.54932,-10.2329,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[10.6841,5.5625,0],58.607,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[2.11426,11.7148,0],186.184,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[-2.25,11.8774,0],0,1,0,[-5.5062,-49.4463],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[-11.25,3.87744,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_vc_spiderhole_02",[9.43604,-8.2207,-0.0755582],126.322,1,0,[-0.0013206,0.00149978],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[7.13037,9.89795,0],218.689,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_forest_fern",[-9.59082,-8.16309,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[8.64307,-8.96582,0],326.413,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[11.5068,-4.90039,0],299.774,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_forest_fern",[-12.5908,-3.16309,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[10.6265,-6.95313,0],322.673,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1fb",[1.75,12.8774,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_beech_big",[-1.54199,-13.5405,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_beech_big",[9.67578,-10.0083,0],232.215,1,0,[0,0],"","",false,false]
+	],
+	[
+		["vn_o_nva_65_static_mortar_type63",[-1.19092,-0.356445,-0.0716577],71.277,1,0,[-0.000292767,-0.000122153],"","",false,false], 
+		["vn_o_nva_65_static_mortar_type63",[1.03369,-1.89307,-0.0716629],46.6379,1,0,[0.000860358,-0.000322008],"","",false,false], 
+		["vn_o_nva_65_static_mortar_type63",[0.0205078,2.28711,-0.0716581],71.2736,1,0,[-5.22874e-005,-3.12308e-005],"","",false,false], 
+		["vn_o_prop_t102e_01",[-2.32959,-2.25293,0.0100613],276.962,1,0,[6.67215,-0.693001],"","",false,false], 
+		["Crater",[-0.255371,-3.23242,0],0,1,0,[0,0],"","",false,false], 
+		["vn_o_ammobox_wpn_07",[-3.38232,1.31104,0.170842],0,1,0,[0,0],"","",false,false], 
+		["Crater",[-1.25537,3.76758,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_fort_bagfence_long",[3.69385,1.76758,0],61.573,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_stubleafs_pmc",[4.07813,-2.70996,0],0,1,0,[0,0],"","",false,false], 
+		["vn_b_ammobox_full_11",[-2.94434,-3.85254,-0.00154114],360,1,0,[0.125976,7.18865e-005],"","",false,false], 
+		["Land_vn_c_bigfallenbranches_pine03",[4.90771,-1.20752,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_stubleafs_pmc",[-3.92188,-3.70996,0],0,1,0,[0,0],"","",false,false], 
+		["Land_BagFence_Round_F",[0.802734,6.0708,-0.00130129],194.128,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_torzotree_pmc",[2.6748,-5.13574,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_torzotree_pmc",[-2.3252,5.86426,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_stubleafs_pmc",[-3.92188,-5.70996,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_fallenspruce_pmc",[-4.59033,-1.66357,0],237.898,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_fallentrunk_pmc",[4.45117,-5.53174,0],24.305,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_branchbig",[-4.01953,6.79443,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc2d_f",[6.89404,2.36572,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc2d_f",[4.96094,5.30664,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_misc_fallenspruce_1xtrunk_pmc",[-3.58643,3.79883,0],165.662,1,0,[0,-0],"","",false,false], 
+		["Land_vn_c_branches_deciduous",[-0.422852,-8.20947,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc1s_f",[-8.90137,-1.32422,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc2d_f",[-6.17334,5.01563,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc1s_f",[-4.03027,7.05908,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc2d_f",[-6.79932,-5.38428,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_c_branches_picea",[-5.31104,-7.12402,0],0,1,0,[0,0],"","",false,false], 
+		["CraterLong_02_small_F",[3.43604,-8.14502,0],35.362,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc2d_f",[-3.19385,-9.57422,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc1s_f",[-8.8623,-7.30127,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_ficusc2d_f",[-11.687,-2.71436,0],0,1,0,[0,0],"","",false,false]
+	],
+	[
+		["vn_o_nva_navy_static_mortar_type63",[1.42773,-0.519531,-0.0716667],116.439,1,0,[0.00100154,-0.000233532],"","",false,false], 
+		["Land_ShellCrater_02_small_F",[2.18262,-0.42041,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_garbage_square3_f",[1.30713,4.08838,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_rock_clutter_01_01",[-4.1416,-1.32227,-7.62939e-006],0,1,0,[0,0],"","",false,false], 
+		["Weapon_arifle_AKM_F",[2.13379,3.94824,0],17.797,1,0,[0,0],"","",false,false], 
+		["vn_o_item_bedroll_01",[2.25049,4.28467,0],0,1,0,[0,0],"","",false,false], 
+		["Land_Cliff_stone_big_F",[-2.08447,-4.43262,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_bedrag_01",[1.81836,4.5376,0],60.071,1,0,[0,0],"","",false,false], 
+		["vn_o_prop_t102e_01",[1.73633,4.60303,-0.00100279],50.0245,1,0,[-1.47146e-005,-0.000422375],"","",false,false], 
+		["Land_vn_b_arundod2s_f",[-4.26904,4.8335,-1.45],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_arundod2s_f",[0.730957,-7.1665,-1.45],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_stone_medium",[5.8584,4.67773,0],120.433,1,0,[0,-0],"","",false,false], 
+		["Land_vn_stone_small",[7.8584,-4.32227,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1f",[-0.240234,5.96826,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_arundod2s_f",[3.73096,8.8335,-1.45],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_b_arundod2s_f",[9.84961,-0.839844,-1.45],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1f",[-1.72656,8.94092,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1f",[-6.24023,-6.03174,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1f",[1.75977,8.96826,0],0,1,0,[0,0],"","",false,false], 
+		["Land_vn_t_fagussylvatica_1f",[5.75977,-8.03174,0],0,1,0,[0,0],"","",false,false]
+	]
+];
 
-private _vehicles = [_mortar select 0];
-private _units = _mortar select 1;
-private _groups = [_mortar select 2];
+private _artyObjects = [_position, 0, selectRandom vn_mf_arty_compositions] call BIS_fnc_objectsMapper;
+{
 
-[[_vehicles, _units, _groups], [_mortar select 0]]
+	if (_x isKindOf "StaticWeapon") then {
+		_x allowDamage false;
+		_x setPos [getPos _x # 0, getPos _x # 1, 0];
+		_x setVectorUp (surfaceNormal getPos _x);
+		_x allowDamage true;
+	};
+	
+} forEach _artyObjects;
+
+_artyObjects

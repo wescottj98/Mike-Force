@@ -29,8 +29,15 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		private _result = [_spawnPos, "HEAVY"] call vn_mf_fnc_create_aa_buildings;
-		private _createdThings = _result select 0;
+		private _AAObjs = [_spawnPos] call vn_mf_fnc_create_camp_buildings;
+
+		{
+			if(_x isKindOf "StaticWeapon" || _x isKindOf "Building" || _x isKindOf "House" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
+				[_x, true] call para_s_fnc_enable_dynamic_sim;
+			};
+		} forEach _AAObjs;
+
+		private _objectsToDestroy = _AAObjs select {_x isKindOf "vn_o_nva_65_static_zpu4"};
 
 		//Create an AA warning marker.
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
@@ -46,25 +53,15 @@ params ["_pos"];
 		_aaMarker setMarkerText "AA";
 		_aaMarker setMarkerAlpha 0; //tried 0.3 too light returned to default 
 
-		private _vehicles = _createdThings select 0;
-		private _groups = _createdThings select 1;
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-		} forEach (_vehicles + _groups);
-
-		private _guns = _result select 1;
 		private _objectives = [];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _guns;
+		} forEach _objectsToDestroy;
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
 		_siteStore setVariable ["markers", [_aaZoneMarker, _aaMarker]];
-		_siteStore setVariable ["aaGuns", _guns];
-		_siteStore setVariable ["vehicles", _vehicles]; 
-		_siteStore setVariable ["units", (_createdThings select 1)]; 
-		_siteStore setVariable ["groups", _groups];
+		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
 	//Teardown condition check code
 	{
@@ -75,7 +72,7 @@ params ["_pos"];
 	{
 		params ["_siteStore"];
 		//Teardown when all guns destroyed
-		(_siteStore getVariable "aaGuns" findIf {alive _x} == -1)
+		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
 	},
 	//Teardown code
 	{
@@ -87,7 +84,7 @@ params ["_pos"];
 
 		{
 			deleteVehicle _x;
-		} forEach ((_siteStore getVariable "vehicles") + (_siteStore getVariable "units"));
+		} forEach ((_siteStore getVariable "objectsToDestroy"));
 
 		{
 			[_x] call para_s_fnc_ai_obj_finish_objective;

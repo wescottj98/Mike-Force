@@ -27,10 +27,12 @@ vn_mf_markers_no_harass = [];
 
 {
 	if (_x find "mf_respawn_" isEqualTo 0) then {
+		_x setMarkerAlpha 0;
 		vn_mf_markers_base_respawns pushBack _x;
 	};
 
 	if (_x find "mf_dc_respawn_" isEqualTo 0)then {
+		_x setMarkerAlpha 0;
 		vn_mf_dc_markers_base_respawns pushBack _x;
 	};
 

@@ -30,7 +30,6 @@ params ["_pos"];
 		private _spawnPos = _sitePos;
 
 		private _campObjs = [_spawnPos] call vn_mf_fnc_create_camp_buildings;
-		private _createdThings = _campObjs select 0;
 
 		{
 			if(_x isKindOf "StaticWeapon" || _x isKindOf "Building" || _x isKindOf "House" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
@@ -38,7 +37,11 @@ params ["_pos"];
 			};
 		} forEach _campObjs;
 
-		private _objectsToDestroy = _campObjs select { _x isKindOf "Land_vn_o_shelter_06"};
+		private _objectsToDestroy = _campObjs select {
+			private _objectType = typeOf _x;
+			_objectType in ["Land_vn_o_shelter_06", "Land_vn_pavn_launchers", "vn_b_ammobox_01", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2",
+							   "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"];
+		};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _campMarker = createMarker [format ["Camp_%1", _siteId], _markerPos];
