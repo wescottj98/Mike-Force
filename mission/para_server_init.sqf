@@ -110,9 +110,6 @@ diag_log "VN MikeForce: Initialising markers";
 //Read map markers and populate appropriate arrays
 call vn_mf_fnc_marker_init;
 
-//Read pow cage locations and populate arrays 
-call vn_mf_fnc_pow_init;
-
 // restore enlisted player counter
 (["GET", "enlisted_counter", 745001] call para_s_fnc_profile_db) params ["",["_enlisted_counter",0]];
 vn_mf_enlisted_counter = _enlisted_counter;
@@ -320,6 +317,9 @@ diag_log "VN MikeForce: Initialising Sites";
 diag_log "VN MikeForce: Initialising Gameplay Director";
 // Initialise the gameplay director
 [] call vn_mf_fnc_director_init;
+
+diag_log "VN MikeForce: Initialising Safe Zones";
+[] call vn_mf_fnc_arsenal_safe_zones_init;
 
 diag_log "VN MikeForce: Initialising Respawn Scheduler";
 // Initialise respawn job

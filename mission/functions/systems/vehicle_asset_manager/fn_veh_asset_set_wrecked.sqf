@@ -27,6 +27,11 @@ if (isNull _vehicle) exitWith {
 
 _vehicleInfo set [struct_veh_asset_info_m_state_data, ["WRECKED", getPosASL _vehicle, getDir _vehicle]];
 
+//if it's in water send it to repair
+if (surfaceIsWater (position _vehicle)) exitWith {
+	[_id] call vn_mf_fnc_veh_asset_set_repairing;
+};
+
 //Kaboom. We don't want TWO vehicles by accident.
 if (alive _vehicle) then {
 	_vehicle setDamage 1;

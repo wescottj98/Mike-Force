@@ -158,6 +158,15 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 
+	class NoFireZone 
+	{
+		title = "No Fire Zone";
+		description = "Do not fire your weapon near the arsenal. Use the Gun Range!";
+		priority = 8;
+		color[] = {0.8,0.5,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
 	class NoExplosives 
 	{
 		title = "No Explosives";

@@ -12,7 +12,7 @@
 		_target - Target player [OBJECT];
 	
 	Returns:
-		False if a player is on the same side [Boolean]
+		False if a player is not on the same side [Boolean]
 	
 	Example(s):
 		[_player, _target] call vn_mf_fnc_check_side;
@@ -22,18 +22,11 @@ params ["_player", "_target"];
 
 private _playerSide = _player getVariable "vn_mf_side";
 private _targetSide = _target getVariable "vn_mf_side";
-private _result = true;
+private _result = false;
 
-if ((_playerSide == west || _playerSide == independent) &&
-	(_targetSide == west || _targetSide == independent)) then 
+if (_playerSide == _targetSide) then
 {
-	_result = false;
-};
-
-if ((_playerSide == east) &&
-	(_targetSide == east)) then 
-{
-	_result = false;
+	_result = true;
 };
 
 _result

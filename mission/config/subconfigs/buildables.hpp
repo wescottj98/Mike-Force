@@ -2,7 +2,7 @@
 #define CONDITION_IS_ENGINEER { $STR_vn_mf_buildingMenu_condition_isEngineer, "player getUnitTrait 'engineer'"}
 #define CONDITION_IS_ON_FOOT { $STR_vn_mf_buildingMenu_condition_rnFoot, "isNull objectParent player"}
 #define CONDITION_NOT_IN_RESTRICTED_ZONE { $STR_vn_mf_buildingMenu_condition_inRestrictedZone, "vn_mf_markers_blocked_areas findIf {_pos inArea _x} isEqualTo -1"}
-#define CONDITION_IS_ACAV { $STR_vn_mf_buildingMenu_condition_inACav, "player getVariable ['vn_mf_db_player_group', 'MikeForce'] isEqualTo 'ACAV'"}
+#define CONDITION_IS_ACAV { $STR_vn_mf_buildingMenu_condition_inACav, "!(player getVariable ['vn_mf_db_player_group', 'MikeForce'] in ['ACAV', 'MikeForce', 'GreenHornets'])"}
 #define CONDITION_IS_DAC_CONG { $STR_vn_mf_buildingMenu_condition_inDacCong, "player getVariable ['vn_mf_db_player_group', 'MikeForce'] isEqualTo 'DacCong'"}
 
 //Icon Classes for Vehicle Spawner

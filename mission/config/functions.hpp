@@ -15,6 +15,7 @@ class CfgFunctions
 			class marker_init {};
 			class pow_init {};
 			class respawn_points_init {};
+			class arsenal_safe_zones_init {};
 			class save_time_elapsed {};
 			class stats_init {};
 		};

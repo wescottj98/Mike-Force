@@ -10,3 +10,4 @@ class Respawn {};
 class SeatSwitchedMan {};
 class TaskSetAsCurrent {};
 class Killed {};
+class Fired {};

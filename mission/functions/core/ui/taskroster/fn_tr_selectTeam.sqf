@@ -21,15 +21,6 @@ disableSerialization;
 
 params ["_team"];
 
-if ([_team] call vn_mf_fnc_is_team_full) exitWith {
-	[
-		[
-			"STR_vn_mf_notification_title_team_full",
-			"STR_vn_mf_notification_desc_team_full"
-		]
-	] call para_c_fnc_postNotification;
-};
-
 vn_tr_groupID = _team;
 private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _team);
 private _groupNameFull = getText(_groupConfig >> "name");

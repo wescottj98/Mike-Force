@@ -10,10 +10,10 @@ class MikeForce
 
     class rolelimits 
     {
-        medic = 1;
-        engineer = 1;
-        explosiveSpecialist = 1;
-        vn_artillery = 1;
+        medic = 40;
+        engineer = 40;
+        explosiveSpecialist = 10;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -46,10 +46,10 @@ class SpikeTeam
 
     class rolelimits 
     {
-        medic = 1;
+        medic = 40;
         engineer = 0;
-        explosiveSpecialist = 1;
-        vn_artillery = 1;
+        explosiveSpecialist = 20;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -83,10 +83,10 @@ class ACAV
 
     class rolelimits 
     {
-        medic = 2;
+        medic = 20;
         engineer = 40;
-        explosiveSpecialist = 2;
-        vn_artillery = 2;
+        explosiveSpecialist = 10;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -119,10 +119,10 @@ class GreenHornets
     
     class rolelimits 
     {
-        medic = 1;
-        engineer = 1;
-        explosiveSpecialist = 1;
-        vn_artillery = 1;
+        medic = 40;
+        engineer = 40;
+        explosiveSpecialist = 0;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -155,10 +155,10 @@ class 71stMEU
 
     class rolelimits 
     {
-        medic = 2;
+        medic = 10;
         engineer = 40;
-        explosiveSpecialist = 2;
-        vn_artillery = 2;
+        explosiveSpecialist = 10;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -192,9 +192,9 @@ class MilitaryPolice
     class rolelimits 
     {
         medic = 40;
-        engineer = 5;
-        explosiveSpecialist = 2;
-        vn_artillery = 1;
+        engineer = 20;
+        explosiveSpecialist = 20;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -227,10 +227,10 @@ class BlackHawk
 
     class rolelimits 
     {
-        medic = 2;
+        medic = 40;
         engineer = 40;
-        explosiveSpecialist = 2;
-        vn_artillery = 2;
+        explosiveSpecialist = 40;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -263,10 +263,10 @@ class Frogmen
 
     class rolelimits 
     {
-        medic = 2;
+        medic = 20;
         engineer = 40;
-        explosiveSpecialist = 2;
-        vn_artillery = 2;
+        explosiveSpecialist = 40;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -275,7 +275,7 @@ class Frogmen
         audibleCoef = 0.6;
         loadCoef = 1;
         engineer = true;
-        explosiveSpecialist = false;
+        explosiveSpecialist = true;
         medic = false;
         UAVHacker = false;
         vn_artillery = true;
@@ -299,10 +299,10 @@ class Muskets
     
     class rolelimits 
     {
-        medic = 1;
-        engineer = 1;
-        explosiveSpecialist = 1;
-        vn_artillery = 1;
+        medic = 20;
+        engineer = 20;
+        explosiveSpecialist = 0;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -335,10 +335,10 @@ class SatansAngels
     
     class rolelimits 
     {
-        medic = 1;
-        engineer = 1;
-        explosiveSpecialist = 1;
-        vn_artillery = 1;
+        medic = 20;
+        engineer = 20;
+        explosiveSpecialist = 20;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -371,10 +371,10 @@ class 633rdCSG
     
     class rolelimits 
     {
-        medic = 1;
+        medic = 30;
         engineer = 60;
-        explosiveSpecialist = 1;
-        vn_artillery = 1;
+        explosiveSpecialist = 30;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -407,10 +407,10 @@ class 7thCAV
     
     class rolelimits 
     {
-        medic = 1;
+        medic = 30;
         engineer = 60;
-        explosiveSpecialist = 1;
-        vn_artillery = 3;
+        explosiveSpecialist = 30;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -419,7 +419,7 @@ class 7thCAV
         audibleCoef = 0.6;
         loadCoef = 1;
         engineer = true;
-        explosiveSpecialist = false;
+        explosiveSpecialist = true;
         medic = false;
         UAVHacker = false;
         vn_artillery = false;
@@ -443,8 +443,8 @@ class TigerForce
     
     class rolelimits 
     {
-        medic = 5;
-        engineer = 10;
+        medic = 15;
+        engineer = 20;
         explosiveSpecialist = 40;
         vn_artillery = 3;
     };
@@ -479,7 +479,7 @@ class Montagnard
     
     class rolelimits 
     {
-        medic = 5;
+        medic = 20;
         engineer = 40;
         explosiveSpecialist = 40;
         vn_artillery = 1;
@@ -515,7 +515,7 @@ class SASR
     
     class rolelimits 
     {
-        medic = 5;
+        medic = 20;
         engineer = 40;
         explosiveSpecialist = 40;
         vn_artillery = 1;
@@ -604,7 +604,7 @@ class DacCong
         UAVHacker = false;
         vn_artillery = false;
         harassable = false;
-        scout = true;
+        scout = false;
     };
 
     //Function Calls on team Join

@@ -35,7 +35,7 @@ vn_mf_player_markers_manned_vehicles = [];
 {
 	private _unit = _x;
 	private _unitSideCheck = [player, _unit] call vn_mf_fnc_check_side;
-	if (_unitSideCheck) then { continue };
+	if !(_unitSideCheck) then { continue };
 
 	private _unitMarker = format ["player_marker_%1", getPlayerUID _unit];
 	private _unitGroup = _unit getVariable ["vn_mf_db_player_group", "FAILED"];
@@ -94,7 +94,7 @@ vn_mf_player_markers_manned_vehicles = [];
 
 	{
 		private _unitSideCheck = [player, _x] call vn_mf_fnc_check_side;
-		if (_unitSideCheck) exitWith { _crewNotSameSide = true; };
+		if !(_unitSideCheck) exitWith { _crewNotSameSide = true; };
 	} forEach _crew;
 	
 	if (_crewNotSameSide) then { continue };

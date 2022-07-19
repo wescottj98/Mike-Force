@@ -56,7 +56,7 @@ if (_is_unit_player) then
 			private _sideCheck = [_unit, _instigator] call vn_mf_fnc_check_side;
 			private _message = format ["[MACV] %1 has friendly fired %2.", name _instigator, name _unit];
 
-			if !(_sideCheck) then {
+			if (_sideCheck) then {
 				{
 					private _inMACV = [_x, "MACV"] call para_g_fnc_db_check_whitelist;
 					if !(_inMACV) then { continue };

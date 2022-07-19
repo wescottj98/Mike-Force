@@ -46,6 +46,9 @@ uiSleep 0.4;
 progressLoadingScreen 0.2;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading2"]] call vn_mf_fnc_update_loading_screen;
 
+//Read pow cage locations and populate arrays 
+call vn_mf_fnc_pow_init;
+
 uiSleep 0.4;
 progressLoadingScreen 0.3;
 // add display event handlers
