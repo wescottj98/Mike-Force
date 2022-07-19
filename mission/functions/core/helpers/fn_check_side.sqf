@@ -20,6 +20,8 @@
 
 params ["_player", "_target"];
 
+if (isNil "_target") exitWith {true};
+
 private _playerSide = _player getVariable "vn_mf_side";
 private _targetSide = _target getVariable "vn_mf_side";
 private _result = false;
