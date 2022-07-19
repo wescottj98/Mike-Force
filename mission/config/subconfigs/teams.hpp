@@ -454,9 +454,9 @@ class TigerForce
         camouflageCoef = 1;
         audibleCoef = 0.6;
         loadCoef = 1;
-        engineer = true;
-        explosiveSpecialist = false;
-        medic = false;
+        engineer = false;
+        explosiveSpecialist = true;
+        medic = true;
         UAVHacker = false;
         vn_artillery = false;
         harassable = true;

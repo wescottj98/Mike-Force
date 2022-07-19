@@ -47,6 +47,10 @@ params ["_pos"];
 			};
 		} forEach _hqObjects;
 
+		{
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+		} forEach _objectsToDestroy;
+
 		//Create a HQ marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
 		private _hqMarker = createMarker [format ["HQ_%1", _siteId], _markerPos];
@@ -84,6 +88,10 @@ params ["_pos"];
 
 		private _objectsToDestroy = _siteStore getVariable "objectsToDestroy";
 		private _respawnToDelete = _siteStore getVariable "respawnPointsDC";
+
+		{
+			deleteVehicle _x;
+		} forEach _objectsToDestroy;
 
 		{
 			deleteMarker _x;

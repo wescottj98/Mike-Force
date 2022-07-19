@@ -20,17 +20,12 @@
 
 params ["_player", "_target"];
 
-if (isNil "_target") exitWith {true};
+if (isNil "_target") exitWith { _result };
 
 private _playerSide = _player getVariable "vn_mf_side";
 private _targetSide = _target getVariable "vn_mf_side";
-private _result = false;
 
-if (isNil "_targetSide") exitwith {};
+if (isNil "_targetSide") exitwith { false };
+if (_playerSide == _targetSide) exitWith { true };
 
-if (_playerSide == _targetSide) then
-{
-	_result = true;
-};
-
-_result
+false

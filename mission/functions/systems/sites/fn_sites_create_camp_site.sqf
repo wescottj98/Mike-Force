@@ -43,6 +43,10 @@ params ["_pos"];
 							   "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"];
 		};
 
+		{
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+		} forEach _objectsToDestroy;
+
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _campMarker = createMarker [format ["Camp_%1", _siteId], _markerPos];
 		_campMarker setMarkerType "o_recon";
@@ -74,6 +78,11 @@ params ["_pos"];
 		{
 			deleteMarker _x;
 		} forEach (_siteStore getVariable "markers");
+
+		private _objectsToDestroy = _siteStore getVariable "objectsToDestroy";
+		{
+			deleteVehicle _x;
+		} forEach _objectsToDestroy;
 
 		{
 			[_x] call para_s_fnc_ai_obj_finish_objective;
