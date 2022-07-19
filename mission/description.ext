@@ -10,7 +10,7 @@ class Header
 {
 	gameType = "mikefrc";
 	minPlayers = 1;
-	maxPlayers = 32; //Do not exceed 32 players, as it begins to degrade balance and performance.
+	maxPlayers = 91; //Do not exceed 32 players, as it begins to degrade balance and performance.
 };
 respawn = "BASE";
 respawnDelay = 20;
@@ -63,7 +63,7 @@ enableDebugConsole[] = {
 
 allowFunctionsLog = 1;
 allowFunctionsRecompile = 1;
-joinUnassigned = 0;
+joinUnassigned = 1;
 forceRotorLibSimulation = 0;
 saving = 0;
 skipLobby = 0;
