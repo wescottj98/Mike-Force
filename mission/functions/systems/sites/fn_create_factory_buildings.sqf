@@ -39,7 +39,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 			["vn_o_nva_65_static_zpu4",[6.12158,4.7583,6.00192],89.514,1,0,[0,0],"","",false,false], 
 			["Land_vn_usaf_revetment_helipad_02",[13.4565,-5.3999,-0.00240421],0.473,1,0,[0,0],"","",false,false], 
 			["vn_o_armor_type63_01",[-12.2124,-1.02393,0.0749989],178.4,1,0,[0,-0],"","",false,false], 
-			["Land_Map_unfolded_F",[9.97461,7.9458,1.18689],337.553,1,0,[0,0],"","",false,false], 
+			["Land_Map_unfolded_Malden_F",[9.97461,7.9458,1.18689],337.553,1,0,[0,0],"","",false,false], 
 			["vn_o_air_mi2_04_01",[11.7339,-5.59619,-0.116121],89.314,1,0,[0,0],"","",false,false], 
 			["Land_WoodenTable_large_F",[10.5151,8.1709,0.328636],268.464,1,0,[0,0],"","",false,false], 
 			["vn_o_prop_t102e_01",[10.9131,8.0918,1.19323],26.5895,1,0,[0,0],"","",false,false], 
@@ -88,7 +88,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 			["Land_NetFence_01_m_8m_F",[19.918,31.46,1.622],359.151,1,0,[0,0],"","",false,false]
 		],
 		[
-			["Land_Map_unfolded_F",[2.93018,0.445313,0.907043],121.485,1,0,[0,-0],"","",false,false], 
+			["Land_Map_unfolded_Malden_F",[2.93018,0.445313,0.907043],121.485,1,0,[0,-0],"","",false,false], 
 			["Land_WoodenTable_small_F",[3.14063,0.827148,0.0424509],0,1,0,[0,0],"","",false,false], 
 			["vn_o_prop_t102e_01",[3.19971,1.13428,0.907043],83.3211,1,0,[0,0],"","",false,false], 
 			["vn_o_wheeled_z157_fuel_nvam",[0.289551,6.69287,-0.0194654],269.254,1,0,[0.111906,0.0559846],"","",false,false], 
@@ -281,7 +281,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 			["vn_o_armor_type63_01",[10.5874,9.67285,-0.0994587],268.229,1,0,[0.0430468,0.0192015],"","",false,false], 
 			["Land_vn_plot_green_branka",[-5.56494,13.6084,0],0,1,0,[0,0],"","",false,false], 
 			["vn_o_prop_t102e_01",[-12.3413,-8.60791,1.17837],85.303,1,0,[0,0],"","",false,false], 
-			["Land_Map_unfolded_F",[-12.9634,-8.02295,1.18801],0,1,0,[0,0],"","",false,false], 
+			["Land_Map_unfolded_Malden_F",[-12.9634,-8.02295,1.18801],0,1,0,[0,0],"","",false,false], 
 			["Land_WoodenTable_large_F",[-12.7427,-8.43994,0.313781],269.547,1,0,[0,0],"","",false,false], 
 			["vn_o_armor_type63_01",[12.6987,-8.62012,-0.0964999],270.403,1,0,[0.0420978,0.0176547],"","",false,false], 
 			["Land_vn_fuel_tank_stairs",[-4.94727,16.0942,0],179.52,1,0,[0,-0],"","",false,false], 

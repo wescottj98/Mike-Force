@@ -26,6 +26,8 @@ private _playerSide = _player getVariable "vn_mf_side";
 private _targetSide = _target getVariable "vn_mf_side";
 private _result = false;
 
+if (isNil "_targetSide") exitwith {};
+
 if (_playerSide == _targetSide) then
 {
 	_result = true;

@@ -67,6 +67,8 @@ class CfgFunctions
 		{
 			file = "functions\core\workarounds";
 			class admin_arsenal {};
+			class holster_weapon {};
+			class release_cargo {};
 		};
 
 		class debug {
