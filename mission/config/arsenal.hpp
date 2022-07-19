@@ -620,6 +620,7 @@ class vn_whitelisted_arsenal_loadouts
 		items[] =
 		{ 
 			//Basics
+			{ "vn_b_item_lighter_01", 				{-1,-1, 0,-1}},
 			{ "FirstAidKit", 						{-1,-1, 0,-1}}, 
 			{ "ItemCompass", 						{-1,-1, 0,-1}}, 
 			{ "ItemMap", 							{-1,-1, 0,-1}}, 
