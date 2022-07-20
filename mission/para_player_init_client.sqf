@@ -63,7 +63,6 @@ call para_c_fnc_init_player_event_handlers;
 
 uiSleep 0.4;
 progressLoadingScreen 0.5;
-call vn_mf_fnc_action_init;
 
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading5"]] call vn_mf_fnc_update_loading_screen;
 
@@ -238,3 +237,10 @@ call vn_mf_fnc_display_location_time;
 };
 
 ["InitializePlayer", [player]] call para_c_fnc_dynamicGroups;
+
+call vn_mf_fnc_action_destroy_respawn;
+call vn_mf_fnc_action_destroy_task;
+call vn_mf_fnc_action_drink_water;
+call vn_mf_fnc_action_gather_intel;
+call vn_mf_fnc_action_capture_player;
+call vn_mf_fnc_action_eat_food;
