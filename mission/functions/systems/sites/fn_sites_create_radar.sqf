@@ -1,0 +1,89 @@
+/*
+    File: fn_sites_create_radar.sqf
+    Author: Cerebral
+    Public: No
+    
+    Description:
+		Creates a new radar site in the given location.
+    
+    Parameter(s):
+		_pos - Position to spawn the HQ site at
+    
+    Returns:
+        Function reached the end [BOOL]
+    
+    Example(s):
+        [markerPos "myHq"] call vn_mf_fnc_sites_create_radar
+*/
+
+params ["_pos"];
+
+[
+	"radar",
+	_pos,
+	"factory",
+	//Setup Code
+	{
+		params ["_siteStore"];
+		private _siteId = _siteStore getVariable "site_id";
+		private _sitePos = getPos _siteStore;
+		private _spawnPos = _sitePos;
+
+		private _radarObjs = [_spawnPos] call vn_mf_fnc_create_radar_buildings;
+		private _createdThings = _radarObjs select 0;
+
+		{
+			if(_x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
+				[_x, true] call para_s_fnc_enable_dynamic_sim;
+			};
+
+			if(typeof _x == "vn_o_static_rsna75" || typeof _x == "vn_sa2") then {
+				_x enableSimulation true;
+				createVehicleCrew _x;
+
+				_x setVehicleRadar 1;
+				_x setVehicleReportOwnPosition true;
+				_x setVehicleReceiveRemoteTargets true;
+				_x setVehicleReportRemoteTargets true;
+			};
+		} forEach _radarObjs;
+
+		private _objectsToDestroy = _radarObjs select { typeof _x == "vn_o_static_rsna75" || typeof _x == "vn_sa2"};
+
+		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
+		private _radarMarker = createMarker [format ["radar_%1", _siteId], _markerPos];
+		_radarMarker setMarkerType "o_support";
+		_radarMarker setMarkerText "Radar";
+		_radarMarker setMarkerAlpha 0;
+
+		private _objectives = [];
+		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
+
+		_siteStore setVariable ["aiObjectives", _objectives];
+		_siteStore setVariable ["markers", [_radarMarker]];
+		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
+	},
+	//Teardown condition check code
+	{
+		//Check if we need to teardown every 15 seconds.
+		15 call _fnc_periodicallyAttemptTeardown;
+	},
+	//Teardown condition
+	{
+		params ["_siteStore"];
+		//Teardown when all guns destroyed
+		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
+	},
+	//Teardown code
+	{
+		params ["_siteStore"];
+
+		{
+			deleteMarker _x;
+		} forEach (_siteStore getVariable "markers");
+
+		{
+			[_x] call para_s_fnc_ai_obj_finish_objective;
+		} forEach (_siteStore getVariable ["aiObjectives", []]);
+	}
+] call vn_mf_fnc_sites_create_site;

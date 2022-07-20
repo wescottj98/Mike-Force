@@ -21,6 +21,7 @@ params ["_pos"];
 [
 	"artillery",
 	_pos,
+	"factory",
 	//Setup Code
 	{
 		params ["_siteStore"];
@@ -28,50 +29,33 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		private _result = [_spawnPos] call vn_mf_fnc_create_mortar;
-		private _createdThings = _result select 0;
+		private _artyObjs = [_spawnPos] call vn_mf_fnc_create_mortar_buildings;
+		{
+			if(_x isKindOf "StaticWeapon" || _x isKindOf "Building" || _x isKindOf "House" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
+				[_x, true] call para_s_fnc_enable_dynamic_sim;
+			};
+		} forEach _artyObjs;
 
-		private _markerPos = _spawnPos getPos [random 5, random 360];
+		private _objectsToDestroy = _artyObjs select {typeOf _x in ["vn_o_nva_navy_static_mortar_type63", "vn_o_nva_65_static_mortar_type53", "vn_o_nva_static_d44_01"]};
+
+		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];
 		_artilleryMarker setMarkerType "o_art";
-		_artilleryMarker setMarkerText "Artillery";
-		// Hiden at spawn 0.5
+		_artilleryMarker setMarkerText "Arty";
 		_artilleryMarker setMarkerAlpha 0;
 
-		// create partially discovered marker
-		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
-		private _partialMarker = createMarker [format ["artillery_zone_%1_partial", _siteId], _partialPos];
-		_partialMarker setMarkerSize [400, 400];
-		_partialMarker setMarkerShape "ELLIPSE";
-		_partialMarker setMarkerText "Suspected Artillery";
-		_partialMarker setMarkerColor "ColorRed";
-		_partialMarker setMarkerAlpha 0; // hiden at spawn 0.3
-
-		private _vehicles = _createdThings select 0;
-		{
-			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
-			_x enableWeaponDisassembly false;
-		} forEach _vehicles;
-		private _groups = _createdThings select 1;
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-		} forEach (_vehicles + _groups);
-
-		private _mortars = _result select 1;
 		private _objectives = [];
 		{
+			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+			_x enableWeaponDisassembly false;
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _mortars;
-		_objectives pushBack ([_spawnPos, 1, 2] call para_s_fnc_ai_obj_request_defend);
+		} forEach _objectsToDestroy;
+		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
-		_siteStore setVariable ["mortars", _mortars];
-		_siteStore setVariable ["vehicles", _vehicles]; 
-		_siteStore setVariable ["units", (_createdThings select 1)]; 
-		_siteStore setVariable ["groups", _groups];
-
-		_siteStore setVariable ["markers", [_artilleryMarker], true];
-		_siteStore setVariable ["partialMarkers", [_partialMarker], true];
+		_siteStore setVariable ["markers", [_artilleryMarker]];
+		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
 	//Teardown condition check code
 	{
@@ -82,7 +66,7 @@ params ["_pos"];
 	{
 		params ["_siteStore"];
 		//Teardown when all guns destroyed
-		(_siteStore getVariable "mortars" findIf {alive _x} == -1)
+		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
 	},
 	//Teardown code
 	{
@@ -90,11 +74,11 @@ params ["_pos"];
 
 		{
 			deleteMarker _x;
-		} forEach ((_siteStore getVariable "markers") + (_siteStore getVariable "partialMarkers"));
+		} forEach (_siteStore getVariable "markers");
 
 		{
 			deleteVehicle _x;
-		} forEach ((_siteStore getVariable "vehicles") + (_siteStore getVariable "units"));
+		} forEach ((_siteStore getVariable "objectsToDestroy"));
 
 		{
 			[_x] call para_s_fnc_ai_obj_finish_objective;

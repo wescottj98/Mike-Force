@@ -11,6 +11,7 @@ class EntityKilled
 {
 	targets[] = {HEADED_CLIENT_HOST,DEDICATED_SERVER};
 };
+
 class PreloadStarted
 {
 	targets[] = {HEADED_CLIENT_HOST,HEADED_CLIENT};

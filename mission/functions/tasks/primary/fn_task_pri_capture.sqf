@@ -33,55 +33,87 @@ _taskDataStore setVariable ["INIT", {
 	private _zone = _taskDataStore getVariable "taskMarker";
 	private _zonePosition = getMarkerPos _zone;
 
-	//TODO - Add event handler to SiteDestroyed
-	private _hqs = (missionNamespace getVariable ["sites_hq", []]) inAreaArray _zone;
-	private _hqPosition = if (count _hqs > 0) then {getPos (_hqs # 0)} else {_zonePosition};
+	private _areaMarker = createMarker ["activeZoneCircle", _zonePosition];
+	_areaMarker setMarkerShape "ELLIPSE";
+	_areaMarker setMarkerSize [1100, 1100];
+	_areaMarker setMarkerAlpha 1;
+	_areaMarker setMarkerBrush "Border";
+	_areaMarker setMarkerColor "ColorYellow";
 
-	private _defendObj = [_hqPosition, 3, 5] call para_s_fnc_ai_obj_request_defend;
+	private _hqPosition = missionNamespace getVariable ["hqPosition", _zoneposition];
+	private _defendHqObj = [_hqPosition, 1, 1] call para_s_fnc_ai_obj_request_defend;
 
-	_taskDataStore setVariable ["hqDefendObjective", _defendObj];
-	_taskDataStore setVariable ["aiObjectives", [_defendObj]];
+	private _factoryPosition = missionNamespace getVariable ["factoryPosition", _zoneposition];
+	private _defendFactoryObj = [_factoryPosition, 1, 1] call para_s_fnc_ai_obj_request_defend;
 
-	[[["hold_hq", _hqPosition], ["destroy_sites", _zonePosition], ["destroy_enemy_supplies", _hqPosition]]] call _fnc_initialSubtasks;
+	_taskDataStore setVariable ["aiObjectives", [_defendHqObj, _defendFactoryObj]];
+	_taskDataStore setVariable ["startTime", serverTime];
+	_taskDataStore setVariable ["hq_sites_destroyed", false];
+	_taskDataStore setVariable ["factory_sites_destroyed", false];
+
+	[[["locate_hq_intel", _zonePosition], ["locate_factory_intel", _zonePosition]]] call _fnc_initialSubtasks;
 }];
 
-_taskDataStore setVariable ["hold_hq", {
+_taskDataStore setVariable ["locate_hq_intel", {
 	params ["_taskDataStore"];
 
-	private _aiRemaining = _taskDataStore getVariable "hqDefendObjective" getVariable ["reinforcements_remaining", 0];
+	if (missionNamespace getVariable "hq_intel" findIf {isNull _x || damage _x >= 1} == -1) exitWith {};
+	_taskDataStore setVariable ["hq_intel_found", true];
 
-	if (_aiRemaining < 0.8) exitWith
+	private _hqPosition = missionNamespace getVariable ["hqPosition",[0,0,0]];
+	private _hqSites = missionNamespace getVariable ["side_sites_hq", []];
+
 	{
-		_taskDataStore setVariable ["hq_held", true];
-		["SUCCEEDED"] call _fnc_finishSubtask;
-	};
+		private _markers = _x getVariable ["markers", []];
+		{
+			_x setMarkerAlpha 0.5;
+		} forEach _markers;
+	} forEach _hqSites;
+
+	["SUCCEEDED", [["destroy_hq_sites", _hqPosition]]] call _fnc_finishSubtask;
 }];
 
-_taskDataStore setVariable ["destroy_sites", {
+_taskDataStore setVariable ["locate_factory_intel", {
 	params ["_taskDataStore"];
 
-	private _zone = (_taskDataStore getVariable "taskMarker");
-	private _rawSizes = markerSize (_taskDataStore getVariable "taskMarker");
-	private _sizes = _rawSizes apply {abs _x};
-	private _sizeMax = selectMax _sizes;
+	if (missionNamespace getVariable "factory_intel" findIf {isNull _x || damage _x >= 1} == -1) exitWith {};
+	_taskDataStore setVariable ["factory_intel_found", true];
 
-	private _numberOfSites = count (missionNamespace getVariable ["sites",[]] inAreaArray [markerPos _zone, _sizeMax, _sizeMax]);
+	private _factoryPosition = missionNamespace getVariable ["factoryPosition",[0,0,0]];
+	private _factorySites = missionNamespace getVariable ["side_sites_factory", []];
 
+	{
+		private _markers = _x getVariable ["markers", []];
+		{
+			if((_x find "AA_zone_") >= 0) then {
+				_x setMarkerAlpha 0.3;
+			} else {
+				_x setMarkerAlpha 0.5;
+			};
+		} forEach _markers;
+	} forEach _factorySites;
+
+	["SUCCEEDED", [["destroy_factory_sites", _factoryPosition]]] call _fnc_finishSubtask;
+}];
+
+_taskDataStore setVariable ["destroy_hq_sites", {
+	params ["_taskDataStore"];
+
+	private _numberOfSites = count (missionNamespace getVariable ["side_sites_hq",[]]);
 	if (_numberOfSites == 0) exitWith
 	{
-		_taskDataStore setVariable ["sites_destroyed", true];
+		_taskDataStore setVariable ["hq_sites_destroyed", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 }];
 
-_taskDataStore setVariable ["destroy_enemy_supplies", {
+_taskDataStore setVariable ["destroy_factory_sites", {
 	params ["_taskDataStore"];
 
-	private _zone = (_taskDataStore getVariable "taskMarker");
-	private _hqs = (missionNamespace getVariable ["sites_hq", []]) inAreaArray _zone;
-
-	if (_hqs select {!isNull _x} isEqualTo []) then {
-		_taskDataStore setVariable ["suppliesDestroyed", true];
+	private _numberOfSites = count (missionNamespace getVariable ["side_sites_factory",[]]);
+	if (_numberOfSites == 0) exitWith
+	{
+		_taskDataStore setVariable ["factory_sites_destroyed", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 }];
@@ -90,9 +122,10 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
 
 	if (
-		_taskDataStore getVariable ["hq_held", false]
-		&& _taskDataStore getVariable ["suppliesDestroyed", false]
-		&& _taskDataStore getVariable ["sites_destroyed", false]
+		_taskDataStore getVariable ["hq_intel_found", false]
+		&& _taskDataStore getVariable ["factory_intel_found", false]
+		&& _taskDataStore getVariable ["hq_sites_destroyed", false]
+		&& _taskDataStore getVariable ["factory_sites_destroyed", false]
 	) then {
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
@@ -103,6 +136,10 @@ _taskDataStore setVariable ["FINISH", {
 
 	_taskDataStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
 
+	deleteMarker "activeZoneCircle";
+
+	_zone setMarkerColor "ColorYellow";
+	_zone setMarkerBrush "DiagGrid";
 	private _taskStore = ((["defend_counterattack", _zone, [["prepTime", 180]]] call vn_mf_fnc_task_create) # 1);
 
 	//Put the besieged zone off to the side for now to prevent an infinite loop

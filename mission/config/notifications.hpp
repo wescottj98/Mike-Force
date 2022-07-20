@@ -148,6 +148,7 @@ class CfgNotifications
 		color[] = {0.7,1,0.3,1};
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 	};
+
 	class EmptyFoodItem
 	{
 		title = $STR_vn_mf_notification_title_empty_food_item;
@@ -155,5 +156,88 @@ class CfgNotifications
 		priority = 7;
 		color[] = {0.8,0.5,0,1};
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class NoFireZone 
+	{
+		title = "No Fire Zone";
+		description = "Do not fire your weapon near the arsenal. Use the Gun Range!";
+		priority = 8;
+		color[] = {0.8,0.5,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class NoExplosives 
+	{
+		title = "No Explosives";
+		description = "Please equip a satchel or breaching charge!";
+		priority = 8;
+		color[] = {1,0,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class FireInTheHole
+	{
+		title = "Satchel Charge Set";
+		description = "Get the heck outta dodge, its gonna blow!";
+		priority = 8;
+		duration = 10;
+		color[] = {1,0,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class POWCapturedRed
+	{
+		title = $STR_vn_mf_notification_title_captured_pow;
+		description = "%1";
+		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class POWCapturedBlue
+	{
+		title = $STR_vn_mf_notification_title_captured_pow;
+		description = "%1";
+		priority = 8;
+		color[] = {0.2,0.3,1,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+	};
+
+	class CampBurnt
+	{
+		title = $STR_vn_mf_notification_burnt_camp;
+		description = "%1";
+		priority = 8;
+		color[] = {0.2,1,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+	};
+
+	class CagesTooClose
+	{
+		title = $STR_vn_mf_notification_error;
+		description = "%1";
+		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class AttackPreparing
+	{
+		title = $STR_vn_mf_notification_title_ao_attack;
+		description = $STR_vn_mf_notification_desc_ao_attack_imminent;
+		priority = 8;
+		color[] = {0,0.06,0.8,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class FriendlyFire
+	{
+		title = $STR_vn_mf_notification_title_friendly_fire;
+		description = "%1";
+		priority = 8;
+		duration = 10;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 	};
 };

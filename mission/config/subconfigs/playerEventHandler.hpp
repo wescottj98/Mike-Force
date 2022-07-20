@@ -6,7 +6,9 @@ class InventoryOpened			// Inventory Opened EH
 class Put {};			// Put EH
 class Take {};			// Take EH
 class HandleRating {};
+class HandleDamage {};
 class Respawn {};
 class SeatSwitchedMan {};
 class TaskSetAsCurrent {};
 class Killed {};
+class Fired {};

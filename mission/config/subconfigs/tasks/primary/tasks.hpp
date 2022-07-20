@@ -3,10 +3,10 @@ class capture_zone : task
 	taskcategory = "PRI";
 	tasktitle = "Capture %1";
 	taskname = "Capture %1";
-	taskdesc = "Defeat hostile forces in %1, and destroy their HQ's equipment stockpiles.";
+	taskdesc = "Defeat hostile forces and sites in %1. Sites spawn inside the yellow circle.";
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\p\vn_ui_mf_task_p1.jpg";
-	rankpoints = 50;
+	rankpoints = 30;
 
 	taskScript = "vn_mf_fnc_state_machine_task_system";
 
@@ -18,22 +18,55 @@ class capture_zone : task
 	};
 
 	//Data for subtasks. These are specific to the script.
-	class hold_hq
+	class locate_hq_intel
 	{
-		taskname = "Capture and Hold HQ";
-		taskdesc = "Enter the enemy HQ and prevent enemies recapturing it.";
+		taskname = "Find the HQ Intel";
+		taskdesc = "Find and search the HQ for intelligence on site locations.";
 	};
 
-	class destroy_sites
+	class locate_factory_intel
 	{
-		taskname = "Destroy Sites";
-		taskdesc = "Destroy all HQs, AA and artillery sites within 1200m.";
+		taskname = "Find the Factory Intel";
+		taskdesc = "Find and search the Factory for intelligence on site locations.";
 	};
 
-	class destroy_enemy_supplies
+	class destroy_hq_sites
 	{
-		taskname = "Destroy Enemy Supplies";
-		taskdesc = "Destroy the supplies found at the enemy HQ. Explosives are recommended.";
+		taskname = "Destroy HQ Supply Line";
+		taskdesc = "Destroy HQ supplies and the sites they're delivered to.";
+	};
+
+	class destroy_factory_sites
+	{
+		taskname = "Destroy Factory Supply Line";
+		taskdesc = "Destroy Factory supplies and the sites they're delivered to.";
+	};
+};
+
+class prepare_zone : task
+{
+	taskcategory = "PRI";
+	tasktitle = "Prepare for %1";
+	taskname = "Prepare for %1";
+	taskdesc = "Gather resources to setup a COP/FOB near %1!";
+	tasktype = "repair";
+	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\p\vn_ui_mf_task_p1.jpg";
+	rankpoints = 30;
+
+	taskScript = "vn_mf_fnc_state_machine_task_system";
+
+	//Data for the script to use to customise behaviour
+	class parameters 
+	{
+		stateMachineCode = "vn_mf_fnc_task_pri_prepare";
+		timeout = -1;
+	};
+
+	//Data for subtasks. These are specific to the script.
+	class prepare
+	{
+		taskname = "Gather Supplies";
+		taskdesc = "Get some ammo, and supplies to build a FOB/COP.";
 	};
 };
 

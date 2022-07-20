@@ -34,8 +34,17 @@ vn_mf_player_markers_manned_vehicles = [];
 
 {
 	private _unit = _x;
+	private _unitSideCheck = [player, _unit] call vn_mf_fnc_check_side;
+	if !([player, _unit] call vn_mf_fnc_check_side) then { continue };
+
 	private _unitMarker = format ["player_marker_%1", getPlayerUID _unit];
-	private _unitGroup = _unit getVariable ["vn_mf_db_player_group", "MikeForce"];
+	private _unitGroup = _unit getVariable ["vn_mf_db_player_group", "FAILED"];
+	private _playerColor = "ColorBLUFOR";
+	if (_unitGroup != "FAILED") then {
+		private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _unitGroup);
+		private _groupColor = getText(_groupConfig >> "color");
+		_playerColor = _groupColor;
+	};
 
 	private _markerType = "b_inf";
 	if (_unit getUnitTrait "Medic") then {_markerType = "b_med"};
@@ -60,7 +69,7 @@ vn_mf_player_markers_manned_vehicles = [];
 		if (_incapacitated) then {
 			_unitMarker setMarkerColorLocal "ColorRed";
 		} else {
-			_unitMarker setMarkerColorLocal "ColorBLUFOR";
+			_unitMarker setMarkerColorLocal _playerColor;
 		};
 	} else {
 		_unitMarker setMarkerColorLocal "ColorGrey";
@@ -81,14 +90,38 @@ vn_mf_player_markers_manned_vehicles = [];
 	private _crew = crew _vehicle select {isPlayer _x};
 	//If somehow we've got a vehicle in this list with no player crew.
 	if (_crew isEqualTo []) exitWith {};
+	private _crewNotSameSide = false;
+
+	{
+		private _unitSideCheck = [player, _x] call vn_mf_fnc_check_side;
+		if !(_unitSideCheck) exitWith { _crewNotSameSide = true; };
+	} forEach _crew;
+	
+	if (_crewNotSameSide) then { continue };
+	if (!(_vehicle in vn_mf_dc_assets) && side player == east) then { continue };
 
 	private _vehicleMarker = format ["player_marker_vehicle_%1", netId _vehicle];
 	_activeVehicleMarkers pushBack _vehicleMarker;
 
+	private _vehicleColor = "ColorBLUFOR";
+	if (_vehicle in vn_mf_dc_assets) then { _vehicleColor = "ColorOPFOR"; };
+	if (driver _vehicle != objNull) then
+	{
+		private _driver = driver _vehicle;
+		private _driverGroup = _driver getVariable ["vn_mf_db_player_group", "FAILED"];
+
+		if (_driverGroup != "FAILED") then 
+		{
+			private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _driverGroup);
+			private _groupColor = getText(_groupConfig >> "color");
+			_vehicleColor = _groupColor;
+		};
+	};
+
 	//Easiest way to check if it exists
 	if (markerShape _vehicleMarker == "") then {
 		createMarkerLocal [_vehicleMarker, [0,0,0]];
-		_vehicleMarker setMarkerColorLocal "ColorBLUFOR";
+		_vehicleMarker setMarkerColorLocal _vehicleColor;
 		_vehicleMarker setMarkerShapeLocal "ICON";
 		_vehicleMarker setMarkerAlphaLocal 1;
 

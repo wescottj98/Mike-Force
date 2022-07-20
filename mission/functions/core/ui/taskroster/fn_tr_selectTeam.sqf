@@ -21,15 +21,6 @@ disableSerialization;
 
 params ["_team"];
 
-if ([_team] call vn_mf_fnc_is_team_full) exitWith {
-	[
-		[
-			"STR_vn_mf_notification_title_team_full",
-			"STR_vn_mf_notification_desc_team_full"
-		]
-	] call para_c_fnc_postNotification;
-};
-
 vn_tr_groupID = _team;
 private _groupConfig = (missionConfigFile >> "gamemode" >> "teams" >> _team);
 private _groupNameFull = getText(_groupConfig >> "name");
@@ -41,6 +32,21 @@ private _groupName = getText(_groupConfig >> "shortname");
 VN_TR_SELECTTEAM_TEAM_NAME_CTRL ctrlSetStructuredText parsetext _groupNameFull;
 //Img on the lext side
 VN_TR_SELECTTEAM_TEAM_LOGO_CTRL ctrlSetText _groupIcon;
+
+private _acceptButtonEnabled = false;
+private _uid = getPlayerUID player;
+
+if(_team in ["MikeForce", "ACAV", "GreenHornets", "SpikeTeam"])then {
+	_acceptButtonEnabled = true;
+} else {
+	private _teamArray = missionNamespace getVariable [format["whitelist_%1", _team], []];
+	private _dodArray = missionNamespace getVariable["whitelist_DoD", []];
+
+	if(_uid in _teamArray) then { _acceptButtonEnabled = true; };
+	if(_uid in _dodArray) then { _acceptButtonEnabled = true; };
+};
+
+VN_TR_SELECTTEAM_ACCEPT_CTRL ctrlEnable _acceptButtonEnabled;
 
 private _playerCount = count (missionNamespace getVariable [_team, []]);
 

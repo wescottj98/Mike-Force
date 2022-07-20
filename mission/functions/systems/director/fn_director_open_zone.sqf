@@ -17,5 +17,8 @@
 */
 params ["_zone"];
 
-private _taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create select 1;
+if( count(mf_s_activeZones) >= 1 ) exitWith {}; //make sure only 1 open
+
+private _taskStore = ["prepare_zone", _zone] call vn_mf_fnc_task_create select 1;
+mf_s_currentZone = _zone;
 mf_s_activeZones pushBack [_zone, _taskStore];

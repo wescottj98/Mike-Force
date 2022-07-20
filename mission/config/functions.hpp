@@ -13,7 +13,9 @@ class CfgFunctions
 			class end_mission {};
 			class get_gamemode_value {};
 			class marker_init {};
+			class pow_init {};
 			class respawn_points_init {};
+			class arsenal_safe_zones_init {};
 			class save_time_elapsed {};
 			class stats_init {};
 		};
@@ -23,6 +25,7 @@ class CfgFunctions
 			file = "functions\core\helpers";
 			class check_enemy_units_alive {};
 			class player_within_radius {};
+			class check_side {};
 		};
 
 		class core_init
@@ -36,6 +39,9 @@ class CfgFunctions
 			{
 				postinit = 1;
 			};
+
+			class curator_init {};
+			class chat_init {};
 			class adv_revive_params {};
 			class init_mission_handlers {};
 		};
@@ -54,12 +60,15 @@ class CfgFunctions
 			class group_init {};
 			class is_team_full {};
 			class player_on_team {};
+			class update_channels {};
 		};
 
 		class core_workarounds
 		{
 			file = "functions\core\workarounds";
 			class admin_arsenal {};
+			class holster_weapon {};
+			class release_cargo {};
 		};
 
 		class debug {
@@ -143,6 +152,17 @@ class CfgFunctions
 			class zone_marker_hostile_zone_info {};
 		};
 
+		class system_actions {
+			file = "functions\systems\actions";
+			class action_init {};
+			class action_destroy_respawn {};
+			class action_destroy_task {};
+			class action_gather_intel {};
+			class action_capture_player {};
+			class action_drink_water {};
+			class action_eat_food {};
+		};
+
 		class system_ammo_repack {
 			file = "functions\systems\ammo_repack";
 			class ammo_repack {};
@@ -161,14 +181,18 @@ class CfgFunctions
 
 		class system_consumables {
 			file = "functions\systems\consumables";
-			class action_drink_water {};
-			class action_eat_food {};
 			class consume {};
 			class eatdrink {};
 			class enable_arsenal_food_drink_overlay {};
 			class health_effects {};
 			class player_health_stats {};
 		};
+
+		class system_dac_cong {
+			file = "functions\systems\dac_cong";
+
+			class capture_player {};
+		}
 
 		//Gameplay director, responsible for main game progression and flow.
 		class system_director
@@ -179,6 +203,7 @@ class CfgFunctions
 			class director_check_mission_end {};
 			class director_open_connected_zones {};
 			class director_open_zone {};
+			class director_open_closest_zone {};
 			class director_zones_in_range_of_bases {};
 		};
 
@@ -216,13 +241,22 @@ class CfgFunctions
 			//Specific types of site
 			class sites_create_aa_site {};
 			class sites_create_artillery_site {};
+			class sites_create_camp_site {};
+			class sites_create_water_supply_site {};
+			class sites_create_tunnel {};
+			class sites_create_tunnel_site {};
 			class sites_create_hq {};
+			class sites_create_factory {};
+			class sites_create_radar {};
 
 			// Composition and entity spawning
-			class create_aa_emplacement {};
+			class create_aa_buildings {};
 			class create_camp_buildings {};
 			class create_hq_buildings {};
-			class create_mortar {};
+			class create_factory_buildings {};
+			class create_mortar_buildings {};
+			class create_radar_buildings {};
+			class create_tunnel_buildings {};
 
 			//Supporting functions
 			class sites_aa_reveal_targets {};
@@ -231,13 +265,14 @@ class CfgFunctions
 			class scout_action {};
 			class sites_subsystem_client_init {};
 			class sites_discovery_job {};
-		};
 
-		class system_snakes {
-			file = "functions\systems\snakes";
-			class snake_handler {};
-		};
+			// Placement functions
+			class sites_get_safe_location {};
+			class sites_find_area_gradient {};
 
+			class destroy_task {};
+		};
+		
 		class system_supplies {
 			file = "functions\systems\supplies";
 			class action_supplies {};
@@ -370,6 +405,7 @@ class CfgFunctions
 
 			class task_pri_build_fob { file = "functions\tasks\primary\fn_task_pri_build_fob.sqf"; };
 			class task_pri_capture { file = "functions\tasks\primary\fn_task_pri_capture.sqf"; };
+			class task_pri_prepare { file = "functions\tasks\primary\fn_task_pri_prepare.sqf"; };
 
 			class task_sec_spike_wiretap { file = "functions\tasks\secondary\fn_task_sec_spike_wiretap.sqf";};
 

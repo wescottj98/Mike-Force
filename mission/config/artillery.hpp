@@ -58,16 +58,6 @@ class vn_artillery_settings
                                 cooldown = (60*5);
                                 cost = 15;
                         };
-                        class snake
-                        {
-                                displayname = $STR_VN_ARTILLERY_AIRCRAFT_HE_SNAKE_NAME;
-                                icon = "vn\ui_f_vietnam\data\decals\vn_callsign_src_vmfa323_ca.paa";
-                                description = $STR_VN_ARTILLERY_AIRCRAFT_HE_SNAKE_DESCRIPTION;
-                                magazines[] = {"vn_rocket_s5_he_x16"};
-                                vehicleclass = "vn_b_air_f4c_cas";
-                                cooldown = (60*5);
-                                cost = 10;
-                        };
                         class showtime
                         {
                                 displayname = $STR_VN_ARTILLERY_AIRCRAFT_HE_SHOWTIME_NAME;

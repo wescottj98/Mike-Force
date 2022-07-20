@@ -53,7 +53,6 @@ if (_is_unit_player) then
 		}
 		else
 		{
-			// _unit is another player report as - friendlyfire
 			_kill_type = "friendlyfire";
 			[[_instigator],_kill_type] call vn_mf_fnc_change_player_stat;
 		};

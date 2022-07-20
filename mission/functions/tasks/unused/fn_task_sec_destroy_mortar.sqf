@@ -33,7 +33,7 @@ _dataStore setVariable ["buildMortar", {
 
 	private _spawnPosition = _taskDataStore getVariable "mortarPosition";
 
-	private _result = [_spawnPosition] call vn_mf_fnc_create_mortar;
+	private _result = [_spawnPosition] call vn_mf_fnc_create_mortar_buildings;
 	private _createdThings = _result select 0;
 
 	_taskDataStore setVariable ["mortars", _result select 1];

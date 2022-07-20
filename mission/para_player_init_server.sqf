@@ -80,9 +80,14 @@ if (_enlisted isEqualTo "0") then {
 
 // last group, or if not one assign MikeForce
 private _lastTeamName = _player getVariable ["vn_mf_db_player_group", "MikeForce"];
-// Attempt team change, defaulting to MikeForce is team is full.
-[_player, _lastTeamName, "DEFAULT"] call vn_mf_fnc_change_team;
 
+switch (side _player) do {
+	case east: { if (_lastTeamName != "DacCong") then { _lastTeamName = "DacCong"; }; };
+	case default { if (_lastTeamName == "DacCong") then { _lastTeamName = "MikeForce"; }; };
+};
+
+// Attempt team change, defaulting to MikeForce is team is full.
+[_player, _lastTeamName] call vn_mf_fnc_force_team_change;
 
 // load last loadout
 (["GET", (_uid + "_loadout"), []] call para_s_fnc_profile_db) params ["","_loadout"];
@@ -98,12 +103,6 @@ if !(rank _player isEqualTo _rank) then
 {
 	_player setUnitRank _rank;
 };
-
-// start player at correct camp for team
-//For now, we're just hardcoding this.
-private _playerGroup = _player getVariable ["vn_mf_db_player_group", "MikeForce"];
-private _respawnMarker = format ["mf_respawn_%1", _playerGroup];
-_player setPos getMarkerPos _respawnMarker;
 
 // add event handlers from the harass subsystem.
 [_player] call para_s_fnc_harass_add_player_event_handlers;

@@ -25,7 +25,12 @@ private _sites = _sitesData apply {createHashMapFromArray _x};
 private _siteCreationFunctions = createHashmapFromArray [
     ["aa", vn_mf_fnc_sites_create_aa_site],
     ["hq", vn_mf_fnc_sites_create_hq],
-    ["artillery", vn_mf_fnc_sites_create_artillery_site]
+    ["factory", vn_mf_fnc_sites_create_factory],
+    ["radar", vn_mf_fnc_sites_create_radar],
+    ["artillery", vn_mf_fnc_sites_create_artillery_site],
+    ["camp", vn_mf_fnc_sites_create_camp_site],
+    ["tunnel", vn_mf_fnc_sites_create_tunnel_site],
+    ["water_supply", vn_mf_fnc_sites_create_tunnel_water_supply_site]
 ];
 
 {

@@ -111,7 +111,7 @@ class vn_tr_disp_selectTeam
 		
 		class btn_accept: vn_mf_RscButton
 		{
-			idc = -1;
+			idc = VN_TR_SELECTTEAM_ACCEPT_IDC;
 			x = UIX_CL(8.5);
 			y = UIY_CD(9.5);
 			w = UIW(7);

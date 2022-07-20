@@ -42,7 +42,7 @@ _taskDataStore setVariable ["deliver_supplies", {
 	params ["_taskDataStore"];
 
 	private _destPos = _taskDataStore getVariable "destPos";
-	if !((allUnits inAreaArray [_destPos,15,15,0,false]) select {alive _x && side _x == west} isEqualTo []) then {
+	if !((allUnits inAreaArray [_destPos,15,15,0,false]) select {alive _x && (side _x == west || side _x == independent)} isEqualTo []) then {
 		["SUCCEEDED"] call _fnc_finishSubtask;
 		["SUCCEEDED"] call _fnc_finishTask;
 	};

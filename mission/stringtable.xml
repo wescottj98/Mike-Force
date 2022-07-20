@@ -134,6 +134,33 @@
       <Key ID="STR_vn_mf_eat_food">
         <Original>Eat Food</Original>
       </Key>
+      <Key ID="STR_vn_mf_destroy_task">
+        <Original>Destroy Site</Original>
+      </Key>
+      <Key ID="STR_vn_mf_destroy_respawn">
+        <Original>Destroy Dac Cong Respawn</Original>
+      </Key>
+      <Key ID="STR_vn_mf_capture_player">
+        <Original>Capture</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_error">
+        <Original>Error</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_burnt_camp">
+        <Original>Successfully Destroyed Site</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_captured_pow">
+        <Original>Prisoner of War</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_ao_attack">
+        <Original>Attack Operation</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_friendly_fire">
+        <Original>Friendly Fire!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent">
+        <Original>Next Attack Operation in 5 minutes!</Original>
+      </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
       </Key>
@@ -203,6 +230,54 @@
       <Key ID="STR_vn_mf_respawn_acav_altis">
         <Original>FOB 1 - ACAV</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_tigerforce">
+        <Original>TIGER FORCE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_daccong">
+        <Original>NVA HQ - DAC CONG</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_tunnel_1">
+        <Original>POW TUNNEL 1</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_satansangels">
+        <Original>SATANS ANGELS</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_presscorp">
+        <Original>PRESS CORP</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_macv">
+        <Original>MACV</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_shooting_range">
+        <Original>GUN RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_militarypolice">
+        <Original>MILITARY POLICE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_montagnard">
+        <Original>MONTAGNARD</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_7thcav">
+        <Original>GARRYOWEN</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_71stmeu">
+        <Original>GUNSLINGERS</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_blackhawk">
+        <Original>BLACK HAWK</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_muskets">
+        <Original>MUSKETS</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_frogmen">
+        <Original>FROGMEN</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_633rdcsg">
+        <Original>633RD CSG</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_sasr">
+        <Original>SASR</Original>
+      </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>
       </Key>
@@ -215,6 +290,9 @@
       <Key ID="STR_vn_mf_helicopters">
         <Original>Helicopters</Original>
       </Key>
+      <Key ID="STR_vn_mf_cas_helicopters">
+        <Original>CAS Helicopters</Original>
+      </Key>
       <Key ID="STR_vn_mf_wreck_recovery">
         <Original>Wreck Recovery</Original>
       </Key>
@@ -222,37 +300,55 @@
         <Original>Rearm</Original>
       </Key>
       <Key ID="STR_vn_mf_loading1">
-        <Original>writing diary entry...</Original>
+        <Original>Welcome To Bro Nation.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading2">
-        <Original>checking pockets...</Original>
+        <Original>Welcome To Bro Nation.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading3">
-        <Original>cleaning glasses...</Original>
+        <Original>When the pin is pulled Mr Grenade is NOT our friend...</Original>
       </Key>
       <Key ID="STR_vn_mf_loading4">
-        <Original>putting boots on...</Original>
+        <Original>Take me to your head Dolphin.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading5">
-        <Original>washing canteen...</Original>
+        <Original>Friendly Fire isn't friendly!</Original>
       </Key>
       <Key ID="STR_vn_mf_loading6">
-        <Original>polishing spork...</Original>
+        <Original>If you see a bomb technician running, try to keep up with him.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading7">
-        <Original>putting on shades...</Original>
+        <Original>Did you try changing your socks?</Original>
       </Key>
       <Key ID="STR_vn_mf_loading8">
-        <Original>dusting off shoulders...</Original>
+        <Original>Sending the new guy out for contour lines...</Original>
       </Key>
       <Key ID="STR_vn_mf_loading9">
-        <Original>shining boots...</Original>
+        <Original>When you have secured an area, don't forget to tell the enemy.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading10">
-        <Original>ready for action...</Original>
+        <Original>Take a Knee Drink Water...</Original>
       </Key>
-      <Key ID="STR_vn_mf_howtobuild">
-        <Original>How to Build</Original>
+      <Key ID="STR_vn_mf_loading11">
+        <Original>Build a FOB with ACAV!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading12">
+        <Original>There's no I in team!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading13">
+        <Original>Help your fellow brothers and sisters!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading14">
+        <Original>VC are in the trees.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading15">
+        <Original>Watch each others back.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading16">
+        <Original>Secure the landing zone!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading17">
+        <Original>Welcome to the jungle.</Original>
       </Key>
       <Key ID="STR_vn_mf_howtobuild_long">
         <Original>Note: Engineer training required!&lt;br&gt;&lt;/br&gt;Press 'N' to enable/disable building.&lt;br&gt;&lt;/br&gt;Use mouse scroll wheel for adjustments, press Alt to cycle between height adjustment or rotation.&lt;br&gt;&lt;/br&gt;Press and hold 'Space' to finalize Build.</Original>
@@ -271,6 +367,9 @@
       </Key>
       <Key ID="STR_vn_mf_rvn_wound_medal">
         <Original>RVN Wound Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_supply_drops">
+        <Original>Supply Drops</Original>
       </Key>
       <Key ID="STR_vn_mf_distinguished_service_cross">
         <Original>Distinguished Service Cross</Original>
@@ -720,6 +819,11 @@
         <Original>In ACav</Original>
         <English>In ACav</English>
       </Key>
+
+      <Key ID="STR_vn_mf_buildingMenu_condition_inDacCong">
+        <Original>In Dac Cong</Original>
+        <English>In Dac Cong</English>
+      </Key>
     </Container>
     <Container name="params">
       <Key ID="STR_vn_mf_param_wipe_save">
@@ -807,42 +911,6 @@
         <English>Enable Advanced Revive (Recommended)</English>
       </Key>
 
-      <Key ID="STR_vn_mf_param_snake_header">
-        <Original>======== Snake Settings ========</Original>
-        <English>======== Snake Settings ========</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_chance">
-        <Original>==== Bite Chance ====</Original>
-        <English>==== Bite Chance ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_chance_desc">
-        <Original>Percentage chance of being bitten</Original>
-        <English>Percentage chance of being bitten</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_distance">
-        <Original>==== Bite Distance ====</Original>
-        <English>==== Bite Distance ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_distance_desc">
-        <Original>How close a snake must be to bite a player</Original>
-        <English>How close a snake must be to bite a player</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_frequency">
-        <Original>==== Bite Frequency ====</Original>
-        <English>==== Bite Frequency ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_frequency_desc">
-        <Original>Minimum Amount of time between bites</Original>
-        <English>Minimum Amount of time between bites</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_extra_time">
-        <Original>==== Ramp up Time ====</Original>
-        <English>==== Ramp up Time ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_extra_time_desc">
-        <Original>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</Original>
-        <English>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</English>
-      </Key>
       <Key ID="STR_vn_mf_param_teams_header">
         <Original>======== Team Settings ========</Original>
         <English>======== Team Settings ========</English>

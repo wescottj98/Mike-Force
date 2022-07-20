@@ -36,7 +36,7 @@ _dataStore setVariable ["INIT", {
 		_spawnPos = _zonePos getPos [500 + random 200, random 360];
 	};
 
-	private _defenseScaling = _taskDataStore getVariable ["defenseScaling", [{playersNumber west}, 1]];
+	private _defenseScaling = _taskDataStore getVariable ["defenseScaling", [{playersNumber west + playersNumber independent}, 1]];
 	_taskDataStore setVariable ["defenseScaling", _defenseScaling];
 
 	private _buildings = [_spawnPos] call vn_mf_fnc_create_camp_buildings;
@@ -75,7 +75,7 @@ _dataStore setVariable ["find_and_destroy_camp", {
 	private _zone = _taskDataStore getVariable ["taskMarker", ""];
 	if (!(_zone isEqualTo "") && ((_taskDataStore getVariable "lastAttackSent") + vn_mf_campAttackFrequency) < serverTime) then {
 		_taskDataStore setVariable ["lastAttackSent", serverTime];
-		private _attackScaling = _taskDataStore getVariable ["attackScaling", [{playersNumber west}, 0.25]];
+		private _attackScaling = _taskDataStore getVariable ["attackScaling", [{playersNumber west + playersNumber independent}, 0.25]];
 		private _objective = [_attackScaling, 1, getMarkerPos _zone] call para_s_fnc_ai_obj_request_attack;
 		_taskDataStore getVariable "aiObjectives" pushBack _objective;
 	};

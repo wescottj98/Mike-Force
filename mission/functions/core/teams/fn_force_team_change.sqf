@@ -20,9 +20,17 @@ params ["_player", "_team"];
 
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 private _playerGroupArray = missionNamespace getVariable [_playerGroup,[]];
+private _playerUID = getPlayerUID _player;
+private _isWhitelisted = [_player, _team] call para_g_fnc_db_check_whitelist;
+
+if (_isWhitelisted) then {
+	_player setVariable ["vn_mf_db_player_group", _team, true]; 
+} else {
+	_player setVariable ["vn_mf_db_player_group", "MikeForce", true]; 	
+	_team = "MikeForce";
+};
 
 ["changedTeams", [_player, _team]] call para_g_fnc_event_dispatch;
-_player setVariable ["vn_mf_db_player_group", _team, true];
 
 // Remove the player from their original team's group array
 missionNamespace setVariable [_playerGroup, _playerGroupArray - [_player]];
@@ -39,6 +47,7 @@ publicVariable _nextPlayerGroup;
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;
 	[] call vn_mf_fnc_tr_overview_team_update;
+	[] call vn_mf_fnc_update_channels;
 }] remoteExec ["spawn", _player];
 
 [] remoteExecCall ["vn_mf_fnc_apply_unit_traits", _player];

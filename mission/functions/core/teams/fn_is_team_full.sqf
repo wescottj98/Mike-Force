@@ -18,7 +18,4 @@
 
 params ["_team"];
 
-private _numPlayersOnTeam = count (missionNamespace getVariable [_team, []]);
-private _maxTeamPlayers = missionNamespace getVariable ["vn_mf_max_players_" + _team, 99];
-
-_numPlayersOnTeam >= _maxTeamPlayers
+false

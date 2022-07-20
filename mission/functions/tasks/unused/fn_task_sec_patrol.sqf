@@ -65,7 +65,7 @@ _taskDataStore setVariable ["patrol_area", {
 	private _patrolPositions = _taskDataStore getVariable "patrolPositions";
 	private _currentPosition = _patrolPositions select _patrolIndex;
 
-	if !((allUnits inAreaArray [_currentPosition,25,25,0,false]) select {alive _x && side _x == west} isEqualTo []) then {
+	if !((allUnits inAreaArray [_currentPosition,25,25,0,false]) select {alive _x && (side _x == west || side _x == independent)} isEqualTo []) then {
 		//Move to the next patrol point if there's some left.
 		if (_patrolIndex + 1 < count _patrolPositions - 1) then {
 			_taskDataStore setVariable ["patrolIndex", _patrolIndex + 1];

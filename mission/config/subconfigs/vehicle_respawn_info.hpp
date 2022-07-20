@@ -221,6 +221,19 @@ class vn_i_air_ch34_01_02 : wreck_medium {};
 class vn_i_air_ch34_02_01 : wreck_medium {};
 class vn_i_air_ch34_02_02 : wreck_medium {};
 
+class vn_b_air_f100d_cap : wreck_long {};
+class vn_b_air_f100d_cas : wreck_long {};
+class vn_b_air_f100d_hcas : wreck_long {};
+class vn_b_air_f100d_ehcas : wreck_long {};
+class vn_b_air_f100d_at : wreck_long {};
+class vn_b_air_f100d_mr : wreck_long {};
+class vn_b_air_f100d_cbu : wreck_long {};
+class vn_b_air_f100d_bmb : wreck_long {};
+class vn_b_air_f100d_lbmb : wreck_long {};
+class vn_b_air_f100d_mbmb : wreck_long {};
+class vn_b_air_f100d_hbmb : wreck_long {}; 
+class vn_b_air_f100d_sead : wreck_long {};
+
 //F4 aircraft
 class vn_b_air_f4c_cap : respawn_long {};
 class vn_b_air_f4c_cas : respawn_long {};

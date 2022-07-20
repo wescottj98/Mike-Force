@@ -124,3 +124,27 @@ class vn_mf_quick_build
 	displayName = "Quick Build /loc";
 	access = 1;
 };
+
+class vn_mf_holster_weapon
+{
+	defaultKey = DIK_H; // SHIFT + H
+	shift = "true";
+	ctrl = "false";
+	alt = "false";
+	function = "vn_mf_fnc_holster_weapon";
+	down = 0;
+	displayName = "Holster Weapon";
+	access = 1;
+};
+
+class vn_mf_release_cargo
+{
+	defaultKey = DIK_4; // SHIFT + 4
+	shift = "true";
+	ctrl = "false";
+	alt = "false";
+	function = "vn_mf_fnc_release_cargo";
+	down = 0;
+	displayName = "Release Cargo (ADVSL)";
+	access = 1;
+};

@@ -6,7 +6,7 @@ import sys
 import user_paths
 
 arma_missions_folder = Path(user_paths.MISSIONS_PATH)
-mission_stem = "vn_mikeforce_indev"
+mission_stem = "bn_mikeforce_indev"
 
 # We don't need these - they bloat the build
 blacklisted_folders = [

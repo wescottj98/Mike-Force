@@ -19,5 +19,5 @@
 mf_s_zone_markers select {
 	!(localNamespace getVariable _x select struct_zone_m_captured)
 	&&
-	{!(para_g_bases inAreaArray [markerPos _x, mf_s_baseZoneUnlockDistance, mf_s_baseZoneUnlockDistance, 0] isEqualTo [])}
+	{!(para_g_bases inAreaArray [markerPos _x, 2000, 2000, 0] isEqualTo [])}
 }

@@ -34,6 +34,18 @@
 
 params ["_player", "_didJIP"];
 
+private _side = side player;
+if (_side == east) then {
+	private _dacCongAllowed = [player, "DacCong"] call para_g_fnc_db_check_whitelist;
+	if !(_dacCongAllowed) then {
+		[player, "MikeForce"] call vn_mf_fnc_force_team_change;
+		endMission "ReservedDacCong";
+	};
+};
+
+private _playerSide = side _player;
+_player setVariable ["vn_mf_side", _playerSide, true];
+
 //Voice fixes. Run in combination with setSPeaker on the server.
 private _fnc_disableChatter = {
 	player disableConversation true;
@@ -55,9 +67,7 @@ private _playerGroup = player getVariable ["vn_mf_db_player_group", "FAILED"];
 if(_playerGroup == "FAILED") then // Should be the only time this check is needed.
 {
 	[player, "MikeForce"] call vn_mf_fnc_force_team_change;
-} else {
-	[player, _playerGroup] call vn_mf_fnc_force_team_change;
-};	
+};
 
 // Start loading screen, so we wait while server init completes.
 startLoadingScreen ["Welcome to Mike Force!", "MikeForce_loadingScreen"];
