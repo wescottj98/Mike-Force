@@ -103,3 +103,4 @@ vn_mf_markers_no_harass = [];
 
 publicVariable "vn_mf_markers_blocked_areas";
 publicVariable "vn_mf_markers_no_sites";
+publicVariable "vn_mf_dc_assets";

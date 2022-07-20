@@ -6,8 +6,8 @@ class support_gh_cas : support_task
 	taskdesc = "Provide close air support to %1";
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_gh3.jpg";
-	taskgroups[] = {"GreenHornets"};
-	requestgroups[] = {"ACAV", "MikeForce", "SpikeTeam"};
+	taskgroups[] = {"GreenHornets", "Muskets", "SatansAngels"};
+	requestgroups[] = {"MACV", "ACAV", "MikeForce", "SpikeTeam", "MilitaryPolice", "71stMEU", "SASR", "BlackHawk", "Frogmen", "Montagnard", "7thCav", "TigerForce", "633rdCSG"};
 	rankpoints = 10;
 	taskprogress = 0;
 

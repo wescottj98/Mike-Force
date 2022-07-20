@@ -300,37 +300,55 @@
         <Original>Rearm</Original>
       </Key>
       <Key ID="STR_vn_mf_loading1">
-        <Original>writing diary entry...</Original>
+        <Original>Welcome To Bro Nation.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading2">
-        <Original>checking pockets...</Original>
+        <Original>Welcome To Bro Nation.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading3">
-        <Original>cleaning glasses...</Original>
+        <Original>When the pin is pulled Mr Grenade is NOT our friend...</Original>
       </Key>
       <Key ID="STR_vn_mf_loading4">
-        <Original>putting boots on...</Original>
+        <Original>Take me to your head Dolphin.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading5">
-        <Original>washing canteen...</Original>
+        <Original>Friendly Fire isn't friendly!</Original>
       </Key>
       <Key ID="STR_vn_mf_loading6">
-        <Original>polishing spork...</Original>
+        <Original>If you see a bomb technician running, try to keep up with him.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading7">
-        <Original>putting on shades...</Original>
+        <Original>Did you try changing your socks?</Original>
       </Key>
       <Key ID="STR_vn_mf_loading8">
-        <Original>dusting off shoulders...</Original>
+        <Original>Sending the new guy out for contour lines...</Original>
       </Key>
       <Key ID="STR_vn_mf_loading9">
-        <Original>shining boots...</Original>
+        <Original>When you have secured an area, don't forget to tell the enemy.</Original>
       </Key>
       <Key ID="STR_vn_mf_loading10">
-        <Original>ready for action...</Original>
+        <Original>Take a Knee Drink Water...</Original>
       </Key>
-      <Key ID="STR_vn_mf_howtobuild">
-        <Original>How to Build</Original>
+      <Key ID="STR_vn_mf_loading11">
+        <Original>Build a FOB with ACAV!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading12">
+        <Original>There's no I in team!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading13">
+        <Original>Help your fellow brothers and sisters!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading14">
+        <Original>VC are in the trees.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading15">
+        <Original>Watch each others back.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading16">
+        <Original>Secure the landing zone!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading17">
+        <Original>Welcome to the jungle.</Original>
       </Key>
       <Key ID="STR_vn_mf_howtobuild_long">
         <Original>Note: Engineer training required!&lt;br&gt;&lt;/br&gt;Press 'N' to enable/disable building.&lt;br&gt;&lt;/br&gt;Use mouse scroll wheel for adjustments, press Alt to cycle between height adjustment or rotation.&lt;br&gt;&lt;/br&gt;Press and hold 'Space' to finalize Build.</Original>
@@ -349,6 +367,9 @@
       </Key>
       <Key ID="STR_vn_mf_rvn_wound_medal">
         <Original>RVN Wound Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_supply_drops">
+        <Original>Supply Drops</Original>
       </Key>
       <Key ID="STR_vn_mf_distinguished_service_cross">
         <Original>Distinguished Service Cross</Original>

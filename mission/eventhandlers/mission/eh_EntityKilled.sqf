@@ -53,25 +53,8 @@ if (_is_unit_player) then
 		}
 		else
 		{
-			private _sideCheck = [_unit, _instigator] call vn_mf_fnc_check_side;
-			private _message = format ["[MACV] %1 has friendly fired %2.", name _instigator, name _unit];
-
-			if (_sideCheck) then {
-				{
-					private _inMACV = [_x, "MACV"] call para_g_fnc_db_check_whitelist;
-					if !(_inMACV) then { continue };
-
-					systemChat _message;
-					["FriendlyFire", [_message]] remoteExec ["para_c_fnc_show_notification", _x];
-				} forEach allPlayers;
-			
-				diag_log format["[!] Friendly fire name:%1 (UID:%2) killed %3 (UID:%4)",name _instigator, getPlayerUID _instigator, name _unit, getPlayerUID _unit];
-
-				// _unit is another player report as - friendlyfire
-				["FriendlyFire", ["Check your fire! You've killed a fellow soldier."]] remoteExec ["para_c_fnc_show_notification", _instigator];
-				_kill_type = "friendlyfire";
-				[[_instigator],_kill_type] call vn_mf_fnc_change_player_stat;
-			};
+			_kill_type = "friendlyfire";
+			[[_instigator],_kill_type] call vn_mf_fnc_change_player_stat;
 		};
 	};
 

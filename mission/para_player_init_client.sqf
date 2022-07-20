@@ -43,50 +43,75 @@ call para_g_fnc_event_subsystem_init;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading1"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.2;
+progressLoadingScreen 0.1;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading2"]] call vn_mf_fnc_update_loading_screen;
 
 //Read pow cage locations and populate arrays 
 call vn_mf_fnc_pow_init;
 
 uiSleep 0.4;
-progressLoadingScreen 0.3;
+progressLoadingScreen 0.2;
 // add display event handlers
 call para_c_fnc_init_display_event_handler;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading3"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.4;
+progressLoadingScreen 0.3;
 // add player event handlers
 call para_c_fnc_init_player_event_handlers;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading4"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.5;
+progressLoadingScreen 0.4;
+call vn_mf_fnc_action_destroy_respawn;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading6"]] call vn_mf_fnc_update_loading_screen;
 
-[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading5"]] call vn_mf_fnc_update_loading_screen;
+uiSleep 0.4;
+progressLoadingScreen 0.42;
+call vn_mf_fnc_action_destroy_task;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading7"]] call vn_mf_fnc_update_loading_screen;
+
+uiSleep 0.4;
+progressLoadingScreen 0.44;
+call vn_mf_fnc_action_drink_water;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading8"]] call vn_mf_fnc_update_loading_screen;
+
+uiSleep 0.4;
+progressLoadingScreen 0.46;
+call vn_mf_fnc_action_gather_intel;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
+
+uiSleep 0.4;
+progressLoadingScreen 0.48;
+call vn_mf_fnc_action_capture_player;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
+
+uiSleep 0.4;
+progressLoadingScreen 0.5;
+call vn_mf_fnc_action_eat_food;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading11"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.6;
 // Set up arsenal clean up trash cans.
 call vn_mf_fnc_arsenal_trash_cleanup_init;
-[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading6"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading12"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.7;
 // create UI
 0 spawn vn_mf_fnc_ui_create;
-[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading7"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading13"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.8;
 // master loop
 0 spawn para_c_fnc_compiled_loop_init;
-[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading8"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading14"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.9;
-[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading17"]] call vn_mf_fnc_update_loading_screen;
 
 private _lastTeamName = player getVariable ["vn_mf_db_player_group", "MikeForce"];
 
@@ -238,9 +263,4 @@ call vn_mf_fnc_display_location_time;
 
 ["InitializePlayer", [player]] call para_c_fnc_dynamicGroups;
 
-call vn_mf_fnc_action_destroy_respawn;
-call vn_mf_fnc_action_destroy_task;
-call vn_mf_fnc_action_drink_water;
-call vn_mf_fnc_action_gather_intel;
-call vn_mf_fnc_action_capture_player;
-call vn_mf_fnc_action_eat_food;
+

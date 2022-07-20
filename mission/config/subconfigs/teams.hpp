@@ -170,7 +170,7 @@ class 71stMEU
         explosiveSpecialist = false;
         medic = false;
         UAVHacker = false;
-        vn_artillery = true;
+        vn_artillery = false;
         harassable = true;
         scout = false;
     };
@@ -242,7 +242,7 @@ class BlackHawk
         explosiveSpecialist = false;
         medic = false;
         UAVHacker = false;
-        vn_artillery = true;
+        vn_artillery = false;
         harassable = true;
         scout = false;
     };
@@ -278,7 +278,7 @@ class Frogmen
         explosiveSpecialist = true;
         medic = false;
         UAVHacker = false;
-        vn_artillery = true;
+        vn_artillery = false;
         harassable = true;
         scout = false;
     };
@@ -446,7 +446,7 @@ class TigerForce
         medic = 15;
         engineer = 20;
         explosiveSpecialist = 40;
-        vn_artillery = 3;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -482,7 +482,7 @@ class Montagnard
         medic = 20;
         engineer = 40;
         explosiveSpecialist = 40;
-        vn_artillery = 1;
+        vn_artillery = 0;
     };
     
     class defaultTraits
@@ -518,7 +518,7 @@ class SASR
         medic = 20;
         engineer = 40;
         explosiveSpecialist = 40;
-        vn_artillery = 1;
+        vn_artillery = 0;
     };
     
     class defaultTraits
