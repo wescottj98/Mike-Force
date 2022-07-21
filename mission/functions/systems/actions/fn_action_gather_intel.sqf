@@ -1,7 +1,7 @@
 params ["_intel"];
 
 [
-	player,		// Object the action is attached to
+	_intel,		// Object the action is attached to
 	"Gather Enemy Intel",		// Title of the action
 	"custom\holdactions\holdAction_documents_ca.paa",	// Idle icon shown on screen
 	"custom\holdactions\holdAction_documents_ca.paa",	// Progress icon shown on screen
