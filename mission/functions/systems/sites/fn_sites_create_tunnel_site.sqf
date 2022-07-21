@@ -27,17 +27,13 @@ if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 		_tunnelMarker setMarkerText "Tunnel";
 		_tunnelMarker setMarkerAlpha 0;
 		
-		private _vehicles = _createdThings select 0;
-		{
-			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
-			_x enableWeaponDisassembly false;
-		} forEach _vehicles;
 		private _groups = _createdThings select 1;
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
-		} forEach (_vehicles + _groups);
+		} forEach (_groups);
 
 		private _tunnels = _result select 1;
+		[[_tunnels]] call vn_mf_fnc_action_destroy_task;
 
 		private _objectives = [];
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);

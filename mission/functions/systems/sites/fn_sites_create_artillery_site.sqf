@@ -37,6 +37,13 @@ params ["_pos"];
 		} forEach _artyObjs;
 
 		private _objectsToDestroy = _artyObjs select {typeOf _x in ["vn_o_nva_navy_static_mortar_type63", "vn_o_nva_65_static_mortar_type53", "vn_o_nva_static_d44_01"]};
+		
+		if (count _objectsToDestroy > 1) then {
+			[_objectsToDestroy] call vn_mf_fnc_action_destroy_task;
+		} else {
+			[[_objectsToDestroy]] call vn_mf_fnc_action_destroy_task;
+		};
+		
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];

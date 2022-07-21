@@ -57,6 +57,13 @@ params ["_pos"];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
 		} forEach _objectsToDestroy;
+
+		if (count _objectsToDestroy > 1) then {
+			[_objectsToDestroy] call vn_mf_fnc_action_destroy_task;
+		} else {
+			[[_objectsToDestroy]] call vn_mf_fnc_action_destroy_task;
+		};
+		
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];

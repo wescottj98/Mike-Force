@@ -51,6 +51,14 @@ params ["_pos"];
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 		} forEach _objectsToDestroy;
 
+		if (count _objectsToDestroy > 1) then {
+			[_objectsToDestroy] call vn_mf_fnc_action_destroy_task;
+		} else {
+			[[_objectsToDestroy]] call vn_mf_fnc_action_destroy_task;
+		};
+		
+		[_intel] call vn_mf_fnc_action_gather_intel;
+
 		//Create a HQ marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
 		private _hqMarker = createMarker [format ["HQ_%1", _siteId], _markerPos];
