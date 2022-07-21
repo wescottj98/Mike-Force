@@ -13,3 +13,10 @@
 	Example(s):
 		call vn_mf_fnc_action_init;
 */
+
+call vn_mf_fnc_action_destroy_respawn;
+call vn_mf_fnc_action_capture_player;
+call vn_mf_fnc_action_eat_food;
+call vn_mf_fnc_action_drink_water;
+call vn_mf_fnc_action_destroy_task;
+call vn_mf_fnc_action_gather_intel;

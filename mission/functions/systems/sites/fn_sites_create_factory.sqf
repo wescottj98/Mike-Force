@@ -45,10 +45,6 @@ params ["_pos"];
 			};
 		} forEach _factoryObjects;
 
-		{
-			_x call vn_mf_fnc_action_destroy_task;
-		} forEach _objectsToDestroy;
-
 		//Create a factory marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
 		private _factoryMarker = createMarker [format ["factory_%1", _siteId], _markerPos];

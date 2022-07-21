@@ -63,7 +63,7 @@ call para_c_fnc_init_player_event_handlers;
 
 uiSleep 0.4;
 progressLoadingScreen 0.4;
-call vn_mf_fnc_action_destroy_respawn;
+
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading6"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
@@ -72,7 +72,7 @@ progressLoadingScreen 0.42;
 
 uiSleep 0.4;
 progressLoadingScreen 0.44;
-call vn_mf_fnc_action_drink_water;
+
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading8"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
@@ -81,12 +81,12 @@ progressLoadingScreen 0.46;
 
 uiSleep 0.4;
 progressLoadingScreen 0.48;
-call vn_mf_fnc_action_capture_player;
+
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.5;
-call vn_mf_fnc_action_eat_food;
+
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading11"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;

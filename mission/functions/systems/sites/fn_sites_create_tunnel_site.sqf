@@ -38,10 +38,6 @@ if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 		} forEach (_vehicles + _groups);
 
 		private _tunnels = _result select 1;
-		
-		{
-			_x call vn_mf_fnc_action_destroy_task;
-		} forEach _tunnels;
 
 		private _objectives = [];
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);

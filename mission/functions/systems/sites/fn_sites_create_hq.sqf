@@ -33,7 +33,7 @@ params ["_pos"];
 
 		_hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {typeOf _x in ["Land_vn_pavn_launchers", "vn_b_ammobox_01", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2",
-							   "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"]};
+							   "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06"]};
 		private _intel = _hqObjects select {typeOf _x == "Land_Map_unfolded_F"};
 		missionNamespace setVariable ["hq_intel", _intel];
 		missionNamespace setVariable ["hqPosition", _pos];
@@ -49,7 +49,6 @@ params ["_pos"];
 
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
-			_x call vn_mf_fnc_action_destroy_task;
 		} forEach _objectsToDestroy;
 
 		_intel call vn_mf_fnc_action_gather_intel;

@@ -56,7 +56,6 @@ params ["_pos"];
 		private _objectives = [];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-			_x call vn_mf_fnc_action_destroy_task;
 		} forEach _objectsToDestroy;
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 

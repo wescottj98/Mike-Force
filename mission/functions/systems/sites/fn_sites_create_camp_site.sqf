@@ -41,7 +41,6 @@ params ["_pos"];
 
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
-			_x call vn_mf_fnc_action_destroy_task;
 		} forEach _objectsToDestroy;
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];

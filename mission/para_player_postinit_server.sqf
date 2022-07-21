@@ -30,4 +30,6 @@ params ["_player", "_didJIP"];
 
 [_player] call vn_mf_fnc_curator_init;
 
+call vn_mf_fnc_action_init;
+
 diag_log format ["Mike Force: Player postinit server - %1", _player];
