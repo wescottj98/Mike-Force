@@ -47,12 +47,6 @@ params ["_pos"];
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 		} forEach _objectsToDestroy;
 
-		if (count _objectsToDestroy > 1) then {
-			[_objectsToDestroy] call vn_mf_fnc_action_destroy_task;
-		} else {
-			[[_objectsToDestroy]] call vn_mf_fnc_action_destroy_task;
-		};
-
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _campMarker = createMarker [format ["Camp_%1", _siteId], _markerPos];
 		_campMarker setMarkerType "o_recon";
