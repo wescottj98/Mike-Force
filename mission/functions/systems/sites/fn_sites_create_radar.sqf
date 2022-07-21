@@ -50,6 +50,10 @@ params ["_pos"];
 
 		private _objectsToDestroy = _radarObjs select { typeof _x == "vn_o_static_rsna75" || typeof _x == "vn_sa2"};
 
+		{
+			_x call vn_mf_fnc_action_destroy_task;
+		} forEach _objectsToDestroy;
+		
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _radarMarker = createMarker [format ["radar_%1", _siteId], _markerPos];
 		_radarMarker setMarkerType "o_support";

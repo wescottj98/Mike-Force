@@ -113,5 +113,7 @@ if !(rank _player isEqualTo _rank) then
 // send all variables to player
 [_local_vars] remoteExecCall ["para_c_fnc_set_local_var",_player];
 
+_player call vn_mf_fnc_action_capture_player;
+
 _player setVariable ["para_s_player_initialised", true];
 _player setVariable ["vn_mf_dyn_issetup", true];

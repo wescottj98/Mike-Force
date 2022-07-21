@@ -37,11 +37,17 @@ params ["_pos"];
 		missionNamespace setVariable ["factory_intel", _intel];
 		missionNamespace setVariable ["factoryPosition", _pos];
 
+		_intel call vn_mf_fnc_action_gather_intel;
+
 		{
 			if(_x isKindOf "Building" || _x isKindOf "House" || typeOf _x in ["Land_Map_unfolded_Malden_F", "Land_vn_wf_vehicle_service_point_east", "Land_vn_fuel_tank_stairs", "Land_Net_Fence_Gate_F"] || _x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
 		} forEach _factoryObjects;
+
+		{
+			_x call vn_mf_fnc_action_destroy_task;
+		} forEach _objectsToDestroy;
 
 		//Create a factory marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];

@@ -49,6 +49,7 @@ params ["_pos"];
 			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 			_x enableWeaponDisassembly false;
+			_x call vn_mf_fnc_action_destroy_task;
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
 		} forEach _objectsToDestroy;
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);

@@ -68,7 +68,6 @@ call vn_mf_fnc_action_destroy_respawn;
 
 uiSleep 0.4;
 progressLoadingScreen 0.42;
-call vn_mf_fnc_action_destroy_task;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading7"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
@@ -78,7 +77,6 @@ call vn_mf_fnc_action_drink_water;
 
 uiSleep 0.4;
 progressLoadingScreen 0.46;
-call vn_mf_fnc_action_gather_intel;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
