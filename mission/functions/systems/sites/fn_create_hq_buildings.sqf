@@ -620,7 +620,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 		[
 			["Land_DirtPatch_03_F",[-0.914551,-0.447266,2.28882e-005],1.76909,1,0,[0,0],"","",false,false], 
 			["BloodTrail_01_Old_F",[2.12939,-1.18359,0],73.143,1,0,[0,0],"","",false,false], 
-			["Land_vn_us_weapons_stack4",[-2.62061,-0.991211,0.374994],359.99,1,0.524206,[2.30988e-005,-8.44695e-007],"","",false,false], 
+			["Land_vn_pavn_weapons_stack2",[-2.62061,-0.991211,0.374994],359.99,1,0.524206,[2.30988e-005,-8.44695e-007],"","",false,false], 
 			["Land_vn_hut_mont_03",[-3.97998,-2.29541,-1.30333],271.579,1,0,[0,0],"","",false,false], 
 			["vn_o_prop_t102e_01",[-2.27344,3.62939,1.26627],179.797,1,0,[2.77152,-0.496581],"","",false,false], 
 			["Land_vn_lobby_table",[-2.59375,3.63721,0.775329],179.279,1,0,[2.76693,-0.521251],"","",false,false], 
@@ -630,7 +630,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 			["Land_Map_unfolded_F",[-3.00244,3.77246,1.25508],176.193,1,0,[0,-0],"","",false,false], 
 			["Land_vn_fence_bamboo_01_05",[0.26123,-5.21973,0],0,1,0,[0,0],"","",false,false], 
 			["Land_vn_fence_bamboo_01_05",[0.307129,-5.22168,1.0506],0,1,0,[0,0],"","",false,false], 
-			["Land_vn_us_weapons_stack2",[-5.35156,-1.09082,0.373843],178.867,1,0.428152,[0.0132898,0.755142],"","",false,false], 
 			["vn_campfire_burning_f",[5.85596,1.33691,0.0299988],3.595,1,0,[0,0],"","",false,false], 
 			["Land_vn_humanskull_f",[-3.8667,4.95508,0],124.959,1,0,[0,-0],"","",false,false], 
 			["Land_vn_fence_bamboo_01_05",[-4.61084,-5.16406,0],0,1,0,[0,0],"","",false,false], 

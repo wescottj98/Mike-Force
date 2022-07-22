@@ -36,7 +36,9 @@ if (count _nearbyCages != 0) exitWith {
 	["CagesTooClose", ["Prisoner is already captured!"]] call para_c_fnc_show_notification;
 };
 
-if(side player == east) then {
+
+
+if(player getVariable 'vn_mf_side' == east) then {
 	private _cage = selectRandom vn_mf_cages;
 	["POWCapturedRed", [_message]] remoteExec ["para_c_fnc_show_notification", allPlayers];
 

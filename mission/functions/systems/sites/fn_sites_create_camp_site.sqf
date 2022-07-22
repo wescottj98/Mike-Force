@@ -37,7 +37,7 @@ params ["_pos"];
 			};
 		} forEach _campObjs;
 
-		private _objectsToDestroy = _campObjs select {typeOf _x in ["Land_vn_o_shelter_06", "Land_vn_pavn_launchers", "vn_b_ammobox_01", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2", "Land_vn_pavn_weapons_stack3", "Land_vn_us_weapons_stack2", "Land_vn_us_weapons_stack4", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"]};
+		private _objectsToDestroy = _campObjs select {typeOf _x in ["Land_vn_o_shelter_06", "Land_vn_pavn_launchers", "vn_b_ammobox_01", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2", "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"]};
 
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
