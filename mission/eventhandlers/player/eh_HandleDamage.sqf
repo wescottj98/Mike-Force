@@ -10,7 +10,6 @@ if (_hitPoint == "incapacitated" && _instigator != objNull && _unit != _instigat
 			private _inMACV = [_x, "MACV"] call para_g_fnc_db_check_whitelist;
 			if !(_inMACV) then { continue };
 			systemChat _message;
-			["FriendlyFire", [_message]] remoteExec ["para_c_fnc_show_notification", _x];
 			[_message] remoteExec ["systemChat", _x];
 		} forEach allPlayers;
 

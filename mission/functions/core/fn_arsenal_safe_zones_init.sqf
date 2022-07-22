@@ -34,3 +34,5 @@ vn_mf_arsenal_circles = [];
 
 	vn_mf_arsenal_circles pushBack _markerName;
 } forEach _arsenals;
+
+publicVariable "vn_mf_arsenal_circles";

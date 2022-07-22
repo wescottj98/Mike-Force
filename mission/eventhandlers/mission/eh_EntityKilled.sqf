@@ -53,6 +53,15 @@ if (_is_unit_player) then
 		}
 		else
 		{
+			{
+					private _inMACV = [_x, "MACV"] call para_g_fnc_db_check_whitelist;
+					private _message = format ["[MACV] %1 has killed %2.", name _instigator, name _unit];
+
+					if !(_inMACV) then { continue };
+					systemChat _message;
+					["FriendlyFire", [_message]] remoteExec ["para_c_fnc_show_notification", _x];
+				} forEach allPlayers;
+
 			_kill_type = "friendlyfire";
 			[[_instigator],_kill_type] call vn_mf_fnc_change_player_stat;
 		};
