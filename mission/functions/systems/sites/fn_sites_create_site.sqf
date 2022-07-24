@@ -74,8 +74,17 @@ publicVariable "sites";
 
 switch (_supplier) do
 {
-	case "hq": 		{ missionNamespace getVariable "side_sites_hq" pushBack _siteStore; };
-	case "factory": { missionNamespace getVariable "side_sites_factory" pushBack _siteStore; };
+	case "hq": 		{ 
+		private _hqSites = missionNamespace getVariable ["side_sites_hq", []];
+		_hqSites pushBack _siteStore;
+		publicVariable "side_sites_hq";
+	};
+
+	case "factory": { 
+		private _factorySites = missionNamespace getVariable ["side_sites_factory", []];
+		_factorySites pushBack _siteStore;
+		publicVariable "side_sites_factory";
+	};
 };
 
 _siteStore
