@@ -51,49 +51,7 @@ _taskDataStore setVariable ["INIT", {
 	_taskDataStore setVariable ["hq_sites_destroyed", false];
 	_taskDataStore setVariable ["factory_sites_destroyed", false];
 
-	[[["locate_hq_intel", _zonePosition], ["locate_factory_intel", _zonePosition]]] call _fnc_initialSubtasks;
-}];
-
-_taskDataStore setVariable ["locate_hq_intel", {
-	params ["_taskDataStore"];
-
-	if (missionNamespace getVariable "hq_intel" findIf {isNull _x || damage _x >= 1} == -1) exitWith {};
-	_taskDataStore setVariable ["hq_intel_found", true];
-
-	private _hqPosition = missionNamespace getVariable ["hqPosition",[0,0,0]];
-	private _hqSites = missionNamespace getVariable ["side_sites_hq", []];
-
-	{
-		private _markers = _x getVariable ["markers", []];
-		{
-			_x setMarkerAlpha 0.5;
-		} forEach _markers;
-	} forEach _hqSites;
-
-	["SUCCEEDED", [["destroy_hq_sites", _hqPosition]]] call _fnc_finishSubtask;
-}];
-
-_taskDataStore setVariable ["locate_factory_intel", {
-	params ["_taskDataStore"];
-
-	if (missionNamespace getVariable "factory_intel" findIf {isNull _x || damage _x >= 1} == -1) exitWith {};
-	_taskDataStore setVariable ["factory_intel_found", true];
-
-	private _factoryPosition = missionNamespace getVariable ["factoryPosition",[0,0,0]];
-	private _factorySites = missionNamespace getVariable ["side_sites_factory", []];
-
-	{
-		private _markers = _x getVariable ["markers", []];
-		{
-			if((_x find "AA_zone_") >= 0) then {
-				_x setMarkerAlpha 0.3;
-			} else {
-				_x setMarkerAlpha 0.5;
-			};
-		} forEach _markers;
-	} forEach _factorySites;
-
-	["SUCCEEDED", [["destroy_factory_sites", _factoryPosition]]] call _fnc_finishSubtask;
+	[[["destroy_hq_sites", _zonePosition], ["destroy_factory_sites", _zonePosition]]] call _fnc_initialSubtasks;
 }];
 
 _taskDataStore setVariable ["destroy_hq_sites", {

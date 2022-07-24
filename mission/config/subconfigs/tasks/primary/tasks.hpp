@@ -17,29 +17,16 @@ class capture_zone : task
 		timeout = -1;
 	};
 
-	//Data for subtasks. These are specific to the script.
-	class locate_hq_intel
-	{
-		taskname = "Find the HQ Intel";
-		taskdesc = "Find and search the HQ for intelligence on site locations.";
-	};
-
-	class locate_factory_intel
-	{
-		taskname = "Find the Factory Intel";
-		taskdesc = "Find and search the Factory for intelligence on site locations.";
-	};
-
 	class destroy_hq_sites
 	{
 		taskname = "Destroy HQ Supply Line";
-		taskdesc = "Destroy HQ supplies and the sites they're delivered to.";
+		taskdesc = "Destroy HQ supplies and the sites they're delivered to. You might find intel inside for the locations to the rest of the sites!";
 	};
 
 	class destroy_factory_sites
 	{
 		taskname = "Destroy Factory Supply Line";
-		taskdesc = "Destroy Factory supplies and the sites they're delivered to.";
+		taskdesc = "Destroy Factory supplies and the sites they're delivered to. You might find intel inside for the locations to the rest of the sites!";
 	};
 };
 

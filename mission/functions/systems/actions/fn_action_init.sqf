@@ -14,9 +14,18 @@
 		call vn_mf_fnc_action_init;
 */
 
-call vn_mf_fnc_action_destroy_respawn;
-call vn_mf_fnc_action_capture_player;
-call vn_mf_fnc_action_eat_food;
-call vn_mf_fnc_action_drink_water;
-call vn_mf_fnc_action_destroy_task;
-call vn_mf_fnc_action_gather_intel;
+if (isNil "vn_mf_actions_player") then
+{
+	vn_mf_actions_player = player;
+};
+
+if (isNil "vn_mf_actions_initialized" || vn_mf_actions_player != player) then //arma's  variable system is asinine
+{
+	vn_mf_actions_player = player;
+	vn_mf_actions_initialized = 1;
+	call vn_mf_fnc_action_destroy_respawn;
+	call vn_mf_fnc_action_capture_player;
+	call vn_mf_fnc_action_destroy_task;
+	call vn_mf_fnc_action_gather_intel;
+};
+
