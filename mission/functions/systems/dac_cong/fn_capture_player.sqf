@@ -50,6 +50,4 @@ if(_player getVariable 'vn_mf_side' == east) then {
 	_target setPosASL _cage;
 };
 
-removeAllWeapons _target;
-
 
