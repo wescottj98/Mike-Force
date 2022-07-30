@@ -31,7 +31,7 @@ params ["_pos"];
 
 		missionNamespace getVariable ["current_factory", _siteStore];
 
-		_factoryObjects = [_spawnPos] call vn_mf_fnc_create_factory_buildings;
+		private _factoryObjects = [_spawnPos] call vn_mf_fnc_create_factory_buildings;
 		private _objectsToDestroy = _factoryObjects select {typeOf _x == "Land_vn_wf_vehicle_service_point_east"};
 		private _intel = _factoryObjects select {typeOf _x == "Land_Map_unfolded_Malden_F"};
 		missionNamespace setVariable ["factory_intel", _intel];
@@ -44,6 +44,8 @@ params ["_pos"];
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
 		} forEach _factoryObjects;
+
+		vn_site_objects append _factoryObjects;
 
 		//Create a factory marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
@@ -60,6 +62,8 @@ params ["_pos"];
 		private _respawnObj = createVehicle ["Land_vn_o_platform_04", _markerPos, [], 5, "NONE"];
 		_respawnObj setVariable ["vn_respawn", [_factoryRespawnMarker, _respawnID]];
 	
+		vn_dc_adhoc_respawns pushBack [_factoryRespawnMarker, _respawnID];
+
 		private _guns = _factoryObjects select {_x isKindOf "StaticWeapon"};
 		private _objectives = [];
 		{

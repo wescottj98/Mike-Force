@@ -162,5 +162,17 @@ _taskDataStore setVariable ["FINISH", {
 	private _zone = _taskDataStore getVariable "taskMarker";
 	[_zone] call vn_mf_fnc_zones_capture_zone;
 
+	{
+		private _marker = _x # 0;
+		private _respawnID = _x # 1;
+
+		_respawnID call BIS_fnc_removeRespawnPosition;
+		deleteMarker _marker;
+	} forEach vn_dc_adhoc_respawns;
+
+	{
+		deleteVehicle _x;
+	} forEach vn_site_objects;
+
 	[_taskDataStore getVariable "attackObjective"] call para_s_fnc_ai_obj_finish_objective;
 }];

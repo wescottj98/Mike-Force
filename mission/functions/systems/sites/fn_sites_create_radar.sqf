@@ -48,6 +48,8 @@ params ["_pos"];
 			};
 		} forEach _radarObjs;
 
+		vn_site_objects append _radarObjs;
+
 		private _objectsToDestroy = _radarObjs select { typeof _x == "vn_o_static_rsna75" || typeof _x == "vn_sa2"};
 		
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];

@@ -31,7 +31,7 @@ params ["_pos"];
 
 		missionNamespace getVariable ["current_hq", _siteStore];
 
-		_hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
+		private _hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {typeOf _x in ["Land_vn_pavn_launchers", "vn_b_ammobox_01", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2",
 							   "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06"]};
 		private _intel = _hqObjects select {typeOf _x == "Land_Map_unfolded_F"};
@@ -46,6 +46,8 @@ params ["_pos"];
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
 		} forEach _hqObjects;
+
+		vn_site_objects append _hqObjects;
 
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
@@ -67,6 +69,8 @@ params ["_pos"];
 		private _respawnID = [east, _hqRespawnMarker] call BIS_fnc_addRespawnPosition;
 		private _respawnObj = createVehicle ["Land_vn_o_platform_04", _markerPos, [], 5, "NONE"];
 		_respawnObj setVariable ["vn_respawn", [_hqRespawnMarker,_respawnID]];
+
+		vn_dc_adhoc_respawns pushBack [_hqRespawnMarker,_respawnID];
 	
 		private _guns = _hqObjects select {_x isKindOf "StaticWeapon"};
 		private _objectives = [];

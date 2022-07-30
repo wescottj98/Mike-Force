@@ -36,6 +36,8 @@ params ["_pos"];
 			};
 		} forEach _artyObjs;
 
+		vn_site_objects append _artyObjs;
+
 		private _objectsToDestroy = _artyObjs select {typeOf _x in ["vn_o_nva_navy_static_mortar_type63", "vn_o_nva_65_static_mortar_type53", "vn_o_nva_static_d44_01"]};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];

@@ -98,6 +98,10 @@ vn_mf_counterattackBaseInfantryMultiplier = 3;
 vn_mf_counterattackCampInfantryMultiplier = 6;
 para_s_bf_respawn_supply_cost = 50;
 
+vn_dc_adhoc_respawns = [];
+publicVariable "vn_dc_adhoc_respawns";
+
+vn_site_objects = [];
 
 // Set desired number of simultaneously active zones.
 vn_mf_targetNumberOfActiveZones = 1;
