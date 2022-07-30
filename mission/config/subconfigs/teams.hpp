@@ -41,7 +41,7 @@ class SpikeTeam
     icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
     shortname = "Spike Team";
     unit = "vn_b_men_army_01";
-    color = "ColorIndependent";
+    color = "ColorUNKNOWN";
     colorRGBA[] = {0, 0.8, 1, 1};
 
     class rolelimits 
@@ -438,7 +438,7 @@ class TigerForce
     icon = "custom\taskroster\tigerforce_HL.paa";
     shortname = "Tiger Force";
     unit = "vn_b_men_army_01";
-    color = "ColorRed";
+    color = "ColorUNKNOWN";
     colorRGBA[] = {0, 0.8, 1, 1};
     
     class rolelimits 
@@ -460,7 +460,8 @@ class TigerForce
         UAVHacker = false;
         vn_artillery = false;
         harassable = true;
-        scout = false;
+        scout = true;
+        scout_multiple = true;
     };
 
     //Function Calls on team Join
@@ -474,7 +475,7 @@ class Montagnard
     icon = "custom\taskroster\montagnard_HL.paa";
     shortname = "Montagnard";
     unit = "vn_b_men_army_01";
-    color = "ColorIndependent";
+    color = "ColorUNKNOWN";
     colorRGBA[] = {0, 0.8, 1, 1};
     
     class rolelimits 
@@ -496,7 +497,8 @@ class Montagnard
         UAVHacker = false;
         vn_artillery = false;
         harassable = true;
-        scout = false;
+        scout = true;
+        scout_multiple = true;
     };
 
     //Function Calls on team Join
@@ -510,7 +512,7 @@ class SASR
     icon = "custom\taskroster\sasr_HL.paa";
     shortname = "SASR";
     unit = "vn_b_men_army_01";
-    color = "ColorRed";
+    color = "ColorUNKNOWN";
     colorRGBA[] = {0, 0.8, 1, 1};
     
     class rolelimits 
@@ -532,7 +534,8 @@ class SASR
         UAVHacker = false;
         vn_artillery = false;
         harassable = true;
-        scout = false;
+        scout = true;
+        scout_multiple = true;
     };
 
     //Function Calls on team Join
