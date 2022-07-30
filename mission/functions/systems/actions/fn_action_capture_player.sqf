@@ -24,7 +24,7 @@
 	{},	// Code executed when action starts
 	{},	// Code executed on every progress tick
 	{
-		[cursorTarget] call vn_mf_fnc_capture_player;
+		[cursorTarget, player] remoteExec ["vn_mf_fnc_capture_player", 2];
 	},// Code executed on completion
 	{},	// Code executed on interrupted
 	[],													// Arguments passed to the scripts as _this select 3

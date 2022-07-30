@@ -11,24 +11,24 @@
 	Returns:
 	
 	Example(s):
-		[_object] call vn_mf_fnc_destroy_task;
+		[_object, _player] call vn_mf_fnc_destroy_task;
 */
 
-params ["_task"];
+params ["_task", "_player"];
 
 private _fnc_useExplosives = {
 	private _neededExplosiveTypes = ["vn_mine_satchel_remote_02_mag", "vn_mine_m112_remote_mag"]; 
-	private _mags = magazines player; 
+	private _mags = magazines _player; 
 	private _availableExplosives = _mags arrayIntersect _neededExplosiveTypes;
 
 	if (count _availableExplosives == 0) exitWith { false };
-	player removeMagazine (_availableExplosives select 0);
+	_player removeMagazine (_availableExplosives select 0);
 
 	true;
 };
 
 private _fnc_hasLighter = {
-	private _mags = magazines player;  
+	private _mags = magazines _player;  
 	private _lighterExists = _mags arrayIntersect ["vn_b_item_lighter_01"]; 
 	if (count _lighterExists == 0) exitWith { false };
 
@@ -42,7 +42,7 @@ if(typeOf _task == "Land_vn_o_shelter_06" && call _fnc_hasLighter) exitWith {
 		["CampBurnt", ["The camp has been set on fire!"]] call para_c_fnc_show_notification;
 
 		// Light
-		private _light = "#lightpoint" createVehicleLocal getpos _task; 
+		private _light = "#lightpoint" createVehicle getpos _task; 
 		_light setLightDayLight true; 
 		_light setLightColor [5, 2.5, 0]; 
 		_light setLightBrightness 0.1; 
@@ -51,7 +51,7 @@ if(typeOf _task == "Land_vn_o_shelter_06" && call _fnc_hasLighter) exitWith {
 		_light setLightAttenuation [3, 0, 0, 0.6]; 
 
 		// Fire
-		private _ps0 = "#particlesource" createVehicleLocal getpos _task;
+		private _ps0 = "#particlesource" createVehicle getpos _task;
 		_ps0 setParticleParams [
 			["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard",
 			0, 1, [0, 0, 0.25], [0, 0, 0.5], 1, 1, 0.9, 0.3, [1.5],
@@ -61,7 +61,7 @@ if(typeOf _task == "Land_vn_o_shelter_06" && call _fnc_hasLighter) exitWith {
 		_ps0 setDropInterval 0.03;
 
 		// Smoke part 1
-		private _ps1 = "#particlesource" createVehicleLocal getpos _task;
+		private _ps1 = "#particlesource" createVehicle getpos _task;
 		_ps1 setParticleParams [
 			["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 7, 1], "", "Billboard",
 			1, 10, [0, 0, 0.5], [0, 0, 2.9], 1, 1.275, 1, 0.066, [4, 5, 10, 10],
@@ -71,7 +71,7 @@ if(typeOf _task == "Land_vn_o_shelter_06" && call _fnc_hasLighter) exitWith {
 		_ps1 setDropInterval 0.5;
 
 		// Smoke part 2
-		private _ps2 = "#particlesource" createVehicleLocal getpos _task;
+		private _ps2 = "#particlesource" createVehicle getpos _task;
 		_ps2 setParticleParams [
 			["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 9, 1], "", "Billboard",
 			1, 15, [0, 0, 0.5], [0, 0, 2.9], 1, 1.275, 1, 0.066, [4, 5, 10, 10],
@@ -102,6 +102,20 @@ private _nearPlayers = (getPos _task) nearObjects ["Man", 50];
 	};
 } forEach _nearPlayers;
 
+if (typeOf _task == "Land_vn_o_platform_04") then 
+{
+	private _respawnInfo = _task getVariable ["vn_respawn", []];
+
+	if !(_respawnInfo isEqualTo []) then
+	{
+		private _marker = _respawnInfo # 0;
+		private _respawnID = _respawnInfo # 1;
+
+		_respawnID call BIS_fnc_removeRespawnPosition;
+		deleteMarker _marker;
+	};
+};
+
 private _building = _task getVariable ["para_g_building", objNull];
 if !(_building isEqualTo objNull) then
 {
@@ -120,5 +134,4 @@ if !(_building isEqualTo objNull) then
 		deleteVehicle _task;
 	};
 };
-
 

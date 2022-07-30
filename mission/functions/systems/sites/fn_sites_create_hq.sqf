@@ -59,6 +59,14 @@ params ["_pos"];
 		_hqMarker setMarkerType "o_hq";
 		_hqMarker setMarkerText "HQ";
 		_hqMarker setMarkerAlpha 0;
+
+		private _hqRespawnMarker = createMarker [format ["dc_respawn_adhoc_%1", _siteId], _markerPos];
+		_hqRespawnMarker setMarkerType "o_hq";
+		_hqRespawnMarker setMarkerAlpha 0;
+
+		private _respawnID = [east, _hqRespawnMarker] call BIS_fnc_addRespawnPosition;
+		private _respawnObj = createVehicle ["Land_vn_o_platform_04", _markerPos, [], 5, "NONE"];
+		_respawnObj setVariable ["vn_respawn", [_hqRespawnMarker,_respawnID]];
 	
 		private _guns = _hqObjects select {_x isKindOf "StaticWeapon"};
 		private _objectives = [];

@@ -51,6 +51,14 @@ params ["_pos"];
 		_factoryMarker setMarkerType "o_Ordnance";
 		_factoryMarker setMarkerText "Factory";
 		_factoryMarker setMarkerAlpha 0;
+
+		private _factoryRespawnMarker = createMarker [format ["dc_respawn_adhoc_%1", _siteId], _markerPos];
+		_factoryRespawnMarker setMarkerType "o_Ordnance";
+		_factoryRespawnMarker setMarkerAlpha 0;
+		
+		private _respawnID = [east, _factoryRespawnMarker] call BIS_fnc_addRespawnPosition;
+		private _respawnObj = createVehicle ["Land_vn_o_platform_04", _markerPos, [], 5, "NONE"];
+		_respawnObj setVariable ["vn_respawn", [_factoryRespawnMarker, _respawnID]];
 	
 		private _guns = _factoryObjects select {_x isKindOf "StaticWeapon"};
 		private _objectives = [];

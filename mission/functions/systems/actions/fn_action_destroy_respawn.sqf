@@ -25,7 +25,7 @@
 	{},	// Code executed when action starts
 	{},	// Code executed on every progress tick
 	{
-		[cursorObject] call vn_mf_fnc_destroy_task;
+		[cursorObject, player] call vn_mf_fnc_destroy_task;
 	},// Code executed on completion
 	{},	// Code executed on interrupted
 	[],													// Arguments passed to the scripts as _this select 3
