@@ -80,9 +80,7 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
 
 	if (
-		_taskDataStore getVariable ["hq_intel_found", false]
-		&& _taskDataStore getVariable ["factory_intel_found", false]
-		&& _taskDataStore getVariable ["hq_sites_destroyed", false]
+		_taskDataStore getVariable ["hq_sites_destroyed", false]
 		&& _taskDataStore getVariable ["factory_sites_destroyed", false]
 	) then {
 		["SUCCEEDED"] call _fnc_finishTask;

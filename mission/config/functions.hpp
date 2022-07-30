@@ -272,6 +272,8 @@ class CfgFunctions
 			class sites_find_area_gradient {};
 
 			class destroy_task {};
+
+			class reveal_supply_line;
 		};
 		
 		class system_supplies {
