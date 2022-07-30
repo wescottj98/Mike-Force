@@ -42,7 +42,7 @@ class SpikeTeam
     shortname = "Spike Team";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
-    colorRGBA[] = {0, 0.8, 1, 1};
+    colorRGBA[] = {0.7,0.6,0,1};
 
     class rolelimits 
     {
@@ -439,7 +439,7 @@ class TigerForce
     shortname = "Tiger Force";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
-    colorRGBA[] = {0, 0.8, 1, 1};
+    colorRGBA[] = {0.7,0.6,0,1};
     
     class rolelimits 
     {
@@ -476,7 +476,7 @@ class Montagnard
     shortname = "Montagnard";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
-    colorRGBA[] = {0, 0.8, 1, 1};
+    colorRGBA[] = {0.7,0.6,0,1};
     
     class rolelimits 
     {
@@ -513,7 +513,7 @@ class SASR
     shortname = "SASR";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
-    colorRGBA[] = {0, 0.8, 1, 1};
+    colorRGBA[] = {0.7,0.6,0,1};
     
     class rolelimits 
     {
