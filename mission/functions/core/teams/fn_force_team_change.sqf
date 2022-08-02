@@ -33,7 +33,8 @@ if (_isWhitelisted) then {
 ["changedTeams", [_player, _team]] call para_g_fnc_event_dispatch;
 
 // Remove the player from their original team's group array
-missionNamespace setVariable [_playerGroup, _playerGroupArray - [_player]];
+_playerGroupArray deleteAt (_playerGroupArray find _player);
+missionNamespace setVariable [_playerGroup, _playerGroupArray];
 publicVariable _playerGroup;
 
 // add them to the new group

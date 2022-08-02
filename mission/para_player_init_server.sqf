@@ -79,7 +79,7 @@ if (_enlisted isEqualTo "0") then {
 };
 
 // last group, or if not one assign MikeForce
-private _lastTeamName = _player getVariable ["vn_mf_db_player_group", "MikeForce"];
+private _lastTeamName = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 
 switch (side _player) do {
 	case east: { if (_lastTeamName != "DacCong") then { _lastTeamName = "DacCong"; }; };
