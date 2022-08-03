@@ -129,7 +129,7 @@ if !(_building isEqualTo objNull) then
 } else {
 	[_task] spawn {
 		params ["_task"];
-		sleep 15;
+		sleep 30;
 		private _bomb = createVehicle ["Rocket_04_HE_F", getPos _task, [], 0, "CAN_COLLIDE"];
 		deleteVehicle _task;
 	};
