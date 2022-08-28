@@ -3,7 +3,10 @@ params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex",
 if (_hitPoint == "incapacitated" && _instigator != objNull && _unit != _instigator) then 
 {
 	private _sideCheck = (side _unit == side _instigator);
+	private _instigatorInMACV = [_instigator, "MACV"] call para_g_fnc_db_check_whitelist;
 	private _message = format ["[MACV] %1 has friendly fired %2.", name _instigator, name _unit];
+
+	if (_instigatorInMACV) exitWith {}; 
 
 	if (_sideCheck) then {
 		{

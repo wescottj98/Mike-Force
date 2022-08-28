@@ -55,7 +55,10 @@ if (_is_unit_player) then
 		{
 			{
 					private _inMACV = [_x, "MACV"] call para_g_fnc_db_check_whitelist;
+					private _instigatorInMACV = [_instigator, "MACV"] call para_g_fnc_db_check_whitelist;
 					private _message = format ["[MACV] %1 has killed %2.", name _instigator, name _unit];
+
+					if (_instigatorInMACV) then { continue };
 
 					if !(_inMACV) then { continue };
 					systemChat _message;
