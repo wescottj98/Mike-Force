@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4555;
+		nextID=4729;
 	};
 	class Camera
 	{
-		pos[]={15876.388,34.179832,8024.6533};
-		dir[]={-0.047937479,-0.80507267,0.59124005};
-		up[]={-0.065062001,0.59317648,0.80244112};
-		aside[]={0.99673396,-1.3626777e-007,0.080815889};
+		pos[]={15913.211,12.23163,8017.7461};
+		dir[]={-0.29654917,-0.62616599,0.72109765};
+		up[]={-0.23815794,0.7796858,0.57911175};
+		aside[]={0.92484981,7.5029675e-008,0.38034168};
 	};
 };
 binarizationWanted=0;
@@ -6245,7 +6245,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={17194.467,32.510002,5629.2432};
-						angles[]={0,6.2660298,-0};
+						angles[]={0,6.2660298,0};
 					};
 					side="Empty";
 					flags=5;
@@ -6279,7 +6279,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={17193.367,30.684427,5624.7432};
-						angles[]={0,1.5559393,-0};
+						angles[]={0,1.5559393,0};
 					};
 					side="Empty";
 					flags=4;
@@ -15481,10 +15481,10 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={254.33099,131.28999,18717.658};
-			name="OBS_mf_dc_respawn_tunnel_1_nw";
+			name="mf_dc_respawn_tunnel_1_nw";
 			text="@STR_vn_mf_respawn_tunnel_1";
 			type="Empty";
-			angle=197.39891;
+			angle=197.39897;
 			id=4465;
 		};
 		class Item423
@@ -15512,10 +15512,10 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={266.13199,131.28999,18704.738};
-			name="mf_dc_respawn_tunnel_1_sw";
+			name="OBS_mf_dc_respawn_tunnel_1_sw";
 			text="@STR_vn_mf_respawn_tunnel_1";
 			type="Empty";
-			angle=197.39891;
+			angle=197.39897;
 			id=4468;
 		};
 		class Item426
@@ -91022,7 +91022,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15861.769,17.513752,7997.4629};
-				angles[]={0,3.3333302,-0};
+				angles[]={0,3.3333302,0};
 			};
 			side="Empty";
 			class Attributes
@@ -91039,8 +91039,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15879.928,0.74575537,8051.4004};
-				angles[]={0.015998369,1.6023648,0.0060001095};
+				position[]={15917.96,2.1847816,8025.207};
+				angles[]={6.2679958,4.6271601,6.275362};
 			};
 			side="Empty";
 			flags=4;
@@ -91050,7 +91050,6 @@ class Mission
 			};
 			id=14102;
 			type="Land_vn_us_weapons_stack2";
-			atlOffset=0.070662737;
 			class CustomAttributes
 			{
 				class Attribute0
