@@ -21,20 +21,18 @@
 params ["_player", "_role", "_vehicle"];
 
 private _isCopilot = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isCopilot") > 0);
+private _isTurret = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isPersonTurret") > 0);
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 
 //TODO: FIX THIS (DOES NOT WORK AS INTENDED, DOES NOT EVEN LET WHITELISTED BLACKHAWKS USE 105s)
-// if (_vehicle isKindOf "vn_b_army_static_m101_02") exitWith {
-// 	private _inBlackHawks = [_player, "BlackHawk"] call para_g_fnc_db_check_whitelist;
-// 	if (_inBlackHawks) exitWith {
-// 		true
-// 	};
+private _type = typeOf _vehicle;
 
-// 	["VehicleLockedToTeam", ["Black Hawk artillery squadron members only, apply on Discord."]] remoteExec ["para_c_fnc_show_notification", _player];
-// 	false
-// };
+if (_type == "vn_b_army_static_m101_02" && _playerGroup != "BlackHawk") exitWith { 
+  ["VehicleLockedToTeamMessage", ["Black Hawk artillery squadron members only; apply on Discord."]] remoteExec ["para_c_fnc_show_notification", _player]; 
+  false 
+};
 
-if (_role == "driver" || _isCopilot) exitWith {
+if (_role == "driver" || _isCopilot || _isTurret) exitWith {
 	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
 	if (_teamsVehicleIsLockedTo isEqualTo [] || _playerGroup in _teamsVehicleIsLockedTo) exitWith {
 		true

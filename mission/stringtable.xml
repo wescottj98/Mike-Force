@@ -192,7 +192,7 @@
         <Original>Disabled</Original>
       </Key>
       <Key ID="STR_vn_mf_vehicle_locked_to_team">
-        <Original>This vehicle can't be used by your team</Original>
+        <Original>This vehicle slot can't be used by your team.</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force">
         <Original>PLEI MEI SF CAMP - MIKE FORCE</Original>
