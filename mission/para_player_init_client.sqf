@@ -213,6 +213,8 @@ else{
 	};
 };
 
+"vn_holdActionAdd_layer" cutText ["","PLAIN"];
+
 // display location after a little delay
 sleep 4;
 call vn_mf_fnc_display_location_time;

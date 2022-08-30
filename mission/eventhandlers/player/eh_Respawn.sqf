@@ -32,3 +32,5 @@ params
 // update UI
 ["vn_mf_db_thirst",1] call vn_mf_fnc_ui_update;
 ["vn_mf_db_hunger",1] call vn_mf_fnc_ui_update;
+
+"vn_holdActionAdd_layer" cutText ["","PLAIN"];
