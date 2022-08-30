@@ -27,5 +27,6 @@ if (isNil "vn_mf_actions_initialized" || vn_mf_actions_player != player) then //
 	call vn_mf_fnc_action_capture_player;
 	call vn_mf_fnc_action_destroy_task;
 	call vn_mf_fnc_action_gather_intel;
+	"vn_holdActionAdd_layer" cutText ["","PLAIN"];
 };
 
