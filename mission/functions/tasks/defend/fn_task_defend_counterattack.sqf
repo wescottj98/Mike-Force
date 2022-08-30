@@ -122,7 +122,7 @@ _taskDataStore setVariable ["defend_zone", {
 	private _garrisonStrength = _taskDataStore getVariable ["attackObjective", objNull] getVariable ["reinforcements_remaining", 0];
 
 	//Zone has been held long enough, or they've killed enough attackers for the AI objective to complete.
-	if (serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 20 * 60]) ||
+	if (serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 60 * 60]) ||
 		isNull (_taskDataStore getVariable "attackObjective") ) exitWith 
 	{ //exitWith here to prevent a tie causing the zone to turn green but have new tasks for its capture spawn
 		_taskDataStore setVariable ["zoneDefended", true];
