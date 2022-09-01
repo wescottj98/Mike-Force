@@ -32,7 +32,7 @@ if (_type == "vn_b_army_static_m101_02" && _playerGroup != "BlackHawk") exitWith
   false 
 };
 
-if (_role == "driver" || _isCopilot || _isTurret) exitWith {
+if (_role == "driver" || _isCopilot) exitWith {
 	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
 	if (_teamsVehicleIsLockedTo isEqualTo [] || _playerGroup in _teamsVehicleIsLockedTo) exitWith {
 		true
