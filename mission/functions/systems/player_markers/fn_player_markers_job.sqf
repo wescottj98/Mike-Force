@@ -35,7 +35,7 @@ vn_mf_player_markers_manned_vehicles = [];
 {
 	private _unit = _x;
 	private _unitSideCheck = [player, _unit] call vn_mf_fnc_check_side;
-	if !([player, _unit] call vn_mf_fnc_check_side) then { continue };
+	if !(_unitSideCheck) then { continue };
 
 	private _unitMarker = format ["player_marker_%1", getPlayerUID _unit];
 	private _unitGroup = _unit getVariable ["vn_mf_db_player_group", "FAILED"];

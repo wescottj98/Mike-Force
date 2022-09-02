@@ -23,20 +23,14 @@ params ["_player", "_target"];
 private _playerSide = side _player;
 private _targetTeam = side _target;
 
-if (_playerSide == east) then
+if (_playerSide == east && _targetTeam != east) exitWith
 {
-	if (_targetTeam == west || _targetTeam == independent) exitWith
-	{
-		false
-	};
+	false
 };
 
-if(_playerSide == west || _playerSide == independent) then
-{
-	if (_targetTeam == east) exitWith
-	{
-		false
-	};
+if (_playerSide != east && _targetTeam == east) exitWith //i'm sure there's a better way of handling this
+{														 //will fix later
+	false
 };
 
 true
