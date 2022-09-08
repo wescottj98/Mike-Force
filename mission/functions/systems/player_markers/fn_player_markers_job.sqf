@@ -37,6 +37,8 @@ vn_mf_player_markers_manned_vehicles = [];
 	private _unitSideCheck = [player, _unit] call vn_mf_fnc_check_side;
 	if !(_unitSideCheck) then { continue };
 
+	if (side _unit == civilian || side player == civilian) then {continue};
+
 	private _unitMarker = format ["player_marker_%1", getPlayerUID _unit];
 	private _unitGroup = _unit getVariable ["vn_mf_db_player_group", "FAILED"];
 	private _playerColor = "ColorBLUFOR";
