@@ -144,6 +144,22 @@ vn_mf_player_markers_manned_vehicles = [];
 	};
 
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+	if(_vehicleName == "MH-9 Hummingbird" || _vehicleName == "AH-9 Pawnee") then 
+	{
+		_vehicleName = "YOH-6A";
+
+		switch(vehicleVarName _vehicle) do
+		{
+			case "cmd1" : {_vehicleName = "CMD-1"; };
+			case "mp1"  : {_vehicleName = "MP-1"; };
+		};
+	};
+
+	if(_vehicleName == "AH-99 Blackfoot") then 
+	{
+		_vehicleName = "Ghost";
+	};
+	
 	private _crewCount = count _crew;
 	private _crewDisplay = 0;
 	if (_crewCount - 1 <= 0) then {
