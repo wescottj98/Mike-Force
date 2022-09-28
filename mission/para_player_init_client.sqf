@@ -172,7 +172,7 @@ vn_mf_default_awards = [];
 // initialize tools controller
 call para_c_fnc_tool_controller_init;
 
-call vn_mf_fnc_admin_arsenal;
+//call vn_mf_fnc_admin_arsenal;
 
 // This is used for showing values of food and water in the arsenal
 call vn_mf_fnc_enable_arsenal_food_drink_overlay;
