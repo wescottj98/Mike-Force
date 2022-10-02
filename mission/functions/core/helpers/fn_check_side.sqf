@@ -20,21 +20,11 @@
 
 params ["_player", "_target"];
 
-private _playerSide = side _player;
-private _targetTeam = side _target;
+private _playerSide = _player getVariable ["vn_mf_side", independent];
+private _targetTeam = _target getVariable ["vn_mf_side", independent];
 
-if (_targetSide == civilian) exitWith
+if (_playerSide != _targetTeam) exitWith
 {
-	true
-};
-
-if (_playerSide == east && _targetTeam != east) exitWith
-{
-	false
-};
-
-if (_playerSide != east && _targetTeam == east) exitWith //i'm sure there's a better way of handling this
-{														 //will fix later
 	false
 };
 
