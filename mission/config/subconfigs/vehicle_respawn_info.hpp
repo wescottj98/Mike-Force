@@ -323,3 +323,6 @@ class uns_willys_2_usmp : respawn_short {};
 class uns_willys_2_usmc : respawn_short {};
 class uns_willys_2_m60 : respawn_short {};
 class uns_willys_2_m1919 : respawn_short {};
+
+//Migs
+class vn_o_air_mig19_cap : respawn_short {};
