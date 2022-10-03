@@ -18,7 +18,7 @@
 
 params ["_target"];
 
-private _objects = _target nearObjects ["GroundWeaponHolder",20];
+private _objects = _target nearObjects ["GroundWeaponHolder", 50];
 {
 	deleteVehicle _x;
 } forEach _objects;
