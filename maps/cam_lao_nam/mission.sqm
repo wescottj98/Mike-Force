@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=578;
+	toggles=1602;
 	class ItemIDProvider
 	{
-		nextID=14771;
+		nextID=14773;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5734;
+		nextID=5829;
 	};
 	class Camera
 	{
-		pos[]={11205.294,95.073624,14791.672};
-		dir[]={-0.39028737,-0.48704323,0.78132373};
-		up[]={-0.21764551,0.87337798,0.43570942};
-		aside[]={0.89459997,-1.8044375e-008,0.44687107};
+		pos[]={16128.645,73.867889,6876.3735};
+		dir[]={-0.87712681,-0.40249753,0.26208016};
+		up[]={-0.38565758,0.91541857,0.11523149};
+		aside[]={0.2862936,3.0646333e-007,0.95816314};
 	};
 };
 binarizationWanted=0;
@@ -538,8 +538,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -589,8 +589,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -658,7 +658,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1670;
+		items=1672;
 		class Item0
 		{
 			dataType="Marker";
@@ -57057,7 +57057,7 @@ class Mission
 						class data
 						{
 							singleType="BOOL";
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -77560,6 +77560,83 @@ class Mission
 			};
 			id=14770;
 			type="Land_vn_b_trench_20_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1670
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16220.093,14.98,6512.208};
+				angles[]={0,0.57592022,-0};
+			};
+			areaSize[]={18.659607,0,8.6396484};
+			flags=1;
+			id=14771;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1671
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16218.845,17.111347,6516.3062};
+				angles[]={0,5.3245807,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=14772;
+			type="Land_Shed_Small_F";
 			class CustomAttributes
 			{
 				class Attribute0
