@@ -16,27 +16,26 @@
         call vn_mf_fnc_arsenal_trash_cleanup_init;
 */
 
+private _arsenals = allMapMarkers select {_x find "arsenal" isEqualTo 0};
+
 {
-
-	if (_x find "arsenal_cleanup_" isEqualTo 0) then {
-		_x addAction
-		[
-			"Clean Up",
-			{
-				params ["_target", "_caller", "_actionId", "_arguments"];
-				["arsenalcleanup", [_target]] call para_c_fnc_call_on_server;
-			},
-			nil,
-			1.5,
-			true,
-			true,
-			"",
-			"true",
-			5,
-			false,
-			"",
-			""
-		];
-	};
-
-} forEach allMapMarkers;
+	private _trashCan = missionNamespace getVariable [format["arsenal_cleanup_%1",_forEachIndex], objNull];
+	_trashCan addAction
+	[
+		"Clean Up",
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"];
+			["arsenalcleanup", [_target]] call para_c_fnc_call_on_server;
+		},
+		nil,
+		1.5,
+		true,
+		true,
+		"",
+		"true",
+		5,
+		false,
+		"",
+		""
+	];
+} forEach _arsenals;
