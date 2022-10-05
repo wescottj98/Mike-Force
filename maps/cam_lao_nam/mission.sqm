@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6019;
+		nextID=6114;
 	};
 	class Camera
 	{
-		pos[]={14695.116,116.40004,6821.6563};
-		dir[]={-0.30189171,-0.61931032,-0.72493666};
-		up[]={-0.23807998,0.78515118,-0.5717088};
-		aside[]={-0.92323691,6.480841e-007,0.38447043};
+		pos[]={14670.439,116.40004,6779.8662};
+		dir[]={0.41316932,-0.55260158,0.72397649};
+		up[]={0.27390209,0.83344328,0.47994775};
+		aside[]={0.86859953,7.1397517e-007,-0.49570376};
 	};
 };
 binarizationWanted=0;
@@ -538,8 +538,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -589,8 +589,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -43430,7 +43430,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14689.876,99.733383,6795.6421};
-				angles[]={0,0.06152615,0};
+				angles[]={0,0.061522856,0};
 			};
 			side="Empty";
 			flags=5;
@@ -43439,6 +43439,23 @@ class Mission
 			};
 			id=7531;
 			type="Land_vn_hut_mont_05";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item963
 		{
@@ -43455,7 +43472,6 @@ class Mission
 			};
 			id=7532;
 			type="Land_vn_temple_shrine_01";
-			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43679,6 +43695,23 @@ class Mission
 			};
 			id=7547;
 			type="Land_vn_b_prop_mapstand_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item968
 		{
