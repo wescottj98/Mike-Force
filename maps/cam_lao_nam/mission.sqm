@@ -8,7 +8,7 @@ class EditorData
 	toggles=1602;
 	class ItemIDProvider
 	{
-		nextID=14776;
+		nextID=14777;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6114;
+		nextID=6209;
 	};
 	class Camera
 	{
@@ -538,8 +538,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -589,8 +589,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -658,7 +658,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1667;
+		items=1668;
 		class Item0
 		{
 			dataType="Marker";
@@ -17024,6 +17024,7 @@ class Mission
 			};
 			id=4557;
 			type="vn_b_air_ch34_04_04";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item403
 		{
@@ -23981,7 +23982,7 @@ class Mission
 			};
 			id=6337;
 			type="Land_vn_o_prop_cong_cage_01";
-			atlOffset=0.005068779;
+			atlOffset=0.0050678253;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24015,7 +24016,7 @@ class Mission
 			};
 			id=6338;
 			type="Land_vn_o_prop_cong_cage_01";
-			atlOffset=0.38700008;
+			atlOffset=0.38699913;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32646,6 +32647,7 @@ class Mission
 					};
 					id=6778;
 					type="vn_b_air_uh1c_03_01";
+					atlOffset=9.5367432e-007;
 				};
 				class Item107
 				{
@@ -33138,6 +33140,7 @@ class Mission
 					};
 					id=6779;
 					type="vn_b_air_uh1c_03_01";
+					atlOffset=9.5367432e-007;
 				};
 				class Item123
 				{
@@ -39310,6 +39313,7 @@ class Mission
 					};
 					id=7201;
 					type="vn_b_wheeled_m54_01";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item180
 				{
@@ -39328,6 +39332,7 @@ class Mission
 					};
 					id=7202;
 					type="vn_b_wheeled_m54_01";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item181
 				{
@@ -39347,6 +39352,7 @@ class Mission
 					};
 					id=7203;
 					type="vn_b_wheeled_m54_01";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -43925,6 +43931,7 @@ class Mission
 			};
 			id=7532;
 			type="Land_vn_temple_shrine_01";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53356,6 +53363,7 @@ class Mission
 			};
 			id=10311;
 			type="vn_o_air_mig19_cap";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -64424,7 +64432,7 @@ class Mission
 		class Item1636
 		{
 			dataType="Marker";
-			position[]={11427.096,71.577148,15130.19};
+			position[]={11344.35,71.577148,14981.007};
 			name="marker_127";
 			text="NO FLY ZONE";
 			type="mil_warning";
@@ -64432,7 +64440,7 @@ class Mission
 			a=2;
 			b=2;
 			id=14154;
-			atlOffset=-59.934494;
+			atlOffset=-0.66106415;
 		};
 		class Item1637
 		{
@@ -67497,6 +67505,7 @@ class Mission
 																	};
 																	id=14255;
 																	type="Land_vn_bargate_f";
+																	atlOffset=9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -81718,7 +81727,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15737.916,14.98,7054.1865};
-				angles[]={0,3.984719,-0};
+				angles[]={0,3.984719,0};
 			};
 			side="Empty";
 			flags=4;
@@ -81727,6 +81736,22 @@ class Mission
 			};
 			id=14775;
 			type="Land_JumpTarget_F";
+		};
+		class Item1667
+		{
+			dataType="Marker";
+			position[]={11350.439,70.176636,14719.383};
+			name="marker_112";
+			text="NO FLY ZONE ( JTAC TRAINING )";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			alpha=0.75077415;
+			fillName="Grid";
+			a=437.06396;
+			b=371.61279;
+			id=14776;
+			atlOffset=6.2704391;
 		};
 	};
 	class Connections
