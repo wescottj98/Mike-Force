@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=641;
 	class ItemIDProvider
 	{
 		nextID=1088;
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=485;
+		nextID=498;
 	};
 	class Camera
 	{
@@ -2295,7 +2295,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3357.8059,43.712986,4196.1797};
-				angles[]={0,3.098053,-0};
+				angles[]={0,3.098053,0};
 			};
 			side="Empty";
 			flags=5;
@@ -2328,7 +2328,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3355.106,43.644157,4196.208};
-				angles[]={0,3.1339889,-0};
+				angles[]={0,3.1339889,0};
 			};
 			side="Empty";
 			flags=5;
@@ -8910,7 +8910,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2902.8948,47.769955,615.95081};
-				angles[]={0,3.7835212,-0};
+				angles[]={0,3.7835212,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10231,7 +10231,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2903.5515,47.458286,615.22162};
-				angles[]={0,2.2191696,-0};
+				angles[]={0,2.2191696,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10266,7 +10266,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2901.7881,47.371796,614.40454};
-				angles[]={0,3.7935648,-0};
+				angles[]={0,3.7935648,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10301,7 +10301,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2901.8564,47.459927,616.10193};
-				angles[]={0,5.3534694,-0};
+				angles[]={0,5.3534694,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10441,7 +10441,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2900.74,47.73547,617.55847};
-				angles[]={0,3.7835212,-0};
+				angles[]={0,3.7835212,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10474,7 +10474,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2901.397,47.452885,616.82965};
-				angles[]={0,2.2191696,-0};
+				angles[]={0,2.2191696,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10509,7 +10509,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2899.6335,47.369026,616.01257};
-				angles[]={0,3.7935648,-0};
+				angles[]={0,3.7935648,0};
 			};
 			side="Empty";
 			flags=5;
@@ -10544,7 +10544,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2899.7021,47.386204,617.70996};
-				angles[]={0,5.3534694,-0};
+				angles[]={0,5.3534694,0};
 			};
 			side="Empty";
 			flags=5;
@@ -15633,7 +15633,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={3055.8931,115.117,781.49402};
-			name="mf_respawn_daccong";
+			name="mf_dc_respawn_daccong";
 			text="@STR_vn_mf_respawn_daccong";
 			type="Empty";
 			id=1062;
@@ -15658,7 +15658,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3355.1394,42.949951,4195.8311};
-				angles[]={-0,2.7684999,0};
+				angles[]={0,2.7684999,0};
 			};
 			name="vn_mf_capture_2";
 			id=1064;
@@ -15671,7 +15671,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2900.4507,46.897022,617.14929};
-				angles[]={-0,5.3035111,0};
+				angles[]={0,5.3035111,0};
 			};
 			name="vn_dc_capture_1";
 			id=1065;
@@ -15684,7 +15684,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2902.4934,46.901665,615.5509};
-				angles[]={-0,5.3035111,0};
+				angles[]={0,5.3035111,0};
 			};
 			name="vn_dc_capture_2";
 			id=1066;
@@ -15708,7 +15708,7 @@ class Mission
 			name="mf_respawn_71stmeu";
 			text="@STR_vn_mf_respawn_71stmeu";
 			type="Empty";
-			angle=186.3011;
+			angle=186.30109;
 			id=1068;
 		};
 		class Item360
@@ -15718,7 +15718,7 @@ class Mission
 			name="mf_respawn_7thcav";
 			text="@STR_vn_mf_respawn_7thcav";
 			type="Empty";
-			angle=27.811556;
+			angle=27.811554;
 			id=1069;
 		};
 		class Item361
@@ -15739,7 +15739,7 @@ class Mission
 			name="mf_respawn_macv";
 			text="@STR_vn_mf_respawn_macv";
 			type="Empty";
-			angle=171.0479;
+			angle=171.04788;
 			id=1071;
 		};
 		class Item363
@@ -15871,7 +15871,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=222.43616;
+			angle=222.43614;
 			id=1083;
 		};
 		class Item375
@@ -15894,7 +15894,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=168.14989;
+			angle=168.14987;
 			id=1085;
 			atlOffset=-0.88599777;
 		};
