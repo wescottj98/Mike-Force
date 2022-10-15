@@ -128,7 +128,7 @@ class vn_b_air_ch34_04_03 : wreck_medium {};
 class vn_b_air_ch34_04_04 : wreck_medium {};
 
 //Littlebird
-class C_Heli_Light_01_civil_F : respawn_short {};
+class B_Heli_Light_01_F : respawn_short {};
 class vn_b_air_oh6a_01 : respawn_short {};
 class vn_b_air_oh6a_02 : wreck_medium {};
 class vn_b_air_oh6a_03 : wreck_medium {};
