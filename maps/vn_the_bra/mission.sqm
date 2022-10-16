@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=537;
+		nextID=550;
 	};
 	class Camera
 	{
-		pos[]={3322.1675,59.080147,4411.4126};
-		dir[]={-0.32035774,-0.61398977,0.72147429};
-		up[]={-0.2492037,0.78926003,0.56122607};
-		aside[]={0.91401178,-4.3644104e-007,0.40585265};
+		pos[]={3246.4612,71.882965,4385.3647};
+		dir[]={0.79858679,-0.45475826,-0.39452648};
+		up[]={0.40782687,0.89055955,-0.20147693};
+		aside[]={-0.44296592,-2.7602073e-007,-0.89663476};
 	};
 };
 binarizationWanted=0;
@@ -8822,6 +8822,23 @@ class Mission
 			};
 			id=829;
 			type="Land_vn_bargate_f";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item218
 		{
@@ -9728,7 +9745,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=860;
 					type="vn_flag_aus";
@@ -9763,7 +9779,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=861;
 					type="vn_flag_sog";
@@ -9798,7 +9813,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=862;
 					type="vn_flag_usarmy";
@@ -9833,7 +9847,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=863;
 					type="vn_flag_arvn";
@@ -9868,7 +9881,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=864;
 					type="vn_flag_usa";
@@ -9903,7 +9915,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=865;
 					type="vn_flag_usa";
@@ -9938,7 +9949,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=866;
 					type="vn_flag_usa";
@@ -9973,7 +9983,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=867;
 					type="vn_flag_usa";
@@ -10216,7 +10225,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=874;
 			type="vn_flag_usa";
@@ -10250,7 +10258,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=875;
 			type="vn_flag_usa";
@@ -10284,7 +10291,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=876;
 			type="vn_flag_usa";
@@ -10318,7 +10324,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=877;
 			type="vn_flag_usa";
@@ -14195,8 +14200,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3283.7664,41.487892,4418.8193};
-						angles[]={0,3.1588256,0};
+						position[]={3283.7659,41.487892,4418.8188};
+						angles[]={0,3.158819,0};
 					};
 					side="Empty";
 					flags=4;
@@ -15659,7 +15664,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3361.7329,41.496128,4451.4277};
+						position[]={3361.7329,41.496132,4451.4277};
 						angles[]={0,3.158819,0};
 					};
 					side="Empty";
@@ -15680,7 +15685,7 @@ class Mission
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -15789,7 +15794,7 @@ class Mission
 			name="mf_respawn_7thcav";
 			text="@STR_vn_mf_respawn_7thcav";
 			type="Empty";
-			angle=27.811548;
+			angle=27.811546;
 			id=1069;
 		};
 		class Item358
@@ -15820,7 +15825,7 @@ class Mission
 			name="mf_respawn_militarypolice";
 			text="@STR_vn_mf_respawn_militarypolice";
 			type="Empty";
-			angle=331.69;
+			angle=331.68997;
 			id=1072;
 			atlOffset=0.71993256;
 		};
@@ -15920,7 +15925,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=50.433376;
+			angle=50.433372;
 			id=1081;
 		};
 		class Item370
@@ -15942,7 +15947,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=222.4361;
+			angle=222.43608;
 			id=1083;
 		};
 		class Item372
@@ -17817,7 +17822,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3307.96,50.971649,4430.5415};
-				angles[]={0,5.4460497,-0};
+				angles[]={0,5.4460497,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17833,7 +17838,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3306.0134,50.971649,4428.4624};
-				angles[]={0,5.4460497,-0};
+				angles[]={0,5.4460497,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17849,7 +17854,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3304.0244,50.971649,4426.3354};
-				angles[]={0,5.4460497,-0};
+				angles[]={0,5.4460497,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17865,7 +17870,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3302.2881,50.971649,4424.4609};
-				angles[]={0,5.4460497,-0};
+				angles[]={0,5.4460497,0};
 			};
 			side="Empty";
 			flags=4;
