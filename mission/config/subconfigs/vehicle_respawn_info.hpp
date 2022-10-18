@@ -209,6 +209,7 @@ class vn_b_air_uh1c_06_02 : wreck_medium {};
 
 //UH1B - Slick
 class vn_b_air_uh1c_07_01 : respawn_medium {};
+class vn_b_air_uh1c_07_02 : respawn_medium {};
 
 //UH1E - Heavy Gunship
 class vn_b_air_uh1e_02_04 : wreck_medium {};
