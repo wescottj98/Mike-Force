@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1190;
+		nextID=1206;
 	};
 	class Camera
 	{
@@ -1611,7 +1611,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=2;
+							value=0;
 						};
 					};
 				};
@@ -10986,6 +10986,7 @@ class Mission
 			};
 			id=535;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17700,6 +17701,7 @@ class Mission
 			};
 			id=733;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 		};
 		class Item239
 		{
@@ -17716,6 +17718,7 @@ class Mission
 			};
 			id=734;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 		};
 		class Item240
 		{
@@ -19301,7 +19304,7 @@ class Mission
 			};
 			id=791;
 			type="vn_b_air_uh1c_02_01";
-			atlOffset=0.00015258789;
+			atlOffset=0.027008057;
 			class CustomAttributes
 			{
 				class Attribute0
