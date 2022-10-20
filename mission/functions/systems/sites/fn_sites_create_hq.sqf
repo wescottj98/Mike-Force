@@ -45,6 +45,11 @@ params ["_pos"];
 							   "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"]) then {
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
+
+			if (_x isKindOf "Building" || _x isKindOf "House") then
+			{
+				[_x, true] call para_s_fnc_enable_dynamic_sim;
+			};
 		} forEach _hqObjects;
 
 		vn_site_objects append _hqObjects;
