@@ -70,7 +70,6 @@ class vn_b_wheeled_m54_mg_03 : wreck_short {};
 
 //Armoured Cars
 class vn_b_armor_m41_01_01 : wreck_long {};
-class vn_o_armor_type63_01 : wreck_long {};
 
 //APC
 class vn_b_armor_m113_01 : respawn_medium {};
@@ -216,15 +215,15 @@ class vn_b_air_uh1e_02_04 : wreck_medium {};
 class vn_b_air_uh1e_01_04 : wreck_medium {};
 
 //UH1E - Slick
-class vn_b_air_uh1e_03_04 : wreck_medium {};
+class vn_b_air_uh1e_03_04 : respawn_medium {};
 
 //UH1F - Slick
 class vn_b_air_uh1f_01_03 : respawn_medium {};
 
 //CH43 - Heavy Transport
-class vn_i_air_ch34_01_02 : wreck_medium {};
-class vn_i_air_ch34_02_01 : wreck_medium {};
-class vn_i_air_ch34_02_02 : wreck_medium {};
+class vn_i_air_ch34_01_02 : respawn_medium {};
+class vn_i_air_ch34_02_01 : respawn_medium {};
+class vn_i_air_ch34_02_02 : respawn_medium {};
 
 class vn_b_air_f100d_cap : wreck_long {};
 class vn_b_air_f100d_cas : wreck_long {};
@@ -325,5 +324,19 @@ class uns_willys_2_usmc : respawn_short {};
 class uns_willys_2_m60 : respawn_short {};
 class uns_willys_2_m1919 : respawn_short {};
 
-//Migs
+//Stuff forgotten
+class vn_b_air_uh1c_07_07 : respawn_short {};
+class vn_b_air_uh1b_01_03 : respawn_short {};
+
+
+//Dac Cong
 class vn_o_air_mig19_cap : respawn_short {};
+class vn_o_air_mi2_01_03 : respawn_short {};
+class vn_o_armor_type63_01 : respawn_short {};
+class vn_o_wheeled_btr40_mg_03 : respawn_short {};
+class vn_o_nva_static_d44 : respawn_short {};
+class vn_o_wheeled_btr40_mg_02 : respawn_short {};
+class vn_o_wheeled_btr40_mg_01 : respawn_short {};
+class vn_o_wheeled_z157_ammo : respawn_short {};
+class vn_o_air_mi2_01_02 : respawn_short {};
+class vn_o_air_mi2_01_01 : respawn_short {};
