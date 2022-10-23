@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=2715;
+		nextID=2716;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1206;
+		nextID=1222;
 	};
 	class Camera
 	{
-		pos[]={8997.8018,249.37399,6629.9878};
-		dir[]={0.47742131,-0.36081901,0.80132318};
-		up[]={0.18473676,0.93259072,0.31006643};
-		aside[]={0.85917336,3.3830293e-007,-0.51189446};
+		pos[]={9261.1846,387.68011,6182.2178};
+		dir[]={0.5009318,-0.47531822,0.72344679};
+		up[]={0.27064538,0.87973362,0.39086086};
+		aside[]={0.82221818,-5.6327553e-007,-0.56933451};
 	};
 };
 binarizationWanted=0;
@@ -10986,7 +10986,6 @@ class Mission
 			};
 			id=535;
 			type="Land_vn_b_helipad_01";
-			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17701,7 +17700,6 @@ class Mission
 			};
 			id=733;
 			type="Land_vn_b_helipad_01";
-			atlOffset=0.0071258545;
 		};
 		class Item239
 		{
@@ -17718,7 +17716,6 @@ class Mission
 			};
 			id=734;
 			type="Land_vn_b_helipad_01";
-			atlOffset=0.0071258545;
 		};
 		class Item240
 		{
@@ -19304,7 +19301,7 @@ class Mission
 			};
 			id=791;
 			type="vn_b_air_uh1c_02_01";
-			atlOffset=0.027008057;
+			atlOffset=0.00015258789;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53364,15 +53361,14 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={11181.806,-5.0217896,6816.665};
-				angles[]={0,1.5563173,0};
+				position[]={11161.376,6.7465701,6799.3989};
+				angles[]={6.2645216,2.8652196,6.0101771};
 			};
-			areaSize[]={60,0,18.465551};
+			areaSize[]={45,0,50};
 			areaIsRectangle=1;
 			flags=1;
 			id=2452;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=-1.1715233;
 			class CustomAttributes
 			{
 				class Attribute0
