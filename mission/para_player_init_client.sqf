@@ -180,7 +180,7 @@ call vn_mf_fnc_enable_arsenal_food_drink_overlay;
 //LOADING COMPLETE
 //Start tidying up ready for play.
 
-enableEnvironment false;
+enableEnvironment [false, true];
 
 // end loading screen
 uiSleep 0.4;
