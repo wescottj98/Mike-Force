@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1222;
+		nextID=1238;
 	};
 	class Camera
 	{
-		pos[]={9261.1846,387.68011,6182.2178};
-		dir[]={0.5009318,-0.47531822,0.72344679};
-		up[]={0.27064538,0.87973362,0.39086086};
-		aside[]={0.82221818,-5.6327553e-007,-0.56933451};
+		pos[]={9342.1934,302.14023,6675.8247};
+		dir[]={0.10616753,-0.55145311,-0.82744986};
+		up[]={0.070180975,0.83419967,-0.54697663};
+		aside[]={-0.99189007,-1.6423292e-007,-0.12726524};
 	};
 };
 binarizationWanted=0;
@@ -10986,6 +10986,7 @@ class Mission
 			};
 			id=535;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17700,6 +17701,7 @@ class Mission
 			};
 			id=733;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 		};
 		class Item239
 		{
@@ -17716,6 +17718,7 @@ class Mission
 			};
 			id=734;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 		};
 		class Item240
 		{
@@ -19301,7 +19304,7 @@ class Mission
 			};
 			id=791;
 			type="vn_b_air_uh1c_02_01";
-			atlOffset=0.00015258789;
+			atlOffset=0.027008057;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -57882,8 +57885,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9238.082,226.92145,6483.4414};
-				angles[]={0.0047331657,0.6954661,6.2807426};
+				position[]={9238.8652,226.89789,6484.0288};
+				angles[]={0,0.69546133,0};
 			};
 			side="Empty";
 			flags=4;
@@ -57893,7 +57896,6 @@ class Mission
 			};
 			id=2591;
 			type="Land_vn_us_weapons_stack2";
-			atlOffset=0.02355957;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -58013,8 +58015,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9239.8721,226.92105,6484.2949};
-				angles[]={0.0047331657,3.7510099,6.2807426};
+				position[]={9240.4912,226.90833,6485.2466};
+				angles[]={-0,3.7510099,0.0079935296};
 			};
 			side="Empty";
 			flags=4;
@@ -58025,7 +58027,6 @@ class Mission
 			};
 			id=2595;
 			type="Land_vn_object_trashcan_01";
-			atlOffset=0.016662598;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61564,11 +61565,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=231;
+			nextID=232;
 		};
 		class Links
 		{
-			items=231;
+			items=232;
 			class Item0
 			{
 				linkID=0;
@@ -63874,6 +63875,16 @@ class Mission
 				linkID=230;
 				item0=1315;
 				item1=116;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item231
+			{
+				linkID=231;
+				item0=2591;
+				item1=123;
 				class CustomData
 				{
 					type="Sync";
