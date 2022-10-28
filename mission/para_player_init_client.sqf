@@ -121,7 +121,7 @@ if (side player == east) then
 	_respawnMarker = format ["mf_dc_respawn_%1", _lastTeamName]; 
 };
 
-if (_lastTeamName == "SatansAngels") then {
+if (_lastTeamName == "SatansAngels" && toLower(worldName) in ["cam_lao_nam"]) then {
 	player setPosATL [20152.6,67.6535,123.54];
 } else {
 	player setPos getMarkerPos _respawnMarker;
@@ -180,7 +180,7 @@ call vn_mf_fnc_enable_arsenal_food_drink_overlay;
 //LOADING COMPLETE
 //Start tidying up ready for play.
 
-enableEnvironment false;
+enableEnvironment [false, true];
 
 // end loading screen
 uiSleep 0.4;
