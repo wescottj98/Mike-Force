@@ -1275,6 +1275,9 @@
       <Key ID="STR_vn_mf_light_ammo_supplies">
         <Original>Light Ammo Supplies</Original>
       </Key>
+      <Key ID="STR_vn_mf_empty_supply_crate">
+        <Original>Empty Supply Crate</Original>
+      </Key>
       <Key ID="STR_vn_mf_support_ammo_supplies">
         <Original>Support Ammo Supplies</Original>
       </Key>

@@ -155,3 +155,12 @@ class FoodCrate
 	items[] = {};
 	backpacks[] = {};
 };
+
+class EmptySupplyCrate
+{
+	objectClassname = "vn_b_ammobox_supply_01";
+	weapons[] = {};
+	magazines[] = {};
+	items[] = {};
+	backpacks[] = {};
+};

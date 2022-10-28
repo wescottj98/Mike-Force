@@ -62,6 +62,13 @@ class support
 		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_sup_med_ca.paa";
 		crateConfig = "MedicalCrate";
 	};
+	class EmptyCrate
+	{
+		name = "STR_vn_mf_empty_supply_crate";
+		className =	"vn_b_ammobox_supply_01";
+		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_sup_ammo_ca.paa";
+		crateConfig = "EmptySupplyCrate";
+	};
 };
 
 class ammo
