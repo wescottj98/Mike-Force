@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=589;
+		nextID=602;
 	};
 	class Camera
 	{
-		pos[]={3255.0823,60.272015,4253.4287};
-		dir[]={-0.73770708,-0.5595969,0.37790862};
-		up[]={-0.49808916,0.82873833,0.25515798};
-		aside[]={0.45596659,-1.5221303e-007,0.89008445};
+		pos[]={3326.5288,84.253113,4358.9824};
+		dir[]={-0.61294502,-0.65264505,-0.44561282};
+		up[]={-0.52793247,0.75760418,-0.38380969};
+		aside[]={-0.58808237,-1.0649674e-006,0.8089177};
 	};
 };
 binarizationWanted=0;
@@ -326,24 +326,6 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
-				};
-			};
-		};
-		nAttributes=1;
-	};
-	class Category1
-	{
-		name="Scenario";
-		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
 				};
 			};
 		};
@@ -2130,7 +2112,7 @@ class Mission
 			};
 			id=559;
 			type="vn_o_air_mi2_01_03";
-			atlOffset=0.031085968;
+			atlOffset=0.00013923645;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2166,7 +2148,7 @@ class Mission
 			};
 			id=560;
 			type="vn_o_air_mi2_05_05";
-			atlOffset=0.030948639;
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2202,7 +2184,7 @@ class Mission
 			};
 			id=561;
 			type="vn_o_air_mi2_04_03";
-			atlOffset=0.031085968;
+			atlOffset=0.00013923645;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2238,7 +2220,7 @@ class Mission
 			};
 			id=562;
 			type="vn_o_air_mi2_01_02";
-			atlOffset=0.030948639;
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4671,7 +4653,7 @@ class Mission
 			};
 			id=638;
 			type="vn_o_air_mi2_01_02";
-			atlOffset=0.015001297;
+			atlOffset=0.02404213;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8263,17 +8245,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3228.7461,42.005432,4248.8779};
+				position[]={3228.7458,42.005672,4248.8784};
 				angles[]={0.011990411,4.5790806,6.2751913};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=758;
 			type="vn_b_air_oh6a_01";
-			atlOffset=-0.00024414063;
+			atlOffset=-3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15343,6 +15326,7 @@ class Mission
 						angles[]={0,4.6421046,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""71stMEU"",""MikeForce"",""MilitaryPolice"",""BlackHawk"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -15350,7 +15334,7 @@ class Mission
 					};
 					id=749;
 					type="vn_b_air_uh1d_02_01";
-					atlOffset=0.25099945;
+					atlOffset=0.0001411438;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15378,6 +15362,7 @@ class Mission
 						angles[]={0,4.6784596,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""71stMEU"",""MikeForce"",""MilitaryPolice"",""BlackHawk"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -15385,7 +15370,7 @@ class Mission
 					};
 					id=751;
 					type="vn_b_air_uh1c_07_07";
-					atlOffset=0.25099945;
+					atlOffset=0.0001411438;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15413,6 +15398,7 @@ class Mission
 						angles[]={0,4.6421032,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""71stMEU"",""MikeForce"",""MilitaryPolice"",""BlackHawk"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -15420,7 +15406,6 @@ class Mission
 					};
 					id=750;
 					type="vn_b_air_uh1d_02_01";
-					atlOffset=0.25085831;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15448,6 +15433,7 @@ class Mission
 						angles[]={0,4.6956687,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""71stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -15455,7 +15441,7 @@ class Mission
 					};
 					id=741;
 					type="vn_b_air_uh1e_02_04";
-					atlOffset=0.25099945;
+					atlOffset=0.0001411438;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15483,6 +15469,7 @@ class Mission
 						angles[]={0,4.6888447,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""71stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -15490,7 +15477,7 @@ class Mission
 					};
 					id=740;
 					type="vn_b_air_uh1d_03_06";
-					atlOffset=0.25099945;
+					atlOffset=0.0001411438;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15518,6 +15505,7 @@ class Mission
 						angles[]={0,4.7186198,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""71stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -15525,7 +15513,7 @@ class Mission
 					};
 					id=760;
 					type="vn_b_air_oh6a_03";
-					atlOffset=0.25099945;
+					atlOffset=0.0001411438;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15834,7 +15822,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=359.70804;
+			angle=359.70801;
 			id=1077;
 		};
 		class Item366
@@ -15889,7 +15877,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=75.676659;
+			angle=75.676651;
 			id=1082;
 		};
 		class Item371
@@ -15900,7 +15888,7 @@ class Mission
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
-			angle=222.43604;
+			angle=222.43602;
 			id=1083;
 		};
 		class Item372
@@ -15942,7 +15930,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3199.5591,41.416206,4242.125};
+				position[]={3199.5586,41.416595,4242.125};
 				angles[]={0,0.096028015,0.051958453};
 			};
 			side="Empty";
@@ -15950,10 +15938,11 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""71stMEU"",""MikeForce"",""MilitaryPolice"",""BlackHawk"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
 			};
 			id=1087;
 			type="B_Heli_Light_01_F";
-			atlOffset=-0.0024147034;
+			atlOffset=-0.0019950867;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17319,6 +17308,7 @@ class Mission
 			};
 			id=1143;
 			type="Land_vn_b_helipad_01";
+			atlOffset=-0.0071258545;
 		};
 		class Item413
 		{
@@ -17334,6 +17324,7 @@ class Mission
 			};
 			id=1144;
 			type="Land_vn_b_helipad_01";
+			atlOffset=-0.0071258545;
 		};
 		class Item414
 		{
@@ -17349,6 +17340,7 @@ class Mission
 			};
 			id=1145;
 			type="Land_vn_b_helipad_01";
+			atlOffset=-0.0071258545;
 		};
 		class Item415
 		{
@@ -17365,6 +17357,7 @@ class Mission
 			};
 			id=1149;
 			type="Land_vn_b_helipad_01";
+			atlOffset=-0.0071258545;
 		};
 		class Item416
 		{
@@ -17383,7 +17376,7 @@ class Mission
 			};
 			id=1150;
 			type="vn_b_air_uh1d_02_07";
-			atlOffset=1.5258789e-005;
+			atlOffset=0.0071411133;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17419,6 +17412,7 @@ class Mission
 			};
 			id=1152;
 			type="vn_b_air_uh1d_02_04";
+			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17454,6 +17448,7 @@ class Mission
 			};
 			id=1153;
 			type="vn_b_air_uh1d_02_02";
+			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17489,6 +17484,7 @@ class Mission
 			};
 			id=1154;
 			type="B_Heli_Light_01_F";
+			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
