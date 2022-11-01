@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1270;
+		nextID=1286;
 	};
 	class Camera
 	{
-		pos[]={9255.6445,263.99438,6288.6812};
-		dir[]={-0.27719223,-0.51160645,0.81331724};
-		up[]={-0.16506104,0.85918379,0.48431259};
-		aside[]={0.94656539,5.956972e-007,0.32260659};
+		pos[]={9165.168,356.33035,6413.832};
+		dir[]={0.3708345,-0.59321487,-0.71460474};
+		up[]={0.2732645,0.80500048,-0.52658731};
+		aside[]={-0.88763565,6.1292667e-007,-0.46062854};
 	};
 };
 binarizationWanted=0;
@@ -11125,6 +11125,7 @@ class Mission
 			};
 			id=535;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17839,6 +17840,7 @@ class Mission
 			};
 			id=733;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 		};
 		class Item239
 		{
@@ -17855,6 +17857,7 @@ class Mission
 			};
 			id=734;
 			type="Land_vn_b_helipad_01";
+			atlOffset=0.0071258545;
 		};
 		class Item240
 		{
@@ -19440,7 +19443,7 @@ class Mission
 			};
 			id=791;
 			type="vn_b_air_uh1c_02_01";
-			atlOffset=0.00015258789;
+			atlOffset=0.027008057;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61701,8 +61704,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9217.8496,229.22369,6476.627};
-				angles[]={0.029324362,1.8269742,6.272521};
+				position[]={9217.8496,229.22369,6476.6265};
+				angles[]={0.029321531,1.8269758,6.2725215};
 			};
 			side="Empty";
 			flags=4;
@@ -61713,7 +61716,6 @@ class Mission
 			};
 			id=2717;
 			type="vn_b_wheeled_m54_ammo";
-			atlOffset=1.5258789e-005;
 		};
 		class Item1226
 		{
@@ -61805,6 +61807,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[this, [""7thCAV"",""71stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2727;
@@ -61823,6 +61826,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[this, [""7thCAV"",""71stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2728;
