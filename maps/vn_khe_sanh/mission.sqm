@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1254;
+		nextID=1270;
 	};
 	class Camera
 	{
-		pos[]={9221.0938,321.05869,6473.2993};
-		dir[]={-0.044440944,-0.9985168,0.031807743};
-		up[]={-0.8119629,0.054595429,0.58114749};
-		aside[]={0.582021,-1.8998981e-007,0.81318504};
+		pos[]={9255.6445,263.99438,6288.6812};
+		dir[]={-0.27719223,-0.51160645,0.81331724};
+		up[]={-0.16506104,0.85918379,0.48431259};
+		aside[]={0.94656539,5.956972e-007,0.32260659};
 	};
 };
 binarizationWanted=0;
@@ -354,6 +354,24 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
 				};
 			};
 		};
@@ -3648,7 +3666,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9242.7852,228.31215,6329.2163};
-						angles[]={-0,4.7457333,0};
+						angles[]={0,4.7457333,0};
 					};
 					side="Empty";
 					flags=4;
@@ -3658,6 +3676,7 @@ class Mission
 					};
 					id=2726;
 					type="Land_vn_us_vehicleammo";
+					atlOffset=-0.032348633;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3678,7 +3697,7 @@ class Mission
 				};
 			};
 			id=224;
-			atlOffset=-0.073654175;
+			atlOffset=-0.089828491;
 		};
 		class Item32
 		{
@@ -17427,7 +17446,7 @@ class Mission
 			};
 			id=724;
 			type="vn_b_wheeled_m54_mg_03";
-			atlOffset=1.5258789e-005;
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61702,7 +61721,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9247.2461,228.42999,6327.1323};
-				angles[]={-0,1.3670465,0};
+				angles[]={0,1.3670465,0};
 			};
 			areaSize[]={10,0,20};
 			areaIsRectangle=1;
