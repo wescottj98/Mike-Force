@@ -73,7 +73,7 @@ switch(_team) do
 		6 enableChannel [true, true];
 	};
 
-	case "BlackHawk" : {
+	case "QuarterHorse" : {
 		1 radioChannelAdd [player];
 		3 radioChannelAdd [player];
 

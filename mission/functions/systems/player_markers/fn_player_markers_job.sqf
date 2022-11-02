@@ -158,6 +158,7 @@ vn_mf_player_markers_manned_vehicles = [];
 		_vehicleName = "Ghost";
 	};
 	
+	
 	private _crewCount = count _crew;
 	private _crewDisplay = 0;
 	if (_crewCount - 1 <= 0) then {

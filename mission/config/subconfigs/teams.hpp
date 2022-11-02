@@ -216,11 +216,11 @@ class MilitaryPolice
     onLeave = "";
 };
 
-class BlackHawk
+class QuarterHorse
 {
-    name = "Black Hawk [1st Squadron, 1st Cav]";
-    icon = "custom\taskroster\blackhawk_HL.paa";
-    shortname = "Black Hawk";
+    name = "Quarter Horse [1st Squadron, 1st Cav]";
+    icon = "custom\taskroster\quarterhorse_HL.paa";
+    shortname = "Quarter Horse";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
     colorRGBA[] = {0.85, 0.4, 0, 1};
