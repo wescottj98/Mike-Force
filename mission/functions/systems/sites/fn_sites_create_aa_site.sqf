@@ -33,8 +33,9 @@ params ["_pos"];
 
 		vn_site_objects append _AAObjs;
 
+		// if AAObj is a StaticWeapon, Building, House, LandVehicle, or Air then enable dynamic sim
 		{
-			if(_x isKindOf "StaticWeapon" || _x isKindOf "Building" || _x isKindOf "House" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
+			if (typeOf _x in ["StaticWeapon", "Building", "House", "LandVehicle", "Air"]) then {
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
 		} forEach _AAObjs;
