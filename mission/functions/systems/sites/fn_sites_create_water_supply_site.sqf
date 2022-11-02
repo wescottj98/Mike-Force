@@ -44,6 +44,7 @@ params ["_pos"];
 		_siteStore setVariable ["markers", [_supplyMarker]];
 		_siteStore setVariable ["supplys", [_tunnelWS]];
 		_siteStore setVariable ["vehicles", [_tunnelWS]]; 
+		_siteStore setVariable ["objectsToDestroy", _tunnelWS];
 	},
 	//Teardown condition check code
 	{

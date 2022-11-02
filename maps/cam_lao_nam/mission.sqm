@@ -38201,7 +38201,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
-						init="this setObjectTexture [0,""];";
+						init="this setObjectTexture [0,""custom\billboards\blackhawk_bb.paa""];";
 					};
 					id=7213;
 					type="Land_Billboard_03_aan_F";

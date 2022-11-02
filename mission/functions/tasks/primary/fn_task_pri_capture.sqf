@@ -57,7 +57,18 @@ _taskDataStore setVariable ["INIT", {
 _taskDataStore setVariable ["destroy_hq_sites", {
 	params ["_taskDataStore"];
 
-	private _numberOfSites = count (missionNamespace getVariable ["side_sites_hq",[]]);
+	private _side_sites_hq = missionNamespace getVariable ["side_sites_hq", []];
+
+	// check each hq site to see if it's been destroyed
+	{
+		if (isNull _x || !(alive _x)) then
+		{
+			//remove from list
+			_side_sites_hq deleteAt _forEachIndex;
+		}
+	} forEach _side_sites_hq;
+
+	private _numberOfSites = count _side_sites_hq;
 	if (_numberOfSites == 0) exitWith
 	{
 		_taskDataStore setVariable ["hq_sites_destroyed", true];
@@ -68,7 +79,18 @@ _taskDataStore setVariable ["destroy_hq_sites", {
 _taskDataStore setVariable ["destroy_factory_sites", {
 	params ["_taskDataStore"];
 
-	private _numberOfSites = count (missionNamespace getVariable ["side_sites_factory",[]]);
+	private _side_sites_factory = missionNamespace getVariable ["side_sites_factory", []];
+
+	//check each site to see if it's destroyed
+	{
+		if (isNull _x || !(alive _x)) then
+		{
+			//remove from list
+			_side_sites_factory deleteAt _forEachIndex;
+		};
+	} forEach _side_sites_factory;
+
+	private _numberOfSites = count _side_sites_factory;
 	if (_numberOfSites == 0) exitWith
 	{
 		_taskDataStore setVariable ["factory_sites_destroyed", true];

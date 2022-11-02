@@ -48,6 +48,7 @@ if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 		_siteStore setVariable ["vehicles", _vehicles]; 
 		_siteStore setVariable ["units", (_createdThings select 1)]; 
 		_siteStore setVariable ["groups", _groups];
+		_siteStore setVariable ["objectsToDestroy", _vehicles];
 	},
 	//Teardown condition check code
 	{

@@ -202,8 +202,8 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\blackhawk_gray.paa";
-			textUp = "custom\taskroster\blackhawk_HL.paa";
+			text = "custom\taskroster\quarterhorse_gray.paa";
+			textUp = "custom\taskroster\quarterhorse_HL.paa";
 			
 			onButtonClick = "['QuarterHorse'] call vn_mf_fnc_tr_selectTeam;";
 		};
