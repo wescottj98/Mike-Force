@@ -144,11 +144,11 @@ class GreenHornets
     onLeave = "";
 };
 
-class 71stMEU
+class 3rdMEU
 {
-    name = "Gunslingers [71st MEU]";
-    icon = "custom\taskroster\71stmeu_HL.paa";
-    shortname = "Gunslingers";
+    name = "3rd Marines";
+    icon = "custom\taskroster\3rdmeu_HL.paa";
+    shortname = "The Fighting Third";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0.3, 0.6, 1};

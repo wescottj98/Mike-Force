@@ -186,10 +186,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\71stmeu_gray.paa";
-			textUp = "custom\taskroster\71stmeu_HL.paa";
+			text = "custom\taskroster\3rdmeu_gray.paa";
+			textUp = "custom\taskroster\3rdmeu_HL.paa";
 			
-			onButtonClick = "['71stMEU'] call vn_mf_fnc_tr_selectTeam;";
+			onButtonClick = "['3rdMEU'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		// middle center left
 		class logoBH: vn_mf_RscButton_ImgSwitch

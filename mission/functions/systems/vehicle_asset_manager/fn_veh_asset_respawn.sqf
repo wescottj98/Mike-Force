@@ -48,6 +48,14 @@ if (getNumber (configfile >> "CfgVehicles" >> _className >> "isUAV") > 0 && coun
 	createVehicleCrew _vehicle;
 };
 
+// If className is "B_Heli_Light_01_F" then delete inventory
+if (_className isEqualTo "B_Heli_Light_01_F") then {
+	clearWeaponCargoGlobal _vehicle;
+	clearMagazineCargoGlobal _vehicle;
+	clearItemCargoGlobal _vehicle;
+	clearBackpackCargoGlobal _vehicle;
+};
+
 //Restore initial variables
 //TODO: Un-network this, once teamLock is fixed to be less buggy with respawn.
 {
