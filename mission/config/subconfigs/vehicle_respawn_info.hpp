@@ -87,11 +87,14 @@ class vn_c_boat_02_01 : respawn_short {};
 //US Boats
 class vn_b_boat_05_01 : respawn_long {};
 class vn_b_boat_06_01 : respawn_long {};
+class vn_b_boat_06_02 : respawn_long {};
 class vn_b_boat_09_01 : respawn_medium {};
 class vn_b_boat_10_01 : respawn_medium {};
 class vn_b_boat_11_01 : respawn_medium {};
 class vn_b_boat_12_01 : respawn_medium {};
+class vn_b_boat_12_02 : respawn_medium {};
 class vn_b_boat_13_01 : respawn_medium {};
+class vn_b_boat_13_02 : respawn_medium {};
 
 //Air assets
 //Cobra Helicopter
