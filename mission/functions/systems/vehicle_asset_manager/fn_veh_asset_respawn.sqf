@@ -58,4 +58,12 @@ _vehicleInfo set [struct_veh_asset_info_m_vehicle, _vehicle];
 
 [_id, _vehicle] call vn_mf_fnc_veh_asset_init_vehicle;
 
+// If className is "B_Heli_Light_01_F" then delete inventory
+if (_className isEqualTo "B_Heli_Light_01_F") then {
+	clearWeaponCargoGlobal _vehicle;
+	clearMagazineCargoGlobal _vehicle;
+	clearItemCargoGlobal _vehicle;
+	clearBackpackCargoGlobal _vehicle;
+};
+
 _vehicle enableSimulationGlobal true;
