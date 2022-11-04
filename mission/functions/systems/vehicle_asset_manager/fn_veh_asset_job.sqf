@@ -36,7 +36,7 @@ private _fnc_processVehicle = {
 	private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
 	private _vehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
 	_vehicleInfo select struct_veh_asset_info_m_respawn_info params ["_respawnType", "_respawnTime", "_positionOverride"];
-	_vehicleInfo select struct_veh_asset_info_m_spawn_info params ["_type", "_dir", "_spawnPos", "_vars"];
+	_vehicleInfo select struct_veh_asset_info_m_spawn_info params ["_type", "_dir", "_spawnPos", "_vars", "_vehicleVarName"];
 	private _stateData = _vehicleInfo select struct_veh_asset_info_m_state_data;
 	//Need this to be a function, as state can change at various points, and it always needs to be up to date.
 	private _fnc_getState = {_vehicleInfo select struct_veh_asset_info_m_state_data};

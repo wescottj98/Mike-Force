@@ -19,7 +19,7 @@ params ["_id"];
 private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
 _vehicleInfo select struct_veh_asset_info_m_respawn_info params ["_respawnType", "_respawnTime", "_positionOverride"];
 private _spawnInfo = _vehicleInfo select struct_veh_asset_info_m_spawn_info;
-_spawnInfo params ["_className", "_vectorDirUp", "_position", "_initialVariables"];
+_spawnInfo params ["_className", "_vectorDirUp", "_position", "_initialVariables", "_vehicleVarName"];
 private _vehicle = objNull;
 
 private _oldVehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
@@ -57,6 +57,11 @@ if (getNumber (configfile >> "CfgVehicles" >> _className >> "isUAV") > 0 && coun
 _vehicleInfo set [struct_veh_asset_info_m_vehicle, _vehicle];
 
 [_id, _vehicle] call vn_mf_fnc_veh_asset_init_vehicle;
+
+// Set the vehicleVarName
+if !(_vehicleVarName isEqualTo "") then {
+	_vehicle setVehicleVarName _vehicleVarName;
+};
 
 // If className is "B_Heli_Light_01_F" then delete inventory
 if (_className isEqualTo "B_Heli_Light_01_F") then {

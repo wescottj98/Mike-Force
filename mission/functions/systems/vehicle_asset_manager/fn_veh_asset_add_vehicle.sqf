@@ -59,7 +59,7 @@ private _vehicleInfo = call struct_veh_asset_info_fnc_create;
 private _vectorDirUp = [vectorDir _veh, vectorUp _veh];
 _vehicleInfo set [
 	struct_veh_asset_info_m_spawn_info,
-	[typeOf _veh, _vectorDirUp, getPosWorld _veh, _initialVariables]
+	[typeOf _veh, _vectorDirUp, getPosWorld _veh, _initialVariables, vehicleVarName _veh]
 ];
 
 _vehicleInfo set [
