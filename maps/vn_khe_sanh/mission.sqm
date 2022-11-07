@@ -33170,7 +33170,7 @@ class Mission
 			dataType="Marker";
 			position[]={9480.4072,228.0197,6403.4736};
 			name="marker_26";
-			text="GUNSLINGERS";
+			text="3RD MEU";
 			type="b_installation";
 			id=1305;
 		};
