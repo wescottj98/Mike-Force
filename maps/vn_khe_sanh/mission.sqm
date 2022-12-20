@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1546;
+	toggles=1538;
 	class ItemIDProvider
 	{
-		nextID=2736;
+		nextID=2764;
 	};
 	class MarkerIDProvider
 	{
-		nextID=42;
+		nextID=44;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1302;
+		nextID=1318;
 	};
 	class Camera
 	{
-		pos[]={9991.0596,459.94284,6199.0669};
-		dir[]={0.13494529,-0.67149889,0.72863346};
-		up[]={0.12228549,0.74100173,0.66027534};
-		aside[]={0.98329175,-2.5116606e-007,-0.18210964};
+		pos[]={9286.5176,272.86948,6228.6558};
+		dir[]={0.55693054,-0.74499369,-0.3671996};
+		up[]={0.62197644,0.66706651,-0.4100858};
+		aside[]={-0.55045795,-3.3565448e-007,-0.83487934};
 	};
 };
 binarizationWanted=0;
@@ -385,7 +385,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1212;
+		items=1234;
 		class Item0
 		{
 			dataType="Layer";
@@ -2166,7 +2166,7 @@ class Mission
 					};
 					id=2732;
 					type="Land_vn_us_weapons_stack2";
-					atlOffset=0.33776855;
+					atlOffset=0.55654907;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2187,7 +2187,7 @@ class Mission
 				};
 			};
 			id=196;
-			atlOffset=12.61731;
+			atlOffset=-64.621826;
 		};
 		class Item18
 		{
@@ -60882,7 +60882,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10084.711,231.6763,6487.2539};
-				angles[]={-0,5.0901923,0};
+				angles[]={0,5.0901923,0};
 			};
 			name="vn_dc_capture_4";
 			id=2705;
@@ -60895,7 +60895,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10084.234,231.58107,6485.0513};
-				angles[]={-0,5.0893159,0};
+				angles[]={0,5.0893159,0};
 			};
 			name="vn_dc_capture_5";
 			id=2706;
@@ -60908,7 +60908,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10083.76,231.58984,6482.7329};
-				angles[]={-0,5.0901923,0};
+				angles[]={0,5.0901923,0};
 			};
 			name="vn_dc_capture_6";
 			id=2711;
@@ -61208,7 +61208,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={470.71268,469.22818,11126.165};
-				angles[]={0,4.7668295,-0};
+				angles[]={0,4.7668295,0};
 			};
 			side="Empty";
 			flags=5;
@@ -61224,7 +61224,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={470.60324,469.22818,11128.931};
-				angles[]={0,4.7717352,-0};
+				angles[]={0,4.7717352,0};
 			};
 			side="Empty";
 			flags=5;
@@ -61234,16 +61234,558 @@ class Mission
 			id=2735;
 			type="Land_vn_o_prop_cong_cage_01";
 		};
+		class Item1212
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9298.6279,231.69691,6208.418};
+				angles[]={0,5.3004079,0};
+			};
+			areaSize[]={31.559149,0,20.682405};
+			areaIsRectangle=1;
+			flags=1;
+			id=2736;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1213
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9304.6934,233.86581,6233.5903};
+				angles[]={0,0.58033943,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="camo3";
+				disableSimulation=1;
+			};
+			id=2737;
+			type="vn_b_air_oh6a_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="camo3";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1214
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9304.915,231.92476,6233.9321};
+				angles[]={0,0.55451691,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=2738;
+			type="Land_vn_helipadcircle_f";
+			atlOffset=0.4131012;
+		};
+		class Item1215
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9317.5566,231.63789,6222.3257};
+				angles[]={0.010985284,2.1704683,6.2828965};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2740;
+			type="Land_vn_b_helipad_01";
+		};
+		class Item1216
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9316.3008,233.70998,6220.7524};
+				angles[]={0.010978121,0.63364178,6.2828884};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="ch34_03";
+				disableSimulation=1;
+			};
+			id=2741;
+			type="vn_i_air_ch34_02_02";
+			atlOffset=0.77424622;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ch34_03";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1217
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9284.6348,233.95509,6220.7134};
+				angles[]={0.013718288,2.2696435,0.016336281};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"", ""ARVN"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2744;
+			type="vn_i_armor_m113_acav_06";
+			atlOffset=-0.0005645752;
+		};
+		class Item1218
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9287.4922,233.95293,6224.1108};
+				angles[]={0.016318828,2.2708304,6.2694497};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"", ""ARVN"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2745;
+			type="vn_i_armor_m113_acav_06";
+			atlOffset=-0.00085449219;
+		};
+		class Item1219
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9290.1758,233.91982,6227.2852};
+				angles[]={0.013578662,2.2608821,0.016441001};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"", ""ARVN"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2746;
+			type="vn_i_armor_m113_acav_05";
+			atlOffset=-0.00061035156;
+		};
+		class Item1220
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9291.9268,233.60271,6231.1997};
+				angles[]={0,2.250602,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"", ""ARVN"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2747;
+			type="vn_b_wheeled_m151_mg_04";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item1221
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9293.665,233.57637,6233.2417};
+				angles[]={0,2.2442317,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"", ""ARVN"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2748;
+			type="vn_b_wheeled_m151_mg_04";
+			atlOffset=-1.5258789e-005;
+		};
+		class Item1222
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9293.9063,230.892,6182.6841};
+				angles[]={0,6.2535534,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2750;
+			type="Land_vn_b_gunpit_01";
+		};
+		class Item1223
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9276.4795,230.8192,6195.6758};
+				angles[]={0,1.1556554,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2751;
+			type="Land_vn_b_gunpit_01";
+		};
+		class Item1224
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9303.8193,233.76282,6189.499};
+				angles[]={0,5.6420736,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"", ""ARVN"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2753;
+			type="vn_i_wheeled_m54_ammo";
+			atlOffset=-1.5258789e-005;
+		};
+		class Item1225
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9312.293,233.81136,6198.2378};
+				angles[]={0,3.8001301,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2755;
+			type="Land_vn_tent_01_01";
+		};
+		class Item1226
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9309.75,231.81892,6197.4873};
+				angles[]={0,1.7037904,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="arsenal_cleanup_57";
+				disableSimulation=1;
+			};
+			id=2756;
+			type="Land_vn_object_trashcan_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1227
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9308.6289,231.80702,6198.6685};
+				angles[]={0,5.9801326,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2757;
+			type="Land_vn_us_weapons_stack2";
+			atlOffset=0.0018768311;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1228
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9313.8008,231.88586,6194.6792};
+				angles[]={0.0032986721,2.8579242,6.2790136};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="vn_mf_arvn_teleporter";
+			};
+			id=2758;
+			type="Land_vn_b_prop_mapstand_01";
+			atlOffset=0.0050048828;
+		};
+		class Item1229
+		{
+			dataType="Marker";
+			position[]={9312.2002,231.80499,6195.4219};
+			name="duty_officer_arvn";
+			text="@STR_vn_mf_duty_officer";
+			type="mil_dot";
+			colorName="ColorWhite";
+			angle=45;
+			id=2759;
+			atlOffset=-7.6293945e-005;
+		};
+		class Item1230
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9274.1387,232.69365,6194.3779};
+				angles[]={0,4.2115841,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""MACV"",""QuarterHorse"", ""ARVN""]]call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2760;
+			type="vn_b_army_static_m101_02";
+			atlOffset=0.00044250488;
+		};
+		class Item1231
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9293.71,232.74565,6180.248};
+				angles[]={0,3.0589688,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""MACV"",""QuarterHorse"", ""ARVN""]]call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=2761;
+			type="vn_b_army_static_m101_02";
+			atlOffset=4.5776367e-005;
+		};
+		class Item1232
+		{
+			dataType="Marker";
+			position[]={9311.9229,231.804,6197.4189};
+			name="mf_respawn_arvn";
+			text="@STR_vn_mf_respawn_arvn";
+			type="Empty";
+			id=2762;
+			atlOffset=0.0004119873;
+		};
+		class Item1233
+		{
+			dataType="Marker";
+			position[]={9296.8652,231.689,6208.0288};
+			name="markerARVN";
+			text="ARVN";
+			type="b_installation";
+			id=2763;
+			atlOffset=0.00045776367;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=240;
+			nextID=251;
 		};
 		class Links
 		{
-			items=240;
+			items=251;
 			class Item0
 			{
 				linkID=0;
@@ -63639,6 +64181,116 @@ class Mission
 				linkID=239;
 				item0=123;
 				item1=2732;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item240
+			{
+				linkID=240;
+				item0=116;
+				item1=2737;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item241
+			{
+				linkID=241;
+				item0=116;
+				item1=2741;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item242
+			{
+				linkID=242;
+				item0=116;
+				item1=2748;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item243
+			{
+				linkID=243;
+				item0=116;
+				item1=2747;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item244
+			{
+				linkID=244;
+				item0=116;
+				item1=2746;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item245
+			{
+				linkID=245;
+				item0=116;
+				item1=2745;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item246
+			{
+				linkID=246;
+				item0=116;
+				item1=2744;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item247
+			{
+				linkID=247;
+				item0=116;
+				item1=2753;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item248
+			{
+				linkID=248;
+				item0=116;
+				item1=2760;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item249
+			{
+				linkID=249;
+				item0=116;
+				item1=2761;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item250
+			{
+				linkID=250;
+				item0=123;
+				item1=2757;
 				class CustomData
 				{
 					type="Sync";

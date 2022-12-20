@@ -510,7 +510,7 @@ class Montagnard
 class SASR
 {
     name = "SASR";
-    icon = "custom\taskroster\sasr_HL.paa";
+    icon = "custom\taskroster\arvn_HL.paa";
     shortname = "SASR";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
@@ -532,6 +532,43 @@ class SASR
         engineer = true;
         explosiveSpecialist = true;
         medic = true;
+        UAVHacker = false;
+        vn_artillery = false;
+        harassable = true;
+        scout = true;
+        scout_multiple = true;
+    };
+
+    //Function Calls on team Join
+    onJoin = "";
+    onLeave = "";
+};
+
+class ARVN
+{
+    name = "Army of the Repulic of Vietnam";
+    icon = "custom\taskroster\quarterhorse_HL.paa";
+    shortname = "ARVN";
+    unit = "vn_b_men_army_01";
+    color = "ColorUNKNOWN";
+    colorRGBA[] = {0.7,0.6,0,1};
+
+    class rolelimits 
+    {
+        medic = 40;
+        engineer = 40;
+        explosiveSpecialist = 40;
+        vn_artillery = 0;
+    };
+    
+    class defaultTraits
+    {
+        camouflageCoef = 0.8;
+        audibleCoef = 0.6;
+        loadCoef = 1;
+        engineer = true;
+        explosiveSpecialist = true;
+        medic = false;
         UAVHacker = false;
         vn_artillery = false;
         harassable = true;
