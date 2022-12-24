@@ -69,6 +69,11 @@ class objects
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
+
+	class vn_mf_arvn_teleporter
+	{
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+	};
 	
 	class vn_mf_633rdcsg_teleporter
 	{
