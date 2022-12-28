@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1538;
+	toggles=1666;
 	class ItemIDProvider
 	{
 		nextID=2780;
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1350;
+		nextID=1366;
 	};
 	class Camera
 	{
@@ -61662,7 +61662,7 @@ class Mission
 			name="mf_respawn_arvn";
 			text="@STR_vn_mf_respawn_arvn";
 			type="Empty";
-			angle=334.16193;
+			angle=334.1619;
 			id=2773;
 			atlOffset=-0.0001373291;
 		};
@@ -61671,32 +61671,38 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9314.2529,233.72046,6218.1802};
-				angles[]={0,0.71407318,-0};
+				position[]={9314.2529,233.72034,6218.1802};
+				angles[]={0,0.71406651,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
 			};
 			id=2774;
 			type="vn_i_air_ch34_01_02";
+			atlOffset=0.029998779;
 		};
 		class Item1231
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9298.5508,234.40744,6231.2124};
-				angles[]={0,0.70170993,-0};
+				position[]={9298.5508,234.40771,6231.2119};
+				angles[]={0,0.70170963,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
 			};
 			id=2775;
 			type="vn_i_air_uh1d_02_01";
+			atlOffset=0.00018310547;
 		};
 		class Item1232
 		{
