@@ -457,7 +457,7 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_mine_jerrycan_mag",				{0,-1,-1,0}},
 			{"vn_mine_jerrycan_range_mag",			{0,-1,-1,0}},
 			{"vn_mine_lighter_mag",					{0,-1,-1,0}},
-			{"vn_mine_limpet_01_mag",				{-1,-1,-1,0}},
+			{"vn_mine_limpet_01_mag",				{0, 0,-1,0}},
 			{"vn_mine_limpet_02_mag",				{0,-1,-1,0}},
 			{"vn_mine_mortar_range_mag",			{0,-1,-1,0}},
 			{"vn_mine_chicom_no8_mag",				{0,-1,-1,0}},
