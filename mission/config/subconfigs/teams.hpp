@@ -510,7 +510,7 @@ class Montagnard
 class SASR
 {
     name = "SASR";
-    icon = "custom\taskroster\sasr_HL.paa";
+    icon = "custom\taskroster\nzsas_HL.paa";
     shortname = "SASR";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
@@ -547,7 +547,7 @@ class SASR
 class ARVN
 {
     name = "Army of the Repulic of Vietnam";
-    icon = "custom\taskroster\quarterhorse_HL.paa";
+    icon = "custom\taskroster\ARVN_HL.paa";
     shortname = "ARVN";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
