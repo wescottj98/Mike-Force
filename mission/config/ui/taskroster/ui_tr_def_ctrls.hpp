@@ -115,10 +115,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoBL: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BL_IDC;
-			x = UIW(2); //(2.75);
+			x = UIW(1); //(2.75);
 			y = UIH(5.5); //(12);
-			w = UIW(3); //(6);
-			h = UIH(3); //(6);
+			w = UIW(2); //(6);
+			h = UIH(2); //(6);
 			
 			tooltip = "";
 			
@@ -131,10 +131,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoTL: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TL_IDC;
-			x = UIW(6);
+			x = UIW(5);
 			y = UIH(5.5);
-			w = UIW(3); //(6);
-			h = UIH(3); //(6);
+			w = UIW(2); //(6);
+			h = UIH(2); //(6);
 			
 			tooltip = "";
 			
@@ -147,10 +147,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoTR: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TR_IDC;
-			x = UIW(10); //(9.75);
+			x = UIW(9); //(9.75);
 			y = UIH(5.5);
-			w = UIW(3); //(6);
-			h = UIH(3); //(6);
+			w = UIW(2); //(6);
+			h = UIH(2); //(6);
 			
 			tooltip = "";
 			
@@ -163,10 +163,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoBR: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BR_IDC;
-			x = UIW(14);
+			x = UIW(13);
 			y = UIH(5.5);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -179,10 +179,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoEC: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_EC_IDC;
-			x = UIW(2); //(9.75);
+			x = UIW(1); //(9.75);
 			y = UIH(9); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -195,10 +195,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoBH: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BH_IDC;
-			x = UIW(6); //(9.75);
+			x = UIW(5); //(9.75);
 			y = UIH(9); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -211,10 +211,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoMK: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MK_IDC;
-			x = UIW(10);
+			x = UIW(9);
 			y = UIH(9);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -227,10 +227,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoTF: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TF_IDC;
-			x = UIW(14);
+			x = UIW(13);
 			y = UIH(9);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -243,10 +243,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoMP: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MP_IDC;
-			x = UIW(2); //(9.75);
+			x = UIW(1); //(9.75);
 			y = UIH(12.25); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -259,10 +259,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoFM: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_FM_IDC;
-			x = UIW(6); //(9.75);
+			x = UIW(5); //(9.75);
 			y = UIH(12.25); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -275,10 +275,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoSA: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_SA_IDC;
-			x = UIW(10);
+			x = UIW(9);
 			y = UIH(12.25);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -291,10 +291,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoMO: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_PC_IDC;
-			x = UIW(14);
+			x = UIW(13);
 			y = UIH(12.25);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -307,15 +307,15 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoSASR: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_SASR_IDC;
-			x = UIW(2); //(9.75);
+			x = UIW(1); //(9.75);
 			y = UIH(15.75); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\sasr_gray.paa";
-			textUp = "custom\taskroster\sasr_HL.paa";
+			text = "custom\taskroster\NZSAS_grey.paa";
+			textUp = "custom\taskroster\NZSAS_HL.paa";
 			
 			onButtonClick = "['SASR'] call vn_mf_fnc_tr_selectTeam;";
 		};
@@ -323,10 +323,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoMontagnard: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MO_IDC;
-			x = UIW(6); //(9.75);
+			x = UIW(5); //(9.75);
 			y = UIH(15.75); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -339,10 +339,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logoTigerForce: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_TF_IDC;
-			x = UIW(10); //(9.75);
+			x = UIW(9); //(9.75);
 			y = UIH(15.75); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -355,10 +355,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class logo7thCAV: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_7TH_IDC;
-			x = UIW(14); //(9.75);
+			x = UIW(13); //(9.75);
 			y = UIH(15.75); //(12);
-			w = UIW(3);
-			h = UIH(3);
+			w = UIW(2);
+			h = UIH(2);
 			
 			tooltip = "";
 			
@@ -366,6 +366,22 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			textUp = "custom\taskroster\7thcav_HL.paa";
 			
 			onButtonClick = "['7thCAV'] call vn_mf_fnc_tr_selectTeam;";
+		};
+
+		class logoARVN: vn_mf_RscButton_ImgSwitch
+		{
+			idc = VN_TR_SELECTTEAM_TEAM_LOGO_ARVN_IDC;
+			x = UIW(16); //(9.75);
+			y = UIH(5.5); //(12);
+			w = UIW(2);
+			h = UIH(2);
+			
+			tooltip = "";
+			
+			text = "custom\taskroster\ARVN_grey.paa";
+			textUp = "custom\taskroster\ARVN_HL.paa";
+			
+			onButtonClick = "['ARVN'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		
 		class txtTeam: vn_mf_RscStructuredText
