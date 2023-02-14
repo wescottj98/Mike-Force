@@ -228,6 +228,17 @@ class vn_i_air_ch34_01_02 : respawn_medium {};
 class vn_i_air_ch34_02_01 : respawn_medium {};
 class vn_i_air_ch34_02_02 : respawn_medium {};
 
+
+//// ARVN VEHICLES 
+//UH1D - Slick - Independent
+class vn_i_air_uh1d_02_01 : respawn_medium {};
+
+//M113
+class vn_i_armor_m113_acav_05 : wreck_short {};
+class vn_i_armor_m113_acav_06 : wreck_short {};
+//105 at gun
+class vn_i_static_m101_01 : respawn_medium {};
+
 class vn_b_air_f100d_cap : wreck_long {};
 class vn_b_air_f100d_cas : wreck_long {};
 class vn_b_air_f100d_hcas : wreck_long {};
