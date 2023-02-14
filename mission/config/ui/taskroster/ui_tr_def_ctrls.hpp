@@ -368,7 +368,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			onButtonClick = "['7thCAV'] call vn_mf_fnc_tr_selectTeam;";
 		};
 
-		class logoARVN: vn_mf_RscButton_ImgSwitch
+		class logoARVNR: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_LOGO_ARVN_IDC;
 			x = UIW(16); //(9.75);
@@ -381,7 +381,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "custom\taskroster\ARVN_grey.paa";
 			textUp = "custom\taskroster\ARVN_HL.paa";
 			
-			onButtonClick = "['ARVN'] call vn_mf_fnc_tr_selectTeam;";
+			onButtonClick = "['ARVNR'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		
 		class txtTeam: vn_mf_RscStructuredText

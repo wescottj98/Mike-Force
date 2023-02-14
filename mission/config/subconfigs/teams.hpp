@@ -544,11 +544,11 @@ class SASR
     onLeave = "";
 };
 
-class ARVN
+class ARVNR
 {
     name = "Army of the Repulic of Vietnam";
     icon = "custom\taskroster\ARVN_HL.paa";
-    shortname = "ARVN";
+    shortname = "ARVNR";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
     colorRGBA[] = {0.7,0.6,0,1};
