@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8109;
+		nextID=8204;
 	};
 	class Camera
 	{
-		pos[]={16119.831,48.377525,7103.8701};
-		dir[]={0.59496367,-0.66997045,0.44402462};
-		up[]={0.53692704,0.74238771,0.40071157};
-		aside[]={0.59810334,-1.4901161e-008,-0.80141902};
+		pos[]={16139.337,48.377525,7079.2051};
+		dir[]={0.16630931,-0.60795152,0.77637506};
+		up[]={0.12734495,0.79396641,0.59447622};
+		aside[]={0.97782886,-2.4811743e-007,-0.20946373};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -77953,18 +77953,17 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16127.781,17.219551,7142.3857};
-				angles[]={-0,2.424629,0};
+				angles[]={0,2.424629,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14790;
 			type="vn_b_wheeled_m151_mg_04";
-			atlOffset=-9.5367432e-007;
 		};
 		class Item1506
 		{
@@ -77972,18 +77971,17 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16128.314,17.219551,7147.3438};
-				angles[]={-0,2.424629,0};
+				angles[]={0,2.424629,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14791;
 			type="vn_b_wheeled_m151_mg_04";
-			atlOffset=-9.5367432e-007;
 		};
 		class Item1507
 		{
@@ -77997,7 +77995,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14792;
@@ -78015,11 +78013,12 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14793;
 			type="vn_i_armor_m113_acav_05";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item1509
 		{
@@ -78033,7 +78032,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14794;
@@ -78150,14 +78149,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16177.161,15.178645,7139.6367};
-				angles[]={-0,1.6087748,0};
+				position[]={16177.161,15.178645,7139.6372};
+				angles[]={0,1.6087748,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14814;
@@ -78168,19 +78167,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16177.188,15.16501,7128.1289};
-				angles[]={-0,1.6087748,6.2771854};
+				position[]={16177.188,15.165385,7128.1289};
+				angles[]={0,1.6087748,6.2771816};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14815;
 			type="vn_i_static_m101_01";
-			atlOffset=-0.015375137;
+			atlOffset=-0.015000343;
 		};
 		class Item1517
 		{
@@ -78194,7 +78193,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14816;
@@ -78470,18 +78469,18 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16149,17.292263,7138.7598};
-				angles[]={-0,4.6570272,-0};
+				angles[]={0,4.6570272,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""Muskets"",""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""Muskets"",""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14843;
 			type="vn_i_air_ch34_01_02";
-			atlOffset=0.033999443;
+			atlOffset=0.034000397;
 		};
 		class Item1536
 		{
@@ -78495,7 +78494,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""Muskets"",""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""Muskets"",""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14845;
@@ -79637,7 +79636,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16152.241,16.513128,7116.0273};
-				angles[]={-0,3.1179452,0};
+				angles[]={0,3.1179452,0};
 			};
 			side="Empty";
 			flags=4;
@@ -79653,7 +79652,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16150.54,16.513128,7139.3188};
-				angles[]={-0,3.1179452,0};
+				angles[]={0,3.1179452,0};
 			};
 			side="Empty";
 			flags=4;
