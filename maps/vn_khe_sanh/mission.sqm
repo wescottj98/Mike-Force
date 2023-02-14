@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1366;
+		nextID=1382;
 	};
 	class Camera
 	{
-		pos[]={9262.0898,269.60632,6172.0684};
+		pos[]={9277.1201,269.60632,6177.4331};
 		dir[]={0.49334371,-0.64012206,0.58916229};
 		up[]={0.41102275,0.76818919,0.49085903};
 		aside[]={0.76679182,2.741057e-006,-0.64207268};
@@ -61390,7 +61390,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2757;
@@ -61402,19 +61402,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9311.2402,233.83961,6195.4341};
+				position[]={9311.2402,233.83954,6195.4346};
 				angles[]={6.2791882,5.435461,0.0035255651};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2758;
 			type="vn_b_wheeled_m151_mg_04";
-			atlOffset=7.6293945e-005;
 		};
 		class Item1217
 		{
@@ -61422,13 +61421,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9308.2217,234.08734,6191.7017};
-				angles[]={6.2794137,5.4469733,6.2829933};
+				angles[]={6.2794151,5.4469805,6.2829933};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2759;
@@ -61440,13 +61439,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9305.2373,234.07733,6188.4927};
-				angles[]={6.2814093,5.4459934,6.2812152};
+				angles[]={6.281405,5.4459858,6.2812128};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2760;
@@ -61457,38 +61456,37 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9302.2354,234.07466,6185.438};
-				angles[]={6.2814093,5.4459934,6.2812152};
+				position[]={9302.2354,234.075,6185.4385};
+				angles[]={6.281405,5.4459858,6.2812128};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2761;
 			type="vn_i_armor_m113_acav_06";
-			atlOffset=0.1436615;
+			atlOffset=0.14399719;
 		};
 		class Item1220
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9296.4463,231.73827,6182.4258};
+				position[]={9296.4463,231.73849,6182.4258};
 				angles[]={0,0.71315897,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2762;
 			type="vn_i_static_m101_01";
-			atlOffset=-0.00022888184;
 		};
 		class Item1221
 		{
@@ -61502,7 +61500,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2763;
@@ -61513,19 +61511,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9285.2734,231.64137,6191.8135};
+				position[]={9285.2734,231.64098,6191.8135};
 				angles[]={0,0.71315897,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2764;
 			type="vn_i_static_m101_01";
-			atlOffset=0.0023956299;
+			atlOffset=0.0019989014;
 		};
 		class Item1223
 		{
@@ -61662,7 +61660,7 @@ class Mission
 			name="mf_respawn_arvn";
 			text="@STR_vn_mf_respawn_arvn";
 			type="Empty";
-			angle=334.1619;
+			angle=334.16187;
 			id=2773;
 			atlOffset=-0.0001373291;
 		};
@@ -61678,7 +61676,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2774;
@@ -61697,7 +61695,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ARVN"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ARVNR"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2775;
