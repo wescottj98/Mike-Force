@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8204;
+		nextID=8299;
 	};
 	class Camera
 	{
-		pos[]={16139.337,48.377525,7079.2051};
-		dir[]={0.16630931,-0.60795152,0.77637506};
-		up[]={0.12734495,0.79396641,0.59447622};
-		aside[]={0.97782886,-2.4811743e-007,-0.20946373};
+		pos[]={1806.1492,288.05914,18904.293};
+		dir[]={-0.01826917,-0.67407256,0.73848122};
+		up[]={-0.016671907,0.7386564,0.67387873};
+		aside[]={0.99972618,-3.075329e-007,0.024732679};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -1618,7 +1618,7 @@ class Mission
 			type="mil_arrow";
 			angle=11.032681;
 			id=423;
-			atlOffset=22.251999;
+			atlOffset=15.831757;
 		};
 		class Item73
 		{
@@ -77964,6 +77964,7 @@ class Mission
 			};
 			id=14790;
 			type="vn_b_wheeled_m151_mg_04";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item1506
 		{
@@ -77982,6 +77983,7 @@ class Mission
 			};
 			id=14791;
 			type="vn_b_wheeled_m151_mg_04";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item1507
 		{
@@ -78018,7 +78020,6 @@ class Mission
 			};
 			id=14793;
 			type="vn_i_armor_m113_acav_05";
-			atlOffset=-9.5367432e-007;
 		};
 		class Item1509
 		{
@@ -78480,7 +78481,7 @@ class Mission
 			};
 			id=14843;
 			type="vn_i_air_ch34_01_02";
-			atlOffset=0.034000397;
+			atlOffset=0.033999443;
 		};
 		class Item1536
 		{
@@ -79364,12 +79365,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={15390.109,17.892141,7901.5459};
-				angles[]={0,1.1737142,0};
+				position[]={2282.9089,179.80176,19584.729};
+				angles[]={0.043971907,1.1737142,0.10955995};
 			};
 			id=14848;
 			type="vn_module_tunnel_init";
-			atlOffset=-0.0079174042;
+			atlOffset=-0.00015258789;
 			class CustomAttributes
 			{
 				class Attribute0
