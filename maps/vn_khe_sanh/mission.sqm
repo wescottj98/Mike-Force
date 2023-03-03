@@ -11238,7 +11238,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=536;
@@ -13370,7 +13370,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_13";
 				disableSimulation=1;
 			};
@@ -13480,7 +13480,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_13";
 				disableSimulation=1;
 			};
@@ -13590,7 +13590,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_13";
 				disableSimulation=1;
 			};
@@ -13700,7 +13700,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_13";
 				disableSimulation=1;
 			};
@@ -13809,7 +13809,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=637;
@@ -13828,7 +13828,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=639;
@@ -14197,7 +14197,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=650;
 			type="vn_b_army_static_mk18";
@@ -14215,7 +14215,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=651;
 			type="vn_b_army_static_mk18";
@@ -14233,7 +14233,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=652;
 			type="vn_b_army_static_mk18";
@@ -14251,7 +14251,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=653;
 			type="vn_b_army_static_tow";
@@ -14269,7 +14269,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=654;
 			type="vn_b_army_static_tow";
@@ -14287,7 +14287,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=655;
 			type="vn_b_army_static_tow";
@@ -14305,7 +14305,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=657;
 			type="vn_b_army_static_m1919a4_high";
@@ -14323,7 +14323,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=658;
 			type="vn_b_army_static_m1919a4_high";
@@ -14341,7 +14341,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=659;
 			type="vn_b_army_static_m1919a4_high";
@@ -14359,7 +14359,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=660;
 			type="vn_b_army_static_m1919a4_low";
@@ -14377,7 +14377,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=661;
 			type="vn_b_sf_static_m1919a4_low";
@@ -14395,7 +14395,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=662;
 			type="vn_b_sf_static_m2_high";
@@ -14413,7 +14413,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=663;
 			type="vn_b_sf_static_m2_high";
@@ -14431,7 +14431,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=664;
 			type="vn_b_sf_static_m2_low";
@@ -14449,7 +14449,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=665;
 			type="vn_b_sf_static_m2_low";
@@ -14467,7 +14467,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=666;
 			type="vn_b_sf_static_m40a1rr";
@@ -14485,7 +14485,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=667;
 			type="vn_b_sf_static_m40a1rr";
@@ -14503,7 +14503,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m45_03";
 			};
 			id=668;
@@ -14576,7 +14576,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=669;
 			type="vn_b_army_static_m45";
@@ -14594,7 +14594,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=670;
@@ -15741,7 +15741,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m41_01";
 				disableSimulation=1;
 			};
@@ -15815,7 +15815,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m41_01";
 				disableSimulation=1;
 			};
@@ -15888,7 +15888,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m41_01";
 				disableSimulation=1;
 			};
@@ -15961,7 +15961,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m41_01";
 				disableSimulation=1;
 			};
@@ -16034,7 +16034,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=707;
@@ -16053,7 +16053,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=708;
@@ -16071,7 +16071,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -16212,7 +16212,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -16353,7 +16353,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -16494,7 +16494,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -16635,7 +16635,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 				disableSimulation=1;
 			};
@@ -16777,7 +16777,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 				disableSimulation=1;
 			};
@@ -17022,7 +17022,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -17147,7 +17147,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -17272,7 +17272,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -17397,7 +17397,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_09";
 				disableSimulation=1;
 			};
@@ -17523,7 +17523,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="camo13";
 				disableSimulation=1;
 			};
@@ -17649,7 +17649,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_13";
 				disableSimulation=1;
 			};
@@ -17951,7 +17951,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_04";
 				disableSimulation=1;
 			};
@@ -18025,7 +18025,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_04";
 				disableSimulation=1;
 			};
@@ -18099,7 +18099,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=737;
@@ -18118,7 +18118,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=739;
@@ -18136,7 +18136,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=742;
@@ -18154,7 +18154,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=745;
@@ -18172,7 +18172,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=746;
@@ -18191,7 +18191,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=747;
@@ -18209,7 +18209,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=748;
@@ -18227,7 +18227,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=749;
@@ -18245,7 +18245,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=750;
@@ -18263,7 +18263,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=751;
@@ -18281,7 +18281,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=752;
@@ -18299,7 +18299,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=753;
@@ -18317,7 +18317,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=754;
@@ -18335,7 +18335,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=755;
@@ -18353,7 +18353,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=756;
@@ -18372,7 +18372,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=757;
@@ -18390,7 +18390,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=758;
@@ -18408,7 +18408,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=759;
@@ -18427,7 +18427,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="army";
 				disableSimulation=1;
 			};
@@ -18552,7 +18552,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="army";
 				disableSimulation=1;
 			};
@@ -18677,7 +18677,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="army";
 				disableSimulation=1;
 			};
@@ -18802,7 +18802,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=763;
@@ -18821,7 +18821,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=764;
@@ -18840,7 +18840,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=765;
@@ -18859,7 +18859,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=766;
@@ -18878,7 +18878,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=767;
@@ -18897,7 +18897,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="camo2";
 				disableSimulation=1;
 			};
@@ -19023,7 +19023,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="army";
 				disableSimulation=1;
 			};
@@ -19149,7 +19149,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="army";
 				disableSimulation=1;
 			};
@@ -19294,7 +19294,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=774;
 			type="vn_b_sf_static_m2_low";
@@ -19499,7 +19499,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -19573,7 +19573,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -19647,7 +19647,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -19721,7 +19721,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -19795,7 +19795,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -19869,7 +19869,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -19943,7 +19943,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=798;
@@ -20006,7 +20006,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_04";
 				disableSimulation=1;
 			};
@@ -20080,7 +20080,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_01";
 				disableSimulation=1;
 			};
@@ -20237,7 +20237,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_01";
 				disableSimulation=1;
 			};
@@ -20567,7 +20567,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_34";
 				disableSimulation=1;
 			};
@@ -20676,7 +20676,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_08";
 				disableSimulation=1;
 			};
@@ -20817,7 +20817,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_08";
 				disableSimulation=1;
 			};
@@ -22954,7 +22954,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_04";
 				disableSimulation=1;
 			};
@@ -23028,7 +23028,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_04";
 				disableSimulation=1;
 			};
@@ -24295,7 +24295,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=986;
@@ -24314,7 +24314,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=987;
@@ -24333,7 +24333,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=988;
@@ -24448,7 +24448,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=998;
 			type="vn_b_navy_static_l70mk2";
@@ -24994,7 +24994,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1030;
@@ -25013,7 +25013,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1031;
@@ -25032,7 +25032,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1032;
@@ -25051,7 +25051,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1033;
@@ -25070,7 +25070,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1034;
@@ -25089,7 +25089,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1035;
@@ -25187,7 +25187,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1048;
 			type="vn_b_army_static_mortar_m2";
@@ -25204,7 +25204,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1049;
 			type="vn_b_army_static_mortar_m2";
@@ -25221,7 +25221,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1050;
 			type="vn_b_army_static_mortar_m2";
@@ -25238,7 +25238,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1051;
 			type="vn_b_army_static_mortar_m29";
@@ -25255,7 +25255,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1052;
 			type="vn_b_army_static_mortar_m29";
@@ -25272,7 +25272,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1053;
 			type="vn_b_army_static_mortar_m29";
@@ -25289,7 +25289,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1054;
 			type="vn_b_navy_static_l70mk2";
@@ -25307,7 +25307,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1055;
 			type="vn_b_navy_static_l70mk2";
@@ -25325,7 +25325,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1056;
 			type="vn_b_navy_static_l70mk2";
@@ -25343,7 +25343,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1057;
 			type="vn_b_navy_static_l60mk3";
@@ -25361,7 +25361,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1058;
 			type="vn_b_navy_static_l60mk3";
@@ -25379,7 +25379,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1059;
 			type="vn_b_navy_static_l60mk3";
@@ -25711,7 +25711,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 			};
 			id=1092;
@@ -25868,7 +25868,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 			};
 			id=1093;
@@ -26170,7 +26170,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_22";
 				disableSimulation=1;
 			};
@@ -26244,7 +26244,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_22";
 				disableSimulation=1;
 			};
@@ -26318,7 +26318,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_22";
 				disableSimulation=1;
 			};
@@ -26819,7 +26819,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="pbr_01";
 			};
 			id=1127;
@@ -26956,7 +26956,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1129;
 			type="vn_b_boat_13_02";
@@ -26990,7 +26990,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1133;
 			type="vn_b_boat_11_01";
@@ -28542,7 +28542,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="camo3";
 				disableSimulation=1;
 			};
@@ -28616,7 +28616,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_04";
 			};
 			id=1185;
@@ -28797,7 +28797,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_04";
 				disableSimulation=1;
 			};
@@ -29270,7 +29270,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_03";
 			};
 			id=1207;
@@ -29355,7 +29355,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1214;
 			type="B_Heli_Light_01_F";
@@ -29635,7 +29635,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_10";
 				disableSimulation=1;
 			};
@@ -29793,7 +29793,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_10";
 			};
 			id=1223;
@@ -29950,7 +29950,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_10";
 			};
 			id=1224;
@@ -30104,7 +30104,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_10";
 			};
 			id=1225;
@@ -30257,7 +30257,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_10";
 			};
 			id=1226;
@@ -30411,7 +30411,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_21";
 				disableSimulation=1;
 			};
@@ -30553,7 +30553,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_21";
 				disableSimulation=1;
 			};
@@ -30710,7 +30710,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_14";
 			};
 			id=1234;
@@ -31406,7 +31406,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1253;
@@ -31424,7 +31424,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_43";
 				disableSimulation=1;
 			};
@@ -31609,7 +31609,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_03";
 				disableSimulation=1;
 			};
@@ -31683,7 +31683,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_17";
 				disableSimulation=1;
 			};
@@ -31824,7 +31824,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_17";
 				disableSimulation=1;
 			};
@@ -31965,7 +31965,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_05";
 				disableSimulation=1;
 			};
@@ -32106,7 +32106,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_05";
 				disableSimulation=1;
 			};
@@ -32247,7 +32247,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1263;
@@ -32265,7 +32265,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_05";
 				disableSimulation=1;
 			};
@@ -32454,7 +32454,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_17";
 				disableSimulation=1;
 			};
@@ -32866,7 +32866,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_17";
 				disableSimulation=1;
 			};
@@ -32989,7 +32989,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_05";
 				disableSimulation=1;
 			};
@@ -33114,7 +33114,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_05";
 				disableSimulation=1;
 			};
@@ -33413,7 +33413,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="sog";
 			};
 			id=1314;
@@ -33630,7 +33630,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="Green";
 			};
 			id=1315;
@@ -33703,7 +33703,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="Green";
 			};
 			id=1316;
@@ -33776,7 +33776,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="GreenWhite";
 			};
 			id=1317;
@@ -34849,7 +34849,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 			};
 			id=1365;
@@ -35006,7 +35006,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 			};
 			id=1366;
@@ -35163,7 +35163,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1367;
 			type="vn_b_army_static_mk18";
@@ -35213,7 +35213,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1370;
 			type="vn_b_army_static_m2_low";
@@ -35230,7 +35230,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1371;
 			type="vn_b_army_static_m2_high";
@@ -35247,7 +35247,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1372;
 			type="vn_b_army_static_m1919a6";
@@ -35264,7 +35264,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1373;
 			type="vn_b_army_static_m1919a4_low";
@@ -35281,7 +35281,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1374;
 			type="vn_b_army_static_m1919a4_high";
@@ -35498,7 +35498,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1384;
@@ -35516,7 +35516,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1385;
@@ -36794,7 +36794,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -36868,7 +36868,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_02";
 				disableSimulation=1;
 			};
@@ -36942,7 +36942,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_02";
 				disableSimulation=1;
 			};
@@ -37016,7 +37016,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_02";
 				disableSimulation=1;
 			};
@@ -37089,7 +37089,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_02";
 				disableSimulation=1;
 			};
@@ -37162,7 +37162,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_02";
 				disableSimulation=1;
 			};
@@ -37443,7 +37443,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_20";
 				disableSimulation=1;
 			};
@@ -37525,7 +37525,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1470;
@@ -37543,7 +37543,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1471;
@@ -37660,7 +37660,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1490;
@@ -37678,7 +37678,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1491;
@@ -37697,7 +37697,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1493;
@@ -37716,7 +37716,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1494;
@@ -38180,7 +38180,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1513;
@@ -38402,7 +38402,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_43";
 				disableSimulation=1;
 			};
@@ -38512,7 +38512,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_43";
 				disableSimulation=1;
 			};
@@ -38622,7 +38622,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1524;
@@ -38641,7 +38641,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1526;
@@ -38809,7 +38809,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_01";
 			};
 			id=1533;
@@ -38950,7 +38950,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_13";
 			};
 			id=1534;
@@ -39091,7 +39091,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1535;
 			type="vn_b_wheeled_m151_02";
@@ -39109,7 +39109,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_01";
 			};
 			id=1536;
@@ -39266,7 +39266,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_01";
 			};
 			id=1537;
@@ -39511,7 +39511,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m113_30";
 			};
 			id=1569;
@@ -39619,7 +39619,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_05";
 				disableSimulation=1;
 			};
@@ -40239,7 +40239,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1598;
 			type="vn_b_navy_static_l70mk2";
@@ -40319,7 +40319,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="canopy_01_03";
 			};
 			id=1612;
@@ -40391,7 +40391,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1613;
 			type="vn_c_boat_02_01";
@@ -40408,7 +40408,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="Wood_Eyes";
 			};
 			id=1614;
@@ -40510,7 +40510,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1621;
@@ -40528,7 +40528,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1622;
 			type="vn_b_sf_static_mortar_m2";
@@ -40545,7 +40545,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=1623;
 			type="vn_b_sf_static_mortar_m2";
@@ -40562,7 +40562,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1624;
@@ -40581,7 +40581,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=1625;
@@ -40711,7 +40711,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_c_2";
 			};
 			id=1643;
@@ -40867,7 +40867,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="m151_c_2";
 			};
 			id=1644;
@@ -52958,7 +52958,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={9486.8984,227.87,6395.7012};
-			name="duty_officer_3rdmeu";
+			name="duty_officer_1stMEU";
 			text="@STR_vn_mf_duty_officer";
 			type="mil_dot";
 			colorName="ColorWhite";
@@ -52969,8 +52969,8 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={9489.4355,227.87,6390.8291};
-			name="mf_respawn_3rdmeu";
-			text="@STR_vn_mf_respawn_3rdmeu";
+			name="mf_respawn_1stMEU";
+			text="@STR_vn_mf_respawn_1stMEU";
 			type="Empty";
 			angle=354.18396;
 			id=2427;
@@ -53418,7 +53418,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="stab_01";
 			};
 			id=2457;
@@ -53542,7 +53542,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="stab_01";
 			};
 			id=2458;
@@ -53666,7 +53666,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 			};
 			id=2459;
 			type="vn_b_boat_13_01";
@@ -58276,7 +58276,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_18";
 				disableSimulation=1;
 			};
@@ -58350,7 +58350,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1c_18";
 				disableSimulation=1;
 			};
@@ -60643,7 +60643,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="uh1d_14";
 			};
 			id=2690;
@@ -60851,7 +60851,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2694;
@@ -60977,7 +60977,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				textures="ch34_03";
 				disableSimulation=1;
 			};
@@ -61051,7 +61051,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2713;
@@ -61130,7 +61130,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""3rdMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""ACAV"",""GreenHornets"",""SpikeTeam"",""1stMEU"",""MikeForce"",""MilitaryPolice"",""QuarterHorse"",""Muskets"",""SatansAngels"",""633rdCSG"",""SASR"",""7thCAV"",""Frogmen"",""TigerForce"",""Montagnard"",""MACV"",""BNCadet"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2717;
@@ -61226,7 +61226,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2727;
@@ -61245,7 +61245,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""3rdMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""1stMEU"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=2728;
