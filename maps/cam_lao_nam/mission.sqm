@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8394;
+		nextID=8489;
 	};
 	class Camera
 	{
-		pos[]={1806.1492,288.05914,18904.293};
-		dir[]={-0.19048852,-0.65894198,0.72767407};
-		up[]={-0.16687308,0.75219375,0.63746208};
-		aside[]={0.96740246,7.4505806e-009,0.25324395};
+		pos[]={16367.004,21.09725,6554.9038};
+		dir[]={-0.010490262,-0.44688872,0.89453328};
+		up[]={-0.0052404129,0.89458901,0.44685879};
+		aside[]={0.99993503,-4.6966761e-008,0.011726581};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -79668,11 +79668,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=541;
+			nextID=544;
 		};
 		class Links
 		{
-			items=541;
+			items=544;
 			class Item0
 			{
 				linkID=0;
@@ -85077,6 +85077,36 @@ class Mission
 			{
 				linkID=540;
 				item0=14845;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item541
+			{
+				linkID=541;
+				item0=10657;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item542
+			{
+				linkID=542;
+				item0=705;
+				item1=10656;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item543
+			{
+				linkID=543;
+				item0=10660;
 				item1=705;
 				class CustomData
 				{
