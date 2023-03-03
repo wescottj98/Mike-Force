@@ -167,7 +167,7 @@ class 1stMEU
         audibleCoef = 0.6;
         loadCoef = 1;
         engineer = true;
-        explosiveSpecialist = false;
+        explosiveSpecialist = true;
         medic = false;
         UAVHacker = false;
         vn_artillery = false;
