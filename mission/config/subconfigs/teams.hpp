@@ -144,10 +144,10 @@ class GreenHornets
     onLeave = "";
 };
 
-class 3rdMEU
+class 1stMEU
 {
-    name = "3rd Marines [3rd MEU]";
-    icon = "custom\taskroster\3rdmeu_HL.paa";
+    name = "1st Marines [1st MEU]";
+    icon = "custom\taskroster\1stmeu_HL.paa";
     shortname = "3rd Marines";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
