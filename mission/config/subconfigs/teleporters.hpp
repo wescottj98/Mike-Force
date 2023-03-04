@@ -45,6 +45,11 @@ class objects
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
 
+	class vn_mf_quarterhorse_teleporter_fsb
+	{
+		destinations[] = {"quarterhorse_fsb"};
+	};
+
 	class vn_mf_7thcav_teleporter
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
@@ -219,6 +224,12 @@ class destinations
 		image = "custom\taskroster\daccong_team.paa"; 
 		position_marker = "mf_dc_respawn_daccong";
 	};
+
+	class daccong_fsb
+	{
+		image = "custom\taskroster\daccong_team.paa"; 
+		position_marker = "mf_dc_respawn_daccong_fsb";
+	};
 	
 	class tigerforce_base
 	{
@@ -254,6 +265,12 @@ class destinations
 	{
 		image = "custom\taskroster\quarterhorse_HL.paa"; 
 		position_marker = "mf_respawn_quarterhorse";
+	};
+
+	class quarterhorse_fsb
+	{
+		image = "custom\taskroster\quarterhorse_HL.paa"; 
+		position_marker = "mf_respawn_quarterhorse_fsb";
 	};
 	
 	class muskets_base
