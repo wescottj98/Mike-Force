@@ -544,7 +544,7 @@ class SASR
     onLeave = "";
 };
 
-class ARVNR
+class ARVN
 {
     name = "Army of the Repulic of Vietnam";
     icon = "custom\taskroster\ARVN_HL.paa";
