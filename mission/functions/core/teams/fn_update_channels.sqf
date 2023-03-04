@@ -61,7 +61,7 @@ switch(_team) do
 		7 enableChannel [true, true];
 	};
 
-	case "3rdMEU" : {
+	case "1stMEU" : {
 		1 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
