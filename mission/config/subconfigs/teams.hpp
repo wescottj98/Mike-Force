@@ -144,7 +144,7 @@ class GreenHornets
     onLeave = "";
 };
 
-class 3rdMEU
+class 1stMEU
 {
     name = "1st Marines [1st MEU]";
     icon = "custom\taskroster\1stmeu_HL.paa";
