@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8679;
+		nextID=8774;
 	};
 	class Camera
 	{
-		pos[]={17251.059,63.233597,5568.1924};
-		dir[]={-0.21226375,-0.57561797,0.78971052};
-		up[]={-0.14941707,0.81771111,0.55589527};
-		aside[]={0.96573812,2.6989801e-007,0.25957653};
+		pos[]={13743.95,472.84753,8296.0859};
+		dir[]={0.25054282,-0.54711396,0.79870123};
+		up[]={0.16375852,0.83704948,0.52204269};
+		aside[]={0.95417023,3.890018e-007,-0.29930961};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -19735,9 +19735,10 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13767.902,435.51361,8370.0898};
-				angles[]={0,1.7210692,-0};
+				angles[]={0,1.7210692,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""MACV"",""QuarterHorse""]]call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -19745,7 +19746,7 @@ class Mission
 			};
 			id=6204;
 			type="vn_b_army_static_m101_02";
-			atlOffset=0.33068848;
+			atlOffset=0.11682129;
 		};
 		class Item514
 		{
@@ -19753,7 +19754,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13721.818,432.19922,8335.166};
-				angles[]={-0,3.1887341,-0};
+				angles[]={0,3.1887341,0};
 			};
 			side="Empty";
 			class Attributes
@@ -19763,7 +19764,7 @@ class Mission
 			};
 			id=6205;
 			type="vn_b_army_static_m101_02";
-			atlOffset=0.55328369;
+			atlOffset=0.42523193;
 		};
 		class Item515
 		{
@@ -19771,9 +19772,10 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13695.831,432.23868,8359.3262};
-				angles[]={-0,4.5744033,0};
+				angles[]={0,4.5744033,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""MACV"",""QuarterHorse""]]call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -19781,7 +19783,7 @@ class Mission
 			};
 			id=6206;
 			type="vn_b_army_static_m101_02";
-			atlOffset=0.31784058;
+			atlOffset=0.22381592;
 		};
 		class Item516
 		{
@@ -38803,11 +38805,11 @@ class Mission
 					};
 					id=14784;
 					type="vn_b_wheeled_m54_ammo";
-					atlOffset=3.0517578e-005;
+					atlOffset=-0.001373291;
 				};
 			};
 			id=7173;
-			atlOffset=212.99399;
+			atlOffset=212.99467;
 		};
 		class Item782
 		{
@@ -79849,18 +79851,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13709.95,434.88675,8348.5303};
+				position[]={13709.95,434.88678,8348.5303};
 				angles[]={0.016214108,4.6938009,6.2714744};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""QuarterHorse"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""QuarterHorse"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14921;
 			type="vn_b_armor_m113_acav_04_rok_army";
-			atlOffset=0.42596436;
+			atlOffset=0.42599487;
 		};
 		class Item1589
 		{
@@ -79900,7 +79902,7 @@ class Mission
 			};
 			id=14924;
 			type="Land_vn_b_prop_mapstand_01";
-			atlOffset=0.065999985;
+			atlOffset=0.063987732;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -79924,11 +79926,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=545;
+			nextID=547;
 		};
 		class Links
 		{
-			items=545;
+			items=547;
 			class Item0
 			{
 				linkID=0;
@@ -85373,6 +85375,26 @@ class Mission
 			{
 				linkID=544;
 				item0=14915;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item545
+			{
+				linkID=545;
+				item0=14920;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item546
+			{
+				linkID=546;
+				item0=14921;
 				item1=705;
 				class CustomData
 				{
