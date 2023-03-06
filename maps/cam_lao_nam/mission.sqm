@@ -8,7 +8,7 @@ class EditorData
 	toggles=585;
 	class ItemIDProvider
 	{
-		nextID=14925;
+		nextID=14926;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8774;
+		nextID=8869;
 	};
 	class Camera
 	{
-		pos[]={13743.95,472.84753,8296.0859};
-		dir[]={0.25054282,-0.54711396,0.79870123};
-		up[]={0.16375852,0.83704948,0.52204269};
-		aside[]={0.95417023,3.890018e-007,-0.29930961};
+		pos[]={16077.438,218.78914,6955.7583};
+		dir[]={0.079116389,-0.76727551,0.636419};
+		up[]={0.094655216,0.64131743,0.76141465};
+		aside[]={0.99236143,0,-0.12336534};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -651,7 +651,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1592;
+		items=1593;
 		class Item0
 		{
 			dataType="Marker";
@@ -79920,6 +79920,16 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1592
+		{
+			dataType="Marker";
+			position[]={16126.688,15.18,7130.6748};
+			name="baseflag_arvn";
+			text="@STR_vn_mf_respawn_arvn";
+			type="b_hq";
+			colorName="ColorWEST";
+			id=14925;
 		};
 	};
 	class Connections
