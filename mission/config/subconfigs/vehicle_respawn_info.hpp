@@ -425,3 +425,7 @@ class vn_o_nva_navy_static_at3 : respawn_short {};
 class vn_o_air_mi2_03_03 : respawn_short {};
 class vn_o_air_mi2_03_05 : respawn_short {};
 class vn_o_air_mi2_03_04 : respawn_short {};
+
+//Modern
+class B_Heli_Light_01_F : wreck_long {};
+class B_Heli_Light_01_dynamicLoadout_F : wreck_long {};
