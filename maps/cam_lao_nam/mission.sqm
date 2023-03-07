@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8869;
+		nextID=8964;
 	};
 	class Camera
 	{
-		pos[]={16077.438,218.78914,6955.7583};
-		dir[]={0.079116389,-0.76727551,0.636419};
-		up[]={0.094655216,0.64131743,0.76141465};
-		aside[]={0.99236143,0,-0.12336534};
+		pos[]={16819.195,54.516174,6311.8701};
+		dir[]={-0.27874053,-0.64063412,0.71546888};
+		up[]={-0.23256144,0.76784307,0.5969364};
+		aside[]={0.93178624,-6.3839252e-008,0.36301613};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -60313,6 +60313,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[this, [""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=14151;
@@ -77654,7 +77655,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16819.258,32.20153,6337.3921};
+				position[]={16819.258,32.201931,6337.3926};
 				angles[]={0,4.9249701,0};
 			};
 			side="Empty";
@@ -77666,7 +77667,7 @@ class Mission
 			};
 			id=14778;
 			type="vn_b_air_oh6a_03";
-			atlOffset=-0.0013847351;
+			atlOffset=-0.00099945068;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -77754,17 +77755,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={18403.275,2.1704292,12444.028};
+				position[]={18403.275,2.1705327,12444.028};
 				angles[]={0,6.1285324,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="[this, [""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
 			};
 			id=14781;
 			type="B_Heli_Light_01_dynamicLoadout_F";
-			atlOffset=3.5762787e-007;
+			atlOffset=0.00010371208;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -79936,11 +79939,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=547;
+			nextID=548;
 		};
 		class Links
 		{
-			items=547;
+			items=548;
 			class Item0
 			{
 				linkID=0;
@@ -85406,6 +85409,16 @@ class Mission
 				linkID=546;
 				item0=14921;
 				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item547
+			{
+				linkID=547;
+				item0=705;
+				item1=14781;
 				class CustomData
 				{
 					type="Sync";
