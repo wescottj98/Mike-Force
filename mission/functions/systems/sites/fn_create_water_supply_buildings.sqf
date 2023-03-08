@@ -27,7 +27,7 @@
 
 params ["_position"];
 
-private _tunnelWS = "Land_CratesWooden_F" createVehicle _position;
+private _tunnelWS = "vn_o_ammobox_02" createVehicle _position;
 
 private _vehicles = _tunnelWS; //[_tunnel select 0];
 private _units = [];// _tunnel select 1;

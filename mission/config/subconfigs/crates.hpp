@@ -150,7 +150,7 @@ class AmmoCrateExplosives
 		{"vn_mine_m18_x3_range_mag",10},
 		{"vn_mine_satchel_remote_02_mag",10}};
 	items[] = {};
-	backpacks[] = {{"vn_b_pack_static_base_01", 5},{"vn_b_pack_static_m2_01",5},{"vn_b_pack_static_m29_01",5}};
+	backpacks[] = {{"vn_b_pack_static_base_01", 5}};
 };
 
 class FoodCrate
