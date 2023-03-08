@@ -144,10 +144,10 @@ class GreenHornets
     onLeave = "";
 };
 
-class 3rdMEU
+class 1stMEU
 {
-    name = "3rd Marines [3rd MEU]";
-    icon = "custom\taskroster\3rdmeu_HL.paa";
+    name = "1st Marines [1st MEU]";
+    icon = "custom\taskroster\1stmeu_HL.paa";
     shortname = "3rd Marines";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
@@ -167,7 +167,7 @@ class 3rdMEU
         audibleCoef = 0.6;
         loadCoef = 1;
         engineer = true;
-        explosiveSpecialist = false;
+        explosiveSpecialist = true;
         medic = false;
         UAVHacker = false;
         vn_artillery = false;
@@ -544,7 +544,7 @@ class SASR
     onLeave = "";
 };
 
-class ARVNR
+class ARVN
 {
     name = "Army of the Repulic of Vietnam";
     icon = "custom\taskroster\ARVN_HL.paa";

@@ -236,6 +236,9 @@
 	    <Key ID="STR_vn_mf_respawn_daccong">
         <Original>NVA HQ - DAC CONG</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_daccong_fsb">
+        <Original>FSB Harass - DAC CONG</Original>
+      </Key>
 	    <Key ID="STR_vn_mf_respawn_tunnel_1">
         <Original>POW TUNNEL 1</Original>
       </Key>
@@ -263,17 +266,20 @@
       <Key ID="STR_vn_mf_respawn_7thcav">
         <Original>GARRYOWEN</Original>
       </Key>
-	    <Key ID="STR_vn_mf_respawn_3rdmeu">
-        <Original>3RD MEU</Original>
+	    <Key ID="STR_vn_mf_respawn_1stMEU">
+        <Original>1st MEU</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_quarterhorse">
         <Original>QUARTER HORSE</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_quarterhorse_fsb">
+        <Original>WHITELISTED ARTILLERY</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_muskets">
         <Original>MUSKETS</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_arvn">
-        <Original>ARVN</Original>
+        <Original>ARVNR</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_frogmen">
         <Original>FROGMEN</Original>

@@ -68,8 +68,9 @@ class vn_b_wheeled_m54_mg_01 : wreck_short {};
 class vn_b_wheeled_m54_mg_02 : wreck_short {};
 class vn_b_wheeled_m54_mg_03 : wreck_short {};
 
-//Armoured Cars
+//Armoured Cars (Tank)
 class vn_b_armor_m41_01_01 : wreck_long {};
+class vn_b_armor_m41_01_02 : wreck_long {};
 
 //APC
 class vn_b_armor_m113_01 : respawn_medium {};
@@ -130,7 +131,8 @@ class vn_b_air_ch34_04_03 : wreck_medium {};
 class vn_b_air_ch34_04_04 : wreck_medium {};
 
 //Littlebird
-class B_Heli_Light_01_F : respawn_short {};
+class B_Heli_Light_01_F : wreck_long {};
+class B_Heli_Light_01_dynamicLoadout_F : wreck_long {};
 class vn_b_air_oh6a_01 : respawn_short {};
 class vn_b_air_oh6a_02 : wreck_medium {};
 class vn_b_air_oh6a_03 : wreck_medium {};
@@ -236,8 +238,12 @@ class vn_i_air_uh1d_02_01 : respawn_medium {};
 //M113
 class vn_i_armor_m113_acav_05 : wreck_short {};
 class vn_i_armor_m113_acav_06 : wreck_short {};
+//Bulldog
+class vn_i_armor_m41_01 : wreck_long {};
 //105 at gun
 class vn_i_static_m101_01 : respawn_medium {};
+//m45 quadmount
+class vn_i_statis_m54 : respawn_medium {};
 
 class vn_b_air_f100d_cap : wreck_long {};
 class vn_b_air_f100d_cas : wreck_long {};

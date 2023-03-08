@@ -32,12 +32,12 @@ class objects
 	
 	class vn_mf_gunrange_teleporter
 	{
-		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "3rdmeu_base", "sasr_base", "muskets_base", "macv_base", "frogmen_base"};
+		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "1stMEU_base", "sasr_base", "muskets_base", "macv_base", "frogmen_base"};
 	};
 	
 	class vn_mf_macv_teleporter
 	{
-		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "3rdmeu_base", "sasr_base", "muskets_base", "frogmen_base"};
+		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "1stMEU_base", "sasr_base", "muskets_base", "frogmen_base"};
 	};
 
 	class vn_mf_quarterhorse_teleporter
@@ -45,12 +45,17 @@ class objects
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
 
+	class vn_mf_quarterhorse_teleporter_fsb
+	{
+		destinations[] = {"quarterhorse_fsb"};
+	};
+
 	class vn_mf_7thcav_teleporter
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
 	
-	class vn_mf_3rdmeu_teleporter
+	class vn_mf_1stMEU_teleporter
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
@@ -219,6 +224,12 @@ class destinations
 		image = "custom\taskroster\daccong_team.paa"; 
 		position_marker = "mf_dc_respawn_daccong";
 	};
+
+	class daccong_fsb
+	{
+		image = "custom\taskroster\daccong_team.paa"; 
+		position_marker = "mf_dc_respawn_daccong_fsb";
+	};
 	
 	class tigerforce_base
 	{
@@ -244,16 +255,22 @@ class destinations
 		position_marker = "mf_respawn_macv";
 	};
 	
-	class 3rdmeu_base
+	class 1stMEU_base
 	{
-		image = "custom\taskroster\3rdmeu_HL.paa"; 
-		position_marker = "mf_respawn_3rdmeu";
+		image = "custom\taskroster\1stMEU_HL.paa"; 
+		position_marker = "mf_respawn_1stMEU";
 	};
 	
 	class quarterhorse_base
 	{
 		image = "custom\taskroster\quarterhorse_HL.paa"; 
 		position_marker = "mf_respawn_quarterhorse";
+	};
+
+	class quarterhorse_fsb
+	{
+		image = "custom\taskroster\quarterhorse_HL.paa"; 
+		position_marker = "mf_respawn_quarterhorse_fsb";
 	};
 	
 	class muskets_base

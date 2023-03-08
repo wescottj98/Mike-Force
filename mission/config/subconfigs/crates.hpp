@@ -9,17 +9,15 @@ class MedicalCrate
 	{"vn_prop_med_antimalaria",15},
 	{"vn_prop_med_antibiotics",30}};
 	items[] = {{"vn_b_item_medikit_01",10},
-	{"vn_b_item_firstaidkit",40}};
+	{"vn_b_item_firstaidkit",300}};
 	backpacks[] = {};
 };
 
 class AmmoCrateLight
 {
 	objectClassname = "vn_b_ammobox_supply_01";
-	weapons[] = {{"vn_m127",3}};
+	weapons[] = {{"vn_m127",3},{"vn_m72",30}};
 	magazines[] = {
-		{"ACRE_PRC343",5},
-		{"ACRE_PRC77",1},
 		{"vn_m1911_mag",20},
 		{"vn_mk22_mag",20},
 		{"vn_m16_40_mag",15},
@@ -40,6 +38,7 @@ class AmmoCrateLight
 		{"vn_m10_mag",20},
 		{"vn_m16_30_mag",60},
 		{"vn_m63a_30_mag",30},
+		{"vn_m63a_150_t_mag",30},
 		{"vn_mp40_mag",30},
 		{"vn_m16_20_mag",60},
 		{"vn_carbine_15_mag",30},
@@ -58,10 +57,11 @@ class AmmoCrateLight
 		{"vn_m1918_mag", 30},
 		{"vn_m1_garand_mag", 30},
 		{"vn_mpu_mag", 30},
-		{"vn_m1928_mag", 30}
+		{"vn_m1928_mag", 30},
+		{"vn_m72_mag", 30}
 	};
 	items[] = {};
-	backpacks[] = {};
+	backpacks[] = {{"vn_b_pack_static_base_01", 5},{"vn_b_pack_static_tow",5},{"vn_b_pack_static_ammo_01",2}};
 };
 
 class AmmoCrateSupport
@@ -72,9 +72,10 @@ class AmmoCrateSupport
 		{"vn_m127",15}
 	};
 	magazines[] = {
-		{"vn_m60_100_mag",20},
-		{"vn_rpd_100_mag",20},
+		{"vn_m60_100_mag",50},
+		{"vn_rpd_100_mag",10},
 		{"vn_m63a_100_mag", 20},
+		{"vn_m63a_150_t_mag",30},
 		{"vn_vz61_mag", 20},
 		{"vn_m40a1_mag",30},
 		{"vn_m127_mag",50},
@@ -101,7 +102,11 @@ class AmmoCrateSupport
 		{"vn_40mm_m716_smoke_y_mag",20},
 		{"vn_40mm_m717_smoke_p_mag",20}};
 	items[] = {{"vn_b_item_trapkit",5}};
-	backpacks[] = {};
+	backpacks[] = {
+		{"vn_b_pack_static_base_01", 10},
+		{"vn_b_pack_static_m2_high_01",3},
+		{"vn_b_pack_static_m60_high_01",5},
+		{"vn_b_pack_static_mk18",2}};
 };
 
 class AmmoCrateExplosives
@@ -145,7 +150,7 @@ class AmmoCrateExplosives
 		{"vn_mine_m18_x3_range_mag",10},
 		{"vn_mine_satchel_remote_02_mag",10}};
 	items[] = {};
-	backpacks[] = {};
+	backpacks[] = {{"vn_b_pack_static_base_01", 5},{"vn_b_pack_static_m2_01",5},{"vn_b_pack_static_m29_01",5}};
 };
 
 class FoodCrate
