@@ -28,7 +28,7 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = [_sitePos #0, _sitePos #1, (_sitePos #2)+3];
 		
-		private _tunnelWS = "Land_CratesWooden_F" createVehicle _spawnPos;
+		private _tunnelWS = "vn_o_ammobox_02" createVehicle _spawnPos;
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _supplyMarker = createMarker [format ["Tunnel_WaterSupply_%1", _siteId], _markerPos];
 		_supplyMarker setMarkerType "o_installation";
