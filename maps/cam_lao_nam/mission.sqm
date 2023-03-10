@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9154;
+		nextID=9249;
 	};
 	class Camera
 	{
-		pos[]={17262.199,87.789856,5481.665};
-		dir[]={-0.23085964,-0.69533938,0.68059313};
-		up[]={-0.22336152,0.71868157,0.65848809};
-		aside[]={0.94700247,0,0.32122663};
+		pos[]={17205.98,49.80061,5603.855};
+		dir[]={0.19138807,-0.4537003,-0.87042433};
+		up[]={0.097442657,0.89111495,-0.44315922};
+		aside[]={-0.97672296,5.8949809e-008,-0.21476075};
 	};
 };
 binarizationWanted=0;
@@ -544,8 +544,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -595,8 +595,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -9092,7 +9092,7 @@ class Mission
 			name="mf_respawn_quarterhorse";
 			text="@STR_vn_mf_respawn_quarterhorse";
 			type="Empty";
-			angle=26.730991;
+			angle=26.730989;
 			id=3457;
 		};
 		class Item227
@@ -20409,17 +20409,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17252.973,31.667559,5593.6099};
-				angles[]={0,1.5983074,0};
+				position[]={17252.973,31.667551,5593.6099};
+				angles[]={0,1.5983026,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this setObjectTexture [0,""custom\billboards\Blackhorse_Base_Sign_2.paa""];";
 			};
 			id=6252;
 			type="vn_signad_sponsor_vrana_f";
-			atlOffset=7.6293945e-006;
 		};
 		class Item534
 		{
@@ -32480,7 +32480,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={17285.773,30.037651,5530.5078};
-						angles[]={-0,0.0005644933,0};
+						angles[]={0,0.0005644933,0};
 					};
 					side="Empty";
 					flags=4;
@@ -38082,11 +38082,11 @@ class Mission
 					flags=1;
 					class Attributes
 					{
-						init="this setObjectTexture [0,""custom\billboards\bnpromo_bb.paa""];";
+						init="this setObjectTexture [0,""custom\billboards\Blackhorse_Motorpool_Sign.paa""];";
 					};
 					id=7213;
 					type="Land_Billboard_03_aan_F";
-					atlOffset=0.77000237;
+					atlOffset=0.77000046;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -80954,7 +80954,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={17294.338,30.040001,5521.4204};
-				angles[]={-0,3.1355069,0};
+				angles[]={0,3.1355069,0};
 			};
 			side="Empty";
 			flags=4;
