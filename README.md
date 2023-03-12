@@ -27,7 +27,7 @@ The gamemode is a self-contained mission file. Simply download the mission from 
 ### Prerequisites
 
 You will need to install Python via the Microsoft Store. 
-Open the windows start menu, search for Microsoft Store. 
+Open the windows start menu, search for Microsoft Store and open it. 
 Then search for Python, any version 3 of Python will work. 
 Install it.
 
@@ -36,14 +36,14 @@ You will need to download the code for both BN versions of Mike-Force and the Pa
 - https://github.com/Bro-Nation/Mike-Force
 - https://github.com/Bro-Nation/Paradigm
 
-For curators, you can click on the `Code` dropdown (top right of this page) and select download as Zip. 
+For compositions devs, you can click on the `Code` dropdown (top right of this page) and select download as Zip. 
 Extract the Zip files out into a suitable location on your computer, e.g. a new `BN-MIKE-FORCE` folder in your Documents folder.
 
 For developers, you should be do the same using `git clone`.
 
 ### Setting up the missions
 
-1. In `MIKE-FORCE\Mike-Force`, copy the `user_paths_example.py` as a new file named `user_paths.py`
+1. In `MIKE-FORCE\Mike-Force`, copy the `user_paths_example.py` and save it as a new file named `user_paths.py`
 2. Open the file up with Notepad or similar. 
 3. Delete out the text between the double quotes for both `PARADIGM_PATH` and `MISSIONS_PATH` i.e. `r"everything between the quotes here"`
 4. In Windows File Explorer, open up the `MIKE-FORCE\Paradigm` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
