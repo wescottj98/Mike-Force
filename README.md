@@ -36,8 +36,10 @@ You will need to download the code for both BN versions of Mike-Force and the Pa
 - https://github.com/Bro-Nation/Mike-Force
 - https://github.com/Bro-Nation/Paradigm
 
-For compositions devs, you can click on the `Code` dropdown (top right of this page) and select download as Zip. 
-Extract the Zip files out into a suitable location on your computer, e.g. a new `BN-MIKE-FORCE` folder in your Documents folder.
+For compositions devs, open each of the above links in an internet browser, 
+then click on the `Code` dropdown (top right of each page) and select download as Zip. 
+Extract the Zip files out into a suitable location on your computer, 
+e.g. a new `BN-MIKE-FORCE` folder in your Documents folder.
 
 For developers, you should be do the same using `git clone`.
 
