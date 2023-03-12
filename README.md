@@ -47,7 +47,7 @@ For mission scripting devs, you should be do the above using `git clone`.
 
 ### Setting up the missions
 
-1. In `BN-MIKE-FORCE\Mike-Force`, copy the `user_paths_example.py` and save it as a new file named `user_paths.py`
+1. In the `BN-MIKE-FORCE\Mike-Force` folder, copy the `user_paths_example.py` and save it as a new file named `user_paths.py` in the same folder.
 2. Open the file up with Notepad or similar. 
 3. Delete out the text between the double quotes for both `PARADIGM_PATH` and `MISSIONS_PATH` i.e. `r"everything between the quotes here"`
 4. In Windows File Explorer, open up the `BN-MIKE-FORCE\Paradigm` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
