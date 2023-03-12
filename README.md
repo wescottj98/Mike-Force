@@ -41,17 +41,19 @@ then click on the `Code` dropdown (top right of each page) and select download a
 Extract the Zip files out into a suitable location on your computer, 
 e.g. a new `BN-MIKE-FORCE` folder in your Documents folder.
 
-For developers, you should be do the same using `git clone`.
+You should now have two folders in your `BN-MIKE-FORCE` folder, namely `Mike-Force` and `Paradigm`.
+
+For mission scripting devs, you should be do the above using `git clone`.
 
 ### Setting up the missions
 
-1. In `MIKE-FORCE\Mike-Force`, copy the `user_paths_example.py` and save it as a new file named `user_paths.py`
+1. In `BN-MIKE-FORCE\Mike-Force`, copy the `user_paths_example.py` and save it as a new file named `user_paths.py`
 2. Open the file up with Notepad or similar. 
 3. Delete out the text between the double quotes for both `PARADIGM_PATH` and `MISSIONS_PATH` i.e. `r"everything between the quotes here"`
-4. In Windows File Explorer, open up the `MIKE-FORCE\Paradigm` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
+4. In Windows File Explorer, open up the `BN-MIKE-FORCE\Paradigm` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
 5. Paste (Ctrl + V) this between the quotes on the same line as `PARADIGM_PATH`. It should look like this
 ```
-PARADIGM_PATH = r"C:\Users\dijksterhuis\MIKE-FORCE\Paradigm`
+PARADIGM_PATH = r"C:\Users\dijksterhuis\BN-MIKE-FORCE\Paradigm`
 ```
 6. In Windows File Explorer, open up your default Arma profile's directory. Double click in the address bar and copy the full location of the folder (Ctrl + C).
 7. Paste (Ctrl + V) this between the quotes on the same line as `MISSIONS_PATH`. Make sure it ends with `\MP_Missions`. It should look like this
@@ -60,7 +62,7 @@ MISSIONS_PATH = r"C:\Users\dijksterhuis\Documents\Arma 3\MPMissions`
 ```
 8. Save the `user_paths.py` file.
 9. Bring up the Windows start menu and search for `Command Prompt`. Right click on it and `Run as Administrator`.
-10. In Windows File Explorer, open up the `MIKE-FORCE\Mike-Force` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
+10. In Windows File Explorer, open up the `BN-MIKE-FORCE\Mike-Force` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
 11. Back in the Command Prompt, type `cd` then press the spacebar then use Ctrl + V to paste in the Mike Force folder location. Press Enter.
 12. You should see some text saying direffect folders have been created and if nothing went wrong it should be asking your to `press any key to exit`. Pressy any key on your keyboard.
 13. Start Arma3.
