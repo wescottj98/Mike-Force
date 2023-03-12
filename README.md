@@ -64,14 +64,19 @@ MISSIONS_PATH = r"C:\Users\dijksterhuis\Documents\Arma 3\MPMissions`
 9. Bring up the Windows start menu and search for `Command Prompt`. Right click on it and `Run as Administrator`.
 10. In Windows File Explorer, open up the `BN-MIKE-FORCE\Mike-Force` folder. Double click in the address bar and copy the full location of the folder (Ctrl + C).
 11. Back in the Command Prompt, type `cd` then press the spacebar then use Ctrl + V to paste in the Mike Force folder location. Press Enter.
-12. You should see some text saying direffect folders have been created and if nothing went wrong it should be asking your to `press any key to exit`. Pressy any key on your keyboard.
-13. Start Arma3.
-14. Switch to your default game profile (or the profile where your linked `MPMissions` folder is under)
-15. Go to `Multiplayer` > `Server Browser` > `Host Server` > Click on `Host`
-16. You should see the multiplayer missions menu screen. Select a Map (Altis, CamLaoNam, KheSan or Bra). 
-17. The `Mike Force (v1.00.0+)` should be highlighted in green. You can now enter the 3D editor or play as a non whitelisted unit (bottom right of the screen).
+12. You should see some text saying different folders have been created and if nothing went wrong it should be asking you to `press any key to exit`. 
+13. Press any key on your keyboard and close the COmmand Prompt.
+14. Start Arma3.
+15. Switch to your default game profile (or the profile where your linked `MPMissions` folder is under)
+16. Go to `Multiplayer` > `Server Browser` > `Host Server` > Click on `Host`
+17. You should see the multiplayer missions menu screen. Select a Map (Altis, CamLaoNam, KheSan or Bra). 
+18. The `Mike Force (v1.00.0+)` should be highlighted in green. You can now enter the 3D editor or play as a non whitelisted unit (bottom right of the screen).
 
+### Whitelisted Units
 
+When playing the BN mike force mission locally you will get errors popping up on your screen regarding the whitelist and curator players. 
+This happens because you do not have a copy of the whitelisting database running locally and is perfectly normal.
+However, it does mean you cannot test anything regarding whitelisted units.
 
 ## installation for development
 
