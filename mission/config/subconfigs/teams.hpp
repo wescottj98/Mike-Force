@@ -28,6 +28,7 @@ class MikeForce
         vn_artillery = false;
         harassable = true;
         scout = true;
+        increasedBuildRate = false;
     };
 
     //Function Calls on team Join
@@ -65,6 +66,7 @@ class SpikeTeam
         harassable = false;
         scout = true;
         scout_multiple = true;
+        increasedBuildRate = false;
     };
 
     //Function Calls on team Join
@@ -101,6 +103,7 @@ class ACAV
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = false;
     };
 
     //Function Calls on team Join
@@ -137,6 +140,7 @@ class GreenHornets
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = false;
     };
 
     //Function Calls on team Join
@@ -173,6 +177,7 @@ class 1stMEU
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -209,6 +214,7 @@ class MilitaryPolice
         vn_artillery = true;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -245,6 +251,7 @@ class QuarterHorse
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -282,6 +289,7 @@ class Frogmen
         harassable = true;
         scout = true;
         scout_multiple = true;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -318,6 +326,7 @@ class Muskets
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -354,6 +363,7 @@ class SatansAngels
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -390,6 +400,7 @@ class 633rdCSG
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -426,6 +437,7 @@ class 7thCAV
         vn_artillery = false;
         harassable = true;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -463,6 +475,7 @@ class TigerForce
         harassable = true;
         scout = true;
         scout_multiple = true;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -500,6 +513,7 @@ class Montagnard
         harassable = true;
         scout = true;
         scout_multiple = true;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -537,6 +551,7 @@ class SASR
         harassable = true;
         scout = true;
         scout_multiple = true;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -574,6 +589,7 @@ class ARVN
         harassable = true;
         scout = true;
         scout_multiple = true;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -610,6 +626,7 @@ class MACV
         vn_artillery = false;
         harassable = false;
         scout = true;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -646,6 +663,7 @@ class DacCong
         vn_artillery = false;
         harassable = false;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
@@ -682,6 +700,7 @@ class PressCorp
         vn_artillery = false;
         harassable = false;
         scout = false;
+        increasedBuildRate = true;
     };
 
     //Function Calls on team Join
