@@ -995,6 +995,10 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_b_uniform_macv_04_17",{-1,3,3,-1}},
 			{"vn_b_uniform_macv_05_17",{-1,4,4,-1}},
 			{"vn_b_uniform_macv_06_17",{-1,5,5,-1}},
+			//ERDL uniforms
+			{"vn_b_uniform_macv_01_15",{-1,0,0,-1}},
+			{"vn_b_uniform_macv_04_15",{-1,0,0,-1}},
+			{"vn_b_uniform_macv_05_15",{-1,0,0,-1}},
 			//---
 			//NVA Infantry Uniforms
 			{ "vn_o_uniform_nva_air_01", 			{-1,-1,-1, 1}}, 
