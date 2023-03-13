@@ -68,7 +68,7 @@ MISSIONS_PATH = r"C:\Users\dijksterhuis\Documents\Arma 3\MPMissions`
 13. Press any key on your keyboard and close the COmmand Prompt.
 14. Start Arma3.
 15. Switch to your default game profile (or the profile where your linked `MPMissions` folder is under)
-16. Go to `Multiplayer` > `Server Browser` > `Host Server` > Click on `Host`
+16. Go to `Multiplayer` > `Host Server` > Click on `Host Server` (bottom right)
 17. You should see the multiplayer missions menu screen. Select a Map (Altis, CamLaoNam, KheSan or Bra). 
 18. The `Mike Force (v1.00.0+)` should be highlighted in green. You can now enter the 3D editor or play as a non whitelisted unit (bottom right of the screen).
 
