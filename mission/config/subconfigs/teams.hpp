@@ -152,7 +152,7 @@ class 1stMEU
 {
     name = "1st Marines [1st MEU]";
     icon = "custom\taskroster\1stmeu_HL.paa";
-    shortname = "3rd Marines";
+    shortname = "1st Marines";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0.3, 0.6, 1};
