@@ -245,6 +245,9 @@ class vn_i_static_m101_01 : respawn_medium {};
 //m45 quadmount
 class vn_i_statis_m54 : respawn_medium {};
 
+// Monty Car
+class vn_o_car_04_mg_01 : respawn_short {};
+
 class vn_b_air_f100d_cap : wreck_long {};
 class vn_b_air_f100d_cas : wreck_long {};
 class vn_b_air_f100d_hcas : wreck_long {};
