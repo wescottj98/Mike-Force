@@ -37,7 +37,7 @@ localNamespace setVariable ["vn_mf_last_scout_time", time];
 vn_mf_scout_icons_to_draw = [];
 
 if (isNil "vn_mf_scout_draw_handler") then {
-    vn_mf_scout_max_distance = 50;
+    vn_mf_scout_max_distance = 100;
     vn_mf_scout_fade_time = 10;
     vn_mf_scout_draw_handler = addMissionEventHandler ["Draw3D", {
         private _lastScoutTime = localNamespace getVariable "vn_mf_last_scout_time";
