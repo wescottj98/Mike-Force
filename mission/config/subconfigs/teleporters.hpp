@@ -2,7 +2,7 @@ class objects
 {
 	class vn_mf_greenhornets_teleporter 
 	{
-		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "frogmen_base", "gunrange_base"};
 	};
 
 	class vn_mf_spiketeam_teleporter
@@ -95,7 +95,7 @@ class objects
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
 
-		class vn_mf_satansangels_teleporter
+	class vn_mf_satansangels_teleporter
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
