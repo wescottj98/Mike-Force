@@ -428,7 +428,6 @@ vn_mf_camp_compositions = [
 		["vn_o_nva_spiderhole_01",[7.46826,8.51221,0.603113],0,1,0,[],"","",true,false], 
 		["Land_BagFence_Round_F",[11.3452,-1.72266,-0.00130129],38.3787,1,0,[],"","",true,false], 
 		["Land_BagFence_Long_F",[11.6646,0.526367,-0.000999928],310.874,1,0,[],"","",true,false], 
-		["vn_o_vc_static_mortar_type63",[-7.31348,-9.6333,0.6],53.3462,1,0,[],"","",true,false], 
 		["Land_vn_o_wallfoliage_01",[5.56641,-10.9419,0],133.397,1,0,[],"","",true,false], 
 		["vn_o_nva_spiderhole_01",[-4.2417,-11.5327,0.603113],0,1,0,[],"","",true,false], 
 		["vn_o_nva_static_pk_high",[12.4146,-0.192383,0.6],221.944,1,0,[],"","",true,false], 

@@ -745,7 +745,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 		[
 			["Land_vn_b_calochlaena_f",[-3.81201,0.160645,0],301.277,1,0,[],"","",true,false], 
 			["Land_vn_pavn_weapons_stack1",[-3.68652,-2.28857,0.332987],243.353,1,0,[],"","",true,false], 
-			["Land_vn_camonetb_east",[-1.89111,3.69043,0],336.679,1,0,[],"","",true,false], 
 			["Land_vn_pavn_weapons_stack1",[2.5459,4.34814,0.367948],243.353,1,0,[],"","",true,false], 
 			["vn_o_prop_radio_m252b_01",[-2.34766,4.77637,0.835121],198.629,1,0,[],"","",true,false], 
 			["Land_WoodenTable_large_F",[-3.05518,4.47168,0],242.677,1,0,[],"","",true,false], 
@@ -912,8 +911,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 			["Land_vn_d_fallentrunk_roots_f",[-9.48193,-1.68262,0],171.646,1,0,[],"","",true,false], 
 			["Land_vn_pavn_weapons_stack1",[5.99805,7.82373,1.13615],243.353,1,0,[],"","",true,false], 
 			["Land_vn_t_banana_wild_f",[-5.30078,-9.2583,0],57.4697,1,0,[],"","",true,false], 
-			["Land_vn_d_fallentrunk_clear_f",[-7.54395,7.30811,0],34.4095,1,0,[],"","",true,false], 
-			["vn_o_nva_navy_static_v11m",[-1.15771,10.9092,0.6],178.195,1,0,[],"","",true,false], 
+			["Land_vn_d_fallentrunk_clear_f",[-7.54395,7.30811,0],34.4095,1,0,[],"","",true,false],
 			["Land_vn_b_cycas_f",[9.37305,6.78955,0],328.8,1,0,[],"","",true,false], 
 			["vn_o_nva_static_dshkm_high_01",[10.3003,-5.2251,0.6],90.3,1,0,[],"","",true,false], 
 			["Land_vn_t_inocarpus_f",[1.79639,-6.10303,0],25.8844,1,0,[],"","",true,false], 
@@ -980,7 +978,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 		],
 		[
 			["Land_vn_b_cycas_f",[0.378418,2.01709,4.76837e-007],102.863,1,0,[],"","",true,false], 
-			["Land_vn_camonet_east",[-2.04883,5.02832,-0.864592],0,1,0,[],"","",true,false], 
 			["vn_o_prop_radio_m252b_01",[-2.23877,5.229,1.196625],225.071,1,0,[],"","",true,false], 
 			["Land_WoodenTable_large_F",[-2.97949,5.26221,4.76837e-007],269.119,1,0,[],"","",true,false], 
 			["Land_Map_unfolded_F",[-3.57959,5.09473,1.103566],26.4412,1,0,[],"","",true,false], 
