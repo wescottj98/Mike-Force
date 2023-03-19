@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10013;
+		nextID=10112;
 	};
 	class Camera
 	{
-		pos[]={15919.244,31.702391,7993.2861};
-		dir[]={0.54885709,-0.54447556,-0.63429946};
-		up[]={0.35629788,0.83874887,-0.41176543};
-		aside[]={-0.75621414,-2.0558946e-007,-0.65434813};
+		pos[]={16321.958,102.96744,8111.9189};
+		dir[]={0.30332372,-0.65827477,0.68901014};
+		up[]={0.26523405,0.75275916,0.60249025};
+		aside[]={0.91526473,-1.1326629e-006,-0.4029274};
 	};
 };
 binarizationWanted=0;
@@ -553,8 +553,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -604,8 +604,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -80415,7 +80415,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={16368.348,77.906006,8127.4746};
-						angles[]={0,0.77292615,-0};
+						angles[]={0,0.77292615,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80830,7 +80830,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="this setObjectTextureGlobal [0,""Pictures\TigerForce Sign1.jpg""]";
+												init="this setObjectTexture [0,""custom\billboards\bnpromo_bb.paa""];";
 												disableSimulation=1;
 											};
 											id=15064;
@@ -80859,7 +80859,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={16304.489,74.518723,8156.3477};
-												angles[]={-0,1.843832,0};
+												angles[]={0,1.843832,0};
 											};
 											side="Empty";
 											flags=4;
@@ -80877,7 +80877,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={16297.761,74.510002,8137.0376};
-												angles[]={-0,1.8479683,0};
+												angles[]={0,1.8479683,0};
 											};
 											side="Empty";
 											flags=4;
@@ -81052,7 +81052,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16354.229,76.549553,8139.4385};
-										angles[]={-0,5.0329185,0};
+										angles[]={0,5.0329185,0};
 									};
 									side="Empty";
 									flags=4;
@@ -81070,7 +81070,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16353.323,76.505737,8136.6006};
-										angles[]={-0,5.0246983,0};
+										angles[]={0,5.0246983,0};
 									};
 									side="Empty";
 									flags=4;
@@ -81089,7 +81089,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16352.357,76.588799,8133.7793};
-										angles[]={-0,5.0490975,0};
+										angles[]={0,5.0490975,0};
 									};
 									side="Empty";
 									flags=4;
@@ -81107,7 +81107,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16347.879,74.507652,8132.6025};
-										angles[]={-0,5.9546795,0};
+										angles[]={0,5.9546795,0};
 									};
 									side="Empty";
 									flags=4;
@@ -81141,7 +81141,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16374.18,76.091324,8100.2178};
-										angles[]={0,4.9904537,-0};
+										angles[]={0,4.9904537,0};
 									};
 									side="Empty";
 									flags=5;
@@ -81158,7 +81158,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16374.802,74.976723,8099.751};
-										angles[]={0,4.9868927,-0};
+										angles[]={0,4.9868927,0};
 									};
 									side="Empty";
 									flags=1;
@@ -81176,7 +81176,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16371.488,75.89138,8130.9238};
-										angles[]={0,0.78057075,-0};
+										angles[]={0,0.78057075,0};
 									};
 									side="Empty";
 									flags=5;
@@ -81224,7 +81224,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16335.703,74.510002,8128.4272};
-										angles[]={-0,0.48773226,0};
+										angles[]={0,0.48773226,0};
 									};
 									side="Empty";
 									flags=4;
@@ -81241,7 +81241,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16374.521,76.091324,8110.5459};
-										angles[]={-0,1.8263823,0};
+										angles[]={0,1.8263823,0};
 									};
 									side="Empty";
 									flags=4;
@@ -81297,7 +81297,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={16309.398,74.927315,8132.0356};
-								angles[]={0,4.9846687,-0};
+								angles[]={0,4.9846687,0};
 							};
 							side="Empty";
 							flags=5;
@@ -81314,7 +81314,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={16315.396,74.927315,8151.1616};
-								angles[]={0,5.0656853,-0};
+								angles[]={0,5.0656853,0};
 							};
 							side="Empty";
 							flags=5;
@@ -81337,7 +81337,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setObjectTextureGlobal [0,""Pictures\TigerForce Sign1.jpg""]";
+								init="this setObjectTexture [0,""custom\billboards\bnpromo_bb.paa""];";
 								disableSimulation=1;
 							};
 							id=15090;
@@ -81349,7 +81349,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={16340.896,74.507896,8125.7632};
-								angles[]={-0,3.5601051,0};
+								angles[]={0,3.5601051,0};
 							};
 							side="Empty";
 							flags=4;
@@ -81386,7 +81386,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={16367.042,77.004066,8132.3784};
-						angles[]={0,0.78865725,-0};
+						angles[]={0,0.78865725,0};
 					};
 					side="Empty";
 					flags=1;
@@ -81419,7 +81419,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={16368.83,75.516266,8124.1304};
-						angles[]={-0,1.1261981,0};
+						angles[]={0,1.1261981,0};
 					};
 					side="Empty";
 					flags=4;
@@ -81541,7 +81541,7 @@ class Mission
 			name="supply_officer_initial_6";
 			text="Initial Supply Officer 6";
 			type="Empty";
-			angle=9.999999;
+			angle=9.9999981;
 			id=15120;
 			atlOffset=-0.00029754639;
 		};
