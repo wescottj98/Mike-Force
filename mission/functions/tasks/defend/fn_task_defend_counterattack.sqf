@@ -97,10 +97,10 @@ _taskDataStore setVariable ["prepare_zone", {
 	private _infantryMultiplier = _baseMultiplier;
 
 	/*
-	add the "attack" objectives to the AI objectives task system
+	add the "attack" objective to the AI objectives task system.
 
-	attackDifficulty determines how large to make the AI groups that attack this objective
-	but it is never set as a variable on this player task so it will only the default setting provided below
+	attackDifficulty determines how large to make the AI groups that attack this objective,
+	but it is never set as a variable on this player task so it will only use the default setting provided below.
 	*/
 	private _attackObjective = [
 		_taskDataStore getVariable "attackPos",
