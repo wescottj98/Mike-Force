@@ -30,32 +30,39 @@ _taskDataStore setVariable ["INIT", {
 	private _zonePosition = getMarkerPos _marker;
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
-	// OLD: current_hq vairable is never set in missionNamespace
-	// so this always  defaults to _zonePositon, which is the centre point of the zone
+	// OLD: current_hq variable is never set in missionNamespace
+	// so _attackPos always defaults to _zonePositon, which is just the centre point of the zone
 
 	// private _hq = (missionNamespace getVariable ["current_hq", objNull]);
 	// private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_zonePosition};
 
-	// default attck position is the centre of the zone when no FOBs
-	// basically just sending some troops to the centre and hoping they bump into players
-	private _attackPos = _zonePosition;
-
 	/*
-	if there's a bases within range of the AO, look for a suitable base to send attacks towards
-	TODO: candidate arrays should really be hashmaps.
+	if there's a bases within range of the AO, look for a suitable base to send attacks towards,
+	otherwise send AI towards the centre of the zone and hope they run into players
 
-	get nearby FOBs within a 2000m square area of the zone
-	sorted in descending order of the current supplies of the base
+	current implementation --
+
+	get nearby FOBs within a 2000m square area of the zone,
+	sorted in descending order of the current supplies of the base,
+	using the first array item as the target
 	*/
 
+	// default attack position is the centre of the zone when no FOBs
+	// basically just send some troops to the centre and hoping they bump into players
+	private _attackPos = _zonePosition;
+
+	// construct an array containing another small sub-array for each candidate FOB: [FOB supplies: number, FOB: object]
+	// TODO: candidate arrays should really be hashmaps.
 	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
 
+	// candidate FOBs exist
 	if ((count _candidate_bases_to_attack) > 0) then {
 
 		diag_log format ["Counterattack: Co-Ordinates of FOBs within range of counter attack: %1", _candidate_bases_to_attack apply {getPos (_x # 1)}];
 
 		// TODO: candidate arrays should really be hashmaps.
+		// get the first item from the sorted array
 		private _base_to_attack = (_candidate_bases_to_attack # 0 ) # 1;
 		diag_log format ["Counterattack: Co-Ordinates of selected FOB: %1", _base_to_attack];
 
@@ -63,7 +70,7 @@ _taskDataStore setVariable ["INIT", {
 		_attackPos = getPos _base_to_attack;
 	};
 
-    diag_log format ["Counterattack: Co-ordinates for counter attack target: %1", _attackPos];
+	diag_log format ["Counterattack: Co-ordinates for counter attack target: %1", _attackPos];
 
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
 	_taskDataStore setVariable ["attackTime", _attackTime];
