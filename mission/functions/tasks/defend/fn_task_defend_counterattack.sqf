@@ -44,17 +44,9 @@ _taskDataStore setVariable ["INIT", {
 	if there's a bases within range of the AO, look for a suitable base to send attacks towards
     TODO: candidate arrays should really be hashmaps.
 
-    ==> option 1
-    get nearby FOBs within a 2000m square area of the zone
-    sorted in ascending order of distance to the centre of the zone
-
-	==> option 2 (active)
     get nearby FOBs within a 2000m square area of the zone
     sorted in descending order of the current supplies of the base
     */
-
-	// private _nearby_bases = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ getPos _x distance2D _zonePosition, _x] };
-	// _nearby_bases sort false;
 
 	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
