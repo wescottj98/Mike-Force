@@ -40,13 +40,13 @@ _taskDataStore setVariable ["INIT", {
 	// basically just sending some troops to the centre and hoping they bump into players
 	private _attackPos = _zonePosition;
 
-    /*
+	/*
 	if there's a bases within range of the AO, look for a suitable base to send attacks towards
-    TODO: candidate arrays should really be hashmaps.
+	TODO: candidate arrays should really be hashmaps.
 
-    get nearby FOBs within a 2000m square area of the zone
-    sorted in descending order of the current supplies of the base
-    */
+	get nearby FOBs within a 2000m square area of the zone
+	sorted in descending order of the current supplies of the base
+	*/
 
 	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
@@ -66,7 +66,6 @@ _taskDataStore setVariable ["INIT", {
     diag_log format ["Counterattack: Co-ordinates for counter attack target: %1", _attackPos];
 
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
-
 	_taskDataStore setVariable ["attackTime", _attackTime];
 	_taskDataStore setVariable ["attackPos", _attackPos];
 	_taskDataStore setVariable ["attackAreaSize", markerSize _marker];
