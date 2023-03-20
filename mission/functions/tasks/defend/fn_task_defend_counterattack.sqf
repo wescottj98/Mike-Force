@@ -30,10 +30,51 @@ _taskDataStore setVariable ["INIT", {
 	private _zonePosition = getMarkerPos _marker;
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
-	private _hq = (missionNamespace getVariable ["current_hq", objNull]);
-	private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_zonePosition};
+	// OLD: current_hq vairable is never set in missionNamespace
+	// so this always  defaults to _zonePositon, which is the centre point of the zone
+
+	// private _hq = (missionNamespace getVariable ["current_hq", objNull]);
+	// private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_zonePosition};
+
+	// default attck position is the centre of the zone when no FOBs
+	// basically just sending some troops to the centre and hoping they bump into players
+	private _attackPos = _zonePosition;
+
+    /*
+	if there's a bases within range of the AO, look for a suitable base to send attacks towards
+    TODO: candidate arrays should really be hashmaps.
+
+    ==> option 1
+    get nearby FOBs within a 2000m square area of the zone
+    sorted in ascending order of distance to the centre of the zone
+
+	==> option 2 (active)
+    get nearby FOBs within a 2000m square area of the zone
+    sorted in descending order of the current supplies of the base
+    */
+
+	// private _nearby_bases = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ getPos _x distance2D _zonePosition, _x] };
+	// _nearby_bases sort false;
+
+	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ _x getVariable "para_g_current_supplies", _x] };
+	_candidate_bases_to_attack sort false;
+
+	if ((count _candidate_bases_to_attack) > 0) then {
+
+		diag_log format ["Counterattack: Co-Ordinates of FOBs within range of counter attack: %1", _candidate_bases_to_attack apply {getPos (_x # 1)}];
+
+		// TODO: candidate arrays should really be hashmaps.
+		private _base_to_attack = (_candidate_bases_to_attack # 0 ) # 1;
+		diag_log format ["Counterattack: Co-Ordinates of selected FOB: %1", _base_to_attack];
+
+		// overwrite the default attack position
+		_attackPos = getPos _base_to_attack;
+	};
+
+    diag_log format ["Counterattack: Co-ordinates for counter attack target: %1", _attackPos];
 
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
+
 	_taskDataStore setVariable ["attackTime", _attackTime];
 	_taskDataStore setVariable ["attackPos", _attackPos];
 	_taskDataStore setVariable ["attackAreaSize", markerSize _marker];
@@ -64,6 +105,12 @@ _taskDataStore setVariable ["prepare_zone", {
 	//Add a wave for each camp in our origin zone.
 	private _infantryMultiplier = _baseMultiplier;
 
+	/*
+	add the "attack" objectives to the AI objectives task system
+
+	attackDifficulty determines how large to make the AI groups that attack this objective
+	but it is never set as a variable on this player task so it will only the default setting provided below
+	*/
 	private _attackObjective = [
 		_taskDataStore getVariable "attackPos",
 		//Difficulty 2, unless specified otherwise.
