@@ -104,5 +104,9 @@ params ["_pos"];
 		{
 			deleteMarker _x;
 		} forEach (_siteStore getVariable "markers");
+
+		// release AI from associated objectives
+		// note -- AI can vanish in front of players when this is executed
+		_siteStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
 	}
 ] call vn_mf_fnc_sites_create_site;
