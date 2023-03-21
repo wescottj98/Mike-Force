@@ -1,4 +1,5 @@
 /*
+    // TODO - Rename to make_zone_active
     File: fn_director_open_zone.sqf
     Author: Savage Game Design
     Public: No
@@ -17,8 +18,24 @@
 */
 params ["_zone"];
 
+// kept from previous BN MF version
 if( count(mf_s_activeZones) >= 1 ) exitWith {}; //make sure only 1 open
 
-private _taskStore = ["prepare_zone", _zone] call vn_mf_fnc_task_create select 1;
-mf_s_currentZone = _zone;
-mf_s_activeZones pushBack [_zone, _taskStore];
+
+if (_zone in mf_s_dir_activeZones) exitWith {
+    ["WARNING", format ["Cannot activate already active zone '%1'", _zone]] call para_g_fnc_log;
+};
+
+["INFO", format ["Make zone '%1' an active zone", _zone]] call para_g_fnc_log;
+
+private _taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create select 1;
+
+private _activeZoneInfo = createHashMapFromArray [
+    ["state", "capture"],
+    ["currentTask", _taskStore]
+];
+
+mf_s_dir_activeZones set [_zone, _activeZoneInfo];
+
+mf_g_dir_activeZoneNames = keys mf_s_dir_activeZones;
+publicVariable "mf_g_dir_activeZoneNames";

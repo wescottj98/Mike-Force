@@ -27,11 +27,13 @@ _taskDataStore setVariable ["INIT", {
 
 	//Required parameters
 	private _marker = _taskDataStore getVariable "taskMarker";
-	private _zonePosition = getMarkerPos _marker;
+	private _markerPos = getMarkerPos _marker;
+	private _hqs = (localNamespace getVariable ["sites_hq", []]) inAreaArray _marker;
+
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
 	private _hq = (missionNamespace getVariable ["current_hq", objNull]);
-	private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_zonePosition};
+	private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_markerPos};
 
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
 	_taskDataStore setVariable ["attackTime", _attackTime];
@@ -46,7 +48,7 @@ _taskDataStore setVariable ["INIT", {
 	};
 
 	[[
-		["prepare_zone", _zonePosition]
+		["prepare_zone", _markerPos]
 	]] call _fnc_initialSubtasks;
 }];
 
@@ -134,14 +136,7 @@ _taskDataStore setVariable ["defend_zone", {
 		_enemyHoldZone &&
 		{_enemyZoneHeldTime > (_taskDataStore getVariable ["failureTime", 5 * 60])}
 	) then {
-		private _zone = _taskDataStore getVariable "taskMarker";
-		private _selectZone = mf_s_siegedZones findIf {_zone in _x};
-		mf_s_siegedZones deleteAt _selectZone;
-		mf_s_activeZones deleteAt _selectZone;
-
-		_zone setMarkerColor "ColorRed";
-		_zone setMarkerBrush "DiagGrid";
-
+		["CounterAttackLost", ["", [_zone] call vn_mf_fnc_zone_marker_to_name]] remoteExec ["para_c_fnc_show_notification", 0];
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;
 	};

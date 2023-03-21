@@ -4,7 +4,7 @@
     Public: No
 
     Description:
-		Periodic job that runs the gameplay director.
+		Periodic job that runs the gameplay director, which manages the main game flow.
 
     Parameter(s):
 		None
@@ -16,17 +16,22 @@
 		["gameplay_director", vn_mf_fnc_director_job, [], 30] call para_g_fnc_scheduler_add_job;
 */
 
-////////////////////////////////////////
-// New task handling - Main game flow //
-////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+// Identify the zones which have tasks finished and therefore need processing. //
+/////////////////////////////////////////////////////////////////////////////////
 
-private _completedZones = mf_s_siegedZones select {[_x # 1] call vn_mf_fnc_task_is_completed};
-mf_s_siegedZones = mf_s_siegedZones - _completedZones;
+private _zonesToProcess = [];
 
-if (mf_s_activeZones isEqualTo []) then 
 {
-	call vn_mf_fnc_director_open_closest_zone;
-};
+	private _zone = _x;
+	private _info = _y;
+
+	if ([_info getOrDefault ["currentTask", objNull]] call vn_mf_fnc_task_is_completed) then {
+		_zonesToProcess pushBack _zone;
+	};
+} forEach mf_s_dir_activeZones;
+
+{ [_x] call vn_mf_fnc_director_process_active_zone } forEach _zonesToProcess;
 
 ///////////////////////
 // Mission end state //
