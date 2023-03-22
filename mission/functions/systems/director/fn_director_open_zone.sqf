@@ -19,7 +19,7 @@
 params ["_zone"];
 
 // kept from previous BN MF version
-if( count(mf_s_activeZones) >= 1 ) exitWith {}; //make sure only 1 open
+//if( count(mf_s_activeZones) >= 1 ) exitWith {}; //make sure only 1 open
 
 
 if (_zone in mf_s_dir_activeZones) exitWith {
@@ -28,10 +28,10 @@ if (_zone in mf_s_dir_activeZones) exitWith {
 
 ["INFO", format ["Make zone '%1' an active zone", _zone]] call para_g_fnc_log;
 
-private _taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create select 1;
+private _taskStore = ["prepare_zone", _zone] call vn_mf_fnc_task_create select 1;
 
 private _activeZoneInfo = createHashMapFromArray [
-    ["state", "capture"],
+    ["state", "prepare"],
     ["currentTask", _taskStore]
 ];
 

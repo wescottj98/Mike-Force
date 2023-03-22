@@ -33,6 +33,21 @@ private _taskIsCompleted = [_task] call vn_mf_fnc_task_is_completed;
 private _taskResult = _task getVariable ["taskResult", ""];
 
 if (_taskIsCompleted) then {
+	if (_currentState isEqualTo "prepare") exitWith {
+		["INFO", format ["Zone '%1' prepped, moving to capture", _zone]] call para_g_fnc_log;
+		private _zone = _taskDataStore getVariable "taskMarker";
+		[_zone] call vn_mf_fnc_sites_generate;
+		private _captureTask = ((["capture_zone", _zone] call vn_mf_fnc_task_create) # 1);
+
+		// TODO: Should we move this into the task's init?
+		_zone setMarkerColor "ColorRed";
+		_zone setMarkerBrush "DiagGrid";
+
+		_zoneInfo set ["state", "capture"];
+		_zoneInfo set ["currentTask", _captureTask];
+	};
+
+
 	if (_currentState isEqualTo "capture") exitWith {
 		["INFO", format ["Zone '%1' captured, moving to counterattack", _zone]] call para_g_fnc_log;
 
