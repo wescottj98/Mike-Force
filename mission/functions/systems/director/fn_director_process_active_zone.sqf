@@ -33,13 +33,20 @@ private _taskIsCompleted = [_task] call vn_mf_fnc_task_is_completed;
 private _taskResult = _task getVariable ["taskResult", ""];
 
 if (_taskIsCompleted) then {
+
+	/*
+	Cooldown period/conditions have been met. End of the preparation phase.
+
+	Load in the sites. Trigger the Zone's capture state.
+	*/
+
 	if (_currentState isEqualTo "prepare") exitWith {
 		["INFO", format ["Zone '%1' prepped, moving to capture", _zone]] call para_g_fnc_log;
 		private _zone = _taskDataStore getVariable "taskMarker";
 		[_zone] call vn_mf_fnc_sites_generate;
 		private _captureTask = ((["capture_zone", _zone] call vn_mf_fnc_task_create) # 1);
 
-		// TODO: Should we move this into the task's init?
+		// TODO: Should we move this into the capture_zone task's init?
 		_zone setMarkerColor "ColorRed";
 		_zone setMarkerBrush "DiagGrid";
 
@@ -47,6 +54,11 @@ if (_taskIsCompleted) then {
 		_zoneInfo set ["currentTask", _captureTask];
 	};
 
+	/*
+	All capture site sub tasks have been completed. End of the capture phase.
+
+	Trigger the Zone's counterattack state.
+	*/
 
 	if (_currentState isEqualTo "capture") exitWith {
 		["INFO", format ["Zone '%1' captured, moving to counterattack", _zone]] call para_g_fnc_log;
@@ -55,6 +67,13 @@ if (_taskIsCompleted) then {
 		_zoneInfo set ["state", "counterattack"];
 		_zoneInfo set ["currentTask", _counterattackTask];
 	};
+
+	/*
+	Counterattack results are in!
+
+	If failed, reset back to the capture state.
+	Otherwise close the zone
+	*/
 
 	if (_currentState isEqualTo "counterattack") exitWith {
 		if (_taskResult isEqualTo "FAILED") exitWith {
