@@ -30,30 +30,25 @@ _taskDataStore setVariable ["INIT", {
 	private _zonePosition = getMarkerPos _marker;
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
-	// OLD: current_hq variable is never set in missionNamespace
-	// so _attackPos always defaults to _zonePositon, which is just the centre point of the zone
-
-	// private _hq = (missionNamespace getVariable ["current_hq", objNull]);
-	// private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_zonePosition};
-
 	/*
-	if there's a bases within range of the AO, look for a suitable base to send attacks towards,
-	otherwise send AI towards the centre of the zone and hope they run into players
+	if no candidate FOBs, send AI towards the centre of the zone
+	hoping they run into players.
 
-	current implementation --
-
-	get nearby FOBs within a 2000m square area of the zone,
-	sorted in descending order of the current supplies of the base,
-	using the first array item as the target
+	if there are bases within range of the AO, 
+	get nearby FOBs within a specified radius of the zone's centre point,
+	sort in descending order of the current supplies of the base,
+	use the first array item as the target for counter attack.
 	*/
 
-	// default attack position is the centre of the zone when no FOBs
-	// basically just send some troops to the centre and hoping they bump into players
+	// default attack position is centre of the zone
 	private _attackPos = _zonePosition;
 
-	// construct an array containing another small sub-array for each candidate FOB: [FOB supplies: number, FOB: object]
-	// TODO: candidate arrays should really be hashmaps.
-	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 2000, 2000, 0] apply { [ _x getVariable "para_g_current_supplies", _x] };
+	// search for candidate FOBs
+	// NOTE: 1100 is the area of the yellow circle during the AO's capture phase.
+	// TODO: may want to make the AO's engagement area a global parameter so we can access 
+	// in multiple places as this is also defined in the capture zone phase.
+
+	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 1100, 1100, 0, false] apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
 
 	// candidate FOBs exist
@@ -61,8 +56,7 @@ _taskDataStore setVariable ["INIT", {
 
 		diag_log format ["Counterattack: Co-Ordinates of FOBs within range of counter attack: %1", _candidate_bases_to_attack apply {getPos (_x # 1)}];
 
-		// TODO: candidate arrays should really be hashmaps.
-		// get the first item from the sorted array
+		// get the first FOB from the sorted array
 		private _base_to_attack = (_candidate_bases_to_attack # 0 ) # 1;
 		diag_log format ["Counterattack: Co-Ordinates of selected FOB: %1", _base_to_attack];
 
