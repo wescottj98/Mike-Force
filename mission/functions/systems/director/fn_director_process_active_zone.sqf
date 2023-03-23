@@ -46,10 +46,6 @@ if (_taskIsCompleted) then {
 		[_zone] call vn_mf_fnc_sites_generate;
 		private _captureTask = ((["capture_zone", _zone] call vn_mf_fnc_task_create) # 1);
 
-		// TODO: Should we move this into the capture_zone task's init?
-		_zone setMarkerColor "ColorRed";
-		_zone setMarkerBrush "DiagGrid";
-
 		_zoneInfo set ["state", "capture"];
 		_zoneInfo set ["currentTask", _captureTask];
 	};

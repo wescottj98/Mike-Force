@@ -33,6 +33,11 @@ _taskDataStore setVariable ["INIT", {
 	private _zone = _taskDataStore getVariable "taskMarker";
 	private _zonePosition = getMarkerPos _zone;
 
+	// change the zone's hexagon colour and shading
+	_zone setMarkerColor "ColorRed";
+	_zone setMarkerBrush "DiagGrid";
+
+	// custom BN: yellow circle around the AO
 	private _areaMarker = createMarker ["activeZoneCircle", _zonePosition];
 	_areaMarker setMarkerShape "ELLIPSE";
 	_areaMarker setMarkerSize [1100, 1100];
