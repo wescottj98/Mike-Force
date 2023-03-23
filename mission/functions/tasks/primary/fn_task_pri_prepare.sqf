@@ -58,9 +58,4 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
-	private _zone = _taskDataStore getVariable "taskMarker";
-	[_zone] call vn_mf_fnc_sites_generate;
-	_taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create;
-	_zone setMarkerColor "ColorRed";
-	_zone setMarkerBrush "DiagGrid";
 }];
