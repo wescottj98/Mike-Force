@@ -34,21 +34,18 @@ _taskDataStore setVariable ["INIT", {
 	if no candidate FOBs, send AI towards the centre of the zone
 	hoping they run into players.
 
-	if there are bases within range of the AO, 
-	get nearby FOBs within a specified radius of the zone's centre point,
-	sort in descending order of the current supplies of the base,
+	if there are bases within an AO's hexagon radius,
+	get nearby FOBs sorted in descending order of the current supplies,
 	use the first array item as the target for counter attack.
 	*/
 
 	// default attack position is centre of the zone
 	private _attackPos = _zonePosition;
+	private _areaSize = markerSize _marker;
 
-	// search for candidate FOBs
-	// NOTE: 1100 is the area of the yellow circle during the AO's capture phase.
-	// TODO: may want to make the AO's engagement area a global parameter so we can access 
-	// in multiple places as this is also defined in the capture zone phase.
-
-	private _candidate_bases_to_attack = para_g_bases inAreaArray [_zonePosition, 1100, 1100, 0, false] apply { [ _x getVariable "para_g_current_supplies", _x] };
+	// search for candidate FOBs within the zone's area.
+	private _base_search_area = [_zonePosition, _areaSize select 0, _areaSize select 1, 0, false];
+	private _candidate_bases_to_attack = para_g_bases inAreaArray _base_search_area apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
 
 	// candidate FOBs exist
@@ -69,7 +66,7 @@ _taskDataStore setVariable ["INIT", {
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
 	_taskDataStore setVariable ["attackTime", _attackTime];
 	_taskDataStore setVariable ["attackPos", _attackPos];
-	_taskDataStore setVariable ["attackAreaSize", markerSize _marker];
+	_taskDataStore setVariable ["attackAreaSize", _areaSize];
 
 	if (_prepTime > 0) then 
 	{
