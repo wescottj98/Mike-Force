@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10019;
+		nextID=10119;
 	};
 	class Camera
 	{
-		pos[]={16333.105,80.6866,8111.1226};
-		dir[]={0.25405142,-0.35290337,0.90055966};
-		up[]={0.09583056,0.93563789,0.33969882};
-		aside[]={0.96247762,3.0522642e-008,-0.27151904};
+		pos[]={16342.008,80.6866,8139.394};
+		dir[]={0.81153715,-0.42445147,-0.40155759};
+		up[]={0.38042724,0.9054507,-0.18823963};
+		aside[]={-0.44348919,-1.4901161e-008,-0.89627981};
 	};
 };
 binarizationWanted=0;
@@ -553,8 +553,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -604,8 +604,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -2234,7 +2234,7 @@ class Mission
 					name="supply_officer_initial_6";
 					text="Supply Officer 6";
 					type="Empty";
-					angle=9.9999971;
+					angle=9.9999962;
 					id=15094;
 					atlOffset=-0.051000595;
 				};
@@ -42077,7 +42077,7 @@ class Mission
 			name="mf_respawn_tigerforce";
 			text="@STR_vn_mf_respawn_tigerforce";
 			type="Empty";
-			angle=9.9999971;
+			angle=9.9999962;
 			id=7610;
 		};
 		class Item906
@@ -81595,11 +81595,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=574;
+			nextID=577;
 		};
 		class Links
 		{
-			items=574;
+			items=577;
 			class Item0
 			{
 				linkID=0;
@@ -87334,6 +87334,36 @@ class Mission
 			{
 				linkID=573;
 				item0=15064;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item574
+			{
+				linkID=574;
+				item0=15073;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item575
+			{
+				linkID=575;
+				item0=15072;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item576
+			{
+				linkID=576;
+				item0=15074;
 				item1=705;
 				class CustomData
 				{
