@@ -8,7 +8,7 @@ class EditorData
 	toggles=577;
 	class ItemIDProvider
 	{
-		nextID=15099;
+		nextID=15114;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10119;
+		nextID=10219;
 	};
 	class Camera
 	{
-		pos[]={16342.008,80.6866,8139.394};
-		dir[]={0.81153715,-0.42445147,-0.40155759};
-		up[]={0.38042724,0.9054507,-0.18823963};
-		aside[]={-0.44348919,-1.4901161e-008,-0.89627981};
+		pos[]={16325.693,104.47019,8101.166};
+		dir[]={0.31745484,-0.62288702,0.7150175};
+		up[]={0.25276032,0.78230566,0.56930214};
+		aside[]={0.91397536,-1.3739191e-007,-0.40578869};
 	};
 };
 binarizationWanted=0;
@@ -553,8 +553,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -604,8 +604,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -654,13 +654,13 @@ class Mission
 		month=2;
 		day=6;
 		hour=8;
-		minute=20;
+		minute=0;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=1604;
+		items=1608;
 		class Item0
 		{
 			dataType="Marker";
@@ -80965,7 +80965,7 @@ class Mission
 													flags=5;
 													class Attributes
 													{
-														init="this setObjectTexture [0,""custom\billboards\bnpromo_bb.paa""];";
+														init="this setObjectTexture [0,""custom\billboards\TigerForce_Sign1.paa""];";
 														disableSimulation=1;
 													};
 													id=15060;
@@ -81471,7 +81471,7 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										init="this setObjectTexture [0,""custom\billboards\bnpromo_bb.paa""];";
+										init="this setObjectTexture [0,""custom\billboards\TigerForce_Sign1.paa""];";
 										disableSimulation=1;
 									};
 									id=15086;
@@ -81589,6 +81589,120 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1604
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16321.615,78.282036,8134.9819};
+				angles[]={0,2.4333904,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15099;
+			type="Land_vn_lampshabby_f_4xdir_normal";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1605
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16349.819,78.282036,8126.9888};
+				angles[]={0,2.4333904,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15100;
+			type="Land_vn_lampshabby_f_4xdir_normal";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1606
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16370.273,78.282036,8106.0474};
+				angles[]={0,2.4333904,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15108;
+			type="Land_vn_lampshabby_f_4xdir_normal";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1607
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16336.348,75.319603,8126.5806};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=15109;
+			type="Land_vn_us_common_lantern_01";
+			atlOffset=0.8095932;
 		};
 	};
 	class Connections
