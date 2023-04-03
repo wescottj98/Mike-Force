@@ -17,7 +17,7 @@
 params ["_task", "_player"];
 
 private _fnc_useExplosives = {
-	private _neededExplosiveTypes = ["vn_mine_satchel_remote_02_mag", "vn_mine_m112_remote_mag"]; 
+	private _neededExplosiveTypes = ["vn_mine_satchel_remote_02_mag", "vn_mine_m112_remote_mag", "vn_mine_limpet_02_mag", "vn_mine_bangalore_mag"]; 
 	private _mags = magazines _player; 
 	private _availableExplosives = _mags arrayIntersect _neededExplosiveTypes;
 
