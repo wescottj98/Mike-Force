@@ -1,5 +1,5 @@
 /*
-    File: fn_scour_actions.sqf
+    File: fn_scout_actions.sqf
     Author: Savage Game Design
     Public: No
 
@@ -35,9 +35,10 @@ localNamespace setVariable ["vn_mf_last_scout_time", time];
 // Initialise scouting action and setup the draw3D handler
 
 vn_mf_scout_icons_to_draw = [];
+vn_mf_scout_intel_icons_to_draw = [];
 
 if (isNil "vn_mf_scout_draw_handler") then {
-    vn_mf_scout_max_distance = 50;
+    vn_mf_scout_max_distance = 100;
     vn_mf_scout_fade_time = 10;
     vn_mf_scout_draw_handler = addMissionEventHandler ["Draw3D", {
         private _lastScoutTime = localNamespace getVariable "vn_mf_last_scout_time";
@@ -48,6 +49,21 @@ if (isNil "vn_mf_scout_draw_handler") then {
             _x # 1 set [3, _opacity];
             drawIcon3D (_x select [0, 13]);
         } forEach vn_mf_scout_icons_to_draw;
+    }];
+};
+
+if (isNil "vn_mf_scout_draw_handlerz") then {
+    vn_mf_scout_max_distancez = 100;
+    vn_mf_scout_fade_timez = 10;
+    vn_mf_scout_draw_handlerz = addMissionEventHandler ["Draw3D", {
+        private _lastScoutTimez = localNamespace getVariable "vn_mf_last_scout_time";
+        //if (_lastScoutTimez + vn_mf_scout_fade_timez < time) exitWith {};
+        {
+            private _originalOpacityz = _x # 14;
+            private _opacityz = linearConversion [_lastScoutTimez, _lastScoutTimez + vn_mf_scout_fade_timez, time, _originalOpacityz, 0, true];
+            _x # 1 set [3, _opacityz];
+            drawIcon3D (_x select [0, 13]);
+        } forEach vn_mf_scout_intel_icons_to_draw;
     }];
 };
 
@@ -104,13 +120,52 @@ private _fnc_siteToDrawableIcon = {
     ]
 };
 
+private _fnc_intelToDrawableIcon = {
+    private _distance = getPos _this distance2D _playerRef;
+    private _isDiscovered = _this getVariable ["discovered", false];
+    private _text = if (_isDiscovered) then { toUpper (_this getVariable ["site_type", ""]) } else { "???" };
+    // Full opacity up to X metres, then starts reducing linearly.
+    private _opacity = 1 - ((_distance - 200 max 0) / vn_mf_scout_max_distance);
+    private _distanceText = _distanceTexts select (_distanceTexts findIf {_x # 0 >= _distance}) select 1;
+
+    [
+        getMissionPath "img\vn_ico_mf_binoculars_ca.paa", // Texture
+        [0, 1, 0, _opacity], // Color
+        getPos _this, // Position AGL
+        1, // Width
+        1, // Height
+        0, // Angle
+        "", //Text Content
+        1, // Shadow/Outline
+        0.05, // Text size
+        "RobotoCondensed", // Font 
+        "center", // Text Alignment
+        false, // Show when off screen 
+        0, // Text offset X 
+        -0, // Text offset Y
+        _opacity // Original opacity, used for fading
+    ]
+};
+
 if (player getUnitTrait "scout_multiple") then {
-    vn_mf_scout_icons_to_draw = _nearbySites apply {_x call _fnc_siteToDrawableIcon};
+    vn_mf_scout_icons_to_draw = _nearbySites apply {_x call _fnc_siteToDrawableIcon}; 
 } else {
     if !(isNull _closestSite) then {
         vn_mf_scout_icons_to_draw = [_closestSite call _fnc_siteToDrawableIcon];
     };
 };
+
+targetClassNames = ["Land_Map_unfolded_F","Land_Map_unfolded_Malden_F"];
+nearbyObjects = nearestObjects [_playerRef, ["all"], 100]; 
+ 
+{  
+    objClassName = typeOf _x; 
+     
+ 
+    if (objClassName in targetClassNames) then {
+    vn_mf_scout_intel_icons_to_draw = [_x call _fnc_intelToDrawableIcon] 
+        } 
+} forEach nearbyObjects;
 
 /*
 
