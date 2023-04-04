@@ -35,7 +35,7 @@ diag_log format [
 
 while { count (missionNamespace getVariable ["sites", []]) > 0 } do {
 	private _sites = missionNamespace getVariable ["sites", []];
-	_sites apply {[_x] call vn_mf_fnc_sites_delete_site};
+	_sites apply {[_x] call vn_mf_fnc_sites_delete_active_site};
 };
 
 // HACK: this is a massive hack because some sites refuse to get deleted
