@@ -49,7 +49,7 @@ _taskDataStore setVariable ["INIT", {
 	/*
 	area marker is the outer BN circle, or effective AO play area.
 	if players enter this area they're liable to screw up site generation.
-	WARNING: Do not change size here without checking the capture logic too!
+	WARNING: Do not change size here without checking the other AO tasks too!
 	NOTE: marker is deleted during task clean up (bottom of script file)
 	*/
 	private _areaMarkerSize = 1100;
@@ -107,13 +107,15 @@ _taskDataStore setVariable ["go_away_zone", {
 
 		private _hudOverlayParams = [
 			"Leave the area immediately!",
-			serverTime,
+			serverTime + 30,
 			true
 		];
 
 		["AttackPreparingFailed", []] remoteExec ["para_c_fnc_show_notification", 0];
 		[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
 		_hudOverlayParams call vn_mf_fnc_timerOverlay_setGlobalTimer;
+
+		sleep 30;
 	};
 }];
 
