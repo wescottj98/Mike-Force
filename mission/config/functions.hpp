@@ -238,6 +238,8 @@ class CfgFunctions
 			class sites_init {};
 			class sites_load {};
 			class sites_teardown_site {};
+			class sites_delete_all_active_sites {};
+			class sites_delete_active_site {};
 
 			//Specific types of site
 			class sites_create_aa_site {};
@@ -409,6 +411,7 @@ class CfgFunctions
 			class task_pri_build_fob { file = "functions\tasks\primary\fn_task_pri_build_fob.sqf"; };
 			class task_pri_capture { file = "functions\tasks\primary\fn_task_pri_capture.sqf"; };
 			class task_pri_prepare { file = "functions\tasks\primary\fn_task_pri_prepare.sqf"; };
+			class task_pri_go_away { file = "functions\tasks\primary\fn_task_pri_go_away.sqf"; };
 
 			class task_sec_spike_wiretap { file = "functions\tasks\secondary\fn_task_sec_spike_wiretap.sqf";};
 
