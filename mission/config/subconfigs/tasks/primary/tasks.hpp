@@ -57,6 +57,34 @@ class prepare_zone : task
 	};
 };
 
+class go_away_zone : task
+{
+	taskcategory = "PRI";
+	tasktitle = "Leave %1";
+	taskname = "Leave %1";
+	taskdesc = "Charlie isn't ready yet! Get out of %1!";
+	tasktype = "repair";
+	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\p\vn_ui_mf_task_p1.jpg";
+	rankpoints = 0;
+
+	taskScript = "vn_mf_fnc_state_machine_task_system";
+
+	//Data for the script to use to customise behaviour
+	class parameters 
+	{
+		stateMachineCode = "vn_mf_fnc_task_pri_go_away";
+		timeout = -1;
+	};
+
+	//Data for subtasks. These are specific to the script.
+	class go_away
+	{
+		taskname = "Get out of the AO!";
+		taskdesc = "Charlie isn't ready yet! Get out of the AO!";
+	};
+};
+
+
 class build_fob : task
 {
 	taskcategory = "PRI";
