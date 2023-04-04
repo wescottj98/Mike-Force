@@ -30,9 +30,12 @@ _taskDataStore setVariable ["INIT", {
 	_zone setMarkerColor "ColorBlue";
 	_zone setMarkerBrush "DiagGrid";
 
-	// area marker is the outer BN circle, or effective AO play area.
-	// if players enter this area they're liable to screw up site generation.
-	// WARNING: Do not change size here without checking the capture logic too!
+	/*
+	area marker is the outer BN circle, or effective AO play area.
+	if players enter this area they're liable to screw up site generation.
+	WARNING: Do not change size here without checking the capture logic too!
+	NOTE: marker is deleted during task clean up (bottom of script file)
+	*/
 	private _areaMarkerSize = 1100;
 	private _areaDescriptor = [_zonePosition, _areaMarkerSize, _areaMarkerSize, 0, false];
 
@@ -64,17 +67,21 @@ _taskDataStore setVariable ["prepare", {
 	private _playersInArea = allPlayers inAreaArray _areaDescriptor;
 	private _arePlayersInArea = (count _playersInArea) > 0;
 
-	// players have stayed out of the AO's blue circle
-	// we're good to end the objective and move to the next one
+	/*
+	players have stayed out of the AO's blue circle
+	we're good to end the objective and move to the next one
+	*/
 	if (serverTime > _endTime and not _arePlayersInArea) exitWith {
 		_taskDataStore setVariable ["prepared", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 
-	// players have not stayed out of the AO's blue circle so set the sub task as failed
-	// then enter a blocking loop checking whether players have left blue zone.
-	// if not, send player information to logs if in blue zone (possible trolls).
-	// and spam notifications to all players every X seconds until they leave.
+	/*
+	players have not stayed out of the AO's blue circle so set the sub task as failed
+	then enter a blocking loop checking whether players have left blue zone.
+	if not, send player information to logs if in blue zone (possible trolls).
+	and spam notifications to all players every X seconds until they leave.
+	*/
 	if (_arePlayersInArea) exitWith {
 
 		// used in AFTER_STATES_RUN and FINISH to check the end state of the objective
@@ -148,13 +155,15 @@ _taskDataStore setVariable ["FINISH", {
 
 	} else {
 
-		// TODO: Site generation can take anywhere up to 3-4 minutes
-		// depending on the compositions and server state.
-		// We probably need to add a "delete all sites" script to handle the case
-		// where players enter the zone during this time.
-		//
-		// TL;DR -- if players enter the zone at this stage they will still
-		// screw up the compositions.
+		/*
+		TODO: Site generation can take anywhere up to 3-4 minutes
+		depending on the compositions and server state.
+		We probably need to add a "delete all sites" script to handle the case
+		where players enter the zone during this time.
+		
+		TL;DR -- if players enter the zone at this stage they will still
+		screw up the compositions.
+		*/
 		diag_log format [
 			"Prepare AO: Finish Tick: Creating sites for zone."
 		];
@@ -163,10 +172,14 @@ _taskDataStore setVariable ["FINISH", {
 
 		_zone setMarkerColor "ColorRed";
 		_zone setMarkerBrush "DiagGrid";
+		diag_log format [
+			"Prepare AO: Finish Tick: Creating new capture task."
+		];
 		_taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create;
 
 	};
 
+	// delete the big BN circle AO marker
 	deleteMarker _areaMarkerName;
 
 }];
