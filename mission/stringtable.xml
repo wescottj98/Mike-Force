@@ -159,7 +159,10 @@
         <Original>Friendly Fire!</Original>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent">
-        <Original>Next Attack Operation in 5 minutes!</Original>
+        <Original>Next Attack Operation in %1 minutes! Stay out of the blue zone.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent_failed">
+        <Original>Get away from the blue zone! The AO is not ready yet!</Original>
       </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
