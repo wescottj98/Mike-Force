@@ -62,7 +62,7 @@ class go_away_zone : task
 	taskcategory = "PRI";
 	tasktitle = "Leave %1";
 	taskname = "Leave %1";
-	taskdesc = "Charlie isn't ready yet! Get out of %1!";
+	taskdesc = "Charlie isn't ready yet! Leave %1 immediately!";
 	tasktype = "repair";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\p\vn_ui_mf_task_p1.jpg";
 	rankpoints = 0;
@@ -79,8 +79,8 @@ class go_away_zone : task
 	//Data for subtasks. These are specific to the script.
 	class go_away
 	{
-		taskname = "Get out of the AO!";
-		taskdesc = "Charlie isn't ready yet! Get out of the AO!";
+		taskname = "Get out of the zone!";
+		taskdesc = "Charlie isn't ready yet! Leave the zone immediately!";
 	};
 };
 
