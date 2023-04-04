@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10219;
+		nextID=10319;
 	};
 	class Camera
 	{
-		pos[]={16325.693,104.47019,8101.166};
-		dir[]={0.31745484,-0.62288702,0.7150175};
-		up[]={0.25276032,0.78230566,0.56930214};
-		aside[]={0.91397536,-1.3739191e-007,-0.40578869};
+		pos[]={13773.703,487.01929,8403.4141};
+		dir[]={-0.67773098,-0.70784348,0.19921549};
+		up[]={-0.67912769,0.70635176,0.19962563};
+		aside[]={0.28201991,-3.88638e-007,0.95943415};
 	};
 };
 binarizationWanted=0;
@@ -553,8 +553,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -604,8 +604,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -26705,7 +26705,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[""vn_b_item_firstaidkit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -26740,7 +26740,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[""vn_b_item_firstaidkit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -57707,7 +57707,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[""vn_b_item_firstaidkit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -78513,12 +78513,12 @@ class Mission
 		class Item1522
 		{
 			dataType="Marker";
-			position[]={13749.985,434.879,8371.7148};
+			position[]={13746.816,438.42001,8415.8994};
 			name="mf_respawn_quarterhorse_fsb";
 			text="@STR_vn_mf_respawn_quarterhorse_fsb";
 			type="Empty";
 			id=14922;
-			atlOffset=0.00018310547;
+			atlOffset=-3.0517578e-005;
 		};
 		class Item1523
 		{
@@ -79596,8 +79596,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13737.213,434.40958,8390.7744};
-				angles[]={6.1245351,0.46451938,0};
+				position[]={13747.132,438.39886,8418.9463};
+				angles[]={6.2611933,0.46451938,0};
 			};
 			side="Empty";
 			flags=4;
@@ -79607,7 +79607,6 @@ class Mission
 			};
 			id=14980;
 			type="Land_vn_us_weapons_stack2";
-			atlOffset=0.016998291;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -80015,8 +80014,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13732.794,434.36115,8389.458};
-				angles[]={0,4.9478168,0};
+				position[]={13741.967,438.53177,8417.5371};
+				angles[]={-0,4.9478168,0};
 			};
 			side="Empty";
 			flags=4;
@@ -80027,7 +80026,6 @@ class Mission
 			};
 			id=15006;
 			type="Land_vn_b_prop_mapstand_01";
-			atlOffset=-0.00064086914;
 			class CustomAttributes
 			{
 				class Attribute0
