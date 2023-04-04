@@ -240,6 +240,15 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 
+	class AttackPreparingFailed
+	{
+		title = $STR_vn_mf_notification_title_ao_attack;
+		description = $STR_vn_mf_notification_desc_ao_attack_imminent_failed;
+		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
 	class FriendlyFire
 	{
 		title = $STR_vn_mf_notification_title_friendly_fire;
