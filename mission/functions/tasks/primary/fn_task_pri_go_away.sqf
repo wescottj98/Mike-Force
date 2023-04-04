@@ -66,6 +66,9 @@ _taskDataStore setVariable ["INIT", {
 	_taskDataStore setVariable ["areaMarkerName", _areaMarker];
 	_taskDataStore setVariable ["areaDescriptor", _areaDescriptor];
 
+	// cleanup any existing sites objectives and their composition objects
+	[] call vn_mf_fnc_sites_delete_all_sites;
+
 	[[
 		["go_away_zone", getMarkerPos "starting_point"]
 	]] call _fnc_initialSubtasks;
