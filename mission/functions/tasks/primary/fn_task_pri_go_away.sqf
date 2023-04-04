@@ -70,11 +70,11 @@ _taskDataStore setVariable ["INIT", {
 	[] call vn_mf_fnc_sites_delete_all_active_sites;
 
 	[[
-		["go_away_zone", getMarkerPos "starting_point"]
+		["go_away", getMarkerPos "starting_point"]
 	]] call _fnc_initialSubtasks;
 }];
 
-_taskDataStore setVariable ["go_away_zone", {
+_taskDataStore setVariable ["go_away", {
 	params ["_taskDataStore"];
 
 	private _areaDescriptor = _taskDataStore getVariable ["areaDescriptor", []];
