@@ -68,67 +68,59 @@ _taskDataStore setVariable ["prepare", {
 	private _arePlayersInArea = (count _playersInArea) > 0;
 
 	/*
-	players have stayed out of the AO's blue circle
-	we're good to end the objective and move to the next one
+	1. players have stayed out of the AO's blue circle...
+	and we have not generated any sites already...
+
+	looks like we're okay to spawn in sites for now
 	*/
-	if (serverTime > _endTime and not _arePlayersInArea) exitWith {
+	if (serverTime > _endTime and not (_taskDataStore getVariable ["generated", false])) exitWith {
+
+		private _zone = _taskDataStore getVariable "taskMarker";
+
+		// TODO: vn_mf_fnc_sites_generate is a blocking call which
+		// stops the prepare task doing any ticks while it's executing
+		[_zone] call vn_mf_fnc_sites_generate;
+		_taskDataStore setVariable ["generated", true];
+		diag_log format [
+			"Prepare AO: 'prepare' SubTick: Generated sites zone=%1",
+			_zone
+		];
+	};
+
+	/*
+	2. players have not stayed out of the AO's blue circle,
+
+	set the sub task as failed
+	*/
+	if (_arePlayersInArea) exitWith {
+		_taskDataStore setVariable ["badPlayer", true];
+		["FAILED"] call _fnc_finishSubtask;
+	};
+
+	/*
+	3. we actually generated the sites and haven't triggered a subtask failure
+
+	great success!
+	*/
+	if (_taskDataStore getVariable ["generated", false]) exitWith {
 		_taskDataStore setVariable ["prepared", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 
-	/*
-	players have not stayed out of the AO's blue circle so set the sub task as failed
-	then enter a blocking loop checking whether players have left blue zone.
-	if not, send player information to logs if in blue zone (possible trolls).
-	and spam notifications to all players every X seconds until they leave.
-	*/
-	if (_arePlayersInArea) exitWith {
 
-		// used in AFTER_STATES_RUN and FINISH to check the end state of the objective
-		// i.e. it failed because players did the bad thing
-		_taskDataStore setVariable ["badPlayer", true];
-		["FAILED"] call _fnc_finishSubtask;
-
-		// TODO: duplicates '_arePlayersInArea' logic above. needs optimisation.
-		while {(count (allPlayers inAreaArray _areaDescriptor)) > 0} do {
-
-			private _pollDelaySeconds = 60;
-
-			diag_log format [
-				"Prepare AO: Failing because of bad players: serverTime=%1 players=%2",
-				serverTime,
-				_playersInArea
-			];
-
-			private _hudOverlayParams = [
-				"Move out of the blue circle!",
-				serverTime + _pollDelaySeconds,
-				true
-			];
-
-			["AttackPreparingFailed", []] remoteExec ["para_c_fnc_show_notification", 0];
-			[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
-			_hudOverlayParams call vn_mf_fnc_timerOverlay_setGlobalTimer;
-
-			sleep _pollDelaySeconds;
-		};
-	};
 }];
 
 _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
 
-	// players HAVE stayed out of the AO's blue circle
 	private _prepared = _taskDataStore getVariable ["prepared", false];
-
-	// players HAVE NOT stayed out of the AO's blue circle
 	private _badPlayer = _taskDataStore getVariable ["badPlayer", false];
 
 	diag_log format [
 		"Prepare AO: After tick: serverTime=%1 prepared=%2 badPlayer=%3",
 		serverTime,
 		_prepared,
-		_badPlayer,
+		_badPlayer
 	];
 
 	if (_badPlayer) then {
@@ -143,43 +135,31 @@ _taskDataStore setVariable ["FINISH", {
 	params ["_taskDataStore"];
 
 	private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
+	// delete the big BN circle AO marker
+	deleteMarker _areaMarkerName;
+
 	private _zone = _taskDataStore getVariable "taskMarker";
 
 	if (_taskDataStore getVariable ["taskResult", "FAILED"] == "FAILED") then {
 
 		diag_log format [
-			"Prepare AO: Finish Tick: Task failed, starting new prepare task."
+			"Prepare AO: FinishTick: Task failed, starting 'Go Away' AO task."
 		];
-		// start the same task again
-		_taskStore = ["prepare_zone", _zone] call vn_mf_fnc_task_create;
+
+		// switch to the "go away" task
+		_taskStore = ["go_away_zone", _zone] call vn_mf_fnc_task_create;
 
 	} else {
 
-		/*
-		TODO: Site generation can take anywhere up to 3-4 minutes
-		depending on the compositions and server state.
-		We probably need to add a "delete all sites" script to handle the case
-		where players enter the zone during this time.
-		
-		TL;DR -- if players enter the zone at this stage they will still
-		screw up the compositions.
-		*/
-		diag_log format [
-			"Prepare AO: Finish Tick: Creating sites for zone."
-		];
-		private _zone = _taskDataStore getVariable "taskMarker";
-		[_zone] call vn_mf_fnc_sites_generate;
-
+		// sites were generated, no players entered the zone
+		// we're good to move on
 		_zone setMarkerColor "ColorRed";
 		_zone setMarkerBrush "DiagGrid";
 		diag_log format [
-			"Prepare AO: Finish Tick: Creating new capture task."
+			"Prepare AO: FinishTick: Task success, Creating new 'Capture' AO task."
 		];
 		_taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create;
 
 	};
-
-	// delete the big BN circle AO marker
-	deleteMarker _areaMarkerName;
 
 }];
