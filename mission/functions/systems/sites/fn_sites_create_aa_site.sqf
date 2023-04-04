@@ -42,6 +42,10 @@ params ["_pos"];
 
 		private _objectsToDestroy = _AAObjs select {_x isKindOf "vn_o_nva_65_static_zpu4"};
 
+		{
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+		} forEach _objectsToDestroy;
+
 		//Create an AA warning marker.
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _aaZoneMarker = createMarker [format ["AA_zone_%1", _siteId], _markerPos];
