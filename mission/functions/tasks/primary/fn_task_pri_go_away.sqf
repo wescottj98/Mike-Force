@@ -67,7 +67,7 @@ _taskDataStore setVariable ["INIT", {
 	_taskDataStore setVariable ["areaDescriptor", _areaDescriptor];
 
 	// cleanup any existing sites objectives and their composition objects
-	[] call vn_mf_fnc_sites_delete_all_sites;
+	[] call vn_mf_fnc_sites_delete_all_active_sites;
 
 	[[
 		["go_away_zone", getMarkerPos "starting_point"]
@@ -79,14 +79,14 @@ _taskDataStore setVariable ["go_away_zone", {
 
 	private _areaDescriptor = _taskDataStore getVariable ["areaDescriptor", []];
 	private _playersInArea = allPlayers inAreaArray _areaDescriptor;
-	private _arePlayersInArea = (count _playersInArea) > 0;
+	private _playersAreNotInArea = (count _playersInArea) == 0;
 
 	/*
 	players have left the AO's blue circle
 	we're good to end this task and move back to the prepare task
 	*/
-	if (not _arePlayersInArea) exitWith {
-		_taskDataStore setVariable ["playersInAO", false];
+	if (_playersAreNotInArea) exitWith {
+		_taskDataStore setVariable ["playersAreNotInArea", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 
@@ -95,9 +95,11 @@ _taskDataStore setVariable ["go_away_zone", {
 	send player information to logs if in blue zone (possible trolls).
 	and spam notifications to all players until they leave.
 	*/
-	if (_arePlayersInArea) exitWith {
+	if (not _playersAreNotInArea) exitWith {
 
-		_taskDataStore setVariable ["playersInAO", true];
+		private _pollingDelay = 30;
+
+		_taskDataStore setVariable ["playersAreNotInArea", false];
 
 		diag_log format [
 			"Go Away AO: Players inside the AO area: serverTime=%1 players=%2",
@@ -107,7 +109,7 @@ _taskDataStore setVariable ["go_away_zone", {
 
 		private _hudOverlayParams = [
 			"Leave the area immediately!",
-			serverTime + 30,
+			serverTime + _pollingDelay,
 			true
 		];
 
@@ -115,7 +117,7 @@ _taskDataStore setVariable ["go_away_zone", {
 		[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
 		_hudOverlayParams call vn_mf_fnc_timerOverlay_setGlobalTimer;
 
-		sleep 30;
+		sleep _pollingDelay;
 	};
 }];
 
@@ -123,15 +125,15 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
 
 	// players have left AO's playable area
-	private _playersInAO = _taskDataStore getVariable ["playersInAO", true];
+	private _playersAreNotInArea = _taskDataStore getVariable ["playersAreNotInArea", false];
 
 	diag_log format [
-		"Prepare AO: After tick: serverTime=%1 playersInAO=%2",
+		"Prepare AO: After tick: serverTime=%1 notPlayersAreInAO=%2",
 		serverTime,
-		_playersInAO
+		_playersAreNotInArea
 	];
 
-	if (not _playersInAO) then {
+	if (_playersAreNotInArea) then {
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
 }];
