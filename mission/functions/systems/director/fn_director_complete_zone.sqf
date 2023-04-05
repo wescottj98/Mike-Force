@@ -33,20 +33,6 @@ if !([_task] call vn_mf_fnc_task_is_completed) then {
 
 [_zone] call vn_mf_fnc_zones_capture_zone;
 
-// BN -- delete DC spawns etc.
-{
-    private _marker = _x # 0;
-    private _respawnID = _x # 1;
-
-    _respawnID call BIS_fnc_removeRespawnPosition;
-    deleteMarker _marker;
-} forEach vn_dc_adhoc_respawns;
-
-// BN -- delete all site composition objects.
-{
-    deleteVehicle _x;
-} forEach vn_site_objects;
-
 // upstream SGD allow any connected zone to be open, which is not what we want in BN
 [] call vn_mf_fnc_director_open_closest_zone;
 // [] call vn_mf_fnc_director_open_connected_zones;

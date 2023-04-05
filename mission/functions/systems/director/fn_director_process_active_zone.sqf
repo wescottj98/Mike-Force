@@ -105,20 +105,36 @@ if (_taskIsCompleted) then {
 
 	if (_currentState isEqualTo "counterattack") exitWith {
 
+		// delete DC spawns etc.
+		{
+		    private _marker = _x # 0;
+		    private _respawnID = _x # 1;
+
+		    _respawnID call BIS_fnc_removeRespawnPosition;
+		    deleteMarker _marker;
+		} forEach vn_dc_adhoc_respawns;
+
+		// delete all site composition objects.
+		{
+		    deleteVehicle _x;
+		} forEach vn_site_objects;
+
 		private _zone = _taskDataStore getVariable "taskMarker";
 
 		if (_taskResult isEqualTo "FAILED") exitWith {
 
+			/*
+			TODO -- this is probably going to cause us problems with site generation
+			and might require a new intermediate phase to ask players to leave the AO.
+			*/
+
 			["INFO", format ["Zone '%1' defend against counterattack failed, moving to recapture zone", _zone]] call para_g_fnc_log;
 			private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
-
-			// TODO: This probably won't have access to the previous sites in the sites variable?!
-			[] call vn_mf_fnc_sites_delete_all_active_sites;
 			[[_zoneData]] call vn_mf_fnc_sites_generate;
 
-			private _captureZoneTask = ["capture_zone", _zone] call vn_mf_fnc_task_create select 1; 
+			private _captureTask = ((["capture_zone", _zone] call vn_mf_fnc_task_create) # 1);
 			_zoneInfo set ["state", "capture"];
-			_zoneInfo set ["currentTask", _captureZoneTask];
+			_zoneInfo set ["currentTask", _captureTask];
 		};
 
 		["INFO", format ["Zone '%1' counterattack successfully defended against, completing zone", _zone]] call para_g_fnc_log;
