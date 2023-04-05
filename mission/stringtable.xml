@@ -159,7 +159,10 @@
         <Original>Friendly Fire!</Original>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent">
-        <Original>Next Attack Operation in 5 minutes!</Original>
+        <Original>Next Attack Operation in %1 minutes! Stay out of marked zone.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent_failed">
+        <Original>Leave the area immediately! Charlie isn't ready!</Original>
       </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
@@ -288,7 +291,7 @@
         <Original>633RD CSG</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_sasr">
-        <Original>SASR</Original>
+        <Original>NZ-SAS</Original>
       </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>

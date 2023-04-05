@@ -29,7 +29,7 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		private _AAObjs = [_spawnPos] call vn_mf_fnc_create_camp_buildings;
+		private _AAObjs = [_spawnPos] call vn_mf_fnc_create_aa_buildings;
 
 		vn_site_objects append _AAObjs;
 
@@ -41,6 +41,10 @@ params ["_pos"];
 		} forEach _AAObjs;
 
 		private _objectsToDestroy = _AAObjs select {_x isKindOf "vn_o_nva_65_static_zpu4"};
+
+		{
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+		} forEach _objectsToDestroy;
 
 		//Create an AA warning marker.
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];

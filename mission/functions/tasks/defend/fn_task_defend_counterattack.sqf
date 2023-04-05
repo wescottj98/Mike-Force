@@ -32,13 +32,43 @@ _taskDataStore setVariable ["INIT", {
 
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
-	private _hq = (missionNamespace getVariable ["current_hq", objNull]);
-	private _attackPos = if !(_hq isEqualTo objNull) then {getPos (_hq)} else {_markerPos};
+	/*
+	if no candidate FOBs, send AI towards the centre of the zone
+	hoping they run into players.
+
+	if there are bases within an AO's hexagon radius,
+	get nearby FOBs sorted in descending order of the current supplies,
+	use the first array item as the target for counter attack.
+	*/
+
+	// default attack position is centre of the zone
+	private _attackPos = _zonePosition;
+	private _areaSize = markerSize _marker;
+
+	// search for candidate FOBs within the zone's area.
+	private _base_search_area = [_zonePosition, _areaSize select 0, _areaSize select 1, 0, false];
+	private _candidate_bases_to_attack = para_g_bases inAreaArray _base_search_area apply { [ _x getVariable "para_g_current_supplies", _x] };
+	_candidate_bases_to_attack sort false;
+
+	// candidate FOBs exist
+	if ((count _candidate_bases_to_attack) > 0) then {
+
+		diag_log format ["Counterattack: Co-Ordinates of FOBs within range of counter attack: %1", _candidate_bases_to_attack apply {getPos (_x # 1)}];
+
+		// get the first FOB from the sorted array
+		private _base_to_attack = (_candidate_bases_to_attack # 0 ) # 1;
+		diag_log format ["Counterattack: Co-Ordinates of selected FOB: %1", _base_to_attack];
+
+		// overwrite the default attack position
+		_attackPos = getPos _base_to_attack;
+	};
+
+	diag_log format ["Counterattack: Co-ordinates for counter attack target: %1", _attackPos];
 
 	private _attackTime = serverTime + (_taskDataStore getVariable ["prepTime", 0]);
 	_taskDataStore setVariable ["attackTime", _attackTime];
 	_taskDataStore setVariable ["attackPos", _attackPos];
-	_taskDataStore setVariable ["attackAreaSize", markerSize _marker];
+	_taskDataStore setVariable ["attackAreaSize", _areaSize];
 
 	if (_prepTime > 0) then 
 	{
@@ -66,6 +96,12 @@ _taskDataStore setVariable ["prepare_zone", {
 	//Add a wave for each camp in our origin zone.
 	private _infantryMultiplier = _baseMultiplier;
 
+	/*
+	add the "attack" objective to the AI objectives task system.
+
+	attackDifficulty determines how large to make the AI groups that attack this objective,
+	but it is never set as a variable on this player task so it will only use the default setting provided below.
+	*/
 	private _attackObjective = [
 		_taskDataStore getVariable "attackPos",
 		//Difficulty 2, unless specified otherwise.
@@ -128,6 +164,7 @@ _taskDataStore setVariable ["defend_zone", {
 		isNull (_taskDataStore getVariable "attackObjective") ) exitWith 
 	{ //exitWith here to prevent a tie causing the zone to turn green but have new tasks for its capture spawn
 		_taskDataStore setVariable ["zoneDefended", true];
+
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 
@@ -153,21 +190,5 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 _taskDataStore setVariable ["FINISH", {
 	params ["_taskDataStore"];
-
-	private _zone = _taskDataStore getVariable "taskMarker";
-	[_zone] call vn_mf_fnc_zones_capture_zone;
-
-	{
-		private _marker = _x # 0;
-		private _respawnID = _x # 1;
-
-		_respawnID call BIS_fnc_removeRespawnPosition;
-		deleteMarker _marker;
-	} forEach vn_dc_adhoc_respawns;
-
-	{
-		deleteVehicle _x;
-	} forEach vn_site_objects;
-
 	[_taskDataStore getVariable "attackObjective"] call para_s_fnc_ai_obj_finish_objective;
 }];
