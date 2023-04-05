@@ -115,5 +115,6 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
+	deleteMarker "activeZoneCircle";
 	_taskDataStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
 }];

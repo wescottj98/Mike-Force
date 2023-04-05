@@ -132,5 +132,6 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
-
+	private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
+	deleteMarker _areaMarkerName;
 }];
