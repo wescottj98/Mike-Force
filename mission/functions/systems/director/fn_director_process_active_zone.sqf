@@ -35,30 +35,13 @@ private _taskResult = _task getVariable ["taskResult", ""];
 if (_taskIsCompleted) then {
 
 	/*
-	Cooldown period/conditions have been met. End of the preparation phase.
+	Preparation phase has ended.
 
-	Load in the sites. Trigger the Zone's capture state.
+	Either:
+	(a) all site compositions generated and players did not enter zone (move to capture)
+	(b) players entered the zone (move to go_away)
 	*/
-
-	if (_currentState isEqualTo "go_away") exitWith {
-
-		["INFO", format ["Zone '%1' has no more players, moving to prepare", _zone]] call para_g_fnc_log;
-
-		private _zone = _taskDataStore getVariable "taskMarker";
-		private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
-		deleteMarker _areaMarkerName;
-
-		// start the prepare task again
-		private _prepareTask = ((["prepare_zone", _zone] call vn_mf_fnc_task_create) # 1);
-
-		_zoneInfo set ["state", "prepare"];
-		_zoneInfo set ["currentTask", _prepareTask];
-
-	};
-
 	if (_currentState isEqualTo "prepare") exitWith {
-
-		["INFO", format ["Zone '%1' has no more players, moving to prepare", _zone]] call para_g_fnc_log;
 
 		private _zone = _taskDataStore getVariable "taskMarker";
 		private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
@@ -75,11 +58,35 @@ if (_taskIsCompleted) then {
 			_zoneInfo set ["currentTask", _goAwayTask];
 		};
 
+		["INFO", format ["Zone '%1' preparation successful, moving to 'capture'", _zone]] call para_g_fnc_log;
+
 		// players didn't enter the AO, we're okay to move on to capture phase
 		private _captureTask = ((["capture_zone", _zone] call vn_mf_fnc_task_create) # 1);
 
 		_zoneInfo set ["state", "capture"];
 		_zoneInfo set ["currentTask", _captureTask];
+	};
+
+	/*
+	Players have left the zone now.
+
+	Trigger a new prepare phase for the zone.
+	*/
+
+	if (_currentState isEqualTo "go_away") exitWith {
+
+		["INFO", format ["Zone '%1' players are no longer in zone, moving to 'prepare'", _zone]] call para_g_fnc_log;
+
+		private _zone = _taskDataStore getVariable "taskMarker";
+		private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
+		deleteMarker _areaMarkerName;
+
+		// start the prepare task again
+		private _prepareTask = ((["prepare_zone", _zone] call vn_mf_fnc_task_create) # 1);
+
+		_zoneInfo set ["state", "prepare"];
+		_zoneInfo set ["currentTask", _prepareTask];
+
 	};
 
 	/*
@@ -89,7 +96,7 @@ if (_taskIsCompleted) then {
 	*/
 
 	if (_currentState isEqualTo "capture") exitWith {
-		["INFO", format ["Zone '%1' captured, moving to counterattack", _zone]] call para_g_fnc_log;
+		["INFO", format ["Zone '%1' captured, moving to 'counterattack'", _zone]] call para_g_fnc_log;
 
 		private _counterattackTask = ((["defend_counterattack", _zone, [["prepTime", 180]]] call vn_mf_fnc_task_create) # 1);
 		_zoneInfo set ["state", "counterattack"];
@@ -100,7 +107,7 @@ if (_taskIsCompleted) then {
 	Counterattack results are in!
 
 	If failed, reset back to the capture state.
-	Otherwise close the zone
+	Otherwise close the zone.
 	*/
 
 	if (_currentState isEqualTo "counterattack") exitWith {
@@ -128,7 +135,7 @@ if (_taskIsCompleted) then {
 			and might require a new intermediate phase to ask players to leave the AO.
 			*/
 
-			["INFO", format ["Zone '%1' defend against counterattack failed, moving to 'go away' phase", _zone]] call para_g_fnc_log;
+			["INFO", format ["Zone '%1' defend against counterattack failed, moving to 'go_away' phase", _zone]] call para_g_fnc_log;
 			private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
 			[[_zoneData]] call vn_mf_fnc_sites_generate;
 
