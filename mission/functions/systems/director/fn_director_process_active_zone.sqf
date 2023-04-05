@@ -128,13 +128,13 @@ if (_taskIsCompleted) then {
 			and might require a new intermediate phase to ask players to leave the AO.
 			*/
 
-			["INFO", format ["Zone '%1' defend against counterattack failed, moving to recapture zone", _zone]] call para_g_fnc_log;
+			["INFO", format ["Zone '%1' defend against counterattack failed, moving to 'go away' phase", _zone]] call para_g_fnc_log;
 			private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
 			[[_zoneData]] call vn_mf_fnc_sites_generate;
 
-			private _captureTask = ((["capture_zone", _zone] call vn_mf_fnc_task_create) # 1);
-			_zoneInfo set ["state", "capture"];
-			_zoneInfo set ["currentTask", _captureTask];
+			private _goAwayTask = ((["go_away_zone", _zone] call vn_mf_fnc_task_create) # 1);
+			_zoneInfo set ["state", "go_away"];
+			_zoneInfo set ["currentTask", _goAwayTask];
 		};
 
 		["INFO", format ["Zone '%1' counterattack successfully defended against, completing zone", _zone]] call para_g_fnc_log;
