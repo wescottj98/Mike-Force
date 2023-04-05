@@ -43,10 +43,6 @@ if (_taskIsCompleted) then {
 	*/
 	if (_currentState isEqualTo "prepare") exitWith {
 
-		private _zone = _taskDataStore getVariable "taskMarker";
-		private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
-		deleteMarker _areaMarkerName;
-
 		if (_taskResult isEqualTo "FAILED") exitWith {
 
 			// players have borked the compositions (probably).
@@ -76,10 +72,6 @@ if (_taskIsCompleted) then {
 	if (_currentState isEqualTo "go_away") exitWith {
 
 		["INFO", format ["Zone '%1' players are no longer in zone, moving to 'prepare'", _zone]] call para_g_fnc_log;
-
-		private _zone = _taskDataStore getVariable "taskMarker";
-		private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
-		deleteMarker _areaMarkerName;
 
 		// start the prepare task again
 		private _prepareTask = ((["prepare_zone", _zone] call vn_mf_fnc_task_create) # 1);
@@ -128,8 +120,6 @@ if (_taskIsCompleted) then {
 		    deleteVehicle _x;
 		} forEach vn_site_objects;
 
-		private _zone = _taskDataStore getVariable "taskMarker";
-
 		if (_taskResult isEqualTo "FAILED") exitWith {
 
 			/*
@@ -138,7 +128,8 @@ if (_taskIsCompleted) then {
 			*/
 
 			["INFO", format ["Zone '%1' defend against counterattack failed, moving to 'prepare' phase", _zone]] call para_g_fnc_log;
-			private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
+			// private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
+			// [[_zoneData]] call vn_mf_fnc_sites_generate;
 
 			private _prepareTask = ((["prepare_zone", _zone] call vn_mf_fnc_task_create) # 1);
 			_zoneInfo set ["state", "prepare"];
