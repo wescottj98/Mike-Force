@@ -32,6 +32,10 @@ _taskDataStore setVariable ["INIT", {
 
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
+	_marker setMarkerColor "ColorYellow";
+	_marker setMarkerBrush "DiagGrid";
+
+
 	/*
 	if no candidate FOBs, send AI towards the centre of the zone
 	hoping they run into players.
@@ -42,11 +46,11 @@ _taskDataStore setVariable ["INIT", {
 	*/
 
 	// default attack position is centre of the zone
-	private _attackPos = _zonePosition;
+	private _attackPos = _markerPos;
 	private _areaSize = markerSize _marker;
 
 	// search for candidate FOBs within the zone's area.
-	private _base_search_area = [_zonePosition, _areaSize select 0, _areaSize select 1, 0, false];
+	private _base_search_area = [_markerPos, _areaSize select 0, _areaSize select 1, 0, false];
 	private _candidate_bases_to_attack = para_g_bases inAreaArray _base_search_area apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
 
