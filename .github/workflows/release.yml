@@ -1,7 +1,7 @@
 on:
   push:
     branch:
-      - 'add-automated-release-workflow'
+      - 'development'
 
 jobs:
   build:
