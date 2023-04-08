@@ -38,7 +38,6 @@ _taskDataStore setVariable ["INIT", {
 		serverTime
 	];
 
-	_taskDataStore setVariable ["no_players", false];
 	private _zone = _taskDataStore getVariable "taskMarker";
 
 	// base Mike Force AO marker.
@@ -140,21 +139,6 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 _taskDataStore setVariable ["FINISH", {
 	params ["_taskDataStore"];
-
 	private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
-	private _zone = _taskDataStore getVariable "taskMarker";
-
-	if (_taskDataStore getVariable ["taskResult", "FAILED"] == "SUCCEEDED") then {
-
-		diag_log format [
-			"Go Away AO: Finish Tick: Players have left, starting new prepare task."
-		];
-		// start the prepare task again
-		_taskStore = ["prepare_zone", _zone] call vn_mf_fnc_task_create;
-
-		// delete the big BN circle AO marker
-		deleteMarker _areaMarkerName;
-
-	};
-
+	deleteMarker _areaMarkerName;
 }];

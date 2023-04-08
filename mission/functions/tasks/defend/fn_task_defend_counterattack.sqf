@@ -27,8 +27,18 @@ _taskDataStore setVariable ["INIT", {
 
 	//Required parameters
 	private _marker = _taskDataStore getVariable "taskMarker";
-	private _zonePosition = getMarkerPos _marker;
+	private _markerPos = getMarkerPos _marker;
+
+	/*
+	// present in SGD Mike Force, but not used anywhere.
+	private _hqs = (localNamespace getVariable ["sites_hq", []]) inAreaArray _marker;
+	*/
+
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
+
+	_marker setMarkerColor "ColorYellow";
+	_marker setMarkerBrush "DiagGrid";
+
 
 	/*
 	if no candidate FOBs, send AI towards the centre of the zone
@@ -40,11 +50,11 @@ _taskDataStore setVariable ["INIT", {
 	*/
 
 	// default attack position is centre of the zone
-	private _attackPos = _zonePosition;
+	private _attackPos = _markerPos;
 	private _areaSize = markerSize _marker;
 
 	// search for candidate FOBs within the zone's area.
-	private _base_search_area = [_zonePosition, _areaSize select 0, _areaSize select 1, 0, false];
+	private _base_search_area = [_markerPos, _areaSize select 0, _areaSize select 1, 0, false];
 	private _candidate_bases_to_attack = para_g_bases inAreaArray _base_search_area apply { [ _x getVariable "para_g_current_supplies", _x] };
 	_candidate_bases_to_attack sort false;
 
@@ -76,7 +86,7 @@ _taskDataStore setVariable ["INIT", {
 	};
 
 	[[
-		["prepare_zone", _zonePosition]
+		["prepare_zone", _markerPos]
 	]] call _fnc_initialSubtasks;
 }];
 
@@ -162,6 +172,7 @@ _taskDataStore setVariable ["defend_zone", {
 		isNull (_taskDataStore getVariable "attackObjective") ) exitWith 
 	{ //exitWith here to prevent a tie causing the zone to turn green but have new tasks for its capture spawn
 		_taskDataStore setVariable ["zoneDefended", true];
+
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 
@@ -170,14 +181,7 @@ _taskDataStore setVariable ["defend_zone", {
 		_enemyHoldZone &&
 		{_enemyZoneHeldTime > (_taskDataStore getVariable ["failureTime", 5 * 60])}
 	) then {
-		private _zone = _taskDataStore getVariable "taskMarker";
-		private _selectZone = mf_s_siegedZones findIf {_zone in _x};
-		mf_s_siegedZones deleteAt _selectZone;
-		mf_s_activeZones deleteAt _selectZone;
-
-		_zone setMarkerColor "ColorRed";
-		_zone setMarkerBrush "DiagGrid";
-
+		["CounterAttackLost", ["", [_zone] call vn_mf_fnc_zone_marker_to_name]] remoteExec ["para_c_fnc_show_notification", 0];
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;
 	};
@@ -194,21 +198,5 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 _taskDataStore setVariable ["FINISH", {
 	params ["_taskDataStore"];
-
-	private _zone = _taskDataStore getVariable "taskMarker";
-	[_zone] call vn_mf_fnc_zones_capture_zone;
-
-	{
-		private _marker = _x # 0;
-		private _respawnID = _x # 1;
-
-		_respawnID call BIS_fnc_removeRespawnPosition;
-		deleteMarker _marker;
-	} forEach vn_dc_adhoc_respawns;
-
-	{
-		deleteVehicle _x;
-	} forEach vn_site_objects;
-
 	[_taskDataStore getVariable "attackObjective"] call para_s_fnc_ai_obj_finish_objective;
 }];

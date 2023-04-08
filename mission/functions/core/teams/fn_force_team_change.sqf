@@ -34,16 +34,13 @@ if (_isWhitelisted) then {
 
 // Remove the player from their original team's group array
 _playerGroupArray deleteAt (_playerGroupArray find _player);
-missionNamespace setVariable [_playerGroup, _playerGroupArray];
 publicVariable _playerGroup;
 
-// add them to the new team
-private _nextPlayerTeam = _player getVariable ["vn_mf_db_player_group", "FAILED"];
-private _nextPlayerTeamArray = missionNamespace getVariable [_nextPlayerTeam, []];
+// Add the player to the new team's player list.
+_player setVariable ["vn_mf_db_player_group", _team, true];
+private _nextPlayerTeamArray = missionNamespace getVariable [_team, []];
 _nextPlayerTeamArray pushBackUnique _player;
-
-missionNamespace setVariable [_nextPlayerGroup, _nextPlayerGroupArray];
-publicVariable _nextPlayerGroup;
+publicVariable _nextPlayerTeam;
 
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;

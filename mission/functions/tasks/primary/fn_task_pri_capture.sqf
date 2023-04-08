@@ -33,6 +33,11 @@ _taskDataStore setVariable ["INIT", {
 	private _zone = _taskDataStore getVariable "taskMarker";
 	private _zonePosition = getMarkerPos _zone;
 
+	// change the zone's hexagon colour and shading
+	_zone setMarkerColor "ColorRed";
+	_zone setMarkerBrush "DiagGrid";
+
+	// custom BN: yellow circle around the AO
 	private _areaMarker = createMarker ["activeZoneCircle", _zonePosition];
 	_areaMarker setMarkerShape "ELLIPSE";
 	_areaMarker setMarkerSize [1100, 1100];
@@ -110,19 +115,6 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
-	private _zone = _taskDataStore getVariable "taskMarker";
-
-	_taskDataStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
-
 	deleteMarker "activeZoneCircle";
-
-	_zone setMarkerColor "ColorYellow";
-	_zone setMarkerBrush "DiagGrid";
-	private _taskStore = ((["defend_counterattack", _zone, [["prepTime", 180]]] call vn_mf_fnc_task_create) # 1);
-
-	//Put the besieged zone off to the side for now to prevent an infinite loop
-	private _selectZone = mf_s_activeZones findIf {_zone isEqualTo (_x select struct_zone_m_marker)};
-	mf_s_siegedZones pushBack [_zone, _taskStore];
-	mf_s_activeZones deleteAt _selectZone;
-
+	_taskDataStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
 }];

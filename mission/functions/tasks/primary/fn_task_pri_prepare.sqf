@@ -132,34 +132,6 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
-	params ["_taskDataStore"];
-
 	private _areaMarkerName = _taskDataStore getVariable "areaMarkerName";
-	// delete the big BN circle AO marker
 	deleteMarker _areaMarkerName;
-
-	private _zone = _taskDataStore getVariable "taskMarker";
-
-	if (_taskDataStore getVariable ["taskResult", "FAILED"] == "FAILED") then {
-
-		diag_log format [
-			"Prepare AO: FinishTick: Task failed, starting 'Go Away' AO task."
-		];
-
-		// switch to the "go away" task
-		_taskStore = ["go_away_zone", _zone] call vn_mf_fnc_task_create;
-
-	} else {
-
-		// sites were generated, no players entered the zone
-		// we're good to move on
-		_zone setMarkerColor "ColorRed";
-		_zone setMarkerBrush "DiagGrid";
-		diag_log format [
-			"Prepare AO: FinishTick: Task success, Creating new 'Capture' AO task."
-		];
-		_taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create;
-
-	};
-
 }];
