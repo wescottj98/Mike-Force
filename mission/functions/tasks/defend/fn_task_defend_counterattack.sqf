@@ -28,7 +28,11 @@ _taskDataStore setVariable ["INIT", {
 	//Required parameters
 	private _marker = _taskDataStore getVariable "taskMarker";
 	private _markerPos = getMarkerPos _marker;
+
+	/*
+	// present in SGD Mike Force, but not used anywhere.
 	private _hqs = (localNamespace getVariable ["sites_hq", []]) inAreaArray _marker;
+	*/
 
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
