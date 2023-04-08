@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=577;
+	toggles=705;
 	class ItemIDProvider
 	{
-		nextID=15114;
+		nextID=15124;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=10319;
+		nextID=10619;
 	};
 	class Camera
 	{
-		pos[]={13773.703,487.01929,8403.4141};
-		dir[]={-0.67773098,-0.70784348,0.19921549};
-		up[]={-0.67912769,0.70635176,0.19962563};
-		aside[]={0.28201991,-3.88638e-007,0.95943415};
+		pos[]={14828.271,104.25241,6921.5044};
+		dir[]={-0.70425391,-0.64350086,0.29988855};
+		up[]={-0.59205788,0.76544535,0.25211275};
+		aside[]={0.39178306,-1.4901161e-008,0.92005765};
 	};
 };
 binarizationWanted=0;
@@ -553,8 +553,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -604,8 +604,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -661,7 +661,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1608;
+		items=1611;
 		class Item0
 		{
 			dataType="Marker";
@@ -7413,8 +7413,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.284,99.649834,6922.6265};
-				angles[]={6.2771854,1.6547379,0.0060001095};
+				position[]={14823.137,99.589409,6918.0112};
+				angles[]={-0,1.6547379,6.2771854};
 			};
 			side="Empty";
 			flags=4;
@@ -7424,7 +7424,7 @@ class Mission
 			};
 			id=1590;
 			type="Land_vn_us_weapons_stack2";
-			atlOffset=0.053939819;
+			atlOffset=-0.012237549;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8977,8 +8977,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14825.204,99.698212,6925.8052};
-				angles[]={6.2731905,4.9478121,6.2771854};
+				position[]={14824.767,99.69384,6925.5786};
+				angles[]={6.2731848,5.4002581,0.016004669};
 			};
 			side="Empty";
 			flags=4;
@@ -8989,7 +8989,7 @@ class Mission
 			};
 			id=3041;
 			type="Land_vn_b_prop_mapstand_01";
-			atlOffset=-0.00040435791;
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -41617,8 +41617,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14824.747,99.618523,6924.2754};
-				angles[]={6.2771854,0,0.0060001095};
+				position[]={14823.112,99.605705,6919.1587};
+				angles[]={-0,0,6.2771854};
 			};
 			side="Empty";
 			flags=4;
@@ -79608,6 +79608,7 @@ class Mission
 			};
 			id=14980;
 			type="Land_vn_us_weapons_stack2";
+			atlOffset=-0.034332275;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -80016,7 +80017,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13741.967,438.53177,8417.5371};
-				angles[]={-0,4.9478168,0};
+				angles[]={0,4.9478168,0};
 			};
 			side="Empty";
 			flags=4;
@@ -81702,6 +81703,111 @@ class Mission
 			id=15109;
 			type="Land_vn_us_common_lantern_01";
 			atlOffset=0.8095932;
+		};
+		class Item1608
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14823.924,100.37744,6922.417};
+				angles[]={0,4.3966413,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="vn_mf_macv_WL1_teleporter";
+				disableSimulation=1;
+			};
+			id=15121;
+			type="vn_b_prop_vrc12";
+			atlOffset=0.78099823;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1609
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14823.92,99.598587,6922.5112};
+				angles[]={6.2771816,4.3603034,0.0060039326};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=15122;
+			type="Land_vn_us_common_table_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1610
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14823.645,101.33379,6924.0649};
+				angles[]={6.2771816,4.9941025,0.0060039326};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="vn_mf_macv_WL2_teleporter";
+				disableSimulation=1;
+			};
+			id=15123;
+			type="vn_b_prop_riflerack_06";
+			atlOffset=-3.8146973e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

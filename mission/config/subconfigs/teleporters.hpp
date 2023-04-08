@@ -2,32 +2,32 @@ class objects
 {
 	class vn_mf_greenhornets_teleporter 
 	{
-		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "frogmen_base", "tigerforce_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "macv_base"};
 	};
 
 	class vn_mf_spiketeam_teleporter
 	{
-		destinations[] = {"mikeforce_base", "acav_base", "greenhornets_base","frogmen_base", "tigerforce_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "acav_base", "greenhornets_base", "macv_base"};
 	};
 
 	class vn_mf_mikeforce_teleporter
 	{
-		destinations[] = {"spiketeam_base", "acav_base", "greenhornets_base","frogmen_base", "tigerforce_base", "gunrange_base"};
+		destinations[] = {"spiketeam_base", "acav_base", "greenhornets_base", "macv_base"};
 	};
 
 	class vn_mf_acav_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base","frogmen_base", "tigerforce_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "macv_base"};
 	};
 	
 	class vn_mf_tigerforce_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "militarypolice_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "militarypolice_base", "macv_base"};
 	};
 	
 	class vn_mf_militarypolice_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
 	class vn_mf_gunrange_teleporter
@@ -37,12 +37,22 @@ class objects
 	
 	class vn_mf_macv_teleporter
 	{
-		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "1stMEU_base", "sasr_base", "muskets_base", "frogmen_base", "arvn_base", "tigerforce_base"};
+		destinations[] = {"mikeforce_base","spiketeam_base", "acav_base", "greenhornets_base"};
+	};
+
+	class vn_mf_macv_WL1_teleporter
+	{
+		destinations[] = {  "quarterhorse_base",  "sasr_base",  "frogmen_base", "tigerforce_base", "7th_cav_base"};
+	};
+
+	class vn_mf_macv_WL2_teleporter
+	{
+		destinations[] = {"satansangels_base", "muskets_base", "arvn_base", "1stMEU_base", "militarypolice_base"};
 	};
 
 	class vn_mf_quarterhorse_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 
 	class vn_mf_quarterhorse_teleporter_fsb
@@ -52,52 +62,52 @@ class objects
 
 	class vn_mf_7thcav_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
 	class vn_mf_1stMEU_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "quarterhorse_fsb"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_fsb", "macv_base"};
 	};
 	
 	class vn_mf_muskets_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
 	class vn_mf_montagnard_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
 	class vn_mf_frogmen_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 
 	class vn_mf_arvn_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 
 	class vn_mf_berch_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "quarterhorse_base", "1stMEU_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_base", "1stMEU_base", "macv_base"};
 	};
 	
 	class vn_mf_633rdcsg_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
 	class vn_mf_sasr_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 
 	class vn_mf_satansangels_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
 	class dc_tunnel_1_low_E
@@ -271,6 +281,12 @@ class destinations
 		image = "custom\taskroster\quarterhorse_HL.paa"; 
 		position_marker = "mf_respawn_quarterhorse";
 	};
+
+	class 7th_cav_base
+	{
+		image = "custom\taskroster\7thcav_HL.paa";
+		position_marker = "mf_respawn_7thcav";
+	}
 
 	class quarterhorse_fsb
 	{
