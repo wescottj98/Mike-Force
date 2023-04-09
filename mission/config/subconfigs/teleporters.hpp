@@ -314,7 +314,7 @@ class destinations
 
 	class sasr_base
 	{
-		image = "custom\taskroster\sasr_HL.paa"; 
+		image = "custom\taskroster\NZSAS_HL.paa"; 
 		position_marker = "mf_respawn_sasr";
 	};
 
