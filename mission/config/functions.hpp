@@ -278,7 +278,7 @@ class CfgFunctions
 
 			class destroy_task {};
 
-			class reveal_supply_line;
+			class reveal_supply_line {};
 			class reveal_radiotap_nearest_sites {};
 		};
 		
