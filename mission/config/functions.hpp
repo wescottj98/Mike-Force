@@ -159,6 +159,7 @@ class CfgFunctions
 			class action_destroy_respawn {};
 			class action_destroy_task {};
 			class action_gather_intel {};
+			class action_radiotap {};
 			class action_capture_player {};
 			class action_drink_water {};
 			class action_eat_food {};
@@ -278,6 +279,7 @@ class CfgFunctions
 			class destroy_task {};
 
 			class reveal_supply_line;
+			class reveal_radiotap_nearest_sites {};
 		};
 		
 		class system_supplies {
