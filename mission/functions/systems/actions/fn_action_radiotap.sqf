@@ -45,8 +45,6 @@ private _actionPriority = 100;
 private _actionRemoveOnComplete = true;
 private _showWhenUncon = false;
 
-diag_log format ["Condition to show=%1 progress=%2", _conditionToShow, _conditionToProgress];
-
 [
 	_attachedObj,
 	_actionText,
