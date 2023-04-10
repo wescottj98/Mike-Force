@@ -8,7 +8,6 @@ import user_paths
 arma_missions_folder = Path(user_paths.MISSIONS_PATH)
 mission_stem = "bn_mikeforce_indev"
 
-# Test message please ignore
 # We don't need these - they bloat the build
 blacklisted_folders = [
 	"paradigm/.git",
