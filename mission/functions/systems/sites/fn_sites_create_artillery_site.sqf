@@ -38,7 +38,42 @@ params ["_pos"];
 
 		vn_site_objects append _artyObjs;
 
-		private _objectsToDestroy = _artyObjs select {typeOf _x in ["vn_o_nva_navy_static_mortar_type63", "vn_o_nva_65_static_mortar_type53", "vn_o_nva_static_d44_01"]};
+		/*
+		TODO: mortar site compositions currently have a bunch
+		of ammo crates dotted around that have a holdAction attached to them
+
+		This can be confusing to players as they have the option to destroy the
+		ammo crates, but it is not necessary for the objective to complete.
+
+		We can either
+		- (a) make ammo crates a requirement for completing an Arty site
+		- (b) switch ammo crates out for a different ammo crate type (not in the fn_action_destroy_task list)
+		*/
+
+		// all NVA/VC artillery objects that *could* be spawned in a composition
+		// reference mission/config/arsenal.hpp
+		private _objectTypesToDestroy = [
+			"vn_o_nva_navy_static_mortar_type63",
+			"vn_o_nva_navy_static_mortar_type53",
+			"vn_o_nva_65_static_mortar_type53",
+			"vn_o_nva_65_static_mortar_type63",
+			"vn_o_nva_static_mortar_type53",
+			"vn_o_nva_static_mortar_type63",
+			"vn_o_vc_static_mortar_type53",
+			"vn_o_vc_static_mortar_type63",
+			"vn_o_nva_65_static_d44",
+			"vn_o_nva_65_static_d44_01",
+			"vn_o_nva_navy_static_d44",
+			"vn_o_nva_navy_static_d44_01",
+			"vn_o_nva_static_d44",
+			"vn_o_nva_static_d44_01",
+			"vn_o_vc_static_d44",
+			"vn_o_vc_static_d44_01"
+		];
+
+		private _objectsToDestroy = _artyObjs select {
+			typeOf _x in _objectTypesToDestroy;
+		};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];
