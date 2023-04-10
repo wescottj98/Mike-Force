@@ -20,14 +20,6 @@
 
 params ["_radioObj", "_player"];
 
-private _playerIsExplosiveSpecialist = _player getUnitTrait 'explosiveSpecialist';
-// can only put wiretap kit in backpack
-private _playerHasWiretapKit = 'vn_b_item_wiretap' in (backpackItems _player);
-
-if (not _playerHasWiretapKit || not _playerIsExplosiveSpecialist) exitWith {
-    ["RadioTapFailed", []] remoteExec ["para_c_fnc_show_notification", _player];
-};
-
 // starting vars
 private _radioPos = getPos _radioObj;
 private _sitesArr = missionNamespace getVariable ["sites",[]];
@@ -52,8 +44,6 @@ if (_nSitesToReveal > count _sitesDistanceSortedAscArr) then {
 };
 
 _sitesDistanceSortedAscArr resize _nSitesToReveal;
-
-["RadioTapSuccess", [format ["%1", _nSitesToReveal]]] remoteExec ["para_c_fnc_show_notification", _player];
 
 // no need for messy forEach loops or multiple searches 
 // as we can do one apply call
