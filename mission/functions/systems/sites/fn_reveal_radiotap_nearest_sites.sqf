@@ -1,5 +1,5 @@
 /*
-    File: fn_radiotap_reveal_nearest_site.sqf
+    File: fn_reveal_radiotap_nearest_sites.sqf
     Author: DJ Dijksterhuis
     Public: No
 
@@ -7,18 +7,18 @@
 	    Perform a tap on a radio within a site to reveal the next closest site on map.
 
     Parameter(s):
-        _radioObj - the object related to this site (from the "sites" mission namespace variable)
-        _player - the player initiating the action.
+        _radioObj - the radio object the player is performing the holdAction on
 
     Returns:
         None
     
     Example(s):
-        [parameter] call vn_mf_fnc_radiotap_reveal_nearest_site
+        // execute only on the server
+        [_myRadioObj] remoteExec ["vn_mf_fnc_reveal_radiotap_nearest_sites", 2];
         
 */
 
-params ["_radioObj", "_player"];
+params ["_radioObj"];
 
 // starting vars
 private _radioPos = getPos _radioObj;
