@@ -67,6 +67,19 @@ class wheel_menu_actions
 		spawn = 0;
 	};
 
+	//Add a sandbag to a building.
+	class add_multi_sandbag : base_action
+	{
+		visible = "ALWAYS";
+		condition = "_target call para_g_fnc_is_resupply";
+		text = $STR_vn_mf_add_multi_sandbag;
+		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_resupply_ca.paa";
+		icon_highlighted = "";
+		arguments = "_target";
+		function = "para_c_fnc_resupply_building_with_multiple_sandbag";
+		spawn = 0;
+	};
+
 	//Resupply a building with a crate
 	class resupply : base_action
 	{
