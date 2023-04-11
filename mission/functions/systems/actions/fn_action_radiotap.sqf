@@ -24,9 +24,6 @@
         [obj_1, obj2, obj_3] call vn_mf_fnc_action_radiotap_reveal;
 */
 
-// don't show for headless clients
-if !hasInterface exitWith {};
-
 // if nothing got passed in the call don't bother trying to execute the script
 if (count _this == 0) exitwith {
 	diag_log format ["Radiotap Action: Empty array passed in call so not executing."];
@@ -40,25 +37,26 @@ private _actionIdleIcon = "custom\holdactions\holdAction_listen_ca.paa";
 private _actionProgressIcon = _actionIdleIcon;
 
 /*
-variables used in holdActionAdd conditions  fields
+holdActionAdd CONDITIONS field variables
 	_target ==> the current object / object action is attached to
-	_this   ==> player executing the action (WARN: different to 'code'!)
+	_this   ==> player executing the action (WARN: different to CODE!)
 */
 
 private _isNotOpfor = "side _this != east";
 private _isInRangeOfRadio = "_this distance _target < 5";
-private _isRightObject = "typeOf _target in ['vn_o_prop_t102e_01', 'vn_o_prop_t884_01']";
-
-// WARN: if changing this make sure you change the logic in _codeOnStart too!!
-private _isPlayerExplosiveSpecialist = "_this getUnitTrait 'explosiveSpecialist'";
-private _isPlayerHasWiretapKit = "'vn_b_item_wiretap' in (backpackItems _this)";
+private _isValidObjectType = "typeOf _target in ['vn_o_prop_t102e_01', 'vn_o_prop_t884_01']";
 
 private _conditionToShow = format [
 	"(%1 && %2 && %3)",
 	_isNotOpfor, 
 	_isInRangeOfRadio, 
-	_isRightObject
+	_isValidObjectType
 ];
+
+// WARN: if changing this make sure you change the logic in _codeOnStart too!!
+private _isPlayerExplosiveSpecialist = "_this getUnitTrait 'explosiveSpecialist'";
+private _isPlayerHasWiretapKit = "'vn_b_item_wiretap' in (backpackItems _this)";
+
 private _conditionToProgress = format [
 	"(%1 && %2 && %3)",
 	_conditionToShow,
@@ -67,9 +65,9 @@ private _conditionToProgress = format [
 ];
 
 /*
-variables used in holdActionAdd code fields
+holdActionAdd CODE field variables
 	_target ==> the current object / object action is attached to
-	_this   ==> player executing the action (WARN: different to 'conditions'!)
+	_caller ==> player executing the action (WARN: different to CONDITIONS!)
 */
 
 // show some notifications
