@@ -576,6 +576,10 @@
         <Original>Add Sandbag</Original>
         <English>Add Sandbag</English>
       </Key>
+      <Key ID="STR_vn_mf_add_multi_sandbag">
+        <Original>Add 10 Sandbags</Original>
+        <English>Add 10 Sandbags</English>
+      </Key>
     </Container>
     <Container name="interaction_overlay">
       <Key ID="STR_vn_mf_overlay_duty_officer_name">
