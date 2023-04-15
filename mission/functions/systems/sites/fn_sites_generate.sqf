@@ -31,18 +31,12 @@ private _hqPosition = [_center, 1000, 0, 55, 5, _allTerrainObjects] call vn_mf_f
 private _factoryPosition = [_center, 1000, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 [_factoryPosition, _zone] call vn_mf_fnc_sites_create_factory;
 
-/* 
-Commented out by DJ until 
-1. new non-SAM AA compositions are added into fn_create_aa_site_buildings
-2. harry et al explicitly say they want the current extra SAM sites
-
-//Create initial AA emplacements
+//Create AA emplacements (ZPUs)
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_aa_per_zone - 1)) do
 {
 	private _aaSite = [_center, 1000, 0, 20, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_aaSite, _zone] call vn_mf_fnc_sites_create_aa_site;
 };
-*/
 
 //Create initial artillery emplacements
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_artillery_per_zone - 1)) do
