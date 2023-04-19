@@ -32,7 +32,7 @@ class objects
 	
 	class vn_mf_gunrange_teleporter
 	{
-		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "1stMEU_base", "sasr_base", "muskets_base", "macv_base", "frogmen_base"};
+		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "3rdMEU_base", "sasr_base", "muskets_base", "macv_base", "frogmen_base"};
 	};
 	
 	class vn_mf_macv_teleporter
@@ -47,7 +47,7 @@ class objects
 
 	class vn_mf_macv_WL2_teleporter
 	{
-		destinations[] = {"satansangels_base", "muskets_base", "arvn_base", "1stMEU_base", "militarypolice_base"};
+		destinations[] = {"satansangels_base", "muskets_base", "arvn_base", "3rdMEU_base", "militarypolice_base"};
 	};
 
 	class vn_mf_quarterhorse_teleporter
@@ -65,7 +65,7 @@ class objects
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
-	class vn_mf_1stMEU_teleporter
+	class vn_mf_3rdMEU_teleporter
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_fsb", "macv_base"};
 	};
@@ -92,7 +92,7 @@ class objects
 
 	class vn_mf_berch_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_base", "1stMEU_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_base", "3rdMEU_base", "macv_base"};
 	};
 	
 	class vn_mf_633rdcsg_teleporter
@@ -270,10 +270,10 @@ class destinations
 		position_marker = "mf_respawn_macv";
 	};
 	
-	class 1stMEU_base
+	class 3rdMEU_base
 	{
 		image = "custom\taskroster\1stMEU_HL.paa"; 
-		position_marker = "mf_respawn_1stMEU";
+		position_marker = "mf_respawn";
 	};
 	
 	class quarterhorse_base
