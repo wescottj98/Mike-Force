@@ -107,6 +107,14 @@ switch(_team) do
 		8 enableChannel [true, true];
 	};
 
+	case "ARVN" : {
+		1 radioChannelAdd [player];
+		3 radioChannelAdd [player];
+
+		6 enableChannel [true, true];
+		8 enableChannel [true, true];
+	};
+
 	case "Frogmen" : {
 		1 radioChannelAdd [player];
 
