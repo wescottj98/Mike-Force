@@ -23,14 +23,14 @@
 
 		6 ===> Ground (CC1)
 		7 ===> Air (CC2)
-        8 ===> ACAV (CC3)
-        9 ===> MACV (CC4)
+		8 ===> ACAV (CC3)
+		9 ===> MACV (CC4)
 
-        Note that custom radio channel specific functions like `radioChannelAdd`
-        and `radioChannelRemove` will refer to channel 6 as custom channel 1,
-        channel 7 as custom channel 2 and channel 8 as custom channel 3.
+		Note that custom radio channel specific functions like `radioChannelAdd`
+		and `radioChannelRemove` will refer to channel 6 as custom channel 1,
+		channel 7 as custom channel 2 and channel 8 as custom channel 3.
 
-        Just to keep life interesting.
+		Just to keep life interesting.
     
     Parameter(s):
 		None
