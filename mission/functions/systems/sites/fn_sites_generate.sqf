@@ -68,3 +68,10 @@ for "_i" from 1 to (1 + ceil random (vn_mf_s_max_radars_per_zone - 1)) do
 	private _radar = [_center, 1000, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_radar, _zone] call vn_mf_fnc_sites_create_radar;
 };
+
+// add the "Tap Radio Comms" hold action to all generated radio sets
+private _radios = vn_site_objects select {
+	typeOf _x in ["vn_o_prop_t102e_01", "vn_o_prop_t884_01"];
+};
+
+_radios call vn_mf_fnc_action_radiotap;
