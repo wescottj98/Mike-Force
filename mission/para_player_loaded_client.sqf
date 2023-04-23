@@ -52,8 +52,13 @@ private _fnc_disableChatter = {
 	[player, "NoVoice"] remoteExec ["setSpeaker", 0];
 	{ _x disableAI "RADIOPROTOCOL"; _x setSpeaker "NoVoice"; } forEach allPlayers;
 };
-[] call _fnc_disableChatter;
-player addEventHandler ["Respawn", _fnc_disableChatter];
+
+private _fnc_respawnEventHandler = {
+	call _fnc_disableChatter;
+	call vn_mf_fnc_update_channels;
+};
+
+player addEventHandler ["Respawn", _fnc_respawnEventHandler];
 [true, "arsenalClosed", {
 	[player, "NoVoice"] remoteExec ["setSpeaker", 0];
 }] call BIS_fnc_addScriptedEventHandler;

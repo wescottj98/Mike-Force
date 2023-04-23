@@ -1,10 +1,36 @@
 /*
     File: fn_update_channels.sqf
     Author: Cerebral
+    Modified: @dijksterhuis
     Public: No
     
     Description:
+
         Update player's chat channels.
+
+		Reference: https://community.bistudio.com/wiki/enableChannel
+
+		base game:
+
+		0 ===> Global
+		1 ===> Side
+		2 ===> Command
+		3 ===> Group
+		4 ===> Vehicle
+		5 ===> Direct
+
+		custom:
+
+		6 ===> Ground (CC1)
+		7 ===> Air (CC2)
+		8 ===> ACAV (CC3)
+		9 ===> MACV (CC4)
+
+		Note that custom radio channel specific functions like `radioChannelAdd`
+		and `radioChannelRemove` will refer to channel 6 as custom channel 1,
+		channel 7 as custom channel 2 and channel 8 as custom channel 3.
+
+		Just to keep life interesting.
     
     Parameter(s):
 		None
@@ -74,6 +100,14 @@ switch(_team) do
 	};
 
 	case "QuarterHorse" : {
+		1 radioChannelAdd [player];
+		3 radioChannelAdd [player];
+
+		6 enableChannel [true, true];
+		8 enableChannel [true, true];
+	};
+
+	case "ARVN" : {
 		1 radioChannelAdd [player];
 		3 radioChannelAdd [player];
 
