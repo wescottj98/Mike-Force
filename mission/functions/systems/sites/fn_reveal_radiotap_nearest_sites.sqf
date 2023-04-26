@@ -48,7 +48,7 @@ _sitesDistanceSortedAscArr resize _nSitesToReveal;
 // no need for messy forEach loops or multiple searches 
 // as we can do one apply call
 _sitesDistanceSortedAscArr apply {
-    private _candidateSiteArr = _x # 0;
+    // private _candidateSiteDistance = _x # 0;
     private _candidateSiteObj = _x # 1;
     private _markersArr = _candidateSiteObj getVariable ["markers", []];
     _markersArr apply {_x setMarkerAlpha 0.5};
