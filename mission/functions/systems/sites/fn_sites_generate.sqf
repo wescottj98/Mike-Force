@@ -74,4 +74,4 @@ private _radios = vn_site_objects select {
 	typeOf _x in ["vn_o_prop_t102e_01", "vn_o_prop_t884_01"];
 };
 
-_radios call vn_mf_fnc_action_radiotap;
+_radios apply {_x call vn_mf_fnc_action_radiotap};
