@@ -273,7 +273,7 @@ class destinations
 	class 3rdMEU_base
 	{
 		image = "custom\taskroster\1stMEU_HL.paa"; 
-		position_marker = "mf_respawn";
+		position_marker = "mf_respawn_3rdMEU";
 	};
 	
 	class quarterhorse_base
