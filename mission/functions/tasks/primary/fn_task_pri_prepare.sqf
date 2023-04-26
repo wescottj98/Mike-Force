@@ -64,7 +64,19 @@ _taskDataStore setVariable ["prepare", {
 
 	private _endTime = _taskDataStore getVariable ["endTime", 0];
 	private _areaDescriptor = _taskDataStore getVariable ["areaDescriptor", []];
-	private _playersInArea = allPlayers inAreaArray _areaDescriptor;
+	/*
+	ignore people who are dead. if a counterattack failed and the zone resets
+	there might be 1x AFK player who would block the zone from starting until
+	they disconnect.
+
+	if you change this logic, make sure to change the logic
+	over in fn_task_pri_go_away.sqf too...
+
+	TODO: optimise this so we don't have two different tasks repeating the same code
+	*/
+
+	private _playersAlive = allPlayers select {alive _x};
+	private _playersInArea = _playersAlive inAreaArray _areaDescriptor;
 	private _arePlayersInArea = (count _playersInArea) > 0;
 
 	/*
