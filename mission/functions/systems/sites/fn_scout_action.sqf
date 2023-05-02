@@ -38,7 +38,7 @@ vn_mf_scout_icons_to_draw = [];
 vn_mf_scout_intel_icons_to_draw = [];
 
 if (isNil "vn_mf_scout_draw_handler") then {
-    vn_mf_scout_max_distance = 100;
+    vn_mf_scout_max_distance = 0;
     vn_mf_scout_fade_time = 10;
     vn_mf_scout_draw_handler = addMissionEventHandler ["Draw3D", {
         private _lastScoutTime = localNamespace getVariable "vn_mf_last_scout_time";
@@ -125,7 +125,7 @@ private _fnc_intelToDrawableIcon = {
     private _isDiscovered = _this getVariable ["discovered", false];
     private _text = if (_isDiscovered) then { toUpper (_this getVariable ["site_type", ""]) } else { "???" };
     // Full opacity up to X metres, then starts reducing linearly.
-    private _opacity = 1 - ((_distance - 200 max 0) / vn_mf_scout_max_distance);
+    private _opacity = 1 - ((_distance - 200 max 0) / vn_mf_scout_max_distancez);
     private _distanceText = _distanceTexts select (_distanceTexts findIf {_x # 0 >= _distance}) select 1;
 
     [
