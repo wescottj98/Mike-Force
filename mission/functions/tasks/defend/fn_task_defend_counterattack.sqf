@@ -158,6 +158,7 @@ _taskDataStore setVariable ["defend_zone", {
 		_taskDataStore setVariable ["enemyZoneHeldTime", _enemyZoneHeldTime];
 		_taskDataStore setVariable ["lastCheck", _lastCheck];
 	} else {
+		_taskDataStore setVariable ["enemyZoneHeldTime", 0];
 		_lastCheck = serverTime;
 		_taskDataStore setVariable ["lastCheck", _lastCheck];
 	};
