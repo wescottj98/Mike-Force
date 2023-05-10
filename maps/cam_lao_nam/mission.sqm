@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11619;
+		nextID=11719;
 	};
 	class Camera
 	{
-		pos[]={15830.367,105.40967,7159.7314};
-		dir[]={0.4165172,-0.51408124,0.74988669};
-		up[]={0.24964994,0.85769612,0.44946563};
-		aside[]={0.87424022,5.7992293e-007,-0.48558649};
+		pos[]={16278.346,99.510002,8105.6387};
+		dir[]={0.62850296,-0.5286817,0.57051605};
+		up[]={0.39145699,0.84881753,0.35534006};
+		aside[]={0.6721248,1.0957592e-007,-0.74044037};
 	};
 };
 binarizationWanted=0;
@@ -553,8 +553,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -604,8 +604,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -38972,7 +38972,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14850.844,99.589996,6915.1089};
-				angles[]={-0,1.7880882,0};
+				angles[]={0,1.7880882,0};
 			};
 			side="Empty";
 			flags=4;
@@ -80871,7 +80871,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14854.889,99.589996,6937.3276};
-				angles[]={-0,1.7880882,0};
+				angles[]={0,1.7880882,0};
 			};
 			side="Empty";
 			flags=4;
@@ -80919,6 +80919,19 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[""vn_b_item_firstaidkit""],[4]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
@@ -81032,7 +81045,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item1575
@@ -81041,7 +81054,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16280.712,76.588264,8152.3696};
-				angles[]={-0,1.9442619,0};
+				angles[]={0,1.9442619,0};
 			};
 			side="Empty";
 			flags=4;
@@ -81113,11 +81126,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=582;
+			nextID=583;
 		};
 		class Links
 		{
-			items=582;
+			items=583;
 			class Item0
 			{
 				linkID=0;
@@ -86932,6 +86945,16 @@ class Mission
 			{
 				linkID=581;
 				item0=15216;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item582
+			{
+				linkID=582;
+				item0=15217;
 				item1=705;
 				class CustomData
 				{
