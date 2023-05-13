@@ -55,25 +55,45 @@ private _fnc_noSitesZoneCheck = {
 	_result
 };
 
+/*
+
+==> Generate site blacklisted areas
+
+BIS_fnc_findSafePos requires all blacklisted variables be in the same format.
+
+So use the same format as inAreaArry for all blacklisted positions to ensure
+we can be as detailed about the areas as possible.
+
+[center position, a-axis, b-axis, rotational angle, is a rectangle]
+
+*/
+
 // existing sites that we do not want to spawn other sites inside of
 private _currentSites = missionNamespace getVariable ["sites", []];
 private _occupiedSiteAreas = _currentSites apply {
-	[getPos _x, vn_mf_sites_minimum_distance_between_sites]
+	[
+		getPos _x,
+		vn_mf_sites_minimum_distance_between_sites,
+		vn_mf_sites_minimum_distance_between_sites,
+		0,
+		false
+	]
 };
 
-// BIS_fnc_findSafePos requires a 2D position and a radius
-// but "no_sites_*" area markers could be any shape (rect, square, circle).
-// so we feed in some default value first (not within 100m of centre point)
-// and then do a more correct double check during validation afterwards.
-
-// TODO: Find the maximum edge or radius of the area marker
+// 'no_sites_*' map areas placed down in editor
 private _blacklistedMapZones = vn_mf_markers_no_sites apply {
-	[getMarkerPos _x, 100]
+	[
+		getMarkerPos _x,
+		(getMarkerSize _x) select 0,
+		(getMarkerSize _x) select 1,
+		0,
+		(markerShape _x == "RECTANGLE")
+	]
 };
 
 private _blacklistedSiteAreas = _occupiedSiteAreas + _blacklistedMapZones;
 
-private _finalPosition = [_position, 0, _radius, 0, _waterMode, 0.5, 0, [_blacklistedSiteAreas], [_position, _position]] call BIS_fnc_findSafePos;
+private _finalPosition = [_position, 0, _radius, 0, _waterMode, 0.5, 0, _blacklistedSiteAreas, [_position, _position]] call BIS_fnc_findSafePos;
 private _radGrad = aCos ([0,0,1] vectorCos (surfaceNormal _finalPosition));
 private _areaRadGrad = [_finalPosition, _radius] call vn_mf_fnc_sites_find_area_gradient;
 private _negativeDegree = _gradientDegrees - (_gradientDegrees * 2); //i'm tired sorry I just want a negative number
@@ -88,7 +108,7 @@ while  {(_radGrad > _gradientDegrees)
 		|| _waterCheck
 		|| _noSitesCheck
 } do { //keep searching
-	_finalPosition = [_position, 30, _radius, 0, _waterMode, 0.3, 0, [_blacklistedSiteAreas], [_position, _position]] call BIS_fnc_findSafePos;
+	_finalPosition = [_position, 30, _radius, 0, _waterMode, 0.3, 0, _blacklistedSiteAreas, [_position, _position]] call BIS_fnc_findSafePos;
 	
 	_waterCheck = [_waterMode] call _fnc_checkWaterMode;
 	_areaRadGrad = [_finalPosition, _radius] call vn_mf_fnc_sites_find_area_gradient;
