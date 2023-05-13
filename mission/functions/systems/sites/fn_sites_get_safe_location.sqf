@@ -55,13 +55,23 @@ private _fnc_noSitesZoneCheck = {
 	_result
 };
 
-private _hqSites = missionNamespace getVariable ["side_sites_hq",[]];
-private _factorySites = missionNamespace getVariable ["side_sites_factory",[]];
-private _currentSites = _hqSites + _factorySites;
-private _blacklistedSiteAreas  = []; 
-{ 
-	_blacklistedSiteAreas  append [getPos _x, vn_mf_sites_minimum_distance_between_sites]; 
-} forEach _blacklistedSiteAreas;
+// existing sites that we do not want to spawn other sites inside of
+private _currentSites = missionNamespace getVariable ["sites", []];
+private _occupiedSiteAreas = _currentSites apply {
+	[getPos _x, vn_mf_sites_minimum_distance_between_sites]
+};
+
+// BIS_fnc_findSafePos requires a 2D position and a radius
+// but "no_sites_*" area markers could be any shape (rect, square, circle).
+// so we feed in some default value first (not within 100m of centre point)
+// and then do a more correct double check during validation afterwards.
+
+// TODO: Find the maximum edge or radius of the area marker
+private _blacklistedMapZones = vn_mf_markers_no_sites apply {
+	[getMarkerPos _x, 100]
+};
+
+private _blacklistedSiteAreas = _occupiedSiteAreas + _blacklistedMapZones;
 
 private _finalPosition = [_position, 0, _radius, 0, _waterMode, 0.5, 0, [_blacklistedSiteAreas], [_position, _position]] call BIS_fnc_findSafePos;
 private _radGrad = aCos ([0,0,1] vectorCos (surfaceNormal _finalPosition));
