@@ -124,6 +124,14 @@ while  {(_radGrad > _gradientDegrees)
 	_iterations = _iterations + 1;
 };
 
+// BIS_getSafePos normally return an [x, y] co-ordinate
+// but will return debug position [0,0,0] if it cannot find anywhere suitable ... 
+// randomise the site position somewhere in the zone if this happens
+if (_finalPosition isEqualTo [0, 0, 0] || (count _finalPosition) == 3) then {
+	_finalPosition = _position getPos [_radius, random 360];
+};
+
+
 if(!(_terrainObjects isEqualTo [])) then 
 {
 	{
