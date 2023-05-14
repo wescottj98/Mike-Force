@@ -113,7 +113,7 @@ _taskDataStore setVariable ["prepare_zone", {
 	private _attackObjective = [
 		_taskDataStore getVariable "attackPos",
 		//Difficulty 2, unless specified otherwise.
-		_taskDataStore getVariable ["attackDifficulty", 3],
+		_taskDataStore getVariable ["attackDifficulty", 4],
 		_infantryMultiplier
 	] call para_s_fnc_ai_obj_request_attack;
 
@@ -158,6 +158,7 @@ _taskDataStore setVariable ["defend_zone", {
 		_taskDataStore setVariable ["enemyZoneHeldTime", _enemyZoneHeldTime];
 		_taskDataStore setVariable ["lastCheck", _lastCheck];
 	} else {
+		_taskDataStore setVariable ["enemyZoneHeldTime", 0];
 		_lastCheck = serverTime;
 		_taskDataStore setVariable ["lastCheck", _lastCheck];
 	};

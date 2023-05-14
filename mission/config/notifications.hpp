@@ -194,6 +194,33 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 
+	class RadioTapStart
+	{
+		title = "Radio Tap Started";
+		description = "Listening for radio chatter...";
+		priority = 8;
+		color[] = {0.7,1,0.3,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconCreated_ca.paa";
+	};
+
+	class RadioTapFailed
+	{
+		title = "Radio Tap Failed";
+		description = "You need explosives training and a wiretap kit!";
+		priority = 8;
+		color[] = {1,0,0,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class RadioTapSuccess
+	{
+		title = "Radio Tap Success";
+		description = "Revealed nearby site(s)";
+		priority = 8;
+		color[] = {0.7,1,0.3,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+	};
+
 	class FireInTheHole
 	{
 		title = "Satchel Charge Set";
