@@ -36,7 +36,7 @@ _taskDataStore setVariable ["INIT", {
 	WARNING: Do not change size here without checking the capture logic too!
 	NOTE: marker is deleted during task clean up (bottom of script file)
 	*/
-	private _areaMarkerSize = 1100;
+	private _areaMarkerSize = vn_mf_bn_s_zone_radius + 100;
 	private _areaDescriptor = [_zonePosition, _areaMarkerSize, _areaMarkerSize, 0, false];
 
 	private _areaMarker = createMarker ["prepZoneCircle", _zonePosition];
