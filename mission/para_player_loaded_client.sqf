@@ -53,8 +53,11 @@ private _fnc_disableChatter = {
 	{ _x disableAI "RADIOPROTOCOL"; _x setSpeaker "NoVoice"; } forEach allPlayers;
 };
 
+// need to run this now to disable AO radio chatter on first life.
+[] call _fnc_disableChatter;
+
 private _fnc_respawnEventHandler = {
-	call _fnc_disableChatter;
+	[] call _fnc_disableChatter;
 	call vn_mf_fnc_update_channels;
 };
 
