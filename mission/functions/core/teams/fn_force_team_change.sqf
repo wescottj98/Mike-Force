@@ -40,7 +40,10 @@ publicVariable _playerGroup;
 _player setVariable ["vn_mf_db_player_group", _team, true];
 private _nextPlayerTeamArray = missionNamespace getVariable [_team, []];
 _nextPlayerTeamArray pushBackUnique _player;
-publicVariable _nextPlayerTeam;
+
+// @dijksterhuis commenting out as it just causes script errors (no-one from
+// SGD responded to my discord post about it)
+// publicVariable _nextPlayerTeam;
 
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;
