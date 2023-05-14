@@ -41,8 +41,12 @@ _player setVariable ["vn_mf_db_player_group", _team, true];
 private _nextPlayerTeamArray = missionNamespace getVariable [_team, []];
 _nextPlayerTeamArray pushBackUnique _player;
 
-// @dijksterhuis commenting out as it just causes script errors (no-one from
-// SGD responded to my discord post about it)
+/*
+  @dijksterhuis commenting out line below as it just causes script errors 
+  (no-one from SGD responded to my discord post about it).
+  Have tested and it does not affect players switching teams.
+  The list of players in a given team is updated regardless of the line below.
+*/
 // publicVariable _nextPlayerTeam;
 
 [[_team], {
