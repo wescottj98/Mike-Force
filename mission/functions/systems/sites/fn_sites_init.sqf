@@ -24,6 +24,11 @@ vn_mf_s_max_fortifications_per_zone = getNumber (missionConfigFile >> "map_confi
 vn_mf_s_max_tunnels_per_zone = getNumber (missionConfigFile >> "map_config" >> "max_tunnels_per_zone");
 vn_mf_s_max_vehicle_depots_per_zone = getNumber (missionConfigFile >> "map_config" >> "max_vehicle_depots_per_zone");
 
+// factory and HQ have minimum radius of 55. 
+// Some radars seem to be larger than 55 as well.
+// Add 20 for safety / reliability / QoL.
+vn_mf_sites_minimum_distance_between_sites = 75;
+
 vn_mf_g_sites_partial_discovery_radius = 300;
 publicVariable "vn_mf_g_sites_partial_discovery_radius";
 vn_mf_g_sites_discovery_radius = 50;

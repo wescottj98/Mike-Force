@@ -55,15 +55,45 @@ private _fnc_noSitesZoneCheck = {
 	_result
 };
 
-private _hqSites = missionNamespace getVariable ["side_sites_hq",[]];
-private _factorySites = missionNamespace getVariable ["side_sites_factory",[]];
-private _currentSites = _hqSites + _factorySites;
-private _blacklistedSiteAreas  = []; 
-{ 
-	_blacklistedSiteAreas  append [getPos _x, vn_mf_sites_minimum_distance_between_sites]; 
-} forEach _blacklistedSiteAreas;
+/*
 
-private _finalPosition = [_position, 0, _radius, 0, _waterMode, 0.5, 0, [_blacklistedSiteAreas], [_position, _position]] call BIS_fnc_findSafePos;
+==> Generate site blacklisted areas
+
+BIS_fnc_findSafePos requires all blacklisted variables be in the same format.
+
+So use the same format as inAreaArry for all blacklisted positions to ensure
+we can be as detailed about the areas as possible.
+
+[center position, a-axis, b-axis, rotational angle, is a rectangle]
+
+*/
+
+// existing sites that we do not want to spawn other sites inside of
+private _currentSites = missionNamespace getVariable ["sites", []];
+private _occupiedSiteAreas = _currentSites apply {
+	[
+		getPos _x,
+		vn_mf_sites_minimum_distance_between_sites,
+		vn_mf_sites_minimum_distance_between_sites,
+		0,
+		false
+	]
+};
+
+// 'no_sites_*' map areas placed down in editor
+private _blacklistedMapZones = vn_mf_markers_no_sites apply {
+	[
+		getMarkerPos _x,
+		(getMarkerSize _x) select 0,
+		(getMarkerSize _x) select 1,
+		0,
+		(markerShape _x == "RECTANGLE")
+	]
+};
+
+private _blacklistedSiteAreas = _occupiedSiteAreas + _blacklistedMapZones;
+
+private _finalPosition = [_position, 0, _radius, 0, _waterMode, 0.5, 0, _blacklistedSiteAreas, [_position, _position]] call BIS_fnc_findSafePos;
 private _radGrad = aCos ([0,0,1] vectorCos (surfaceNormal _finalPosition));
 private _areaRadGrad = [_finalPosition, _radius] call vn_mf_fnc_sites_find_area_gradient;
 private _negativeDegree = _gradientDegrees - (_gradientDegrees * 2); //i'm tired sorry I just want a negative number
@@ -78,7 +108,7 @@ while  {(_radGrad > _gradientDegrees)
 		|| _waterCheck
 		|| _noSitesCheck
 } do { //keep searching
-	_finalPosition = [_position, 30, _radius, 0, _waterMode, 0.3, 0, [_blacklistedSiteAreas], [_position, _position]] call BIS_fnc_findSafePos;
+	_finalPosition = [_position, 30, _radius, 0, _waterMode, 0.3, 0, _blacklistedSiteAreas, [_position, _position]] call BIS_fnc_findSafePos;
 	
 	_waterCheck = [_waterMode] call _fnc_checkWaterMode;
 	_areaRadGrad = [_finalPosition, _radius] call vn_mf_fnc_sites_find_area_gradient;
@@ -92,6 +122,14 @@ while  {(_radGrad > _gradientDegrees)
 
 	if(_iterations > 100) exitWith { _position }; //if all else fails revert to original position.
 	_iterations = _iterations + 1;
+};
+
+// BIS_getSafePos normally return an [x, y] co-ordinate
+// but will return debug position [0,0,0] if it cannot find anywhere suitable ... 
+// randomise the site position somewhere in the zone if this happens.
+// this isn't ideal, but it's better than a tunnel placed in debug!
+if (_finalPosition isEqualTo [0, 0, 0]) then {
+	_finalPosition = _position getPos [random _radius, random 360];
 };
 
 if(!(_terrainObjects isEqualTo [])) then 
