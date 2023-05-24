@@ -33,6 +33,8 @@ mf_s_attack_base_priority = 2;
 mf_s_ongoing_attacks = [];
 mf_s_last_attack = serverTime;
 
+vn_mf_bn_s_zone_radius = getNumber (missionConfigFile >> "map_config" >> "bn_zone_radius");
+
 //All zone info
 mf_s_zones = [];
 //All zone names

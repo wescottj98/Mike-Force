@@ -37,10 +37,12 @@ _taskDataStore setVariable ["INIT", {
 	_zone setMarkerColor "ColorRed";
 	_zone setMarkerBrush "DiagGrid";
 
+	private _areaMarkerSize = vn_mf_bn_s_zone_radius + 100;
+
 	// custom BN: yellow circle around the AO
 	private _areaMarker = createMarker ["activeZoneCircle", _zonePosition];
 	_areaMarker setMarkerShape "ELLIPSE";
-	_areaMarker setMarkerSize [1100, 1100];
+	_areaMarker setMarkerSize [_areaMarkerSize, _areaMarkerSize];
 	_areaMarker setMarkerAlpha 1;
 	_areaMarker setMarkerBrush "Border";
 	_areaMarker setMarkerColor "ColorYellow";

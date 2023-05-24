@@ -24,48 +24,48 @@ private _center = markerPos (_zoneData select struct_zone_m_marker);
 private _size = markerSize (_zoneData select struct_zone_m_marker);
 private _sizeX = _size select 0;
 //Create zone HQ
-private _hqPosition = [_center, 1000, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+private _hqPosition = [_center, vn_mf_bn_s_zone_radius, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 [_hqPosition, _zone] call vn_mf_fnc_sites_create_hq;
 
 //Create zone factory
-private _factoryPosition = [_center, 1000, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+private _factoryPosition = [_center, vn_mf_bn_s_zone_radius, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 [_factoryPosition, _zone] call vn_mf_fnc_sites_create_factory;
 
 //Create AA emplacements (ZPUs)
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_aa_per_zone - 1)) do
 {
-	private _aaSite = [_center, 1000, 0, 20, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _aaSite = [_center, vn_mf_bn_s_zone_radius, 0, 20, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_aaSite, _zone] call vn_mf_fnc_sites_create_aa_site;
 };
 
 //Create initial artillery emplacements
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_artillery_per_zone - 1)) do
 {
-	private _artySite = [_center, 1000, 0, 20, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _artySite = [_center, vn_mf_bn_s_zone_radius, 0, 20, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_artySite, _zone] call vn_mf_fnc_sites_create_artillery_site;
 };
 
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_camps_per_zone - 1)) do
 {
 	//[_zoneData] call vn_mf_fnc_sites_create_camp;
-	private _campSite = [_center, 1000, 0, 35, 8, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _campSite = [_center, vn_mf_bn_s_zone_radius, 0, 35, 8, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_campSite, _zone] call vn_mf_fnc_sites_create_camp_site;
 };
 
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_tunnels_per_zone - 1)) do
 {
-	private _tunnelSite = [_center, 1000, 0, 5, 20, _unnaturalObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _tunnelSite = [_center, vn_mf_bn_s_zone_radius, 0, 5, 20, _unnaturalObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_tunnelSite, _zone] call vn_mf_fnc_sites_create_tunnel_site;
 };
 
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_water_supply_per_zone - 1)) do
 {
-	private _tunnelWaterSupply = [_center, 1000, 2, 5, 20, _unnaturalObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _tunnelWaterSupply = [_center, vn_mf_bn_s_zone_radius, 2, 5, 20, _unnaturalObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_tunnelWaterSupply, _zone] call vn_mf_fnc_sites_create_water_supply_site;
 };
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_radars_per_zone - 1)) do
 {
-	private _radar = [_center, 1000, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _radar = [_center, vn_mf_bn_s_zone_radius, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_radar, _zone] call vn_mf_fnc_sites_create_radar;
 };
 
