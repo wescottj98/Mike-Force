@@ -230,6 +230,35 @@ class vn_i_air_ch34_01_02 : respawn_medium {};
 class vn_i_air_ch34_02_01 : respawn_medium {};
 class vn_i_air_ch34_02_02 : respawn_medium {};
 
+// SOG PF 1.3
+class vn_b_air_ch47_04_01 : respawn_medium {};
+class vn_b_air_ach47_04_01 : wreck_medium {};
+
+class vn_b_wheeled_m274_02_03 : respawn_medium {};
+class vn_b_wheeled_m274_01_01 : respawn_medium {};
+class vn_b_wheeled_m274_02_01 : respawn_medium {};
+class vn_b_wheeled_m274_mg_01_01 : respawn_medium {};
+class vn_b_wheeled_m274_mg_02_01 : respawn_medium {};
+class vn_b_wheeled_m274_mg_03_01 : respawn_medium {};
+
+class vn_b_wheeled_lr2a_mg_02_nz_army : respawn_medium {};
+class vn_b_wheeled_lr2a_mg_01_nz_army : respawn_medium {};
+class vn_b_wheeled_lr2a_mg_03_nz_army : respawn_medium {};
+
+class vn_b_wheeled_lr2a_01_nz_army : respawn_medium {};
+class vn_b_wheeled_lr2a_02_nz_army : respawn_medium {};
+class vn_b_wheeled_lr2a_03_nz_army : respawn_medium {};
+
+class vn_b_usmc_static_m2_scoped_low : respawn_medium {};
+class vn_b_usmc_static_m2_scoped_high : respawn_medium {};
+
+class vn_b_armor_m48_01_01 : wreck_medium {};
+class vn_b_armor_m67_01_01 : wreck_medium {};
+
+class vn_b_armor_m125_01 : respawn_medium {};
+class vn_b_armor_m132_01 : respawn_medium {};
+class vn_b_armor_m577_02 : respawn_medium {};
+class vn_b_armor_m577_01 : respawn_medium {};
 
 //// ARVN VEHICLES 
 //UH1D - Slick - Independent
