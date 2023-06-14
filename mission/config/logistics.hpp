@@ -232,6 +232,56 @@ class vn_logistics
 	//UH1F - Slick
 	class vn_b_air_uh1f_01_03 : vn_defaults_small {};
 
+	//Chinook
+	class vn_b_air_ch47_04_01 : vn_defaults_small {};
+	class vn_b_air_ch47_03_01 : vn_defaults_large {};
+	class vn_b_air_ch47_04_02 : vn_defaults_small {};
+	class vn_b_air_ch47_03_02 : vn_defaults_large {};
+	class vn_b_air_ch47_02_01 : vn_defaults_small {};
+
+
+	//Dac Birds
+	class vn_o_air_mi2_03_03 : vn_defaults_large {};
+	class vn_o_air_mi2_03_05 : vn_defaults_large {};
+	class vn_o_air_mi2_03_04 : vn_defaults_large {};
+	class vn_o_air_mi2_04_03 : vn_defaults_large {};
+	class vn_o_air_mi2_05_05 : vn_defaults_large {};
+	class vn_o_air_mi2_04_06 : vn_defaults_large {};
+	class vn_o_air_mi2_04_05 : vn_defaults_large {};
+	class vn_o_air_mi2_04_04 : vn_defaults_large {};
+	class vn_o_air_mi2_05_02 : vn_defaults_large {};
+	class vn_o_air_mi2_05_01 : vn_defaults_large {};
+	class vn_o_air_mi2_05_06 : vn_defaults_large {};
+
+	//PF 1.3 Vehicles
+	class vn_b_air_ach47_04_01 : vn_defaults_tiny {};
+
+	class vn_b_wheeled_m274_02_03 : vn_defaults_tiny {};
+	class vn_b_wheeled_m274_01_01 : vn_defaults_tiny {};
+	class vn_b_wheeled_m274_02_01 : vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_01_01 : vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_02_01 : vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_03_01 : vn_defaults_tiny {};
+
+	class vn_b_wheeled_lr2a_mg_02_nz_army : vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_01_nz_army : vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_03_nz_army : vn_defaults_tiny {};
+
+	class vn_b_wheeled_lr2a_01_nz_army : vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_02_nz_army : vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_03_nz_army : vn_defaults_tiny {};
+
+	class vn_b_usmc_static_m2_scoped_low : vn_defaults_tiny {};
+	class vn_b_usmc_static_m2_scoped_high : vn_defaults_tiny {};
+
+	class vn_b_armor_m48_01_01 : vn_defaults_small {};
+	class vn_b_armor_m67_01_01 : vn_defaults_small {};
+
+	class vn_b_armor_m125_01 : vn_defaults_small {};
+	class vn_b_armor_m132_01 : vn_defaults_small {};
+	class vn_b_armor_m577_02 : vn_defaults_small {};
+	class vn_b_armor_m577_01 : vn_defaults_small {};
+
 
 	//////////////////
 	////  UNSUNG  ////
@@ -416,29 +466,30 @@ class vn_logistics
 		class vn_i_static_m60_high: 	vn_b_army_static_m60_high {};
 		class vn_i_army_static_m45: 	vn_b_army_static_m45 {};
 
-		class vn_o_nva_static_rpd_high: 	vn_b_army_static_m60_high {};
-		class vn_o_nva_static_dshkm_high_01:	vn_b_army_static_m2_high {};
-		class vn_o_nva_static_dshkm_high_02: 	vn_b_army_static_m2_high {};
-		class vn_o_nva_static_dshkm_low_01:	vn_b_army_static_m2_low {};
-		class vn_o_nva_static_dshkm_low_02:	vn_b_army_static_m2_low {};
-		class vn_o_nva_static_mortar_type53: 	vn_b_army_static_mortar_m29 {};
-		class vn_o_nva_static_mortar_type63: 	vn_b_army_static_mortar_m2 {};
+		class vn_o_nva_static_rpd_high: 	vn_static_tiny {};
+		class vn_o_nva_static_dshkm_high_01:	vn_static_tiny {};
+		class vn_o_nva_static_dshkm_high_02: 	vn_static_tiny {};
+		class vn_o_nva_static_dshkm_low_01:	vn_static_tiny {};
+		class vn_o_nva_static_dshkm_low_02:	vn_static_tiny {};
+		class vn_o_nva_static_mortar_type53: 	vn_static_tiny {};
+		class vn_o_nva_static_mortar_type63: 	vn_static_tiny {};
 
-		class vn_o_nva_navy_static_rpd_high: 		vn_b_army_static_m60_high {};
-		class vn_o_nva_navy_static_dshkm_high_01:	vn_b_army_static_m2_high {};
-		class vn_o_nva_navy_static_dshkm_high_02: 	vn_b_army_static_m2_high {};
-		class vn_o_nva_navy_static_dshkm_low_01:	vn_b_army_static_m2_low {};
-		class vn_o_nva_navy_static_dshkm_low_02:	vn_b_army_static_m2_low {};
-		class vn_o_nva_navy_static_mortar_type53: 	vn_b_army_static_mortar_m29 {};
-		class vn_o_nva_navy_static_mortar_type63: 	vn_b_army_static_mortar_m2 {};
+		class vn_o_nva_navy_static_rpd_high: 		vn_static_tiny {};
+		class vn_o_nva_navy_static_dshkm_high_01:	vn_static_tiny {};
+		class vn_o_nva_navy_static_dshkm_high_02: 	vn_static_tiny {};
+		class vn_o_nva_navy_static_dshkm_low_01:	vn_static_tiny {};
+		class vn_o_nva_navy_static_dshkm_low_02:	vn_static_tiny {};
+		class vn_o_nva_navy_static_mortar_type53: 	vn_static_tiny {};
+		class vn_o_nva_navy_static_mortar_type63: 	vn_static_tiny {};
 
-		class vn_o_vc_static_rpd_high: 		vn_b_army_static_m60_high {};
-		class vn_o_vc_static_dp28_high: 	vn_b_army_static_m60_high {};
-		class vn_o_vc_static_dshkm_high_01:	vn_b_army_static_m2_high {};
-		class vn_o_vc_static_dshkm_high_02: 	vn_b_army_static_m2_high {};
-		class vn_o_vc_static_dshkm_low_01:	vn_b_army_static_m2_low {};
-		class vn_o_vc_static_dshkm_low_02:	vn_b_army_static_m2_low {};
-		class vn_o_vc_static_mortar_type53: 	vn_b_army_static_mortar_m29 {};
-		class vn_o_vc_static_mortar_type63: 	vn_b_army_static_mortar_m2 {};
+		class vn_o_vc_static_rpd_high: 		vn_static_tiny {};
+		class vn_o_vc_static_dp28_high: 	vn_static_tiny {};
+		class vn_o_vc_static_dshkm_high_01:	vn_static_tiny {};
+		class vn_o_vc_static_dshkm_high_02: 	vn_static_tiny {};
+		class vn_o_vc_static_dshkm_low_01:	vn_static_tiny {};
+		class vn_o_vc_static_dshkm_low_02:	vn_static_tiny {};
+		class vn_o_vc_static_mortar_type53: 	vn_static_tiny {};
+		class vn_o_vc_static_mortar_type63: 	vn_static_tiny {};
+
     };
 };
