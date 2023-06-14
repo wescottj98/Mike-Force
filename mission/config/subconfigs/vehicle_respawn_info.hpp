@@ -232,6 +232,10 @@ class vn_i_air_ch34_02_02 : respawn_medium {};
 
 // SOG PF 1.3
 class vn_b_air_ch47_04_01 : respawn_medium {};
+class vn_b_air_ch47_03_01 : respawn_medium {};
+class vn_b_air_ch47_04_02 : respawn_medium {};
+class vn_b_air_ch47_03_02 : respawn_medium {};
+class vn_b_air_ch47_02_01 : respawn_medium {};
 class vn_b_air_ach47_04_01 : wreck_medium {};
 
 class vn_b_wheeled_m274_02_03 : respawn_medium {};
@@ -383,6 +387,7 @@ class vn_b_air_uh1b_01_03 : respawn_short {};
 
 //Dac Cong
 class vn_o_air_mig19_cap : respawn_short {};
+class vn_o_air_mig21_cap : respawn_short {};
 class vn_o_air_mi2_01_03 : respawn_short {};
 class vn_o_armor_type63_01 : respawn_short {};
 class vn_o_wheeled_btr40_mg_03 : respawn_short {};
@@ -427,14 +432,6 @@ class vn_o_wheeled_z157_repair_nva65 : respawn_short {};
 class vn_o_armor_m41_01 : respawn_short {};
 class vn_o_armor_pt76a_01 : respawn_short {};
 class vn_o_armor_pt76b_01 : respawn_short {};
-class vn_o_air_mi2_04_03 : respawn_short {};
-class vn_o_air_mi2_05_05 : respawn_short {};
-class vn_o_air_mi2_04_06 : respawn_short {};
-class vn_o_air_mi2_04_05 : respawn_short {};
-class vn_o_air_mi2_04_04 : respawn_short {};
-class vn_o_air_mi2_05_02 : respawn_short {};
-class vn_o_air_mi2_05_01 : respawn_short {};
-class vn_o_air_mi2_05_06 : respawn_short {};
 class vn_o_boat_03_02 : respawn_short {};
 class vn_o_boat_04_02 : respawn_short {};
 class vn_o_nva_navy_static_d44 : respawn_short {};
@@ -458,3 +455,11 @@ class vn_o_nva_navy_static_at3 : respawn_short {};
 class vn_o_air_mi2_03_03 : respawn_short {};
 class vn_o_air_mi2_03_05 : respawn_short {};
 class vn_o_air_mi2_03_04 : respawn_short {};
+class vn_o_air_mi2_04_03 : respawn_short {};
+class vn_o_air_mi2_05_05 : respawn_short {};
+class vn_o_air_mi2_04_06 : respawn_short {};
+class vn_o_air_mi2_04_05 : respawn_short {};
+class vn_o_air_mi2_04_04 : respawn_short {};
+class vn_o_air_mi2_05_02 : respawn_short {};
+class vn_o_air_mi2_05_01 : respawn_short {};
+class vn_o_air_mi2_05_06 : respawn_short {};
