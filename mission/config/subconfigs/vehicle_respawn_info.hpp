@@ -236,6 +236,7 @@ class vn_b_air_ch47_03_01 : respawn_medium {};
 class vn_b_air_ch47_04_02 : respawn_medium {};
 class vn_b_air_ch47_03_02 : respawn_medium {};
 class vn_b_air_ch47_02_01 : respawn_medium {};
+class vn_i_air_ch47_02_01 : respawn_medium {};
 class vn_b_air_ach47_04_01 : wreck_medium {};
 
 class vn_b_wheeled_m274_02_03 : respawn_medium {};
@@ -256,10 +257,13 @@ class vn_b_wheeled_lr2a_03_nz_army : respawn_medium {};
 class vn_b_usmc_static_m2_scoped_low : respawn_medium {};
 class vn_b_usmc_static_m2_scoped_high : respawn_medium {};
 
-class vn_b_armor_m48_01_01 : wreck_medium {};
-class vn_b_armor_m67_01_01 : wreck_medium {};
+class vn_b_armor_m48_01_01 : wreck_long {};
+class vn_b_armor_m67_01_01 : wreck_long {};
+class vn_i_armor_m48_01_01 : wreck_long {};
+class vn_i_armor_m67_01_01 : wreck_long {};
 
 class vn_b_armor_m125_01 : respawn_medium {};
+class vn_i_armor_m125_01 : respawn_medium {};
 class vn_b_armor_m132_01 : respawn_medium {};
 class vn_b_armor_m577_02 : respawn_medium {};
 class vn_b_armor_m577_01 : respawn_medium {};
@@ -383,6 +387,7 @@ class uns_willys_2_m1919 : respawn_short {};
 //Stuff forgotten
 class vn_b_air_uh1c_07_07 : respawn_short {};
 class vn_b_air_uh1b_01_03 : respawn_short {};
+class B_Boat_Transport_01_F: respawn_short {};
 
 
 //Dac Cong
