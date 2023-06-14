@@ -232,14 +232,7 @@ class vn_logistics
 	//UH1F - Slick
 	class vn_b_air_uh1f_01_03 : vn_defaults_small {};
 
-	//Chinook
-	class vn_b_air_ch47_04_01 : vn_defaults_small {};
-	class vn_b_air_ch47_03_01 : vn_defaults_large {};
-	class vn_b_air_ch47_04_02 : vn_defaults_small {};
-	class vn_b_air_ch47_03_02 : vn_defaults_large {};
-	class vn_b_air_ch47_02_01 : vn_defaults_small {};
-
-
+	
 	//Dac Birds
 	class vn_o_air_mi2_03_03 : vn_defaults_large {};
 	class vn_o_air_mi2_03_05 : vn_defaults_large {};
@@ -276,12 +269,21 @@ class vn_logistics
 
 	class vn_b_armor_m48_01_01 : vn_defaults_small {};
 	class vn_b_armor_m67_01_01 : vn_defaults_small {};
+	class vn_i_armor_m48_01_01 : vn_defaults_small {};
+	class vn_i_armor_m67_01_01 : vn_defaults_small {};
 
 	class vn_b_armor_m125_01 : vn_defaults_small {};
+	class vn_i_armor_m125_01 : vn_defaults_small {};
 	class vn_b_armor_m132_01 : vn_defaults_small {};
 	class vn_b_armor_m577_02 : vn_defaults_small {};
 	class vn_b_armor_m577_01 : vn_defaults_small {};
 
+	class vn_b_air_ch47_04_01 : vn_defaults_small {};
+	class vn_b_air_ch47_03_01 : vn_defaults_large {};
+	class vn_b_air_ch47_04_02 : vn_defaults_small {};
+	class vn_b_air_ch47_03_02 : vn_defaults_large {};
+	class vn_b_air_ch47_02_01 : vn_defaults_small {};
+	class vn_i_air_ch47_02_01 : vn_defaults_small {};
 
 	//////////////////
 	////  UNSUNG  ////
