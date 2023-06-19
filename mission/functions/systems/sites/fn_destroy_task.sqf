@@ -113,6 +113,10 @@ if (typeOf _task == "Land_vn_o_platform_04") then
 
 		_respawnID call BIS_fnc_removeRespawnPosition;
 		deleteMarker _marker;
+
+		// pop removed spawn from global list of DC spawns
+		vn_dc_adhoc_respawns = vn_dc_adhoc_respawns select { !(_x isEqualTo _respawnInfo) } ;
+		publicVariable "vn_dc_adhoc_respawns";
 	};
 };
 
