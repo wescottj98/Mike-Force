@@ -477,3 +477,4 @@ class vn_o_air_mi2_05_06 : respawn_short {};
 //SAMS
 class vn_o_static_rsna75 : respawn_extra_very_long {};
 class vn_o_wheeled_z157_04 : respawn_extra_very_long {};
+class vn_sa2 : respawn_extra_very_long {};
