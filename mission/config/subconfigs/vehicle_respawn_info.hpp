@@ -447,7 +447,6 @@ class vn_o_boat_03_02 : respawn_short {};
 class vn_o_boat_04_02 : respawn_short {};
 class vn_o_nva_navy_static_d44 : respawn_short {};
 class vn_o_nva_static_zpu4 : respawn_short {};
-class vn_o_wheeled_z157_04 : respawn_extra_very_long {};
 class vn_o_wheeled_z157_mg_02_vcmf : respawn_short {};
 class vn_o_armor_pt76a_01_pl : respawn_short {};
 class vn_o_wheeled_z157_03_vcmf : respawn_short {};
@@ -474,3 +473,7 @@ class vn_o_air_mi2_04_04 : respawn_short {};
 class vn_o_air_mi2_05_02 : respawn_short {};
 class vn_o_air_mi2_05_01 : respawn_short {};
 class vn_o_air_mi2_05_06 : respawn_short {};
+
+//SAMS
+class vn_o_static_rsna75 : respawn_extra_very_long {};
+class vn_o_wheeled_z157_04 : respawn_extra_very_long {};
