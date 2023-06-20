@@ -19,7 +19,7 @@
 		call vn_mf_fnc_action_destroy_respawn;
 */
 
-params ["_composition_arr", ["_grassBadChance", 0.333]];
+params ["_composition_arr", ["_grassBadChance", 0.4]];
 
 private _grass_arr = _composition_arr select { ((_x select 0) isEqualTo "Land_vn_elephant_grass_01" ) };
 private _non_grass_arr = _composition_arr select { !((_x select 0) isEqualTo "Land_vn_elephant_grass_01" ) };
