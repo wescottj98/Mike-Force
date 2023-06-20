@@ -749,7 +749,8 @@ vn_mf_camp_compositions = [
 ]
 ];
 
-private _campObjects = [_position, 0, selectRandom vn_mf_camp_compositions] call BIS_fnc_objectsMapper;
+private _site_objs = [selectRandom vn_mf_camp_compositions, 0.7] call vn_mf_fnc_sites_objmapper_dynamic_grass;
+
 {
 
 	if (_x isKindOf "StaticWeapon") then {
@@ -759,6 +760,6 @@ private _campObjects = [_position, 0, selectRandom vn_mf_camp_compositions] call
 		_x allowDamage true;
 	};
 	
-} forEach _campObjects;
+} forEach _site_objs;
 
-_campObjects
+_site_objs
