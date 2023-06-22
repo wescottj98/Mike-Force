@@ -33,7 +33,7 @@ vn_mf_factory_compositions = [];
 if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	vn_mf_factory_compositions_default = [
 		[
-			["vn_o_armor_type63_01",[-3.75635,-0.803223,0.0749989],180.535,1,0,[0,0],"","",false,false], 
+			["vn_o_armor_t54b_01",[-3.75635,-0.803223,0.0749989],180.535,1,0,[0,0],"","",false,false], 
 			["vn_sign_town_d_03",[6.37354,3.01221,1.38496],268.676,1,0,[0,0],"","",false,false], 
 			["vn_sign_town_d_01",[6.36963,5.98193,1.05771],269.694,1,0,[0,0],"","",false,false], 
 			["vn_sign_town_d_06",[9.52197,2.25537,1.46346],179.777,1,0,[0,-0],"","",false,false], 
@@ -275,7 +275,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 		[
 			["vn_o_nva_static_pk_high",[-3.53125,9.40869,-0.0837235],180.744,1,0,[0.142331,0.064445],"","",false,false], 
 			["vn_o_armor_type63_01",[11.3823,-2.29688,-0.0992956],268.811,1,0,[0.0436287,0.0194958],"","",false,false], 
-			["vn_o_armor_type63_01",[11.3057,3.72168,-0.101357],267.773,1,0,[0.0426658,0.0176735],"","",false,false], 
+			["vn_o_armor_t54b_01",[11.3057,3.72168,-0.101357],267.773,1,0,[0.0426658,0.0176735],"","",false,false], 
 			["Land_vn_pillboxwall_01_6m_round_f",[1.53662,13.7295,0.228409],180.421,1,0,[0,0],"","",false,false], 
 			["Land_vn_pillboxwall_01_6m_round_f",[-1.85889,13.75,0.228409],180.421,1,0,[0,0],"","",false,false], 
 			["vn_o_armor_type63_01",[10.5874,9.67285,-0.0994587],268.229,1,0,[0.0430468,0.0192015],"","",false,false], 
@@ -450,7 +450,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_wf_vehicle_service_point_east",[-19.4136,-24.0356,0],0,1,0,[0,0],"","",false,false], 
 	["vn_o_wheeled_btr40_mg_01",[-28.5532,-14.627,0.301467],270.854,1,0,[0,0],"","",false,false], 
 	["Land_vn_o_snipertree_04",[-25.1777,15.7559,0],254.8,1,0,[0,0],"","",false,false], 
-	["vn_o_armor_type63_01_nva65",[-24.3472,21.5527,0.731284],291.329,1,0,[0,0],"","",false,false], 
+	["vn_o_armor_t54b_01",[-24.3472,21.5527,0.731284],291.329,1,0,[0,0],"","",false,false], 
 	["vn_o_wheeled_z157_ammo_pl",[0.932617,-32.9727,0.179999],174.407,1,0,[0,-0],"","",false,false], 
 	["Land_vn_t_betula_pendula_2s",[19.4653,-29.5396,0],0,1,0,[0,0],"","",false,false], 
 	["Land_vn_young_palm_tree_01",[-20.1016,-29.0898,0],0,1,0,[0,0],"","",false,false], 
@@ -527,7 +527,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["vn_o_wheeled_z157_ammo_pl",[-20.9399,13.2832,0.567133],284.638,1,0,[0,0],"vehicle_215","",false,false], 
 	["vn_o_wheeled_z157_fuel_nvam",[25.4956,1.39697,0.810334],40.9931,1,0,[0,0],"vehicle_217","",false,false], 
 	["vn_o_nva_static_zpu4",[-9.19238,-26.0728,-0.0749998],201.234,1,0,[0,0],"vehicle_10","",false,false], 
-	["vn_o_armor_type63_01_nva65",[-11.6479,25.7847,0.530049],335.003,1,0,[0,0],"vehicle_197","",false,false], 
+	["vn_o_armor_t54b_01",[-11.6479,25.7847,0.530049],335.003,1,0,[0,0],"vehicle_197","",false,false], 
 	["vn_o_nva_static_zpu4",[2.93311,28.9614,-0.0749998],21.0814,1,0,[0,0],"vehicle_11","",false,false], 
 	["vn_o_nva_spiderhole_01",[-7.75342,28.4365,0.497775],0,1,0,[0,0],"vehicle_80","",false,false], 
 	["Land_vn_t_banana_wild_f",[-8.00586,30.9063,0],89.581,1,0,[0,0],"","",false,false], 
@@ -596,7 +596,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_o_snipertree_04",[-10.3198,-21.2476,0.231856],29.2015,1,0,[0,0],"","",false,false], 
 	["vn_o_nva_spiderhole_01",[16.6035,-19.957,0.392437],0,1,0,[0,0],"","",false,false], 
 	["Land_vn_t_cocos_small_f",[-0.337891,-26.1855,0],294.83,1,0,[0,0],"","",false,false], 
-	["vn_o_armor_type63_01_nva65",[15.0874,-26.5435,1.00046],145.426,1,0,[0,-0],"","",false,false], 
+	["vn_o_armor_t54b_01",[15.0874,-26.5435,1.00046],145.426,1,0,[0,-0],"","",false,false], 
 	["vn_o_nva_static_zpu4",[-2.93994,-30.8755,-0.0749998],152.757,1,0,[0,-0],"","",false,false], 
 	["Land_vn_t_banana_wild_f",[9.92529,-30.3931,0],89.581,1,0,[0,0],"","",false,false], 
 	["Land_vn_t_ficusb1s_f",[20.4448,-24.2627,0],11.6895,1,0,[0,0],"","",false,false]
@@ -656,7 +656,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_t_ficusb1s_f",[15.8804,13.0815,0],11.6895,1,0,[0,0],"","",false,false], 
 	["vn_o_nva_spiderhole_01",[-4.67578,-22.0303,0.392437],0,1,0,[0,0],"","",false,false], 
 	["vn_o_wheeled_z157_fuel_nvam",[22.7319,2.08691,0.836566],40.9931,1,0,[0,0],"","",false,false], 
-	["vn_o_armor_type63_01_nva65",[-8.68896,-23.6494,0.821625],145.426,1,0,[0,-0],"","",false,false], 
+	["vn_o_armor_t54b_01",[-8.68896,-23.6494,0.821625],145.426,1,0,[0,-0],"","",false,false], 
 	["Land_vn_o_snipertree_04",[-16.3848,-17.4043,0],29.2015,1,0,[0,0],"","",false,false], 
 	["Land_vn_t_banana_wild_f",[-2.86768,-26.5371,0],89.581,1,0,[0,0],"","",false,false], 
 	["Land_vn_t_inocarpus_f",[21.2905,-11.8804,0],115.884,1,0,[0,-0],"","",false,false], 
