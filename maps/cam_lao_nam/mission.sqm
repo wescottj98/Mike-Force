@@ -8,7 +8,7 @@ class EditorData
 	toggles=585;
 	class ItemIDProvider
 	{
-		nextID=15461;
+		nextID=15465;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13823;
+		nextID=13924;
 	};
 	class Camera
 	{
-		pos[]={16345.487,120.67921,8175.5957};
-		dir[]={-0.069357127,-0.7021209,-0.70871055};
-		up[]={-0.068387516,0.71204185,-0.69879633};
-		aside[]={-0.99527407,-3.8344297e-009,0.09740258};
+		pos[]={1748.5057,53.443737,19157.736};
+		dir[]={-0.64254606,-0.76580518,-0.026836373};
+		up[]={-0.76514649,0.64306027,-0.031956736};
+		aside[]={-0.041729942,1.6589183e-008,0.99914956};
 	};
 };
 binarizationWanted=0;
@@ -601,8 +601,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -652,8 +652,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -709,7 +709,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1662;
+		items=1666;
 		class Item0
 		{
 			dataType="Marker";
@@ -49829,7 +49829,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1701.2909,13.787583,19164.135};
+				position[]={1701.2908,13.787954,19164.135};
 				angles[]={0.012007865,0,0.016004669};
 			};
 			side="Empty";
@@ -49841,7 +49841,24 @@ class Mission
 			};
 			id=13806;
 			type="vn_o_armor_m41_02_vcmf";
-			atlOffset=-0.37737274;
+			atlOffset=-0.3769989;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_flag";
+					expression="_this setVariable ['vn_flag', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="\vn\objects_f_vietnam\flags\vn_flag_01_vc_co.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1155
 		{
@@ -82356,6 +82373,7 @@ class Mission
 				angles[]={0.0010995574,3.1344018,6.2334433};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""MACV"",""3rdMEU"",""QuarterHorse"",""DacCong""]]call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -82363,7 +82381,7 @@ class Mission
 			};
 			id=15345;
 			type="vn_b_air_ch47_03_01";
-			atlOffset=0.27529907;
+			atlOffset=0.0091247559;
 		};
 		class Item1603
 		{
@@ -85635,7 +85653,6 @@ class Mission
 				angles[]={0,1.9039621,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""Muskets"",""TigerForce"", ""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -85643,6 +85660,7 @@ class Mission
 			};
 			id=15457;
 			type="vn_b_air_ch47_04_01";
+			atlOffset=0.28845978;
 		};
 		class Item1659
 		{
@@ -85715,16 +85733,157 @@ class Mission
 				nAttributes=1;
 			};
 		};
+		class Item1662
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.6859,14.971909,19156.877};
+				angles[]={0,0,0.15865043};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""DacCong"",""MACV""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=15461;
+			type="vn_o_armor_ot54_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_flag";
+					expression="_this setVariable ['vn_flag', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="\vn\objects_f_vietnam\flags\vn_flag_01_pavn_co.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1663
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1714.4883,15.80161,19154.09};
+				angles[]={6.2731848,0,0.10955431};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""DacCong"",""MACV""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=15462;
+			type="vn_o_armor_t54b_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_flag";
+					expression="_this setVariable ['vn_flag', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="\vn\objects_f_vietnam\flags\vn_flag_01_pavn_co.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1664
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.1016,14.733,19167.451};
+				angles[]={6.2431998,0,0.19161969};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""DacCong"",""MACV""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=15463;
+			type="vn_o_armor_ot54_01";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_flag";
+					expression="_this setVariable ['vn_flag', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="\vn\objects_f_vietnam\flags\vn_flag_01_pavn_co.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1665
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1713.9644,16.065311,19164.471};
+				angles[]={6.2172818,0,0.21846287};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""DacCong"",""MACV""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				disableSimulation=1;
+			};
+			id=15464;
+			type="vn_o_armor_t54b_01";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_flag";
+					expression="_this setVariable ['vn_flag', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="\vn\objects_f_vietnam\flags\vn_flag_01_pavn_co.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=684;
+			nextID=688;
 		};
 		class Links
 		{
-			items=684;
+			items=688;
 			class Item0
 			{
 				linkID=0;
@@ -92559,6 +92718,46 @@ class Mission
 			{
 				linkID=683;
 				item0=15457;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item684
+			{
+				linkID=684;
+				item0=15461;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item685
+			{
+				linkID=685;
+				item0=15462;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item686
+			{
+				linkID=686;
+				item0=15463;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item687
+			{
+				linkID=687;
+				item0=15464;
 				item1=705;
 				class CustomData
 				{
