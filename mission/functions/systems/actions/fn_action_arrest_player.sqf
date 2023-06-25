@@ -1,5 +1,5 @@
 /*
-	File: fn_arrest_player.sqf
+	File: fn_action_arrest_player.sqf
 	Author: Duke Lawrence
 	Public: No
 	
@@ -11,7 +11,7 @@
 	Returns:
 	
 	Example(s):
-		call vn_mf_fnc_arrest_player;
+		call vn_mf_fnc_action_arrest_player;
 */
 
 [
