@@ -5511,7 +5511,7 @@ class Land_vn_i_shed_ind_old_f
 				};
 			};
 
-			spawnPositionModelSpace[] = {6.00293,3.26758,-1.91181};
+			spawnPositionModelSpace[] = {0,12,-2};
 			spawnDirectionModelSpace = 270;
 		};
 	};
@@ -6032,15 +6032,15 @@ class vn_sign_town_d_04_01
 	{
 		class initial_state
 		{
-			object_class = "vn_sign_town_d_04_01";
+			object_class = "vn_sign_town_d_11_01";
 		};
 		class middle_state
 		{
-			object_class = "vn_sign_town_d_04_01";
+			object_class = "vn_sign_town_d_11_01";
 		};
 		class final_state
 		{
-			object_class = "vn_sign_town_d_04_01";
+			object_class = "vn_sign_town_d_11_01";
 		};
 	};
 	class features
@@ -6129,7 +6129,7 @@ class vn_sign_town_d_04_01
 					icon = VEHICLE_ICON_ARMOUR;
 					name = "STR_vn_mf_vic_armour";
 
-					class vn_o_nva_armor_type63_01
+					class vn_o_armor_type63_01
 					{
 						cost[] = {{"BuildingSupplies", 10}};
 						cooldown = 5;
@@ -6137,7 +6137,7 @@ class vn_sign_town_d_04_01
 						//side = "WEST";
 					};
 
-					class vn_o_nva_armor_pt76b_01
+					class vn_o_armor_pt76b_01
 					{
 						cost[] = {{"BuildingSupplies", 10}};
 						cooldown = 5;
@@ -6145,7 +6145,7 @@ class vn_sign_town_d_04_01
 						//side = "WEST";
 					};
 
-					class vn_o_nva_armor_t54b_01
+					class vn_o_armor_t54b_01
 					{
 						cost[] = {{"BuildingSupplies", 10}};
 						cooldown = 5;
@@ -6153,7 +6153,7 @@ class vn_sign_town_d_04_01
 						//side = "WEST";
 					};
 
-					class vn_o_nva_armor_ot54_01
+					class vn_o_armor_ot54_01
 					{
 						cost[] = {{"BuildingSupplies", 10}};
 						cooldown = 5;
@@ -6161,7 +6161,7 @@ class vn_sign_town_d_04_01
 						//side = "WEST";
 					};
 
-					class vn_o_nva_armor_btr50pk_02
+					class vn_o_armor_btr50pk_02
 					{
 						cost[] = {{"BuildingSupplies", 10}};
 						cooldown = 5;
@@ -6170,7 +6170,7 @@ class vn_sign_town_d_04_01
 					};
 				};
 			};
-			spawnPositionModelSpace[] = {6.00293,3.26758,-1.91181};
+			spawnPositionModelSpace[] = {0,10,-2};
 			spawnDirectionModelSpace = 270;
 		};
 	};
