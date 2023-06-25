@@ -195,6 +195,7 @@ class CfgFunctions
 			file = "functions\systems\dac_cong";
 
 			class capture_player {};
+			class arrest_player {};
 		}
 
 		//Gameplay director, responsible for main game progression and flow.
