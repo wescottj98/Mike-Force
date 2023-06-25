@@ -1873,7 +1873,7 @@ class Land_vn_o_trench_firing_01
 {
 	name = "";
 	type = "trenches";
-	categories[] = {"trenches", "fortifications", "fences"};
+	categories[] = {"trenches", "fortifications", "fences", "nv"};
 	rank = 0;
 	SUPPLY_CAPACITY(250, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6010,6 +6010,168 @@ class vn_b_prop_fmradio_01
 	class features
 	{
 		class radio {};
+	};
+};
+
+class vn_sign_town_d_04_01
+{
+	name = "";
+	type = "buildings";
+	categories[] = {"buildings", "shelters", "nv"};
+	rank = 0;
+	SUPPLY_CAPACITY(2000, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "vn_sign_town_d_04_01";
+		};
+		class middle_state
+		{
+			object_class = "vn_sign_town_d_04_01";
+		};
+		class final_state
+		{
+			object_class = "vn_sign_town_d_04_01";
+		};
+	};
+	class features
+	{
+		class vehicle_spawning
+		{
+			class vehicle_class
+			{
+				class trucks
+				{
+					icon = VEHICLE_ICON_TRUCK;
+					name = "STR_vn_mf_vic_truck";
+
+					class vn_o_wheeled_z157_mg_02_vcmf
+					{
+						/*Array currently unused, only the first number is used*/
+						cost[] = {{"BuildingSupplies", 5}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_TRUCK;
+						//side = "WEST";
+					};
+				};
+				class statics
+				{
+					icon = VEHICLE_ICON_STATIC;
+					name = "STR_vn_mf_vic_static";
+
+					class vn_o_nva_static_zpu4
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_navy_static_d44
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_pl_static_mortar_type53
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_static_type56rr
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_static_sgm_low_01
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_navy_static_dshkm_low_02
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_navy_static_at3
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+				};
+				class armour
+				{
+					icon = VEHICLE_ICON_ARMOUR;
+					name = "STR_vn_mf_vic_armour";
+
+					class vn_o_nva_armor_type63_01
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_armor_pt76b_01
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_armor_t54b_01
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_armor_ot54_01
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_nva_armor_btr50pk_02
+					{
+						cost[] = {{"BuildingSupplies", 10}};
+						cooldown = 5;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+				};
+			};
+			spawnPositionModelSpace[] = {6.00293,3.26758,-1.91181};
+			spawnDirectionModelSpace = 270;
+		};
 	};
 };
 
