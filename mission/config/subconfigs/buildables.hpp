@@ -1873,7 +1873,7 @@ class Land_vn_o_trench_firing_01
 {
 	name = "";
 	type = "trenches";
-	categories[] = {"trenches", "fortifications", "fences"};
+	categories[] = {"trenches", "fortifications", "fences", "nv"};
 	rank = 0;
 	SUPPLY_CAPACITY(250, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
