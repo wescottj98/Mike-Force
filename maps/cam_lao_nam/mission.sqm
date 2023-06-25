@@ -8,7 +8,7 @@ class EditorData
 	toggles=577;
 	class ItemIDProvider
 	{
-		nextID=15531;
+		nextID=15534;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14332;
+		nextID=14536;
 	};
 	class Camera
 	{
-		pos[]={1766.1852,66.460281,19184.283};
-		dir[]={-0.71396548,-0.65505815,-0.24775073};
-		up[]={-0.61892456,0.75548637,-0.21476775};
-		aside[]={-0.32786143,8.0605969e-007,0.94483161};
+		pos[]={17371.486,94.845413,5572.1431};
+		dir[]={-0.0086526265,-0.68419313,0.72928226};
+		up[]={-0.008117754,0.72928041,0.68415964};
+		aside[]={0.99995059,3.9249767e-007,0.011863733};
 	};
 };
 binarizationWanted=0;
@@ -708,7 +708,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1569;
+		items=1570;
 		class Item0
 		{
 			dataType="Marker";
@@ -12351,12 +12351,13 @@ class Mission
 		class Item273
 		{
 			dataType="Marker";
-			position[]={17437.766,28.963135,5590.5815};
+			position[]={17437.766,28.962999,5590.582};
 			name="mf_respawn_acav";
 			text="@STR_vn_mf_respawn_acav";
 			type="Empty";
+			angle=180;
 			id=3660;
-			atlOffset=-0.0033874512;
+			atlOffset=-0.0035552979;
 		};
 		class Item274
 		{
@@ -79554,8 +79555,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17414.418,27.884567,5540.48};
-				angles[]={6.261188,3.1360996,6.2591896};
+				position[]={17414.563,27.914131,5541.8545};
+				angles[]={6.2591896,3.1360996,6.261188};
 			};
 			side="Empty";
 			flags=4;
@@ -79564,15 +79565,14 @@ class Mission
 			};
 			id=15328;
 			type="Land_vn_helipadsquare_f";
-			atlOffset=2.2888184e-005;
 		};
 		class Item1506
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17414.273,30.701048,5540.1816};
-				angles[]={6.2611938,0.0091804322,6.2591867};
+				position[]={17414.418,30.72855,5541.5562};
+				angles[]={6.2591896,0.0091804322,6.261188};
 			};
 			side="Empty";
 			flags=4;
@@ -79583,7 +79583,6 @@ class Mission
 			};
 			id=15329;
 			type="vn_b_air_uh1d_02_02";
-			atlOffset=0.0013618469;
 		};
 		class Item1507
 		{
@@ -84628,6 +84627,22 @@ class Mission
 			};
 			id=15519;
 			atlOffset=0.87997818;
+		};
+		class Item1569
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17382.381,30.040167,5616.2041};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15533;
+			type="vn_sign_town_d_11_01";
+			atlOffset=5.7220459e-006;
 		};
 	};
 	class Connections
