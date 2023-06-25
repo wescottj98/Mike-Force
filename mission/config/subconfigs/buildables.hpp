@@ -6013,13 +6013,13 @@ class vn_b_prop_fmradio_01
 	};
 };
 
-class Land_vn_sign_town_d_04_01
+class vn_sign_town_d_04_01
 {
 	name = "";
 	type = "buildings";
-	categories[] = {"nonAcav", "buildings", "functional", "nv"};
+	categories[] = {"buildings", "shelters", "nv"};
 	rank = 0;
-	SUPPLY_CAPACITY(200, DAYS_TO_SECONDS(1));
+	SUPPLY_CAPACITY(2000, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
 	conditions[] = {
 		CONDITION_HAS_RANK,
