@@ -161,6 +161,7 @@ class CfgFunctions
 			class action_gather_intel {};
 			class action_radiotap {};
 			class action_capture_player {};
+			class arrest_player {};
 			class action_drink_water {};
 			class action_eat_food {};
 		};

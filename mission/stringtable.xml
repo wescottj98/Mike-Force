@@ -143,6 +143,12 @@
       <Key ID="STR_vn_mf_capture_player">
         <Original>Capture</Original>
       </Key>
+      <Key ID="STR_vn_mf_arrest_player">
+        <Original>Arrest</Original>
+      </Key>
+      <Key ID="STR_vn_mf_release_from_arrest_player">
+        <Original>Release</Original>
+      </Key>
       <Key ID="STR_vn_mf_notification_error">
         <Original>Error</Original>
       </Key>
