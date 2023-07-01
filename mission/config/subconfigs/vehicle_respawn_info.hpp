@@ -42,11 +42,14 @@ class wreck_long
 
 //Jeeps + Small Cars
 class vn_b_wheeled_m151_01 : respawn_short {};
+class vn_b_wheeled_m151_01_mp : respawn_medium {};
 class vn_b_wheeled_m151_02 : respawn_short {};
 class vn_b_wheeled_m151_mg_01 : respawn_medium {};
 class vn_b_wheeled_m151_mg_02 : respawn_medium {};
+class vn_b_wheeled_m151_mg_02_mp : respawn_medium {};
 class vn_b_wheeled_m151_mg_03 : respawn_medium {};
 class vn_b_wheeled_m151_mg_04 : respawn_medium {};
+class vn_b_wheeled_m151_mg_04_mp : respawn_medium {};
 class vn_b_wheeled_m151_mg_05 : respawn_medium {};
 class vn_b_wheeled_m151_mg_06 : respawn_medium {};
 class vn_c_car_01_01 : respawn_short {};
@@ -56,6 +59,7 @@ class vn_c_car_04_01 : respawn_short {};
 
 //Transport trucks
 class vn_b_wheeled_m54_01 : respawn_medium {};
+class vn_b_wheeled_m54_01_sog : respawn_medium {};
 class vn_b_wheeled_m54_01_airport : respawn_medium {};
 class vn_b_wheeled_m54_02 : respawn_medium {};
 //M109 Command Truck
@@ -237,6 +241,8 @@ class vn_i_air_ch34_02_01 : respawn_medium {};
 class vn_i_air_ch34_02_02 : respawn_medium {};
 
 // SOG PF 1.3
+class vn_b_air_ch47_01_01 : respawn_medium {};
+class vn_b_air_ch47_01_02 : respawn_medium {};
 class vn_b_air_ch47_04_01 : respawn_medium {};
 class vn_b_air_ch47_03_01 : respawn_medium {};
 class vn_b_air_ch47_04_02 : respawn_medium {};
