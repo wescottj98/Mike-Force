@@ -8,7 +8,7 @@ class EditorData
 	toggles=577;
 	class ItemIDProvider
 	{
-		nextID=15556;
+		nextID=15560;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17333.5,71.877701,5547.791};
-		dir[]={-0.54240179,-0.61272585,0.57480073};
-		up[]={-0.42052639,0.79028702,0.445645};
-		aside[]={0.72731519,1.4627585e-007,0.68632025};
+		pos[]={16292.959,276.29672,6895.6533};
+		dir[]={-0.64936566,-0.75975579,-0.034730069};
+		up[]={-0.75867498,0.65019989,-0.040577114};
+		aside[]={-0.053411439,-4.3500768e-007,0.99863082};
 	};
 };
 binarizationWanted=0;
@@ -708,7 +708,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1573;
+		items=1574;
 		class Item0
 		{
 			dataType="Marker";
@@ -85155,6 +85155,23 @@ class Mission
 			id=15548;
 			type="vn_b_air_ch47_01_01";
 			atlOffset=0.13409996;
+		};
+		class Item1573
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18405.621,3.1297321,12442.037};
+				angles[]={-0,6.1041183,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=15558;
+			type="vn_b_air_uh1d_04_09";
+			atlOffset=2.3841858e-007;
 		};
 	};
 	class Connections
