@@ -8,7 +8,7 @@ class EditorData
 	toggles=577;
 	class ItemIDProvider
 	{
-		nextID=15560;
+		nextID=15564;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14944;
+		nextID=15046;
 	};
 	class Camera
 	{
-		pos[]={16292.959,276.29672,6895.6533};
-		dir[]={-0.64936566,-0.75975579,-0.034730069};
-		up[]={-0.75867498,0.65019989,-0.040577114};
-		aside[]={-0.053411439,-4.3500768e-007,0.99863082};
+		pos[]={16889.973,16.034525,16922.992};
+		dir[]={-0.81183881,-0.44244966,0.38111171};
+		up[]={-0.40055349,0.89676642,0.18803822};
+		aside[]={0.42496756,-1.1093507e-006,0.90525436};
 	};
 };
 binarizationWanted=0;
@@ -600,8 +600,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -651,8 +651,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -85162,16 +85162,15 @@ class Mission
 			class PositionInfo
 			{
 				position[]={18405.621,3.1297321,12442.037};
-				angles[]={-0,6.1041183,0};
+				angles[]={0,6.1041183,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=15558;
 			type="vn_b_air_uh1d_04_09";
-			atlOffset=2.3841858e-007;
+			atlOffset=4.4036255;
 		};
 	};
 	class Connections
