@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=14740;
+		nextID=14944;
 	};
 	class Camera
 	{
-		pos[]={15852.688,96.164162,6989.769};
-		dir[]={0.83281153,-0.55250001,-0.037549384};
-		up[]={0.55211371,0.83325756,-0.024886677};
-		aside[]={-0.045041662,-3.267287e-007,-0.99904716};
+		pos[]={17333.5,71.877701,5547.791};
+		dir[]={-0.54240179,-0.61272585,0.57480073};
+		up[]={-0.42052639,0.79028702,0.445645};
+		aside[]={0.72731519,1.4627585e-007,0.68632025};
 	};
 };
 binarizationWanted=0;
@@ -36231,7 +36231,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15569.627,17.041809,6890.8945};
-				angles[]={-0,0,0.02199479};
+				angles[]={0,0,0.02199479};
 			};
 			areaSize[]={50,0,50};
 			flags=1;
@@ -64010,6 +64010,7 @@ class Mission
 																	};
 																	id=14459;
 																	type="vn_b_wheeled_m54_01_sog";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -64215,6 +64216,7 @@ class Mission
 																	};
 																	id=14460;
 																	type="vn_b_wheeled_m54_01_sog";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -78600,17 +78602,34 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17448.873,32.426727,5650.6709};
-				angles[]={6.259192,3.1081648,0};
+				position[]={17448.873,32.426716,5650.6704};
+				angles[]={6.2591867,3.1081698,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=15283;
 			type="vn_b_armor_m67_01_01";
-			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="vn_flag";
+					expression="_this setVariable ['vn_flag', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="\vn\objects_f_vietnam\flags\vn_flag_01_usa_co.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1468
 		{
@@ -85135,7 +85154,7 @@ class Mission
 			};
 			id=15548;
 			type="vn_b_air_ch47_01_01";
-			atlOffset=0.046999931;
+			atlOffset=0.13409996;
 		};
 	};
 	class Connections
