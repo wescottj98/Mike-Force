@@ -278,9 +278,9 @@ class Frogmen
     
     class defaultTraits
     {
-        camouflageCoef = 0.8;
-        audibleCoef = 0.6;
-        loadCoef = 1;
+        camouflageCoef = 1;
+        audibleCoef = 0.3;
+        loadCoef = 0.5;
         engineer = true;
         explosiveSpecialist = true;
         medic = false;
@@ -465,8 +465,8 @@ class TigerForce
     class defaultTraits
     {
         camouflageCoef = 1;
-        audibleCoef = 0.6;
-        loadCoef = 1;
+        audibleCoef = 0.3;
+        loadCoef = 0.5;
         engineer = false;
         explosiveSpecialist = true;
         medic = true;
@@ -502,9 +502,9 @@ class Montagnard
     
     class defaultTraits
     {
-        camouflageCoef = 0.8;
-        audibleCoef = 0.6;
-        loadCoef = 1;
+        camouflageCoef = 1;
+        audibleCoef = 0.3;
+        loadCoef = 0.5;
         engineer = true;
         explosiveSpecialist = true;
         medic = true;
@@ -540,9 +540,9 @@ class SASR
     
     class defaultTraits
     {
-        camouflageCoef = 0.8;
-        audibleCoef = 0.6;
-        loadCoef = 1;
+        camouflageCoef = 1;
+        audibleCoef = 0.3;
+        loadCoef = 0.5;
         engineer = true;
         explosiveSpecialist = true;
         medic = true;
