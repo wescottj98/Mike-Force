@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15046;
+		nextID=15148;
 	};
 	class Camera
 	{
-		pos[]={16889.973,16.034525,16922.992};
-		dir[]={-0.81183881,-0.44244966,0.38111171};
-		up[]={-0.40055349,0.89676642,0.18803822};
-		aside[]={0.42496756,-1.1093507e-006,0.90525436};
+		pos[]={15343.822,25,7688.6318};
+		dir[]={0.54840171,-0.69196934,-0.46955916};
+		up[]={0.52562547,0.72191811,-0.45005521};
+		aside[]={-0.65040654,-1.573062e-007,-0.75961906};
 	};
 };
 binarizationWanted=0;
@@ -600,8 +600,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -651,8 +651,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -75298,7 +75298,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[""vn_tt33"",""vn_izh54"",""vn_type56""],[1,1,1]],[[""vn_f1_grenade_mag"",""vn_chicom_grenade_mag"",""vn_rdg2_mag"",""vn_tt33_mag"",""vn_izh54_mag"",""vn_type56_mag""],[3,3,1,1,3,2]],[[""vn_m19_binocs_grey"",""vn_o_item_firstaidkit""],[1,3]],[[],[]]],false]";
+							value="[[[[""vn_m16""],[1]],[[""vn_m16_30_t_mag""],[10]],[[""vn_b_item_firstaidkit""],[10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -75333,7 +75333,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[""vn_tt33"",""vn_izh54"",""vn_type56""],[1,1,1]],[[""vn_f1_grenade_mag"",""vn_chicom_grenade_mag"",""vn_rdg2_mag"",""vn_tt33_mag"",""vn_izh54_mag"",""vn_type56_mag""],[3,3,1,1,3,2]],[[""vn_m19_binocs_grey"",""vn_o_item_firstaidkit""],[1,3]],[[],[]]],false]";
+							value="[[[[""vn_m16""],[1]],[[""vn_m16_30_t_mag""],[10]],[[""vn_b_item_firstaidkit""],[10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -75410,7 +75410,7 @@ class Mission
 			};
 			id=15007;
 			type="vn_o_car_04_mg_01";
-			atlOffset=4.7683716e-007;
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -75554,8 +75554,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15368.173,4.0564537,7680.1846};
-				angles[]={0.019999012,3.9162569,6.2192721};
+				position[]={15368.173,4.0566664,7680.1851};
+				angles[]={0.020001473,3.9162569,6.2192717};
 			};
 			side="Empty";
 			flags=4;
@@ -75566,7 +75566,6 @@ class Mission
 			};
 			id=15036;
 			type="vn_o_car_04_mg_01";
-			atlOffset=-0.00021266937;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -85177,11 +85176,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=688;
+			nextID=690;
 		};
 		class Links
 		{
-			items=688;
+			items=690;
 			class Item0
 			{
 				linkID=0;
@@ -92056,6 +92055,26 @@ class Mission
 			{
 				linkID=687;
 				item0=15548;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item688
+			{
+				linkID=688;
+				item0=15007;
+				item1=705;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item689
+			{
+				linkID=689;
+				item0=15036;
 				item1=705;
 				class CustomData
 				{
