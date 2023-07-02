@@ -6180,7 +6180,7 @@ class Land_vn_hut_river_03
 {
 	name = "";
 	type = "buildings";
-	categories[] = {"buildings", "shelters"};
+	categories[] = {"buildings", "shelters", "nv"};
 	rank = 0;
 	SUPPLY_CAPACITY(2000, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6189,7 +6189,7 @@ class Land_vn_hut_river_03
 		CONDITION_IS_ENGINEER,
 		CONDITION_IS_ON_FOOT,
 		CONDITION_NOT_IN_RESTRICTED_ZONE,
-		
+		CONDITION_IS_DAC_CONG
 	};
 	class build_states
 	{
