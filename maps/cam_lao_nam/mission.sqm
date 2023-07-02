@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15250;
+		nextID=15454;
 	};
 	class Camera
 	{
-		pos[]={16236.222,206.84985,8198.8643};
-		dir[]={0.60251826,-0.5192827,0.60618842};
-		up[]={0.36611712,0.85455692,0.36834887};
-		aside[]={0.70930171,2.5751069e-007,-0.70500064};
+		pos[]={17213.291,52.244076,5529.9805};
+		dir[]={0.10386274,-0.56130183,0.82107776};
+		up[]={0.070441127,0.82760793,0.55686682};
+		aside[]={0.99210441,2.431043e-007,-0.1254981};
 	};
 };
 binarizationWanted=0;
@@ -19339,7 +19339,7 @@ class Mission
 			};
 			id=6223;
 			type="vn_b_air_uh1d_02_07";
-			atlOffset=0.41344643;
+			atlOffset=0.41344833;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52923,7 +52923,7 @@ class Mission
 			};
 			id=14094;
 			type="vn_b_air_uh1c_07_02";
-			atlOffset=0.25097275;
+			atlOffset=0.25097084;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -80168,18 +80168,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17224.326,33.205452,5506.0684};
+				position[]={17224.324,33.205723,5506.0684};
 				angles[]={6.2821555,0,6.2652259};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				init="[this, [""7thCAV"",""QuarterHorse"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
 				disableSimulation=1;
 			};
 			id=15344;
 			type="vn_b_air_oh6a_01";
-			atlOffset=1.0159321;
+			atlOffset=1.0161686;
 		};
 		class Item1517
 		{
