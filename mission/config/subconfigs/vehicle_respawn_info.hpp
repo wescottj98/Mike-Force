@@ -451,6 +451,8 @@ class vn_o_armor_pt76a_01 : respawn_short {};
 class vn_o_armor_pt76b_01 : respawn_short {};
 class vn_o_boat_03_02 : respawn_short {};
 class vn_o_boat_04_02 : respawn_short {};
+class vn_o_boat_07_01 : respawn_short {};
+class vn_o_boat_08_01 : respawn_short {};
 class vn_o_nva_navy_static_d44 : respawn_short {};
 class vn_o_nva_static_zpu4 : respawn_short {};
 class vn_o_wheeled_z157_mg_02_vcmf : respawn_short {};

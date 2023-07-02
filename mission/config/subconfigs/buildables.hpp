@@ -6013,7 +6013,7 @@ class vn_b_prop_fmradio_01
 	};
 };
 
-class vn_sign_town_d_04_01
+class vn_sign_town_d_11_01
 {
 	name = "";
 	type = "buildings";
@@ -6171,6 +6171,107 @@ class vn_sign_town_d_04_01
 				};
 			};
 			spawnPositionModelSpace[] = {0,10,-2};
+			spawnDirectionModelSpace = 270;
+		};
+	};
+};
+
+class Land_vn_hut_river_03
+{
+	name = "";
+	type = "buildings";
+	categories[] = {"buildings", "shelters"};
+	rank = 0;
+	SUPPLY_CAPACITY(2000, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "Land_vn_hut_river_03";
+		};
+		class middle_state
+		{
+			object_class = "Land_vn_hut_river_03";
+		};
+		class final_state
+		{
+			object_class = "Land_vn_hut_river_03";
+		};
+	};
+	class features
+	{
+		class vehicle_spawning
+		{
+			class vehicle_class
+			{
+				class light_boats
+				{
+					icon = VEHICLE_ICON_BOAT;
+					name = "STR_vn_mf_vic_boat_light";
+					class vn_o_boat_01_mg_03
+					{
+						// Boat rpd
+						cost[] = {{"BuildingSupplies", 5}};
+						icon = VEHICLE_ICON_BOAT;
+						cooldown = 5;
+						//side = "EAST";
+					};
+					class vn_o_boat_02_mg_03
+					{
+						// long boat dp27
+						cost[] = {{"BuildingSupplies", 5}};
+						icon = VEHICLE_ICON_BOAT;
+						cooldown = 5;
+						//side = "EAST";
+					};
+				};
+				class heavy_boats
+				{
+					icon = VEHICLE_ICON_BOAT;
+					name = "STR_vn_mf_vic_boat_heavy";
+					class vn_o_boat_03_01
+					{
+						// long boat dp27
+						cost[] = {{"BuildingSupplies", 5}};
+						icon = VEHICLE_ICON_BOAT;
+						cooldown = 5;
+						//side = "EAST";
+					};
+					class vn_o_boat_03_02
+					{
+						// long boat dp27
+						cost[] = {{"BuildingSupplies", 5}};
+						icon = VEHICLE_ICON_BOAT;
+						cooldown = 5;
+						//side = "EAST";
+					};
+					class vn_o_boat_04_01
+					{
+						// long boat dp27
+						cost[] = {{"BuildingSupplies", 5}};
+						icon = VEHICLE_ICON_BOAT;
+						cooldown = 5;
+						//side = "EAST";
+					};
+					class vn_o_boat_04_02
+					{
+						// long boat dp27
+						cost[] = {{"BuildingSupplies", 5}};
+						icon = VEHICLE_ICON_BOAT;
+						cooldown = 5;
+						//side = "EAST";
+					};
+				};
+			};
+			spawnPositionModelSpace[] = {2,15,-2};
 			spawnDirectionModelSpace = 270;
 		};
 	};
