@@ -40,3 +40,7 @@ class Map
 {
 	targets[] = {HEADED_CLIENT_HOST,HEADED_CLIENT};
 };
+class MarkerDeleted
+{
+	targets[] = {HEADED_CLIENT_HOST,HEADED_CLIENT};
+};
