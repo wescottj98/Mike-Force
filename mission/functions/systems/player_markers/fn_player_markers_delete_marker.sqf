@@ -24,6 +24,6 @@ if (!(_local)) exitWith {};
 	//if (_instigatorIsMACV) then { continue };
 	if !(_inMACV) then { continue };
 	
-	systemChat format ["[MACV] %1 has deleted a map marker.", name player];
+	systemChat format ["[MACV] %1 has deleted a map marker. Contents: %2", name player, markerText _marker];
 	["AdminLog", [format ["%1 has deleted a map marker.", name player]]] remoteExec ["para_c_fnc_show_notification", _x];
 } forEach allPlayers;
