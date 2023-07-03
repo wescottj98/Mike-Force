@@ -164,6 +164,9 @@
       <Key ID="STR_vn_mf_notification_title_friendly_fire">
         <Original>Friendly Fire!</Original>
       </Key>
+      <Key ID="STR_vn_mf_notification_title_admin_log">
+        <Original>Admin Log</Original>
+      </Key>
       <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent">
         <Original>Next Attack Operation in %1 minutes! Stay out of marked zone.</Original>
       </Key>

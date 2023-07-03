@@ -224,6 +224,7 @@ class CfgFunctions
 			class player_markers_job {};
 			class player_markers_subsystem_init {};
 			class player_markers_update_positions {};
+			class player_markers_delete_marker {};
 		};
 
 		class system_ranks {

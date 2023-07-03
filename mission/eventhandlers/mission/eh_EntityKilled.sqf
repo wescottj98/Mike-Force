@@ -62,7 +62,7 @@ if (_is_unit_player) then
 				if !(_inMACV) then { continue };
 				
 				systemChat _message;
-				["FriendlyFire", [_message]] remoteExec ["para_c_fnc_show_notification", _x];
+				["AdminLog", [_message]] remoteExec ["para_c_fnc_show_notification", _x];
 			} forEach allPlayers;
 
 			_kill_type = "friendlyfire";

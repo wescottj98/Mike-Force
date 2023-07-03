@@ -295,6 +295,16 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 	};
 
+	class AdminLog
+	{
+		title = $STR_vn_mf_notification_title_admin_log;
+		description = "%1";
+		priority = 8;
+		duration = 10;
+		color[] = {0,0.8,0.8,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
 	class ServerRestart 
 	{
 		title = "Scheduled Restart";

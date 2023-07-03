@@ -25,4 +25,6 @@ vn_mf_player_markers_marker_management_loop = [] spawn {
 		uisleep 2;
 	};
 };
+
 vn_mf_player_markers_eachFrame_handler = addMissionEventHandler ["EachFrame", vn_mf_fnc_player_markers_update_positions];
+vn_mf_player_markers_deleteMarker_handler = addMissionEventHandler ["MarkerDeleted", vn_mf_fnc_player_markers_delete_marker];
