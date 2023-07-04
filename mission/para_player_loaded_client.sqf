@@ -45,7 +45,7 @@ if (_side == east) then {
 
 private _playerSide = side _player;
 _player setVariable ["vn_mf_side", _playerSide, true];
-_player setVariable ["isArrested", "true", true];
+_player setVariable ["isArrested", 'true', true];
 
 //Voice fixes. Run in combination with setSPeaker on the server.
 private _fnc_disableChatter = {
