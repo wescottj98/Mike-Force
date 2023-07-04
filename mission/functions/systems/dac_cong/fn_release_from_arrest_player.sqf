@@ -18,7 +18,7 @@ params ["_target", "_player"];
 if !(isPlayer _target) exitWith {};
 
 {
-    player setVariable ["isArrested", false, true];
+    player setVariable ["isArrested", "false", true];
 	action ["CancelAction", player];
 } remoteExec ["call", _target];
 

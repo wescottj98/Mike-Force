@@ -29,7 +29,7 @@ if !(isPlayer _target) exitWith {};
 	player addItem "vn_o_item_firstaidkit";
 	player addItem "vn_o_item_firstaidkit";
 	player addItem "vn_o_item_firstaidkit";
-    player setVariable ["isArrested", true, true];
+    player setVariable ["isArrested", "true", true];
 	action ["Surrender", player];
 } remoteExec ["call", _target];
 
