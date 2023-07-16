@@ -277,6 +277,7 @@ class CfgFunctions
 			// Placement functions
 			class sites_get_safe_location {};
 			class sites_find_area_gradient {};
+			class sites_objmapper_dynamic_grass {};
 
 			class destroy_task {};
 

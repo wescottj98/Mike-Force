@@ -789,13 +789,8 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 
 };
 
-//if(toLower(worldName) isEqualTo "tanoa")then {
-//	vn_mf_hq_composition = [
-//	];
-//};
+private _site_objs = [selectRandom vn_mf_radar_compositions, 0.5] call vn_mf_fnc_sites_objmapper_dynamic_grass;
 
-private _randomAngle = [0,360] call BIS_fnc_randomInt;
-private _radarObjects = [_position, _randomAngle, selectRandom vn_mf_radar_compositions] call BIS_fnc_objectsMapper;
 {
     if (_x isKindOf "GRAD_envelope_giant") then {
         _x setVectorUp (surfaceNormal getPos _x);
@@ -804,6 +799,6 @@ private _radarObjects = [_position, _randomAngle, selectRandom vn_mf_radar_compo
 	if (_x isKindOf "Land_vn_o_trench_firing_01") then {
         _x setVectorUp (surfaceNormal getPos _x);
     };
-} forEach _radarObjects;
+} forEach _site_objs;
 
-_radarObjects
+_site_objs

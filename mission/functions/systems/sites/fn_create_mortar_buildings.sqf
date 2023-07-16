@@ -525,7 +525,8 @@ vn_mf_arty_compositions = [
 ]
 ];
 
-private _artyObjects = [_position, 0, selectRandom vn_mf_arty_compositions] call BIS_fnc_objectsMapper;
+private _site_objs = [selectRandom vn_mf_arty_compositions, 0.3] call vn_mf_fnc_sites_objmapper_dynamic_grass;
+
 {
 
 	if (_x isKindOf "StaticWeapon") then {
@@ -535,6 +536,6 @@ private _artyObjects = [_position, 0, selectRandom vn_mf_arty_compositions] call
 		_x allowDamage true;
 	};
 	
-} forEach _artyObjects;
+} forEach _site_objs;
 
-_artyObjects
+_site_objs
