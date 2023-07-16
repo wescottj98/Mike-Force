@@ -19,8 +19,8 @@
 	format ["<t color='#33FF00'>%1</t>", localize 'STR_vn_mf_release_from_arrest_player'],							// Title of the action
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",	// Idle icon shown on screen
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",	// Progress icon shown on screen
-	"player getVariable ["isArrested"] && player distance cursorTarget <= 5 && { vehicle player isEqualTo player && {cursorTarget isKindOf 'Man' && {alive cursorTarget && }}}",	// Condition for the action to be shown
-	"player distance cursorTarget < 7",						// Condition for the action to progress
+	"player getVariable ['isArrested', 'false'] == 'true' && player distance cursorTarget <= 3 && { vehicle player isEqualTo player && {cursorTarget isKindOf 'Man' && {alive cursorTarget}}}",	// Condition for the action to be shown
+	"player distance cursorTarget < 5",						// Condition for the action to progress
 	{},	// Code executed when action starts
 	{},	// Code executed on every progress tick
 	{

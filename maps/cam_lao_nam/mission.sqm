@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15556;
+		nextID=16270;
 	};
 	class Camera
 	{
-		pos[]={11236.736,195.60933,14364.28};
-		dir[]={0.86706203,-0.49726564,0.03083639};
-		up[]={0.49696019,0.86759222,0.017673742};
-		aside[]={0.035541717,-1.1588418e-007,-0.99937469};
+		pos[]={11295.123,195.60933,14380.357};
+		dir[]={0.023419268,-0.60241205,-0.79784364};
+		up[]={0.017675158,0.79818493,-0.60215366};
+		aside[]={-0.99957055,-8.5492502e-011,-0.029340761};
 	};
 };
 binarizationWanted=0;
@@ -600,8 +600,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -651,8 +651,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -42475,14 +42475,14 @@ class Mission
 		class Item851
 		{
 			dataType="Marker";
-			position[]={16446.758,14.344116,7120.6748};
+			position[]={16446.758,14.344,7120.6748};
 			name="marker_88";
-			text="EMERGANCY REPAIR BAYS :  1 - 3";
+			text="EMERGENCY REPAIR BAYS :  1 - 3";
 			type="mil_triangle";
 			colorName="ColorRed";
 			alpha=0.74572515;
 			id=8168;
-			atlOffset=-0.63588333;
+			atlOffset=-0.63599968;
 		};
 		class Item852
 		{
@@ -81351,7 +81351,6 @@ class Mission
 				};
 			};
 			id=15450;
-			atlOffset=-0.11438751;
 		};
 		class Item1548
 		{
