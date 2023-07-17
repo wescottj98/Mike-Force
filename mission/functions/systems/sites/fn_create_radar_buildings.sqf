@@ -513,8 +513,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_elephant_grass_01",[-19.1265,-17.9028,0.5],181.402,1,0,[0,0],"","",false,false], 
 	["Land_vn_rulaunchers",[7.39453,-25.4561,0],99.8178,1,0,[0,-0],"","",false,false], 
 	["Land_vn_rulaunchers",[7.88428,-25.5103,0],99.8178,1,0,[0,-0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[7.38574,-25.6768,0.0352035],99.8178,1,0,[0,-0],"","",true,false], 
-	["vn_weapon_launcher_sa7b",[7.87891,-25.7197,0.0761704],99.8178,1,0,[0,-0],"","",true,false], 
 	["Land_vn_elephant_grass_01",[22.8091,-13.9839,0.5],181.402,1,0,[0,0],"","",false,false], 
 	["Land_vn_elephant_grass_01",[14.7319,-22.917,0.5],181.402,1,0,[0,0],"","",false,false], 
 	["vn_o_prop_t102e_01",[8.82568,-26.4224,0.864592],224.322,1,0,[0,0],"","",false,false], 
@@ -552,9 +550,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["vn_sa2",[-5.01123,-12.8818,0.411123],178.452,1,0,[0,-0],"","",false,false], 
 	["Land_vn_rulaunchers",[9.95996,11.0054,0],305.809,1,0,[0,0],"","",false,false], 
 	["Land_vn_rulaunchers",[10.3765,10.7417,0],305.809,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[10.0566,11.1919,0.0761704],305.809,1,0,[0,0],"","",true,false], 
 	["Land_vn_elephant_grass_01",[13.9448,4.90283,0.5],181.402,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[10.4819,10.936,0.0352035],305.809,1,0,[0,0],"","",true,false], 
 	["vn_o_nva_spiderhole_01",[12.5356,8.57666,0.497775],0,1,0,[0,0],"","",false,false], 
 	["Land_vn_o_bunker_02",[-2.17041,16.1772,0.473407],0.869912,1,0,[0,0],"","",false,false], 
 	["Land_WoodenTable_large_F",[8.98633,12.5889,0],119.932,1,0,[0,-0],"","",false,false], 
@@ -612,8 +608,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_elephant_grass_01",[5.94189,3.71777,0.5],181.402,1,0,[0,0],"","",false,false], 
 	["Land_vn_rulaunchers",[3.75098,6.78076,0],305.809,1,0,[0,0],"","",false,false], 
 	["Land_vn_rulaunchers",[3.33447,7.04443,0],305.809,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[3.85645,6.9751,0],305.809,1,0,[0,0],"","",true,false], 
-	["vn_weapon_launcher_sa7b",[3.43115,7.23096,0.040967],305.809,1,0,[0,0],"","",true,false], 
 	["Land_vn_elephant_grass_01",[0.217285,-7.40869,0.5],181.402,1,0,[0,0],"","",false,false], 
 	["Land_vn_o_shelter_06",[-1.99805,-7.96094,0],90,1,0,[0,-0],"","",false,false], 
 	["vn_o_static_rsna75",[-6.24268,-0.45752,1.149131],180.884,1,0,[0,0],"","",false,false], 
@@ -716,9 +710,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_elephant_grass_01",[-20.0264,-4.9834,0.5],181.402,1,0,[0,0],"","",false,false], 
 	["Land_vn_rulaunchers",[2.125,20.8818,0],260.809,1,0,[0,0],"","",false,false], 
 	["Land_vn_rulaunchers",[2.60547,20.9897,0],260.809,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[2.06104,21.082,0.0761704],260.809,1,0,[0,0],"","",true,false], 
 	["Land_WoodenTable_large_F",[0.316406,21.313,0],74.9319,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[2.54199,21.2012,0.0352035],260.809,1,0,[0,0],"","",true,false], 
 	["vn_o_nva_static_dshkm_low_01",[-9.85547,19.0503,-0.0749998],30,1,0,[0,0],"","",false,false], 
 	["vn_o_prop_t102e_01",[0.895508,21.585,0.864592],25.3121,1,0,[0,0],"","",false,false], 
 	["Land_vn_elephant_grass_01",[-13.1738,17.7026,0.5],181.402,1,0,[0,0],"","",false,false], 
@@ -781,9 +773,7 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_WoodenTable_large_F",[22.4551,-10.2417,0],149.932,1,0,[0,-0],"","",false,false], 
 	["vn_o_prop_t102e_01",[22.7886,-10.6816,0.864592],100.312,1,0,[0,-0],"","",false,false], 
 	["Land_vn_rulaunchers",[22.5068,-12.1001,0],335.809,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[22.6836,-11.9868,0.0761704],335.809,1,0,[0,0],"","",true,false], 
-	["Land_vn_rulaunchers",[22.7354,-12.5366,0],335.809,1,0,[0,0],"","",false,false], 
-	["vn_weapon_launcher_sa7b",[22.9238,-12.4214,0.0352035],335.809,1,0,[0,0],"","",true,false]
+	["Land_vn_rulaunchers",[22.7354,-12.5366,0],335.809,1,0,[0,0],"","",false,false]
 ]
 ];
 
