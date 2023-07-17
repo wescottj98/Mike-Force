@@ -75,6 +75,7 @@ params ["_pos"];
 			typeOf _x in _objectTypesToDestroy;
 		};
 
+
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];
 		_artilleryMarker setMarkerType "o_art";
@@ -82,12 +83,26 @@ params ["_pos"];
 		_artilleryMarker setMarkerAlpha 0;
 
 		private _objectives = [];
+
 		{
-			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
+			// Disable weapon dissassembly as statics aren't deleted properly
+			// when disassembled, breaking the site/mission.
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 			_x enableWeaponDisassembly false;
+
+			// Whitelist arty objects to discourage blufor players from
+			// stealing/moving mission critical objects and blocking progress
+			[_x, ["DacCong"]] call vn_mf_fnc_lock_vehicle_to_teams;
+			vn_mf_dc_assets pushBack _x;
+
+			// get replenishable AI crews for mortars/art objects
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+
+			// TODO -- none of the other statics will be getting manned!
+
 		} forEach _objectsToDestroy;
+
+		// add one more AI objective so AI will come and defend the site
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
