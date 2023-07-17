@@ -478,7 +478,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["Land_vn_us_common_table_01",[4.81055,-1.75928,0.0176396],92.7343,1,0,[0,-0],"","",false,false], 
 	["vn_o_prop_t102e_01",[4.87207,-1.70313,0.831531],93.7048,1,0,[0,-0],"","",false,false], 
 	["vn_o_prop_radio_m252b_01",[4.66992,-2.18066,0.884403],318.629,1,0,[0,0],"","",false,false], 
-	["vn_o_ammobox_02",[4.74658,3.95996,0.116219],4.266,1,0,[0,0],"","",false,false], 
 	["Land_vn_us_common_table_01",[3.10156,6.21582,0.0039506],97.7141,1,0,[0,-0],"","",false,false], 
 	["vn_weapon_launcher_sa7b",[2.87109,6.3667,1.25324],268.877,1,0,[0,0],"","",true,false], 
 	["vn_o_helmet_nva_09",[4.09668,5.79932,1.03159],0,1,0,[0,0],"","",true,false], 
@@ -555,7 +554,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["vn_sign_town_d_06",[1.94434,-7.14795,0.987473],180,1,0,[0,0],"","",false,false], 
 	["vn_o_nva_static_dshkm_low_01",[6.14502,5.04785,0.156857],225.588,1,0,[0,0],"","",false,false], 
 	["vn_o_nva_static_dshkm_low_01",[6.54004,-4.77539,0.156857],315.525,1,0,[0,0],"","",false,false], 
-	["vn_o_ammobox_02",[-4.09766,7.17822,0.231856],274.334,1,0,[0,0],"","",false,false], // this?
 	["vn_sign_town_d_08",[8.29688,0.931641,0.993729],90,1,0,[0,-0],"","",false,false], 
 	["vn_weapon_arifle_type56",[-6.28662,5.43457,1.28367],0.0680432,1,0,[0,0],"","",true,false], 
 	["Land_vn_us_common_table_01",[-6.39453,5.72461,0.0484018],92.7343,1,0,[0,-0],"","",false,false], 
@@ -615,7 +613,6 @@ if(toLower(worldName) in ["cam_lao_nam", "vn_khe_sanh"])then {
 	["vn_o_helmet_nva_04",[1.17285,-1.88721,1.06476],0,1,0,[0,0],"","",true,false], 
 	["vn_o_helmet_nva_09",[0.819824,-2.23242,1.06476],0,1,0,[0,0],"","",true,false], 
 	["vn_o_helmet_nva_03",[1.16016,-2.24707,1.06476],0,1,0,[0,0],"","",true,false], 
-	["vn_o_ammobox_02",[2.2085,-1.97314,0.139986],274.334,1,0,[0,0],"","",false,false], 
 	["Land_vn_us_common_table_01",[0.775879,-1.40869,0.020607],92.7343,1,0,[0,-0],"","",false,false], 
 	["Land_vn_us_common_table_01",[2.23779,-1.37354,0.00513935],92.6668,1,0,[0,-0],"","",false,false], 
 	["vn_o_nva_static_dshkm_low_01",[3.15723,2.77979,-0.0596199],270,1,0,[0,0],"","",false,false], 
