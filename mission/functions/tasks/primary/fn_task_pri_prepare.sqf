@@ -101,7 +101,7 @@ _taskDataStore setVariable ["fnc_changeAreaMarkerColor", {
 */
 _taskDataStore setVariable ["fnc_subtaskGoAway", {
 
-	params ["_taskStore", "_nextSubTask", "_playersInArea"];
+	params ["_taskStore", "_nextSubTask", "_playersInArea", "_obj_pos"];
 
 	[_taskStore, "ColorBlack"] call (_taskStore getVariable "fnc_changeAreaMarkerColor");
 
@@ -124,7 +124,7 @@ _taskDataStore setVariable ["fnc_subtaskGoAway", {
 		
 		[
 			"SUCCEEDED", 
-			[[_nextSubtask, getMarkerPos "starting_point"]]
+			[[_nextSubtask, _obj_pos]]
 		] call _fnc_finishSubtask;
 
 	};
@@ -319,13 +319,13 @@ _taskDataStore setVariable ["INIT", {
 	]] call _fnc_initialSubtasks;
 }];
 
-//
+// actual rtb logic is called via method above
 _taskDataStore setVariable ["rtb", {
 	params ["_taskDataStore"];
 	[_taskDataStore] call (_taskDataStore getVariable "fnc_subtaskRTB");
 }];
 
-//
+// actual prepare logic is called via method above
 _taskDataStore setVariable ["prepare", {
 	params ["_taskDataStore"];
 	[_taskDataStore] call (_taskDataStore getVariable "fnc_subtaskPrepare");
@@ -334,21 +334,29 @@ _taskDataStore setVariable ["prepare", {
 // players entered the AO during the RTB subtask, spam notifications until they leave
 _taskDataStore setVariable ["go_away_rtb", {
 	params ["_taskDataStore"];
+
 	private _playersInArea = [_taskDataStore] call (_taskDataStore getVariable "fnc_getPlayersInAreaRTB");
-	[_taskDataStore, "rtb", _playersInArea] call (_taskDataStore getVariable "fnc_subtaskGoAwaySubtask");
+	private _objPos = getMarkerPos "starting_point";
+
+	[_taskDataStore, "rtb", _playersInArea, _objPos] call (_taskDataStore getVariable "fnc_subtaskGoAway");
 }];
 
 // non-DC players entered the AO during prepare subtask, spam notifications until non-DC players leave
 _taskDataStore setVariable ["go_away_prepare", {
 	params ["_taskDataStore"];
+
 	private _playersInArea = [_taskDataStore] call (_taskDataStore getVariable "fnc_getPlayersInAreaPrepare");
-	[_taskDataStore, "prepare", _playersInArea] call (_taskDataStore getVariable "fnc_subtaskGoAwaySubtask");
+	private _objPos = _taskStore getVariable ["stagingPos", getMarkerPos "starting_point"];
+
+	[_taskDataStore, "prepare", _playersInArea, _objPos] call (_taskDataStore getVariable "fnc_subtaskGoAway");
 }];
 
 _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
+
 	private _generated = _taskDataStore getVariable ["generated", false];
 	private _prepared = _taskDataStore getVariable ["prepared", false];
+
 	if (_generated and _prepared) then {
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
