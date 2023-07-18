@@ -346,7 +346,7 @@ _taskDataStore setVariable ["go_away_prepare", {
 	params ["_taskDataStore"];
 
 	private _playersInArea = [_taskDataStore] call (_taskDataStore getVariable "fnc_getPlayersInAreaPrepare");
-	private _objPos = _taskStore getVariable ["stagingPos", getMarkerPos "starting_point"];
+	private _objPos = _taskDataStore getVariable ["stagingPos", getMarkerPos "starting_point"];
 
 	[_taskDataStore, "prepare", _playersInArea, _objPos] call (_taskDataStore getVariable "fnc_subtaskGoAway");
 }];
