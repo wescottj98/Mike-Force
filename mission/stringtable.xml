@@ -170,9 +170,6 @@
       <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent">
         <Original>Next Attack Operation in %1 minutes! Stay out of marked zone.</Original>
       </Key>
-      <Key ID="STR_vn_mf_notification_desc_ao_attack_imminent_failed">
-        <Original>Leave the area immediately! Charlie isn't ready!</Original>
-      </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
       </Key>
