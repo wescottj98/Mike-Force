@@ -97,6 +97,25 @@ class Params
 	#include "config\params.hpp"
 };
 
+class CfgSFX
+{
+	class MPSiren
+	{
+		sound0[] = {"custom\sounds\Siren.ogg", db+2, 1.0, 500, 1, 0, 0, 0};  // path to addon sound
+		sounds[] = {sound0};
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
+};
+
+
+class CfgVehicles
+{
+	class Siren // class name to be used with createSoundSource
+	{
+		sound = "MPSiren"; // reference to CfgSFX class
+	};
+};
+
 class CfgDebriefing
 {
 	class TimedOut

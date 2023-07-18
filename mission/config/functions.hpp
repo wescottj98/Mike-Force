@@ -167,6 +167,13 @@ class CfgFunctions
 			class action_eat_food {};
 		};
 
+		class system_actives {
+			file = "functions\systems\actives";
+
+			class active_init {};
+			class active_siren {};
+		};
+
 		class system_ammo_repack {
 			file = "functions\systems\ammo_repack";
 			class ammo_repack {};

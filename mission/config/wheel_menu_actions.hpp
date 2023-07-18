@@ -54,6 +54,18 @@ class wheel_menu_actions
 		spawn = 0;
 	};
 
+	class siren : base_action
+	{
+		visible = "ALWAYS";
+		condition = "true";
+		text = "Siren";
+		icon = "custom\wheelmenu\siren.paa";
+		icon_highlighted = "";
+		arguments = "true";
+		function = "vn_mf_fnc_active_siren";
+		spawn = 0;
+	};
+
 	//Add a sandbag to a building.
 	class add_sandbag : base_action
 	{

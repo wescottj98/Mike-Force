@@ -82,6 +82,8 @@ progressLoadingScreen 0.46;
 uiSleep 0.4;
 progressLoadingScreen 0.48;
 
+call vn_mf_fnc_active_init;
+
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
