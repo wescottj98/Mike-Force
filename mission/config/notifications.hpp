@@ -285,15 +285,6 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 	};
 
-	class AttackPreparingFailedNotDC
-	{
-		title = $STR_vn_mf_notification_title_ao_attack;
-		description = "%1";
-		priority = 8;
-		color[] = {1,0.3,0.2,1};
-		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
-	};
-
 	class FriendlyFire
 	{
 		title = $STR_vn_mf_notification_title_friendly_fire;
