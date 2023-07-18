@@ -85,6 +85,8 @@ params ["_pos"];
 		_artilleryMarker setMarkerText "Arty";
 		_artilleryMarker setMarkerAlpha 0;
 
+		private _objectives = [];
+
 		{
 			// Disable weapon dissassembly as statics aren't deleted properly
 			// when disassembled, breaking the site/mission.
