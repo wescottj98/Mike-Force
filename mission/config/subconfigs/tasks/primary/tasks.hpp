@@ -50,23 +50,23 @@ class prepare_zone : task
 	};
 	class rtb
 	{
-		taskname = "RTB";
+		taskname = "Return To Base";
 		taskdesc = "Return to base to regroup and rearm for the next zone.";
 	};
 	class go_away_rtb
 	{
-		taskname = "Leave the zone!";
-		taskdesc = "Charlie isn't ready yet! Leave the Blue zone immediately!";
+		taskname = "Leave The Zone!";
+		taskdesc = "Charlie isn't ready yet! Leave the blue zone immediately!";
 	};
 	class prepare
 	{
-		taskname = "Plan and Prepare";
-		taskdesc = "Start planning to capture the zone.";
+		taskname = "Prepare Your Assault";
+		taskdesc = "Co-ordinate, plan and prepare to fight enemy forces in the zone.";
 	};
 	class go_away_prepare
 	{
-		taskname = "Leave the AO!";
-		taskdesc = "Charlie still isn't ready yet! Leave the Blue zone immediately!";
+		taskname = "Leave The Zone!";
+		taskdesc = "Charlie still isn't ready yet! Leave the blue zone immediately!";
 	};
 };
 
