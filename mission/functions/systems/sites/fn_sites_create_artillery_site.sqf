@@ -85,14 +85,20 @@ params ["_pos"];
 		_artilleryMarker setMarkerText "Arty";
 		_artilleryMarker setMarkerAlpha 0;
 
-		private _objectives = [];
-
-		// mortar objective objects setup
 		{
-			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
+			// Disable weapon dissassembly as statics aren't deleted properly
+			// when disassembled, breaking the site/mission.
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 			_x enableWeaponDisassembly false;
+
+			// Whitelist arty objects to discourage blufor players from
+			// stealing/moving mission critical objects and blocking progress
+			[_x, ["DacCong"]] call vn_mf_fnc_lock_vehicle_to_teams;
+			vn_mf_dc_assets pushBack _x;
+
+			// get replenishable AI crews for mortars/art objects
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+
 		} forEach _objectsToDestroy;
 
 		// other static weapons setup
