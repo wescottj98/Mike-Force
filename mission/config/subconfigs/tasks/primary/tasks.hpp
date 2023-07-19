@@ -35,7 +35,7 @@ class prepare_zone : task
 	taskcategory = "PRI";
 	tasktitle = "Prepare for %1";
 	taskname = "Prepare for %1";
-	taskdesc = "Gather resources to setup a COP/FOB near %1!";
+	taskdesc = "Get ready for %1!";
 	tasktype = "repair";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\p\vn_ui_mf_task_p1.jpg";
 	rankpoints = 30;
@@ -48,42 +48,27 @@ class prepare_zone : task
 		stateMachineCode = "vn_mf_fnc_task_pri_prepare";
 		timeout = -1;
 	};
-
-	//Data for subtasks. These are specific to the script.
+	class rtb
+	{
+		taskname = "Return To Base";
+		taskdesc = "Return to base to regroup and rearm for the next zone.";
+	};
+	class go_away_rtb
+	{
+		taskname = "Leave The Zone!";
+		taskdesc = "Charlie isn't ready yet! Leave the blue zone immediately!";
+	};
 	class prepare
 	{
-		taskname = "Gather Supplies";
-		taskdesc = "Get some ammo, and supplies to build a FOB/COP.";
+		taskname = "Prepare Your Assault";
+		taskdesc = "Co-ordinate, plan and prepare to fight enemy forces in the zone.";
+	};
+	class go_away_prepare
+	{
+		taskname = "Leave The Zone!";
+		taskdesc = "Charlie still isn't ready yet! Leave the blue zone immediately!";
 	};
 };
-
-class go_away_zone : task
-{
-	taskcategory = "PRI";
-	tasktitle = "Leave %1";
-	taskname = "Leave %1";
-	taskdesc = "Charlie isn't ready yet! Leave %1 immediately!";
-	tasktype = "repair";
-	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\p\vn_ui_mf_task_p1.jpg";
-	rankpoints = 0;
-
-	taskScript = "vn_mf_fnc_state_machine_task_system";
-
-	//Data for the script to use to customise behaviour
-	class parameters 
-	{
-		stateMachineCode = "vn_mf_fnc_task_pri_go_away";
-		timeout = -1;
-	};
-
-	//Data for subtasks. These are specific to the script.
-	class go_away
-	{
-		taskname = "Get out of the zone!";
-		taskdesc = "Charlie isn't ready yet! Leave the zone immediately!";
-	};
-};
-
 
 class build_fob : task
 {
