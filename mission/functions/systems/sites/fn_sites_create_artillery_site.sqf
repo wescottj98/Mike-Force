@@ -75,6 +75,9 @@ params ["_pos"];
 			typeOf _x in _objectTypesToDestroy;
 		};
 
+		private _staticWeaponsOther = _artyObjs select {
+			!(typeOf _x in _objectTypesToDestroy) && _x isKindOf "StaticWeapon";
+		};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];
@@ -98,11 +101,14 @@ params ["_pos"];
 			// get replenishable AI crews for mortars/art objects
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
 
-			// TODO -- none of the other statics will be getting manned!
-
 		} forEach _objectsToDestroy;
 
-		// add one more AI objective so AI will come and defend the site
+		// other static weapons setup
+		{
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+		} forEach _staticWeaponsOther;
+
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];

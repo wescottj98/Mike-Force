@@ -58,7 +58,17 @@ params ["_pos"];
 		_radarMarker setMarkerText "Radar";
 		_radarMarker setMarkerAlpha 0;
 
+		private _staticWeapons = _radarObjs select {
+			_x isKindOf "StaticWeapon" && !(typeof _x == "vn_o_static_rsna75") && !(typeof _x == "vn_sa2");
+		};
+
 		private _objectives = [];
+
+		{
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+		} forEach _staticWeapons;
+
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
