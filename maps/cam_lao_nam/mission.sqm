@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16372;
+		nextID=16474;
 	};
 	class Camera
 	{
-		pos[]={15810.774,66.492554,7054.396};
-		dir[]={0.48933539,-0.52182537,0.6987772};
-		up[]={0.29941538,0.85295808,0.42756882};
-		aside[]={0.81914151,-2.3884058e-007,-0.57362372};
+		pos[]={15939.292,58.5802,6856.7402};
+		dir[]={0.74822688,-0.64479643,0.15678102};
+		up[]={0.63124412,0.76422006,0.13226683};
+		aside[]={0.20510241,-9.9709723e-008,-0.97883618};
 	};
 };
 binarizationWanted=0;
@@ -600,8 +600,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -651,8 +651,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -669,6 +669,19 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -680,7 +693,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -2496,7 +2509,7 @@ class Mission
 				};
 			};
 			id=704;
-			atlOffset=-4.0829239;
+			atlOffset=-4.6438046;
 		};
 		class Item91
 		{
@@ -9406,7 +9419,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15843.916,16.20006,7114.3779};
-				angles[]={-0,2.3492906,0};
+				angles[]={0,2.3492906,0};
 			};
 			side="Empty";
 			flags=4;
@@ -12894,6 +12907,7 @@ class Mission
 			};
 			id=3817;
 			type="Land_Billboard_03_aan_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13062,6 +13076,7 @@ class Mission
 			};
 			id=4054;
 			type="Land_Billboard_03_aan_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16350,7 +16365,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
 					class Value
 					{
 						class data
@@ -16376,11 +16391,66 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="ch34_03";
 				disableSimulation=1;
 			};
 			id=4557;
 			type="vn_b_air_ch34_04_04";
 			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ch34_03";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item350
 		{
@@ -22832,6 +22902,7 @@ class Mission
 			};
 			id=6703;
 			type="Land_Billboard_03_aan_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item573
 		{
@@ -24763,10 +24834,65 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="camo1";
 						disableSimulation=1;
 					};
 					id=6910;
 					type="vn_b_air_oh6a_07";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="camo1";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item32
 				{
@@ -26150,11 +26276,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6776;
 					type="vn_b_air_uh1c_05_01";
 					atlOffset=-0.0010004044;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item103
 				{
@@ -26203,11 +26384,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6777;
 					type="vn_b_air_uh1c_04_01";
 					atlOffset=-0.0010004044;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item105
 				{
@@ -26257,11 +26493,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6778;
 					type="vn_b_air_uh1c_03_01";
 					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item107
 				{
@@ -26624,11 +26915,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6885;
 					type="vn_b_air_uh1c_01_02";
 					atlOffset=-0.0010004044;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item118
 				{
@@ -26677,11 +27023,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6886;
 					type="vn_b_air_uh1c_01_02";
 					atlOffset=-0.0010004044;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item120
 				{
@@ -26730,11 +27131,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6779;
 					type="vn_b_air_uh1c_03_01";
 					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item122
 				{
@@ -26749,11 +27205,66 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 					};
 					id=6780;
 					type="vn_b_air_uh1c_06_01";
 					atlOffset=-0.0010004044;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item123
 				{
@@ -26938,12 +27449,67 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="uh1c_13";
 						disableSimulation=1;
 						pylons="vn_rocket_ffar_m229_he_x7;vn_rocket_ffar_m229_he_x7;vn_gunpod_xm21_v_3000_mag[0];vn_gunpod_xm21_v_3000_mag[0];";
 					};
 					id=6820;
 					type="vn_b_air_uh1c_02_01";
 					atlOffset=-0.0010004044;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="uh1c_13";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item129
 				{
@@ -27555,10 +28121,65 @@ class Mission
 					class Attributes
 					{
 						init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+						textures="camo1";
 						disableSimulation=1;
 					};
 					id=14777;
 					type="vn_b_air_oh6a_03";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="camo1";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item157
 				{
@@ -63551,7 +64172,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16518.711,15.365673,6454.6753};
-																		angles[]={-0,3.1647995,0};
+																		angles[]={0,3.1647995,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63585,7 +64206,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16521.246,15.365673,6454.6382};
-																		angles[]={-0,3.1647995,0};
+																		angles[]={0,3.1647995,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63619,7 +64240,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16523.797,15.365673,6454.5854};
-																		angles[]={-0,3.1647995,0};
+																		angles[]={0,3.1647995,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63653,7 +64274,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16526.363,15.365673,6454.5112};
-																		angles[]={-0,3.1647995,0};
+																		angles[]={0,3.1647995,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63687,7 +64308,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16528.863,15.365673,6454.4526};
-																		angles[]={-0,3.1647995,0};
+																		angles[]={0,3.1647995,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63721,7 +64342,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16531.422,15.365673,6454.4116};
-																		angles[]={-0,3.1522353,0};
+																		angles[]={0,3.1522353,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63755,7 +64376,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16533.84,15.365673,6454.3784};
-																		angles[]={-0,3.1646104,0};
+																		angles[]={0,3.1646104,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -63789,7 +64410,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16517.623,15.365673,6457.7827};
-																		angles[]={-0,1.6157653,0};
+																		angles[]={0,1.6157653,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -67266,7 +67887,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16551.586,16.019958,6453.9106};
-																		angles[]={0,0.057067093,-0};
+																		angles[]={0,0.057067093,0};
 																	};
 																	side="Empty";
 																	flags=5;
@@ -67444,6 +68065,7 @@ class Mission
 																	};
 																	id=14573;
 																	type="Reflector_Cone_01_white_F";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -67477,6 +68099,7 @@ class Mission
 																	};
 																	id=14574;
 																	type="Reflector_Cone_01_white_F";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -67510,6 +68133,7 @@ class Mission
 																	};
 																	id=14575;
 																	type="Reflector_Cone_01_white_F";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -67543,6 +68167,7 @@ class Mission
 																	};
 																	id=14576;
 																	type="Reflector_Cone_01_white_F";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -70674,7 +71299,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16535.34,15.365673,6454.3472};
-																		angles[]={-0,3.1646104,0};
+																		angles[]={0,3.1646104,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -70708,7 +71333,7 @@ class Mission
 																	class PositionInfo
 																	{
 																		position[]={16517.59,15.365673,6455.8882};
-																		angles[]={-0,1.6107825,0};
+																		angles[]={0,1.6107825,0};
 																	};
 																	side="Empty";
 																	flags=4;
@@ -70751,6 +71376,7 @@ class Mission
 																	};
 																	id=14716;
 																	type="Reflector_Cone_01_white_F";
+																	atlOffset=-9.5367432e-007;
 																	class CustomAttributes
 																	{
 																		class Attribute0
@@ -71809,10 +72435,65 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="uh1d_12";
 				disableSimulation=1;
 			};
 			id=14749;
 			type="vn_b_air_uh1d_02_04";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="uh1d_12";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1252
 		{
@@ -71860,10 +72541,65 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="uh1d_12";
 				disableSimulation=1;
 			};
 			id=14751;
 			type="vn_b_air_uh1d_02_04";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="uh1d_12";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1254
 		{
@@ -77589,11 +78325,66 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="ch47_05";
 				disableSimulation=1;
 			};
 			id=15235;
 			type="vn_b_air_ach47_04_01";
 			atlOffset=-0.058954239;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ch47_05";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1436
 		{
@@ -77729,11 +78520,66 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="ch47_04";
 				disableSimulation=1;
 			};
 			id=15256;
 			type="vn_b_air_ch47_04_01";
 			atlOffset=-0.045000076;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ch47_04";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1443
 		{
@@ -79301,11 +80147,66 @@ class Mission
 			class Attributes
 			{
 				init="[this, [""7thCAV"",""Muskets"",""MACV"",""DacCong""]] call vn_mf_fnc_lock_vehicle_to_teams;";
+				textures="ch47_08";
 				disableSimulation=1;
 			};
 			id=15309;
 			type="vn_b_air_ch47_03_01";
 			atlOffset=-0.044561386;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ch47_08";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1489
 		{
