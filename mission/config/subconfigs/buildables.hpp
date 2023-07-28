@@ -6400,3 +6400,35 @@ class Land_vn_usaf_revetment_helipad_02
 		};
 	};
 };*/
+class Land_Shed_06_F
+{
+	name = "";
+	type = "buildings";
+	categories[] = {"buildings"};
+	rank = 0;
+	SUPPLY_CAPACITY(200, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "Land_Shed_06_F_part0";
+		};
+		class middle_state
+		{
+			object_class = "Land_Shed_06_F_part1";
+		};
+		class final_state
+		{
+			object_class = "Land_Shed_06_F";
+		};
+	};
+};
+
