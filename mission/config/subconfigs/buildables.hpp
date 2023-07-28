@@ -6400,3 +6400,235 @@ class Land_vn_usaf_revetment_helipad_02
 		};
 	};
 };*/
+
+/*
+BN CUSTOM -- FLAGS!
+*/
+class flag_POWMIA_F
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "flag_POWMIA_F";
+		};
+		class middle_state
+		{
+			object_class = "flag_POWMIA_F";
+		};
+		class final_state
+		{
+			object_class = "flag_POWMIA_F";
+		};
+	};
+
+};
+
+class flag_RedCrystal_F
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "flag_RedCrystal_F";
+		};
+		class middle_state
+		{
+			object_class = "flag_RedCrystal_F";
+		};
+		class final_state
+		{
+			object_class = "flag_RedCrystal_F";
+		};
+	};
+
+};
+
+class flag_USA_F
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "flag_USA_F";
+		};
+		class middle_state
+		{
+			object_class = "flag_USA_F";
+		};
+		class final_state
+		{
+			object_class = "flag_USA_F";
+		};
+	};
+	class features
+
+};
+
+class vn_flag_aus
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "vn_flag_aus";
+		};
+		class middle_state
+		{
+			object_class = "vn_flag_aus";
+		};
+		class final_state
+		{
+			object_class = "vn_flag_aus";
+		};
+	};
+
+};
+
+class vn_flag_nz
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "vn_flag_nz";
+		};
+		class middle_state
+		{
+			object_class = "vn_flag_nz";
+		};
+		class final_state
+		{
+			object_class = "vn_flag_nz";
+		};
+	};
+};
+
+class vn_flag_rok
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "vn_flag_rok";
+		};
+		class middle_state
+		{
+			object_class = "vn_flag_rok";
+		};
+		class final_state
+		{
+			object_class = "vn_flag_rok";
+		};
+	};
+};
+
+class vn_flag_arvn
+{
+	name = "";
+	type = "radio";
+	categories[] = {"decorative"};
+	rank = 0;
+	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "vn_flag_arvn";
+		};
+		class middle_state
+		{
+			object_class = "vn_flag_arvn";
+		};
+		class final_state
+		{
+			object_class = "vn_flag_arvn";
+		};
+	};
+};
