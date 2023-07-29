@@ -6277,6 +6277,43 @@ class Land_vn_hut_river_03
 	};
 };
 
+class Land_Shed_06_F
+{
+	name = "";
+	type = "buildings";
+	categories[] = {"buildings"};
+	rank = 0;
+	SUPPLY_CAPACITY(200, DAYS_TO_SECONDS(1));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		/*
+		the Land_vn_shed_06_f object does not have
+		corresponding partX assets so it cannot show
+		wireframe stages during the player build.
+		*/
+		class initial_state
+		{
+			object_class = "Land_vn_shed_06_f";
+		};
+		class middle_state
+		{
+			object_class = "Land_vn_shed_06_f";
+		};
+		class final_state
+		{
+			object_class = "Land_vn_shed_06_f";
+		};
+	};
+};
+
 /*
 class Land_vn_usaf_revetment_helipad_02
 {
@@ -6400,41 +6437,3 @@ class Land_vn_usaf_revetment_helipad_02
 		};
 	};
 };*/
-
-class Land_Shed_06_F
-{
-	name = "";
-	type = "buildings";
-	categories[] = {"buildings"};
-	rank = 0;
-	SUPPLY_CAPACITY(200, DAYS_TO_SECONDS(1));
-	resupply = "BuildingSupplies";
-	conditions[] = {
-		CONDITION_HAS_RANK,
-		CONDITION_IS_ENGINEER,
-		CONDITION_IS_ON_FOOT,
-		CONDITION_NOT_IN_RESTRICTED_ZONE,
-		CONDITION_IS_ACAV
-	};
-	class build_states
-	{
-		/*
-		the Land_vn_shed_06_f object does not have
-		corresponding partX assets so it cannot show
-		wireframe stages during the player build.
-		*/
-		class initial_state
-		{
-			object_class = "Land_vn_shed_06_f";
-		};
-		class middle_state
-		{
-			object_class = "Land_vn_shed_06_f";
-		};
-		class final_state
-		{
-			object_class = "Land_vn_shed_06_f";
-		};
-	};
-};
-
