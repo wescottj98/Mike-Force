@@ -6401,14 +6401,11 @@ class Land_vn_usaf_revetment_helipad_02
 	};
 };*/
 
-/*
-BN CUSTOM -- FLAGS!
-*/
-class flag_POWMIA_F
+class vn_flag_pavn
 {
 	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
+	type = "flag";
+	categories[] = {"flags"};
 	rank = 0;
 	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6417,31 +6414,30 @@ class flag_POWMIA_F
 		CONDITION_IS_ENGINEER,
 		CONDITION_IS_ON_FOOT,
 		CONDITION_NOT_IN_RESTRICTED_ZONE,
-		CONDITION_IS_ACAV
+		CONDITION_IS_DAC_CONG
 	};
 	class build_states
 	{
 		class initial_state
 		{
-			object_class = "flag_POWMIA_F";
+			object_class = "vn_flag_pavn";
 		};
 		class middle_state
 		{
-			object_class = "flag_POWMIA_F";
+			object_class = "vn_flag_pavn";
 		};
 		class final_state
 		{
-			object_class = "flag_POWMIA_F";
+			object_class = "vn_flag_pavn";
 		};
 	};
-
 };
 
-class flag_RedCrystal_F
+class vn_flag_usa
 {
 	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
+	type = "flag";
+	categories[] = {"flags"};
 	rank = 0;
 	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6456,59 +6452,24 @@ class flag_RedCrystal_F
 	{
 		class initial_state
 		{
-			object_class = "flag_RedCrystal_F";
+			object_class = "vn_flag_usa";
 		};
 		class middle_state
 		{
-			object_class = "flag_RedCrystal_F";
+			object_class = "vn_flag_usa";
 		};
 		class final_state
 		{
-			object_class = "flag_RedCrystal_F";
+			object_class = "vn_flag_usa";
 		};
 	};
-
-};
-
-class flag_USA_F
-{
-	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
-	rank = 0;
-	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
-	resupply = "BuildingSupplies";
-	conditions[] = {
-		CONDITION_HAS_RANK,
-		CONDITION_IS_ENGINEER,
-		CONDITION_IS_ON_FOOT,
-		CONDITION_NOT_IN_RESTRICTED_ZONE,
-		CONDITION_IS_ACAV
-	};
-	class build_states
-	{
-		class initial_state
-		{
-			object_class = "flag_USA_F";
-		};
-		class middle_state
-		{
-			object_class = "flag_USA_F";
-		};
-		class final_state
-		{
-			object_class = "flag_USA_F";
-		};
-	};
-	class features
-
 };
 
 class vn_flag_aus
 {
 	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
+	type = "flag";
+	categories[] = {"flags"};
 	rank = 0;
 	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6534,14 +6495,13 @@ class vn_flag_aus
 			object_class = "vn_flag_aus";
 		};
 	};
-
 };
 
 class vn_flag_nz
 {
 	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
+	type = "flag";
+	categories[] = {"flags"};
 	rank = 0;
 	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6565,38 +6525,6 @@ class vn_flag_nz
 		class final_state
 		{
 			object_class = "vn_flag_nz";
-		};
-	};
-};
-
-class vn_flag_rok
-{
-	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
-	rank = 0;
-	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
-	resupply = "BuildingSupplies";
-	conditions[] = {
-		CONDITION_HAS_RANK,
-		CONDITION_IS_ENGINEER,
-		CONDITION_IS_ON_FOOT,
-		CONDITION_NOT_IN_RESTRICTED_ZONE,
-		CONDITION_IS_ACAV
-	};
-	class build_states
-	{
-		class initial_state
-		{
-			object_class = "vn_flag_rok";
-		};
-		class middle_state
-		{
-			object_class = "vn_flag_rok";
-		};
-		class final_state
-		{
-			object_class = "vn_flag_rok";
 		};
 	};
 };
@@ -6604,8 +6532,8 @@ class vn_flag_rok
 class vn_flag_arvn
 {
 	name = "";
-	type = "radio";
-	categories[] = {"decorative"};
+	type = "flag";
+	categories[] = {"flags"};
 	rank = 0;
 	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
