@@ -1284,6 +1284,10 @@
         <Original>Barracks</Original>
         <English>Barracks</English>
       </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_flags">
+          <Original>Flags</Original>
+          <English>Flags</English>
+      </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_walls">
         <Original>Walls</Original>
         <English>Walls</English>
