@@ -310,7 +310,7 @@ _taskDataStore setVariable ["INIT", {
 	private _totalTaskDurationSeconds = (_taskDataStore getVariable ["subtaskDurationSeconds", 0]) * 2;
 	["AttackPreparing", [format ["%1", _totalTaskDurationSeconds]]] remoteExec ["para_c_fnc_show_notification", 0];
 	[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
-	["Attack Operation preparation", serverTime + (_totalTaskDurationSeconds * 60), true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
+	["Attack Operation preparation", serverTime + _totalTaskDurationSeconds, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 
 	diag_log format ["Prepare AO: Init Finished, switching to RTB subtask"];
 
