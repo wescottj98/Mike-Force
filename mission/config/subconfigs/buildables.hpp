@@ -6405,7 +6405,7 @@ class vn_flag_pavn
 {
 	name = "";
 	type = "flag";
-	categories[] = {"flags"};
+	categories[] = {"flags", "nv"};
 	rank = 0;
 	SUPPLY_CAPACITY(50, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
