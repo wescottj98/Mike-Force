@@ -458,7 +458,7 @@ class vn_whitelisted_arsenal_loadouts
 			{ "vn_mine_punji_02_mag", 				{ 0,-1, 0,-1}}, 
 			{ "vn_mine_punji_03_mag", 				{ 0,-1, 0,-1}}, 
 			{ "vn_mine_satchel_remote_02_mag", 		{ 0, 0, 0,-1}}, 
-			{ "vn_mine_tm57_mag", 					{-1, 0, 0,-1}}, 
+			{ "vn_mine_tm57_mag", 					{ 0, 0, 0,-1}}, 
 			{ "vn_mine_tripwire_arty_mag", 			{-1, 0, 0,-1}}, 
 			{ "vn_mine_tripwire_f1_02_mag", 		{-1, 0, 0,-1}}, 
 			{ "vn_mine_tripwire_f1_04_mag", 		{-1, 0, 0,-1}}, 
