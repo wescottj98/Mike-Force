@@ -6017,7 +6017,7 @@ class vn_sign_town_d_11_01
 {
 	name = "";
 	type = "buildings";
-	categories[] = {"buildings", "shelters", "nv"};
+	categories[] = {"buildings", "functional", "nv"};
 	rank = 0;
 	SUPPLY_CAPACITY(2000, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
@@ -6180,7 +6180,7 @@ class Land_vn_hut_river_03
 {
 	name = "";
 	type = "buildings";
-	categories[] = {"buildings", "shelters", "nv"};
+	categories[] = {"buildings", "functional", "nv"};
 	rank = 0;
 	SUPPLY_CAPACITY(2000, DAYS_TO_SECONDS(1));
 	resupply = "BuildingSupplies";
