@@ -6049,20 +6049,6 @@ class vn_sign_town_d_11_01
 		{
 			class vehicle_class
 			{
-				class trucks
-				{
-					icon = VEHICLE_ICON_TRUCK;
-					name = "STR_vn_mf_vic_truck";
-
-					class vn_o_wheeled_z157_mg_02_vcmf
-					{
-						/*Array currently unused, only the first number is used*/
-						cost[] = {{"BuildingSupplies", 5}};
-						cooldown = 5;
-						icon = VEHICLE_ICON_TRUCK;
-						//side = "WEST";
-					};
-				};
 				class statics
 				{
 					icon = VEHICLE_ICON_STATIC;
