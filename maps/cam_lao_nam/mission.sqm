@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=577;
+	toggles=585;
 	class ItemIDProvider
 	{
-		nextID=15592;
+		nextID=15593;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16576;
+		nextID=16678;
 	};
 	class Camera
 	{
-		pos[]={12800.074,34.837639,13321.156};
-		dir[]={0.54379493,-0.6555748,0.52397782};
-		up[]={0.47208643,0.75511914,0.45488358};
-		aside[]={0.69387805,-4.8297807e-008,-0.72012079};
+		pos[]={16266.591,25.176546,6517.8989};
+		dir[]={0.050837524,-0.53980702,0.84025621};
+		up[]={0.032600299,0.84178674,0.53882533};
+		aside[]={0.99817848,-7.3836418e-008,-0.060391955};
 	};
 };
 binarizationWanted=0;
@@ -600,8 +600,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -651,8 +651,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -708,7 +708,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1574;
+		items=1575;
 		class Item0
 		{
 			dataType="Marker";
@@ -13051,14 +13051,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15832.045,16.935854,7112.6035};
+				position[]={15832.045,16.935854,7112.604};
 				angles[]={0,0.018448131,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="this setObjectTexture [0,""custom\billboards\gh_bb.paa""];";
+				init="this setObjectTexture [0,""custom\billboards\BN_air_show_sign.paa""];";
 				disableSimulation=1;
 			};
 			id=4054;
@@ -13516,7 +13516,7 @@ class Mission
 			};
 			id=4330;
 			type="Land_Billboard_03_aan_F";
-			atlOffset=0.026999474;
+			atlOffset=0.027000427;
 		};
 		class Item312
 		{
@@ -85524,7 +85524,7 @@ class Mission
 			};
 			id=15583;
 			type="Zombie_PopUp_Moving_90deg_F";
-			atlOffset=0.039079487;
+			atlOffset=0.039079428;
 		};
 		class Item1569
 		{
@@ -85549,7 +85549,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12798.153,25.894001,13327.167};
-				angles[]={0,5.9849567,-0};
+				angles[]={0,5.9849567,0};
 			};
 			side="Empty";
 			flags=5;
@@ -85565,7 +85565,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12799.819,25.894001,13328.101};
-				angles[]={0,5.9413452,-0};
+				angles[]={0,5.9413452,0};
 			};
 			side="Empty";
 			flags=5;
@@ -85581,7 +85581,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12801.432,25.894009,13328.432};
-				angles[]={0,5.9499159,-0};
+				angles[]={0,5.9499159,0};
 			};
 			side="Empty";
 			flags=5;
@@ -85598,7 +85598,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12802.574,25.894009,13328.811};
-				angles[]={0,5.9918323,-0};
+				angles[]={0,5.9918323,0};
 			};
 			side="Empty";
 			flags=5;
@@ -85608,6 +85608,23 @@ class Mission
 			id=15591;
 			type="vn_sign_town_d_01";
 			atlOffset=7.6293945e-006;
+		};
+		class Item1574
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16266.722,17.032743,6534.8232};
+				angles[]={0.00099483761,0.26515043,0.013857915};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this setObjectTexture [0,""custom\billboards\BN_air_show_sign.paa""];";
+			};
+			id=15592;
+			type="Land_Billboard_03_aan_F";
 		};
 	};
 	class Connections
