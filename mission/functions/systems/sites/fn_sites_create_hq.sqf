@@ -73,10 +73,12 @@ params ["_pos"];
 		missionNamespace setVariable ["hqPosition", _pos];
 
 		private _objectsToDestroy = _hqObjects select {typeOf _x in _objectTypesToDestroy};
-	
-		private _objectives = [];
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
+
+		// 2x ai objectives to replace other factory / hq AI that never get freed in task system
+		private _objectives = [
+			[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend,
+			[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend
+		];
 
 		//Create a HQ marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
