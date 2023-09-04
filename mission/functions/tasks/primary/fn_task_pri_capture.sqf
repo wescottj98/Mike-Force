@@ -48,12 +48,7 @@ _taskDataStore setVariable ["INIT", {
 	_areaMarker setMarkerColor "ColorYellow";
 
 	private _hqPosition = missionNamespace getVariable ["hqPosition", _zoneposition];
-	private _defendHqObj = [_hqPosition, 1, 1] call para_s_fnc_ai_obj_request_defend;
-
 	private _factoryPosition = missionNamespace getVariable ["factoryPosition", _zoneposition];
-	private _defendFactoryObj = [_factoryPosition, 1, 1] call para_s_fnc_ai_obj_request_defend;
-
-	_taskDataStore setVariable ["aiObjectives", [_defendHqObj, _defendFactoryObj]];
 	_taskDataStore setVariable ["startTime", serverTime];
 	_taskDataStore setVariable ["hq_sites_destroyed", false];
 	_taskDataStore setVariable ["factory_sites_destroyed", false];
@@ -118,5 +113,4 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 _taskDataStore setVariable ["FINISH", {
 	deleteMarker "activeZoneCircle";
-	_taskDataStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
 }];

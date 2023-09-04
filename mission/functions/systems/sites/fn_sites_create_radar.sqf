@@ -30,8 +30,7 @@ params ["_pos"];
 		private _spawnPos = _sitePos;
 
 		private _radarObjs = [_spawnPos] call vn_mf_fnc_create_radar_buildings;
-		private _createdThings = _radarObjs select 0;
-
+		
 		{
 			if(_x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle" || _x isKindOf "Air" || typeOf _x in ['Land_Net_Fence_Gate_F'] || _x isKindOf "Building") then {
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
@@ -62,16 +61,9 @@ params ["_pos"];
 			_x isKindOf "StaticWeapon" && !(typeof _x == "vn_o_static_rsna75") && !(typeof _x == "vn_sa2");
 		};
 
-		private _objectives = [];
+		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _staticWeapons;
-
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
-
-		_siteStore setVariable ["aiObjectives", _objectives];
+		_siteStore setVariable ["aiObjectives", [_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend];
 		_siteStore setVariable ["markers", [_radarMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},

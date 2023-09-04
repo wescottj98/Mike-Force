@@ -72,10 +72,10 @@ params ["_pos"];
 		vn_dc_adhoc_respawns pushBack [_factoryRespawnMarker, _respawnID];
 
 		private _guns = _factoryObjects select {_x isKindOf "StaticWeapon"};
+		
+		// 2x ai objectives to replace other factory / hq AI that never get freed in task system
 		private _objectives = [];
-		{
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _guns;
+		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
