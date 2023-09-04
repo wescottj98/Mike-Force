@@ -32,7 +32,6 @@ params ["_pos"];
 		missionNamespace getVariable ["current_factory", _siteStore];
 
 		private _factoryObjects = [_spawnPos] call vn_mf_fnc_create_factory_buildings;
-		private _objectsToDestroy = _factoryObjects select {typeOf _x == "Land_vn_wf_vehicle_service_point_east"};
 		private _intel = _factoryObjects select {typeOf _x == "Land_Map_unfolded_Malden_F"};
 		missionNamespace setVariable ["factory_intel", _intel];
 		missionNamespace setVariable ["factoryPosition", _pos];
@@ -40,19 +39,34 @@ params ["_pos"];
 		_intel call vn_mf_fnc_action_gather_intel;
 		private _currentVehicles = vehicles;
 
-		{
-			if(_x isKindOf "Building" || _x isKindOf "House" || typeOf _x in ["Land_Map_unfolded_Malden_F", "Land_vn_wf_vehicle_service_point_east", "Land_vn_fuel_tank_stairs", "Land_Net_Fence_Gate_F"] || _x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle" || _x isKindOf "Air") then {
+		vn_site_objects append _factoryObjects;
+
+		private _objectTypesToDestroy = ["Land_vn_wf_vehicle_service_point_east"];
+		
+		private _objectTypesForDynamicSim = [
+			"Land_Map_unfolded_Malden_F",
+			"Land_vn_wf_vehicle_service_point_east",
+			"Land_vn_fuel_tank_stairs",
+			"Land_Net_Fence_Gate_F"
+		];
+
+		private _fnc_dynSimKindOfChecker = {
+			params ["_object"];
+			(_x isKindOf "StaticWeapon" || _x isKindOf "Building" || _x isKindOf "House" || _x isKindOf "LandVehicle" || _x isKindOf "Air")
+		};
+
+		_factoryObjects apply {
+			if(typeOf _x in _objectTypesToDestroy + _objectTypesForDynamicSim || [_x] call _fnc_dynSimKindOfChecker) then {
 				[_x, true] call para_s_fnc_enable_dynamic_sim;
 			};
+		};
 
+		_factoryObjects apply {
 			if (_x in _currentVehicles) then {
 				[_x, ["DacCong"]] call vn_mf_fnc_lock_vehicle_to_teams;
 				vn_mf_dc_assets pushBack _x;
 			};
-
-		} forEach _factoryObjects;
-
-		vn_site_objects append _factoryObjects;
+		};
 
 		//Create a factory marker.
 		private _markerPos = _spawnPos getPos [20 + random 30, random 360];
@@ -70,19 +84,18 @@ params ["_pos"];
 		_respawnObj setVariable ["vn_respawn", [_factoryRespawnMarker, _respawnID]];
 	
 		vn_dc_adhoc_respawns pushBack [_factoryRespawnMarker, _respawnID];
-
-		private _guns = _factoryObjects select {_x isKindOf "StaticWeapon"};
-		private _objectives = [];
-		{
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _guns;
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
+		
+		// 2x ai objectives to replace other factory / hq AI that never get freed in task system
+		private _objectives = [
+			[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend,
+			[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend
+		];
 
 		_siteStore setVariable ["aiObjectives", _objectives];
 		_siteStore setVariable ["markers", [_factoryMarker]];
-		_siteStore setVariable ["staticGuns", _guns];
+		_siteStore setVariable ["staticGuns", _factoryObjects select {_x isKindOf "StaticWeapon"}];
 		_siteStore setVariable ["vehicles", _factoryObjects]; 
-		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
+		_siteStore setVariable ["objectsToDestroy", _factoryObjects select {typeOf _x in _objectTypesToDestroy}];
 	},
 	//Teardown condition check code
 	{
@@ -98,8 +111,6 @@ params ["_pos"];
 	//Teardown code
 	{
 		params ["_siteStore"];
-
-		private _objectsToDestroy = _siteStore getVariable "objectsToDestroy";
 
 		{
 			deleteMarker _x;

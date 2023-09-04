@@ -85,9 +85,8 @@ params ["_pos"];
 		_artilleryMarker setMarkerText "Arty";
 		_artilleryMarker setMarkerAlpha 0;
 
-		private _objectives = [];
+		_objectsToDestroy apply {
 
-		{
 			// Disable weapon dissassembly as statics aren't deleted properly
 			// when disassembled, breaking the site/mission.
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
@@ -98,20 +97,10 @@ params ["_pos"];
 			[_x, ["DacCong"]] call vn_mf_fnc_lock_vehicle_to_teams;
 			vn_mf_dc_assets pushBack _x;
 
-			// get replenishable AI crews for mortars/art objects
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+		};
 
-		} forEach _objectsToDestroy;
-
-		// other static weapons setup
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _staticWeaponsOther;
-
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
-
-		_siteStore setVariable ["aiObjectives", _objectives];
+		_staticWeaponsOther apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
+		_siteStore setVariable ["aiObjectives", [_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend];
 		_siteStore setVariable ["markers", [_artilleryMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},

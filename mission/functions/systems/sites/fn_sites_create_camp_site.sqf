@@ -39,11 +39,25 @@ params ["_pos"];
 
 		vn_site_objects append _campObjs;
 
-		private _objectsToDestroy = _campObjs select {typeOf _x in ["Land_vn_o_shelter_06", "Land_vn_pavn_launchers", "vn_b_ammobox_01", "Land_vn_pavn_weapons_wide", "Land_vn_pavn_weapons_cache", "Land_vn_pavn_ammo", "Land_vn_pavn_weapons_stack1", "Land_vn_pavn_weapons_stack2", "Land_vn_pavn_weapons_stack3", "vn_b_ammobox_full_02", "vn_o_ammobox_wpn_04", "vn_o_ammobox_full_03", "vn_o_ammobox_full_07", "vn_o_ammobox_full_06", "StaticWeapon"]};
+		private _campObjectiveTypes = [
+			"Land_vn_o_shelter_06",
+			"Land_vn_pavn_launchers",
+			"vn_b_ammobox_01",
+			"Land_vn_pavn_weapons_wide",
+			"Land_vn_pavn_weapons_cache",
+			"Land_vn_pavn_ammo",
+			"Land_vn_pavn_weapons_stack1",
+			"Land_vn_pavn_weapons_stack2",
+			"Land_vn_pavn_weapons_stack3",
+			"vn_b_ammobox_full_02",
+			"vn_o_ammobox_wpn_04",
+			"vn_o_ammobox_full_03",
+			"vn_o_ammobox_full_07",
+			"vn_o_ammobox_full_06"
+		];
 
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-		} forEach _objectsToDestroy;
+		private _objectsToDestroy = _campObjs select {typeOf _x in _campObjectiveTypes};
+		_objectsToDestroy apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _campMarker = createMarker [format ["Camp_%1", _siteId], _markerPos];
@@ -51,20 +65,10 @@ params ["_pos"];
 		_campMarker setMarkerText "Camp";
 		_campMarker setMarkerAlpha 0;
 
-		private _staticWeapons = _campObjs select {
-			_x isKindOf "StaticWeapon";
-		};
+		private _staticWeapons = _campObjs select {_x isKindOf "StaticWeapon"};
+		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
-		private _objectives = [];
-
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _staticWeapons;
-
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
-
-		_siteStore setVariable ["aiObjectives", _objectives];
+		_siteStore setVariable ["aiObjectives", [_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend];
 		_siteStore setVariable ["markers", [_campMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
