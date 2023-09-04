@@ -31,18 +31,14 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
-		private _aaType = selectRandom [
-			"vn_o_nva_navy_static_zpu4", 
-			"vn_o_nva_static_zpu4", 
-			"vn_o_nva_65_static_zpu4"
-		];
-
-		// private _AAObjs = [_spawnPos] call vn_mf_fnc_create_aa_buildings;
-		private _objects = [[_aaType, _spawnPos] call para_g_fnc_create_vehicle];
+		private _objects = [_spawnPos] call vn_mf_fnc_create_aa_buildings;
 
 		vn_site_objects append _objects;
 
-		_objects apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
+		_objects apply {
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
+			createVehicleCrew _x;
+		};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 
@@ -51,13 +47,7 @@ params ["_pos"];
 		_aaMarker setMarkerText "AA";
 		_aaMarker setMarkerAlpha 0;
 
-		private _objectives = [];
-		{
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _objects;
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
-
-		_siteStore setVariable ["aiObjectives", _objectives];
+		_siteStore setVariable ["aiObjectives", [_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend];
 		_siteStore setVariable ["markers", [_aaMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objects];
 	},
