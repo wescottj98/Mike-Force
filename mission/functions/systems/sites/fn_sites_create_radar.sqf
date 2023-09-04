@@ -63,7 +63,7 @@ params ["_pos"];
 
 		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
-		_siteStore setVariable ["aiObjectives", [_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend];
+		_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
 		_siteStore setVariable ["markers", [_radarMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
