@@ -47,7 +47,7 @@ params ["_pos"];
 		_aaMarker setMarkerText "AA";
 		_aaMarker setMarkerAlpha 0;
 
-		_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
+		_siteStore setVariable ["aiObjectives", []];
 		_siteStore setVariable ["markers", [_aaMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objects];
 	},
