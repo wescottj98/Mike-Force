@@ -20,8 +20,8 @@ params ["_zone"];
 
 localNamespace getVariable [_zone, []] set [struct_zone_m_captured, true];
 
-private _selectZone = mf_s_ActiveZones findIf {_zone in _x};
-mf_s_ActiveZones deleteAt _selectZone;
+private _selectZone = mf_s_dir_activeZones findIf {_zone in _x};
+mf_s_dir_activeZones deleteAt _selectZone;
 
 _zone setMarkerColor "ColorGreen";
 [_zone, "zone_captured"] call para_c_fnc_zone_marker_add;
