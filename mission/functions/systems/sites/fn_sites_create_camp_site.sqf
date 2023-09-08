@@ -68,7 +68,13 @@ params ["_pos"];
 		private _staticWeapons = _campObjs select {_x isKindOf "StaticWeapon"};
 		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
-		_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
+		// 30% chance to spawn an ambush
+		if (random 1 < 0.3) then {
+			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_ambush]];
+		} else {
+			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
+		};
+
 		_siteStore setVariable ["markers", [_campMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},

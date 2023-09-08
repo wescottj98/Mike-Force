@@ -39,10 +39,13 @@ if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 
 		private _tunnels = _result select 1;
 
-		private _objectives = [];
-		_objectives pushBack ([_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend);
+		// 70% chance to spawn an ambush
+		if (random 1 < 0.7) then {
+			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_ambush]];
+		} else {
+			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
+		};
 
-		_siteStore setVariable ["aiObjectives", _objectives];
 		_siteStore setVariable ["markers", [_tunnelMarker]];
 		_siteStore setVariable ["tunnels", _tunnels];
 		_siteStore setVariable ["vehicles", _vehicles]; 
