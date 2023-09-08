@@ -37,8 +37,8 @@ params ["_pos"];
 		
 		[_tunnelWS, true] call para_s_fnc_enable_dynamic_sim;
 		
-		// 30% chance to spawn an ambush
-		if (random 1 < 0.3) then {
+		// 70% chance to spawn an ambush
+		if (random 1 < 0.7) then {
 			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_ambush]];
 		} else {
 			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
