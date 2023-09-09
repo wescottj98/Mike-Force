@@ -394,6 +394,13 @@ class CfgFunctions
 			class zones_save_zone {};
 		};
 
+		class system_sysmsgs
+		{
+			file = "functions\systems\sysmsg";
+			class sysmsg_print_admin {};
+			class sysmsg_print_others {};
+		};
+
 		class mod_support
 		{
 			class init_comms {};
