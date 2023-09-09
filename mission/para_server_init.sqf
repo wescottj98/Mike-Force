@@ -29,6 +29,9 @@ call para_s_fnc_init_curators;
 call para_s_fnc_init_dopamine;
 ["dopamine_hit", para_s_fnc_init_dopemine, [], 300] call para_g_fnc_scheduler_add_job;
 
+["sysmsg_admin", vn_mf_fnc_sysmsg_print_admin, [], 600] call para_g_fnc_scheduler_add_job;
+["sysmsg_generic", vn_mf_fnc_sysmsg_print_others, [], 907] call para_g_fnc_scheduler_add_job;
+
 private _gamemode_config = (missionConfigFile >> "gamemode");
 
 private _wipeSave = (["wipe_save", 0] call BIS_fnc_getParamValue) > 0;
