@@ -8,7 +8,7 @@ class EditorData
 	toggles=585;
 	class ItemIDProvider
 	{
-		nextID=15596;
+		nextID=15601;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16780;
+		nextID=16882;
 	};
 	class Camera
 	{
-		pos[]={16266.591,25.176546,6517.8989};
-		dir[]={0.050837524,-0.53980702,0.84025621};
-		up[]={0.032600299,0.84178674,0.53882533};
-		aside[]={0.99817848,-7.3836418e-008,-0.060391955};
+		pos[]={16067.038,34.059639,7639.9814};
+		dir[]={0.62476665,-0.73814911,0.25460356};
+		up[]={0.6837188,0.67445886,0.27862865};
+		aside[]={0.37738833,-3.2733078e-007,-0.92606497};
 	};
 };
 binarizationWanted=0;
@@ -600,8 +600,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -651,8 +651,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -721,7 +721,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1576;
+		items=1581;
 		class Item0
 		{
 			dataType="Marker";
@@ -19240,6 +19240,7 @@ class Mission
 				angles[]={0,1.7210692,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""MACV"",""3rdMEU"",""QuarterHorse"",""DacCong""]]call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -19247,7 +19248,7 @@ class Mission
 			};
 			id=6204;
 			type="vn_b_army_static_m101_02";
-			atlOffset=0.51599121;
+			atlOffset=0.11679077;
 		};
 		class Item458
 		{
@@ -48442,6 +48443,7 @@ class Mission
 			};
 			id=13798;
 			type="vn_o_armor_pt76a_01_pl";
+			atlOffset=0.0071144104;
 		};
 		class Item1073
 		{
@@ -48460,7 +48462,7 @@ class Mission
 			};
 			id=13799;
 			type="vn_o_armor_pt76a_01_pl";
-			atlOffset=-0.00064277649;
+			atlOffset=4.7683716e-006;
 		};
 		class Item1074
 		{
@@ -80909,6 +80911,7 @@ class Mission
 				angles[]={0.0010995574,3.1344018,6.2334433};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""MACV"",""3rdMEU"",""QuarterHorse"",""DacCong""]]call vn_mf_fnc_lock_vehicle_to_teams;";
@@ -80916,7 +80919,7 @@ class Mission
 			};
 			id=15345;
 			type="vn_b_air_ch47_03_01";
-			atlOffset=0.27529907;
+			atlOffset=0.0091247559;
 		};
 		class Item1510
 		{
@@ -85466,7 +85469,7 @@ class Mission
 			};
 			id=15558;
 			type="vn_b_air_uh1d_04_09";
-			atlOffset=4.3163528;
+			atlOffset=4.4036255;
 		};
 		class Item1565
 		{
@@ -85647,6 +85650,90 @@ class Mission
 			id=15595;
 			type="vn_module_photo_camera_enable_screenshots";
 			atlOffset=88.788994;
+		};
+		class Item1576
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16040.733,20.612495,7623.2563};
+				angles[]={0,0.7788927,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15596;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
+		};
+		class Item1577
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16031.633,19.678709,7645.8682};
+				angles[]={0,1.5268568,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15597;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
+		};
+		class Item1578
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16075.604,20.822031,7637.4482};
+				angles[]={0,6.2734199,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15598;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
+		};
+		class Item1579
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16093.228,21.178429,7648.0366};
+				angles[]={0,4.2948442,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15599;
+			type="Land_vn_lampshabby_f_dir_normal";
+		};
+		class Item1580
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16074.695,20.663406,7661.0571};
+				angles[]={0,2.7624586,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15600;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
 		};
 	};
 	class Connections
