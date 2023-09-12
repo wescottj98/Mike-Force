@@ -26,6 +26,12 @@ if (isNil "_previousMessageTime") then {
 
 vn_mf_arsenal_circles = [];
 {
+	if (vehicleVarName _x == 'mp_arsenal') then {
+		continue
+	};
+	if (vehicleVarName _x == 'udt_docks_arsenal') then {
+		continue
+	};
 	private _markerName = format["vn_mf_arsenal_%1", _forEachIndex];
 	private _marker = createMarker [_markerName, getPos _x];
 	_markerName setMarkerAlpha 0;
