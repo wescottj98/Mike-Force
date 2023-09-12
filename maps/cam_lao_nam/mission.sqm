@@ -670,6 +670,19 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -681,7 +694,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -16373,7 +16386,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="_this setGroupID [_value];";
+					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
 					class Value
 					{
 						class data
@@ -89905,6 +89918,101 @@ class Mission
 			};
 			id=16077;
 			atlOffset=1.1672192;
+		};
+		class Item1575
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={20839.418,-6.1035156e-005,4102.6992};
+			};
+			id=15595;
+			type="vn_module_photo_camera_enable_screenshots";
+			atlOffset=88.788994;
+		};
+		class Item1576
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16040.733,20.612495,7623.2563};
+				angles[]={0,0.7788927,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15596;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
+		};
+		class Item1577
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16031.633,19.678709,7645.8682};
+				angles[]={0,1.5268568,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15597;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
+		};
+		class Item1578
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16075.604,20.822031,7637.4482};
+				angles[]={0,6.2734199,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15598;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
+		};
+		class Item1579
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16093.228,21.178429,7648.0366};
+				angles[]={0,4.2948442,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15599;
+			type="Land_vn_lampshabby_f_dir_normal";
+		};
+		class Item1580
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16074.695,20.663406,7661.0571};
+				angles[]={0,2.7624586,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15600;
+			type="Land_vn_lampshabby_f_dir_normal";
+			atlOffset=1.9073486e-006;
 		};
 	};
 	class Connections

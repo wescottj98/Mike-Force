@@ -78,6 +78,7 @@ class CfgFunctions
 			class enable_debug_monitor {};
 			class init_performance_logging {};
 			class log_performance_data {};
+			class log_ai_objective_data {};
 		};
 
 		class ui
@@ -391,6 +392,13 @@ class CfgFunctions
 			class zones_load_zone {};
 			class zones_manager_job {};
 			class zones_save_zone {};
+		};
+
+		class system_sysmsgs
+		{
+			file = "functions\systems\sysmsg";
+			class sysmsg_print_admin {};
+			class sysmsg_print_others {};
 		};
 
 		class mod_support

@@ -308,7 +308,7 @@ _taskDataStore setVariable ["INIT", {
 
 	/* send notifications about starting the next AO */
 	private _totalTaskDurationSeconds = (_taskDataStore getVariable ["subtaskDurationSeconds", 0]) * 2;
-	["AttackPreparing", [format ["%1", _totalTaskDurationSeconds]]] remoteExec ["para_c_fnc_show_notification", 0];
+	["AttackPreparing", [format ["%1", _totalTaskDurationSeconds / 60]]] remoteExec ["para_c_fnc_show_notification", 0];
 	[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
 	["Attack Operation preparation", serverTime + _totalTaskDurationSeconds, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 
