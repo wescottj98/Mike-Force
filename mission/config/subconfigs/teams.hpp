@@ -151,7 +151,7 @@ class GreenHornets
 class 3rdMEU
 {
     name = "31st MEU [31st MEU]";
-    icon = "custom\taskroster\3rdmeu_HL_OLD.paa";
+    icon = "custom\taskroster\31st_logo_meu_HL.paa";
     shortname = "31st MEU";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
