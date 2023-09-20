@@ -186,8 +186,8 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\3rdmeu_gray_OLD.paa";
-			textUp = "custom\taskroster\3rdmeu_HL_OLD.paa";
+			text = "custom\taskroster\31st_logo_meu_gray.paa";
+			textUp = "custom\taskroster\31st_logo_meu_HL.paa";
 			
 			onButtonClick = "['3rdMEU'] call vn_mf_fnc_tr_selectTeam;";
 		};
