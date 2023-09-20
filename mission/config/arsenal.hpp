@@ -699,7 +699,7 @@ class vn_whitelisted_arsenal_loadouts
 			{ "vn_o_item_map", 						{ 0,-1, 0, 0}}, 
 			{ "vn_o_item_radio_m252", 				{ 0,-1, 0, 0}}, 
 			{ "vn_b_item_compass", 					{ 0, 0, 0,-1}}, 
-			{ "vn_b_item_compass_sog", 				{-1, 0, 0, 0}}, 
+			{ "vn_b_item_compass_sog", 				{ 0, 0, 0, 0}}, 
 			{ "vn_b_item_firstaidkit", 				{-1, 0, 0,-1}}, 
 			{ "vn_b_item_map", 						{-1, 0, 0,-1}}, 
 			{ "vn_b_item_medikit_01", 				{-1, 0, 0,-1}}, 
