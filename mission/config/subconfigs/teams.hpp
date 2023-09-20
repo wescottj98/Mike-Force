@@ -150,9 +150,9 @@ class GreenHornets
 
 class 3rdMEU
 {
-    name = "1st Marines [1st MEU]";
-    icon = "custom\taskroster\1stmeu_HL.paa";
-    shortname = "1st Marines";
+    name = "31st MEU [31st MEU]";
+    icon = "custom\taskroster\3rdmeu_HL_OLD.paa";
+    shortname = "31st MEU";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0.3, 0.6, 1};
