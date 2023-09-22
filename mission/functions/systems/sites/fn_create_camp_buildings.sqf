@@ -17,7 +17,7 @@
 
 params ["_position"];
 
-vn_mf_camp_compositions_default = [
+vn_mf_camp_site_compositions_v1 = [
 	[
 		["vn_o_prop_t102e_01",[3.60205,1.41553,0.864996],43.9,1,0,[0,0],"","",false,false], 
 		["Land_WoodenTable_small_F",[3.64111,1.52979,0],224.926,1,0,[0,0],"","",false,false], 
@@ -394,7 +394,7 @@ vn_mf_camp_compositions_default = [
 	]
 ];
 
-vn_mf_camp_compositions = [
+vn_mf_camp_site_compositions_v2 = [
 	[
 	["vn_o_nva_static_sgm_low_02",[-1.52588,-0.194824,-0.0751295],283.212,1,0,[0,0],"","",false,false], 
 	["vn_fireplace_burning_f",[1.87695,-0.872559,-4.76837e-007],0,1,0,[0,0],"","",false,false], 
@@ -728,17 +728,141 @@ vn_mf_camp_compositions = [
 ]
 ];
 
-private _site_objs = [selectRandom vn_mf_camp_compositions, 0.7] call vn_mf_fnc_sites_objmapper_dynamic_grass;
+vn_mf_camp_site_compositions_v3 = [
+	/*
+	Land_vn_pavn_weapons_stack1 varients
+	*/
 
-{
+	// has no campfire
+	[
+		["Land_vn_o_shelter_06",[0.258789,1.2998,0],270.318,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-1.33398,2.93555,0],247.678,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[0.292969,-3.95068,-0.000703335],359.974,1,0,[0.926653,0.043989],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.52246,-3.23389,0],163.946,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[2.89014,3.41016,0],108.015,1,0,[0,-0],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[2.15869,-3.41455,0.044529],180.238,1,0,[2.46404,-4.35736],"","",true,false]
+	],
+	[
+		["Land_vn_o_shelter_06",[-0.579102,1.47607,0],270.318,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[-0.289551,-3.66748,-0.00075531],359.968,1,0,[0.904449,0.00292902],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.17188,3.11182,0],247.678,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[2.05225,3.58643,0],108.015,1,0,[0,-0],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[1.32178,-3.23633,0.0430574],180.315,1,0.103549,[2.39703,-4.27401],"","",true,false]
+	],
+	// with unlit campfires
+	[
+		["vn_o_prop_t884_01",[-0.868652,2.29199,-0.000768661],359.925,1,0,[0.905595,0.0025392],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[3.58789,0.672363,-0.0200133],90.779,1,0.12162,[-0.785575,-0.0728572],"","",true,false], 
+		["Land_vn_o_shelter_01",[-3.6875,0.754883,0],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.64404,-3.67578,0],148.221,1,0,[0,-0],"","",true,false], 
+		["Land_vn_campfire_f",[-4.28516,1.25635,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.74707,5.26953,0],16.3519,1,0,[0,0],"","",true,false]
+	],
+	[
+		["vn_o_prop_t884_01",[0.69043,-0.509766,-0.00075531],359.969,1,0,[0.904449,0.00292889],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[-1.18115,0.943359,-0.0200458],290.772,1,0.0777321,[-0.788556,-0.0708576],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.39941,-2.11377,0],110.294,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_shelter_06",[3.14893,-0.355957,0],177.713,1,0,[0,-0],"","",true,false], 
+		["Land_vn_campfire_f",[0.816406,-3.27588,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.99951,1.61914,0],201.04,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[0.758789,3.55371,0],125.213,1,0,[0,-0],"","",true,false]
+	],
+	[
+		["Land_vn_campfire_f",[0.397461,0.512207,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[-1.2749,1.39355,-0.00075531],359.968,1,0,[0.904458,0.00292898],"","",true,false], 
+		["Land_vn_o_shelter_06",[-1.80078,-1.83496,0],301.7,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.68604,1.30713,0],201.04,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.59961,2.93945,0],125.213,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_shelter_06",[2.93164,-1.83008,0],219.886,1,0,[0,0],"","",true,false]
+	],
+	[
+		["Land_vn_pavn_weapons_stack1",[1.48975,-0.964844,-0.0199876],90.78,1,0.104103,[-0.781418,-0.0784438],"","",true,false], 
+		["vn_o_prop_t884_01",[-2.6084,-0.19043,-0.00075531],359.968,1,0,[0.904453,0.00292905],"","",true,false], 
+		["Land_vn_o_shelter_04",[-0.525879,2.83301,0],45.7491,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.19482,-2.46094,0],59.8888,1,0,[0,0],"","",true,false], 
+		["Land_vn_campfire_f",[0.581543,-4.8125,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[-4.74219,0.20459,0],349.734,1,0,[0,0],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[4.97803,1.18164,-0.0200596],90.8542,1,0.0964033,[-0.792407,-0.0653819],"","",true,false]
+	],
+	[
+		["vn_o_prop_t884_01",[-0.1875,1.63232,-0.00075531],359.968,1,0,[0.904449,0.00292899],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.18848,-0.776367,0],230.991,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[2.45068,-0.227051,0],112.483,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[1.67822,2.19824,0],108.015,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.54883,1.18359,0],226.591,1,0,[0,0],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[0.398926,-2.86084,-0.0200272],90.7465,1,0.122781,[-0.787538,-0.0710506],"","",true,false]
+	],
+	[
+		["Land_vn_campfire_f",[0.285645,0.709473,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[2.21094,1.47363,-0.00075531],359.968,1,0,[0.90444,0.00292899],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.8999,-1.82568,0],327.824,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.93311,-0.317383,0],48.6475,1,0,[0,0],"","",true,false]
+	],
+	[
+		["Land_vn_campfire_f",[0.121582,-1.07129,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[1.87988,-0.0776367,-0.00075531],359.968,1,0,[0.904449,0.00292901],"","",true,false], 
+		["Land_vn_o_shelter_06",[-3.20996,-1.70264,0],48.6475,1,0,[0,0],"","",true,false],
+		["Land_vn_pavn_weapons_stack1",[3,1,0],48.6475,1,0,[0,0],"","",true,false]
+	],
+	// with burning campfires
+	[
+		["vn_o_prop_t884_01",[-0.868652,2.29199,-0.000768661],359.925,1,0,[0.905595,0.0025392],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[3.58789,0.672363,-0.0200133],90.779,1,0.12162,[-0.785575,-0.0728572],"","",true,false], 
+		["Land_vn_o_shelter_01",[-3.6875,0.754883,0],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.64404,-3.67578,0],148.221,1,0,[0,-0],"","",true,false], 
+		["vn_campfire_burning_f",[-4.28516,1.25635,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.74707,5.26953,0],16.3519,1,0,[0,0],"","",true,false]
+	],
+	[
+		["vn_o_prop_t884_01",[0.69043,-0.509766,-0.00075531],359.969,1,0,[0.904449,0.00292889],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[-1.18115,0.943359,-0.0200458],290.772,1,0.0777321,[-0.788556,-0.0708576],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.39941,-2.11377,0],110.294,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_shelter_06",[3.14893,-0.355957,0],177.713,1,0,[0,-0],"","",true,false], 
+		["vn_campfire_burning_f",[0.816406,-3.27588,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.99951,1.61914,0],201.04,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[0.758789,3.55371,0],125.213,1,0,[0,-0],"","",true,false]
+	],
+	[
+		["vn_campfire_burning_f",[0.397461,0.512207,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[-1.2749,1.39355,-0.00075531],359.968,1,0,[0.904458,0.00292898],"","",true,false], 
+		["Land_vn_o_shelter_06",[-1.80078,-1.83496,0],301.7,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.68604,1.30713,0],201.04,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.59961,2.93945,0],125.213,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_shelter_06",[2.93164,-1.83008,0],219.886,1,0,[0,0],"","",true,false]
+	],
+	[
+		["Land_vn_pavn_weapons_stack1",[1.48975,-0.964844,-0.0199876],90.78,1,0.104103,[-0.781418,-0.0784438],"","",true,false], 
+		["vn_o_prop_t884_01",[-2.6084,-0.19043,-0.00075531],359.968,1,0,[0.904453,0.00292905],"","",true,false], 
+		["Land_vn_o_shelter_04",[-0.525879,2.83301,0],45.7491,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.19482,-2.46094,0],59.8888,1,0,[0,0],"","",true,false], 
+		["vn_campfire_burning_f",[0.581543,-4.8125,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[-4.74219,0.20459,0],349.734,1,0,[0,0],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[4.97803,1.18164,-0.0200596],90.8542,1,0.0964033,[-0.792407,-0.0653819],"","",true,false]
+	],
+	[
+		["vn_o_prop_t884_01",[-0.1875,1.63232,-0.00075531],359.968,1,0,[0.904449,0.00292899],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.18848,-0.776367,0],230.991,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[2.45068,-0.227051,0],112.483,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[1.67822,2.19824,0],108.015,1,0,[0,-0],"","",true,false], 
+		["Land_vn_o_wallfoliage_01",[-2.54883,1.18359,0],226.591,1,0,[0,0],"","",true,false], 
+		["Land_vn_pavn_weapons_stack1",[0.398926,-2.86084,-0.0200272],90.7465,1,0.122781,[-0.787538,-0.0710506],"","",true,false]
+	],
+	[
+		["vn_campfire_burning_f",[0.285645,0.709473,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[2.21094,1.47363,-0.00075531],359.968,1,0,[0.90444,0.00292899],"","",true,false], 
+		["Land_vn_o_shelter_06",[1.8999,-1.82568,0],327.824,1,0,[0,0],"","",true,false], 
+		["Land_vn_o_shelter_06",[-2.93311,-0.317383,0],48.6475,1,0,[0,0],"","",true,false]
+	],
+	[
+		["vn_campfire_burning_f",[0.121582,-1.07129,0.0299988],0,1,0,[0,0],"","",true,false], 
+		["vn_o_prop_t884_01",[1.87988,-0.0776367,-0.00075531],359.968,1,0,[0.904449,0.00292901],"","",true,false], 
+		["Land_vn_o_shelter_06",[-3.20996,-1.70264,0],48.6475,1,0,[0,0],"","",true,false],
+		["Land_vn_pavn_weapons_stack1",[3,1,0],48.6475,1,0,[0,0],"","",true,false]
+	]
+];
 
-	if (_x isKindOf "StaticWeapon") then {
-		_x allowDamage false;
-		_x setPos [getPos _x # 0, getPos _x # 1, 0];
-		_x setVectorUp (surfaceNormal getPos _x);
-		_x allowDamage true;
-	};
-	
-} forEach _site_objs;
+
+private _randAngle = [1, 360] call BIS_fnc_randomInt;
+private _site_objs = [_position, _randAngle, selectRandom vn_mf_camp_site_compositions_v3, 0] call BIS_fnc_objectsMapper;
 
 _site_objs

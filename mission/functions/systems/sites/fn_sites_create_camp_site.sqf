@@ -69,10 +69,11 @@ params ["_pos"];
 		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
 		// 30% chance to spawn an ambush
+		// @dijksterhuis: we don't assign AI to every camp site to save AI budget on other assignments
+		// like tracker teams or factory/HQ/arty sites. 
+		// also reduce the scaling factor (affects how many AI should be assigned to this specific location)
 		if (random 1 < 0.3) then {
-			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_ambush]];
-		} else {
-			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
+			_siteStore setVariable ["aiObjectives", [[_spawnPos, 0.5, 1] call para_s_fnc_ai_obj_request_ambush]];
 		};
 
 		_siteStore setVariable ["markers", [_campMarker]];
