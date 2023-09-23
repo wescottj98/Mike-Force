@@ -91,7 +91,20 @@ private _blacklistedMapZones = vn_mf_markers_no_sites apply {
 	]
 };
 
-private _blacklistedSiteAreas = _occupiedSiteAreas + _blacklistedMapZones;
+// player built FOBs
+private _playerBases = para_g_bases apply {
+	private _baseRadius = _x getVariable "para_g_base_radius";
+	[
+		getPos _x,
+		_baseRadius,
+		_baseRadius,
+		0,
+		false
+	]
+};
+
+	
+private _blacklistedSiteAreas = _occupiedSiteAreas + _blacklistedMapZones + _playerBases;
 
 private _finalPosition = [_position, 0, _radius, 0, _waterMode, 0.5, 0, _blacklistedSiteAreas, [_position, _position]] call BIS_fnc_findSafePos;
 private _radGrad = aCos ([0,0,1] vectorCos (surfaceNormal _finalPosition));
