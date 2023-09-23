@@ -37,6 +37,13 @@ if !([_task] call vn_mf_fnc_task_is_completed) then {
 [] call vn_mf_fnc_director_open_closest_zone;
 // [] call vn_mf_fnc_director_open_connected_zones;
 
+// we don't want to start playing music for
+// players still in the intro / player init
+
+allPlayers select {simulationEnabled _x} apply {
+    remoteExec ["vn_mf_fnc_director_play_music_completed_zone", _x];
+};
+
 mf_s_dir_activeZones deleteAt _zone;
 mf_g_dir_activeZoneNames = keys mf_s_dir_activeZones;
 publicVariable "mf_g_dir_activeZoneNames";
