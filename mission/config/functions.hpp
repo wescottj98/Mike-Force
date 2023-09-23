@@ -219,6 +219,7 @@ class CfgFunctions
 			class director_open_closest_zone {};
 			class director_process_active_zone {};
 			class director_zones_in_range_of_bases {};
+			class director_play_music_completed_zone {};
 		};
 
 		class system_earplugs {
