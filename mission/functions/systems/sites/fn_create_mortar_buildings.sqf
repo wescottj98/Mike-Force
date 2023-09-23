@@ -17,7 +17,7 @@
 
 params ["_position"];
 
-vn_mf_arty_compositions_default = [
+vn_mf_arty_compositions_v1 = [
 	[
 		["Land_VehicleTrack_01_left_v1_F",[1.66064,-0.865723,0.0699997],85.231,1,0,[0,0],"","",false,false], 
 		["Land_VehicleTrack_01_straight_v1_F",[1.71826,1.29395,0.000148773],100.195,1,0,[0,-0],"","",false,false], 
@@ -226,7 +226,7 @@ vn_mf_arty_compositions_default = [
 	]
 ];
 
-vn_mf_arty_compositions = [
+vn_mf_arty_compositions_v2 = [
 	[
 	["Land_vn_elephant_grass_01",[-3.01758,-1.61182,0.5],0,1,0,[0,0],"","",false,false], 
 	["Land_vn_elephant_grass_01",[3.68945,-1.79443,0.5],0,1,0,[0,0],"","",false,false], 
@@ -495,7 +495,125 @@ vn_mf_arty_compositions = [
 ]
 ];
 
-private _site_objs = [selectRandom vn_mf_arty_compositions, 0.3] call vn_mf_fnc_sites_objmapper_dynamic_grass;
+vn_mf_arty_compositions_v3 = [
+    [
+        ["vn_o_nva_65_static_mortar_type53",[0,0,0],359.999,1,0,[0,0],"","",true,false],
+        ["Land_vn_b_calochlaena_f",[-2,2,0],132.195,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[2,2,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type53",[2,-2,0],359.999,1,0,[0,0],"","",true,false],
+        ["vn_o_nva_65_static_mortar_type53",[-2,2,0],359.999,1,0,[0,0],"","",true,false],
+        ["Land_vn_b_calochlaena_f",[-2,-2,0],132.195,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[2,2,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type53",[2,2,0],359.999,1,0,[0,0],"","",true,false],
+        ["vn_o_nva_65_static_mortar_type53",[0,-2,0],359.999,1,0,[0,0],"","",true,false],
+        ["vn_o_nva_65_static_mortar_type53",[-2,2,0],359.999,1,0,[0,0],"","",true,false],
+        ["Land_vn_b_calochlaena_f",[-2,-2,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_static_dshkm_low_02",[-1.38574,-0.101563,0],199.361,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type53",[1.54004,2.05957,0],359.999,1,0,[0,0],"","",true,false],
+        ["Land_vn_b_calochlaena_f",[-2,2,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_static_dshkm_low_02",[-1.38574,0,0],199.361,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type53",[1.54004,2.05957,0],359.999,1,0,[0,0],"","",true,false],
+        ["vn_o_nva_65_static_mortar_type53",[0.5,-2,0],359.999,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-1.58496,-0.0830078,0],269.743,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[0.509766,-1.90234,0],359.973,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[2.54736,-0.000488281,0],179.08,1,0,[0,0],"","",true,false], 
+        ["vn_air_ch34_01_wreck",[0.582031,4.47998,0],264.515,1,0,[0,0],"","",true,false], 
+        ["vn_air_uh1d_med_wreck",[-0.217773,-4.8501,0],90.4572,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[-5.44922,0.953613,0],276.957,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[6.27002,-0.232422,0],93.4601,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[-6.4502,4.63184,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-1.58496,-0.0830078,0],269.743,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[0.509766,-1.90234,0],359.973,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[2.54736,-0.000488281,0],179.08,1,0,[0,0],"","",true,false], 
+        ["vn_air_uh1d_med_wreck",[-0.217773,-4.8501,0],90.4572,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[-5.44922,0.953613,0],276.957,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[6.27002,-0.232422,0],93.4601,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[-6.4502,4.63184,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-1.58496,-0.0830078,0],269.743,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[0.509766,-1.90234,0],359.973,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[2.54736,-0.000488281,0],179.08,1,0,[0,0],"","",true,false], 
+        ["vn_air_ch34_01_wreck",[0.582031,4.47998,0],264.515,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[-5.44922,0.953613,0],276.957,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[6.27002,-0.232422,0],93.4601,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[-6.4502,4.63184,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-0.934082,0.739746,0],269.688,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.71924,-0.5,0],269.703,1,0,[0,0],"","",true,false], 
+        ["Land_vn_d_fallentrunk_clear_f",[-1.40479,-2.27197,0],107.787,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.22559,2.96582,0],269.683,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[2.46045,2.24072,0],359.978,1,0,[0,0],"","",true,false], 
+        ["Land_vn_d_fallentrunk_clear_f",[4.12256,1.88867,0],176.716,1,0,[0,0],"","",true,false], 
+        ["Land_vn_d_fallentrunk_roots_lc_f",[-4.23535,1.59326,0],200,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-0.934082,0.739746,0],269.688,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.71924,-0.5,0],269.703,1,0,[0,0],"","",true,false], 
+        ["Land_vn_d_fallentrunk_clear_f",[-1.40479,-2.27197,0],107.787,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.22559,2.96582,0],269.683,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[2.46045,2.24072,0],359.978,1,0,[0,0],"","",true,false], 
+        ["Land_vn_d_fallentrunk_clear_f",[4.12256,1.88867,0],176.716,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-0.934082,0.739746,0],269.688,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.71924,-0.5,0],269.703,1,0,[0,0],"","",true,false], 
+        ["Land_vn_d_fallentrunk_clear_f",[-1.40479,-2.27197,0],107.787,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.22559,2.96582,0],269.683,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[2.46045,2.24072,0],359.978,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_prop_t884_01",[0.174805,-1.03174,0],359.968,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[-1.9043,1.81445,0],269.688,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[-1.9248,-2.37354,0],269.692,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[2.62695,1.79639,0],269.688,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[2.86377,-2.38037,0],269.684,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[-4.90576,-0.316895,0],132.195,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[0.108398,4.91504,0],132.195,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[5.25586,-0.432129,0],132.195,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[0.221191,-6.18408,0],132.195,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-2.34619,0.305176,0],269.706,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[2.78027,-1.15186,0],179.082,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[-0.364258,-3.59033,0],359.968,1,0,[0,0],"","",true,false], 
+        ["Land_vn_o_shelter_05",[-1.2334,-4.43066,0],285.124,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_65_static_mortar_type63",[-0.868164,0.588379,0],1.24734,1,0,[0,0],"","",true,false], 
+        ["vn_o_prop_t884_01",[1.92334,0.00146484,0],359.968,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type63",[1.11328,-1.42969,0],269.701,1,0,[0,0],"","",true,false], 
+        ["Land_vn_o_wallfoliage_01",[1.93457,1.81104,0],134.095,1,0,[0,0],"","",true,false], 
+        ["Land_vn_o_wallfoliage_01",[-1.87451,2.42773,0],248.001,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[-2.41162,-1.99463,0],223.333,1,0,[0,0],"","",true,false], 
+        ["Land_vn_o_wallfoliage_01",[2.87695,-1.95361,0],8.25574,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[-5.12598,1.07764,0],259.008,1,0,[0,0],"","",true,false], 
+        ["Land_vn_b_calochlaena_f",[2.90967,-5.32373,0],175.111,1,0,[0,0],"","",true,false]
+    ],
+    [
+        ["vn_o_nva_static_dshkm_low_02",[-1.37646,2.64697,0],360,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_65_static_mortar_type53",[-3.5752,-1.19141,0],41.1957,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_navy_static_mortar_type53",[-0.567871,-4.4585,0],49.4285,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_mortar_type53",[-6.54199,1.44629,0],40.8442,1,0,[0,0],"","",true,false], 
+        ["vn_o_nva_static_dshkm_low_02",[-6.50098,-3.35254,0],199.361,1,0,[0,0],"","",true,false]
+    ]
+];
+
+private _randAngle = [1, 360] call BIS_fnc_randomInt;
+private _site_objs = [_position, _randAngle, selectRandom vn_mf_arty_compositions_v3, 0] call BIS_fnc_objectsMapper;
 
 {
 
