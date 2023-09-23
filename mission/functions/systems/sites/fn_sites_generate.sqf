@@ -48,7 +48,7 @@ for "_i" from 1 to (3 + ceil random (vn_mf_s_max_camps_per_zone - 1)) do
 //Create initial artillery emplacements
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_artillery_per_zone - 1)) do
 {
-	private _artySite = [_center, vn_mf_bn_s_zone_radius, 0, 20, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+	private _artySite = [_center, vn_mf_bn_s_zone_radius, 0, 15, 10, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 	[_artySite, _zone] call vn_mf_fnc_sites_create_artillery_site;
 };
 
