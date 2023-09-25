@@ -76,7 +76,7 @@ params ["_pos"];
 			_siteStore setVariable ["aiObjectives", [[_spawnPos, 0.5, 1] call para_s_fnc_ai_obj_request_ambush]];
 		};
 
-		if (random 1 < 0.4) then {
+		if (random 1 < 0.3) then {
 
 			// create a larger amount of punji traps and fewer larger bigboom mines
 			private _traps = ([4, ceil random 8] call vn_mf_fnc_range) apply {
