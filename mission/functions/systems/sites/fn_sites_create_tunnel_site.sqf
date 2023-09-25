@@ -54,7 +54,7 @@ if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 
 		if (random 1 < 0.5) then {
 
-			private _mines = ([3, ceil random 8] call vn_mf_fnc_range) apply {
+			private _mines = ([5, ceil random 10] call vn_mf_fnc_range) apply {
 				createMine [selectRandom _mineTypes, _pos, [], 5]
 			};
 

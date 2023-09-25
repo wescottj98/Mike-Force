@@ -79,7 +79,7 @@ params ["_pos"];
 		if (random 1 < 0.4) then {
 
 			// create a larger amount of punji traps and fewer larger bigboom mines
-			private _traps = ([1, ceil random 7] call vn_mf_fnc_range) apply {
+			private _traps = ([4, ceil random 8] call vn_mf_fnc_range) apply {
 				createMine [
 					"vn_mine_punji_02",
 					_pos,
@@ -87,7 +87,7 @@ params ["_pos"];
 					10
 				]
 			};
-			private _mines = ([1, ceil random 3] call vn_mf_fnc_range) apply {
+			private _mines = ([1, ceil random 2] call vn_mf_fnc_range) apply {
 				createMine [
 					selectRandom ["vn_mine_pot_range", "vn_mine_jerrycan_range"],
 					_pos,
