@@ -46,6 +46,16 @@ if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 			_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
 		};
 
+		if (random 1 < 0.5) then {
+
+			private _mines = ([3, ceil random 8] call vn_mf_fnc_range) apply {
+				createMine ["vn_mine_punji_02", _pos, [], 5]
+			};
+
+			// deletes the mines once the zone is completed
+			vn_site_objects append _mines;
+		};
+
 		_siteStore setVariable ["markers", [_tunnelMarker]];
 		_siteStore setVariable ["tunnels", _tunnels];
 		_siteStore setVariable ["vehicles", _vehicles]; 

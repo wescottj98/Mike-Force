@@ -26,6 +26,7 @@ class CfgFunctions
 			class check_enemy_units_alive {};
 			class player_within_radius {};
 			class check_side {};
+			class range {};
 		};
 
 		class core_init
