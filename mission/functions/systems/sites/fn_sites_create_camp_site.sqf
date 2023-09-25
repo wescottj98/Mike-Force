@@ -76,6 +76,30 @@ params ["_pos"];
 			_siteStore setVariable ["aiObjectives", [[_spawnPos, 0.5, 1] call para_s_fnc_ai_obj_request_ambush]];
 		};
 
+		if (random 1 < 0.4) then {
+
+			// create a larger amount of punji traps and fewer larger bigboom mines
+			private _traps = ([1, ceil random 7] call vn_mf_fnc_range) apply {
+				createMine [
+					"vn_mine_punji_02",
+					_pos,
+					[],
+					10
+				]
+			};
+			private _mines = ([1, ceil random 3] call vn_mf_fnc_range) apply {
+				createMine [
+					selectRandom ["vn_mine_pot_range", "vn_mine_jerrycan_range"],
+					_pos,
+					[],
+					4
+				]
+			};
+			
+			// deletes the mines once the zone is completed
+			vn_site_objects append (_traps + _mines);
+		};
+
 		_siteStore setVariable ["markers", [_campMarker]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
