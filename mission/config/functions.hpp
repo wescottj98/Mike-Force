@@ -425,6 +425,7 @@ class CfgFunctions
 
 			class task_defend_counterattack { file = "functions\tasks\defend\fn_task_defend_counterattack.sqf";};
 			class task_defend_base { file = "functions\tasks\defend\fn_task_defend_base.sqf";};
+			class task_defend_main_base { file = "functions\tasks\defend\fn_task_defend_main_base.sqf";};
 
 			class task_destroy_aa_site { file = "functions\tasks\destroy\fn_task_destroy_aa_site.sqf";};
 			class task_destroy_artillery_site { file = "functions\tasks\destroy\fn_task_destroy_artillery_site.sqf";};

@@ -67,3 +67,80 @@ class defend_base : task
 };
 
 
+class defend_main_base : task
+{
+	taskcategory = "PRI";
+	tasktitle = "Defend Main Base from Attack";
+	taskname = "Defend Main Base from Attack";
+	taskdesc = "The enemy is preparing to attack our main base! Prepare to defend it!";
+	tasktype = "defend";
+	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
+	rankpoints = 10;
+	taskprogress = 10;
+
+	//The script called when the task is created.
+	taskScript = "vn_mf_fnc_state_machine_task_system";
+
+	//Data for the script to use to customise behaviour
+	class parameters 
+	{
+		stateMachineCode = "vn_mf_fnc_task_defend_main_base";
+		timeout = -1;
+	};
+
+	class defend_respawn_1
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_2
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_3
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_4
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_5
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_6
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_7
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_8
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+
+	class defend_respawn_9
+	{
+		taskname = "Defend Base";
+		taskdesc = "Enemy forces are attacking the base. Defend it!";
+	};
+};
+
+
