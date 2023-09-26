@@ -313,4 +313,41 @@ class CfgNotifications
 		color[] = {0.1,0.8,0.1,1};
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
+
+	class DacCongCapturingFlag
+	{
+		title = "Protect The Flag!";
+		description = "Dac Cong are capturing the flag!";
+		priority = 6;
+		color[] = {1,0,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class DacCongCapturedFlag
+	{
+		title = "Protect The Flag!";
+		description = "You are failure! Dac Cong have captured the flag!";
+		priority = 6;
+		color[] = {1,0,0,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class BlueforRaisingFlag
+	{
+		title = "Raise The Flag!";
+		description = "Bluefor are raising the flag.";
+		priority = 6;
+		color[] = {0.2,0.3,1,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+	class BlueforRaisedFlag
+	{
+		title = "Raise The Flag!";
+		description = "Bluefor have raised the flag!";
+		priority = 6;
+		color[] = {0.2,0.3,1,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
 };
