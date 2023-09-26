@@ -53,7 +53,13 @@ _taskDataStore setVariable ["INIT", {
 	_taskDataStore setVariable ["hq_sites_destroyed", false];
 	_taskDataStore setVariable ["factory_sites_destroyed", false];
 
-	[[["destroy_hq_sites", _zonePosition], ["destroy_factory_sites", _zonePosition]]] call _fnc_initialSubtasks;
+	private _initialTasks = [
+		["destroy_hq_sites", [(_zonePosition # 0) - 100, _zonePosition # 1, 0]],
+		["destroy_factory_sites", [(_zonePosition # 0) + 100, _zonePosition # 1, 0]],
+		["build_situation_room", [_zonePosition # 0, (_zonePosition # 1) - 100 , 0]]
+	];
+
+	[_initialTasks] call _fnc_initialSubtasks;
 }];
 
 _taskDataStore setVariable ["destroy_hq_sites", {
@@ -98,6 +104,57 @@ _taskDataStore setVariable ["destroy_factory_sites", {
 		_taskDataStore setVariable ["factory_sites_destroyed", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
+}];
+
+_taskDataStore setVariable ["build_situation_room", {
+        params ["_taskDataStore"];
+
+        private _possibleBases = para_g_bases inAreaArray [
+		getMarkerPos (_taskDataStore getVariable "taskMarker"),
+		selectMax (getMarkerSize (_taskDataStore getVariable "taskMarker") apply {abs _x}),
+		selectMax (getMarkerSize (_taskDataStore getVariable "taskMarker") apply {abs _x}),
+		0
+	];
+
+        if !(_possibleBases isEqualTo []) then {
+		_taskDataStore setVariable ["fob_built", true];
+		_taskDataStore setVariable ["fob_position", getPos (_possibleBases select 0)];
+		private _nextTasks = [
+			["build_respawn", getPos (_possibleBases select 0)],
+			["build_flag", getPos (_possibleBases select 0)]
+		];
+                ["SUCCEEDED", _nextTasks] call _fnc_finishSubtask;
+        };
+}];
+
+_taskDataStore setVariable ["build_respawn", {
+        params ["_taskDataStore"];
+
+        private _possibleRespawns = nearestObjects [
+		_taskDataStore getVariable "fob_position",
+		["Land_vn_guardhouse_01", "Land_vn_b_trench_bunker_01_01", "Land_vn_hootch_01_01"],
+		200
+	];
+
+        if !(_possibleBases isEqualTo []) then {
+		_taskDataStore setVariable ["respawn_built", true];
+                ["SUCCEEDED"] call _fnc_finishSubtask;
+        };
+}];
+
+_taskDataStore setVariable ["build_flag", {
+        params ["_taskDataStore"];
+
+        private _possibleRespawns = nearestObjects [
+		_taskDataStore getVariable "fob_position",
+		["vn_flag_usa", "vn_flag_aus", "vn_flag_arvn", "vn_flag_nz"],
+		200
+	];
+
+        if !(_possibleBases isEqualTo []) then {
+		_taskDataStore setVariable ["flag_built", true];
+                ["SUCCEEDED"] call _fnc_finishSubtask;
+        };
 }];
 
 _taskDataStore setVariable ["AFTER_STATES_RUN", {

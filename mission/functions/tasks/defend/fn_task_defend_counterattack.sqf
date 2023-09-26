@@ -52,6 +52,7 @@ _taskDataStore setVariable ["INIT", {
 	// default attack position is centre of the zone
 	private _attackPos = _markerPos;
 	private _areaSize = markerSize _marker;
+	private _flagDefend = objNull;
 
 	// search for candidate FOBs within the zone's area.
 	private _base_search_area = [_markerPos, _areaSize select 0, _areaSize select 1, 0, false];
@@ -69,6 +70,19 @@ _taskDataStore setVariable ["INIT", {
 
 		// overwrite the default attack position
 		_attackPos = getPos _base_to_attack;
+
+	        private _possibleFlags = nearestObjects [
+		        _attackPos,
+			["vn_flag_usa", "vn_flag_aus", "vn_flag_arvn", "vn_flag_nz"],
+	                200
+	        ];
+		if (count _possibleFlags > 0) then {
+			private _flag = _possibleFlags select 0;
+			// used in the player action to check if DC are looking at the right flag.
+			_flag setVaraible ["canLower", true];
+			_taskDataStore setVariable ["flag", _flag];
+		};
+
 	};
 
 	diag_log format ["Counterattack: Co-ordinates for counter attack target: %1", _attackPos];
@@ -85,9 +99,18 @@ _taskDataStore setVariable ["INIT", {
 		["Counterattack In", _attackTime, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 	};
 
-	[[
-		["prepare_zone", _markerPos]
-	]] call _fnc_initialSubtasks;
+	private _initialTasks = [];
+
+	if (
+		(_taskDataStore getVariable ["flag", []]) isEqualTo []
+	) then {
+		_initialTasks pushBack ["prepare_zone", _markerPos];
+	} else {
+		_initialTasks pushBack ["prepare_zone", _markerPos];
+		_initialTasks pushBack ["defend_flag",  getPos (_taskDataStore getVariable "flag")];
+	};
+
+	[_initialTasks] call _fnc_initialSubtasks;
 }];
 
 _taskDataStore setVariable ["prepare_zone", {
@@ -188,10 +211,46 @@ _taskDataStore setVariable ["defend_zone", {
 	};
 }];
 
+_taskDataStore setVariable ["defend_flag", {
+	params ["_taskDataStore"];
+
+	private _flag = _taskDataStore getVariable "flag";
+
+	/*
+	failure -- flag objected has been deleteVehicle'd
+
+	occurs when either 
+	- Dac Cong full lowered the flag through the action
+	- the flag has been hammered out of existence (Bluefor tried to be clever)
+
+	TODO: How to deal with trolls hammering away the flag?
+	*/
+
+	if (_flag isNull) exitWith {
+		private _zone = _taskDataStore getVariable "taskMarker";
+		["CounterAttackLost", ["", [_zone] call vn_mf_fnc_zone_marker_to_name]] remoteExec ["para_c_fnc_show_notification", 0];
+		["FAILED"] call _fnc_finishSubtask;
+		["FAILED"] call _fnc_finishTask;
+	};
+
+	// finished -- successful defence
+	// (30 minutes passed or AI objective has been wiped out)
+	private _startTime = _taskDataStore getVariable "startTime";
+	if (
+		serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 60 * 30])
+		|| isNull (_taskDataStore getVariable "attackObjective")
+	) exitWith {
+                _taskDataStore setVariable ["flagDefended", true];
+                ["SUCCEEDED"] call _fnc_finishSubtask;
+	};
+}];
+
 _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
 
-	if (_taskDataStore getVariable ["zoneDefended", false]
+	if (
+		_taskDataStore getVariable ["zoneDefended", false]
+		&& _taskDataStore getVariable ["flagDefended", false]
 	) then {
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
