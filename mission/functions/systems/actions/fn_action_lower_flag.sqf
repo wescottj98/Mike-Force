@@ -39,7 +39,7 @@ private _codeOnStart = {
 };
 private _codeOnTick = {
 	// params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
-	[cursorObject, _progress / _maxProgress, false] call BIS_fnc_animateFlag;
+	[cursorObject, (_maxProgress - _progress) / _maxProgress, false] call BIS_fnc_animateFlag;
 };
 private _codeOnComplete = {
 	// params ["_target", "_caller", "_actionId", "_arguments"];
