@@ -79,7 +79,7 @@ _taskDataStore setVariable ["INIT", {
 		if (count _possibleFlags > 0) then {
 			private _flag = _possibleFlags select 0;
 			// used in the player action to check if DC are looking at the right flag.
-			_flag setVaraible ["canLower", true];
+			_flag setVariable ["canLower", true];
 			_taskDataStore setVariable ["flag", _flag];
 		};
 
