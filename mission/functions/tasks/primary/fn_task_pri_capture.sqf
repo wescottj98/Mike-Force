@@ -54,9 +54,9 @@ _taskDataStore setVariable ["INIT", {
 	_taskDataStore setVariable ["factory_sites_destroyed", false];
 
 	private _initialTasks = [
-		["destroy_hq_sites", [(_zonePosition # 0) - 100, _zonePosition # 1, 0]],
-		["destroy_factory_sites", [(_zonePosition # 0) + 100, _zonePosition # 1, 0]],
-		["build_situation_room", [_zonePosition # 0, (_zonePosition # 1) - 100 , 0]]
+		["destroy_hq_sites", _zonePosition getPos [100, 0]],
+		["destroy_factory_sites", _zonePosition getPos [100, 90]],
+		["build_situation_room", _zonePosition getPos [100, 180]]
 	];
 
 	[_initialTasks] call _fnc_initialSubtasks;
@@ -120,8 +120,8 @@ _taskDataStore setVariable ["build_situation_room", {
 		_taskDataStore setVariable ["fob_built", true];
 		_taskDataStore setVariable ["fob_position", getPos (_possibleBases select 0)];
 		private _nextTasks = [
-			["build_respawn", getPos (_possibleBases select 0)],
-			["build_flag", getPos (_possibleBases select 0)]
+			["build_respawn", (_taskDataStore getVariable "fob_position") getPos [50, 90]],
+			["build_flag", (_taskDataStore getVariable "fob_position") getPos [50, 270]]
 		];
                 ["SUCCEEDED", _nextTasks] call _fnc_finishSubtask;
         };
