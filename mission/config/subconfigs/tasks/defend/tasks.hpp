@@ -27,8 +27,14 @@ class defend_counterattack : task
 
 	class defend_zone
 	{
-		taskname = "Defend the Zone";
-		taskdesc = "Defend the zone until all hostiles have been eliminated.";
+		taskname = "Hold the Zone";
+		taskdesc = "Hold the zone for 30 minutes, or until hostiles are eliminated.";
+	};
+
+	class defend_flag
+	{
+		taskname = "Defend the Flag";
+		taskdesc = "Don't let the flag get taken down or we will lose the zone!";
 	};
 };
 
