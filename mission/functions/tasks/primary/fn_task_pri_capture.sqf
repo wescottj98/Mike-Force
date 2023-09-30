@@ -118,7 +118,15 @@ _taskDataStore setVariable ["build_situation_room", {
 
         if !(_possibleBases isEqualTo []) then {
 		_taskDataStore setVariable ["fob_built", true];
-		_taskDataStore setVariable ["fob_position", getPos (_possibleBases select 0)];
+		/*
+		for some reason the AGL conversion for FOB positions
+		places them 200m AGL.... which is greater than the
+		maximum radius of bases...
+
+		so use 2D positions instead for later nearestObjects
+		*/
+		private _fobPos3DASL = getPos (_possibleBases select 0);
+		_taskDataStore setVariable ["fob_position_2d", [_fobPos3DASL select 0, _fobPos3DASL select 1]];
 		private _nextTasks = [
 			["build_respawn", (_taskDataStore getVariable "fob_position") getPos [50, 90]],
 			["build_flag", (_taskDataStore getVariable "fob_position") getPos [50, 270]]
@@ -131,12 +139,12 @@ _taskDataStore setVariable ["build_respawn", {
         params ["_taskDataStore"];
 
         private _possibleRespawns = nearestObjects [
-		_taskDataStore getVariable "fob_position",
+		_taskDataStore getVariable "fob_position_2d",
 		["Land_vn_guardhouse_01", "Land_vn_b_trench_bunker_01_01", "Land_vn_hootch_01_01"],
-		200
+		para_g_max_base_radius
 	];
 
-        if !(_possibleBases isEqualTo []) then {
+        if !(_possibleRespawns isEqualTo []) then {
 		_taskDataStore setVariable ["respawn_built", true];
                 ["SUCCEEDED"] call _fnc_finishSubtask;
         };
@@ -145,13 +153,13 @@ _taskDataStore setVariable ["build_respawn", {
 _taskDataStore setVariable ["build_flag", {
         params ["_taskDataStore"];
 
-        private _possibleRespawns = nearestObjects [
-		_taskDataStore getVariable "fob_position",
+        private _possibleFlags = nearestObjects [
+		_taskDataStore getVariable "fob_position_2d",
 		["vn_flag_usa", "vn_flag_aus", "vn_flag_arvn", "vn_flag_nz"],
-		200
+		para_g_max_base_radius
 	];
 
-        if !(_possibleBases isEqualTo []) then {
+        if !(_possibleFlags isEqualTo []) then {
 		_taskDataStore setVariable ["flag_built", true];
                 ["SUCCEEDED"] call _fnc_finishSubtask;
         };
