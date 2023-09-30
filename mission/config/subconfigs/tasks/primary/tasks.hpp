@@ -29,10 +29,10 @@ class capture_zone : task
 		taskdesc = "Destroy Factory supplies and the sites they're delivered to. You might find intel inside for the locations to the rest of the sites!";
 	};
 
-	class build_situation_room
+	class build_fob
 	{
-		taskname = "Build FOB Situation Room";
-		taskdesc = "Build a situation room to establish a Forward Operating Base.";
+		taskname = "Build FOB";
+		taskdesc = "Build a situation room/bunker to establish a Forward Operating Base.";
 	};
 
 	class build_respawn

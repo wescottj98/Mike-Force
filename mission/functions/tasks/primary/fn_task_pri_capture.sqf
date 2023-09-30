@@ -56,7 +56,7 @@ _taskDataStore setVariable ["INIT", {
 	private _initialTasks = [
 		["destroy_hq_sites", _zonePosition getPos [100, 0]],
 		["destroy_factory_sites", _zonePosition getPos [100, 90]],
-		["build_situation_room", _zonePosition getPos [100, 180]]
+		["build_fob", _zonePosition getPos [100, 180]]
 	];
 
 	[_initialTasks] call _fnc_initialSubtasks;
@@ -106,7 +106,7 @@ _taskDataStore setVariable ["destroy_factory_sites", {
 	};
 }];
 
-_taskDataStore setVariable ["build_situation_room", {
+_taskDataStore setVariable ["build_fob", {
         params ["_taskDataStore"];
 
         private _possibleBases = para_g_bases inAreaArray [
