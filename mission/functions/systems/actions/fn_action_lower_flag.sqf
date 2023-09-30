@@ -21,49 +21,36 @@ private _actionProgressIcon = "custom\holdactions\holdAction_danger_ca.paa";
 private _isOpfor = "side player == east";
 private _isInRangeOf = "player distance cursorObject < 5";
 private _isValidObjectType = "typeOf cursorObject in ['vn_flag_usa', 'vn_flag_aus', 'vn_flag_arvn', 'vn_flag_nz']";
-private _isObjectiveFlag = "(cursorObject getVariable ['canLower', false]) == true";
+private _isObjectiveFlag = "cursorObject getVariable ['canLower', false]";
 
 private _conditionToShow = format [
         "(%1 && %2 && %3 && %4)",
-        _isNotOpfor,
+        _isOpfor,
         _isInRangeOf,
         _isValidObjectType,
         _isObjectiveFlag
 ];
 
-private _conditionToProgress = _conditionToShow;
+private _conditionToProgress = "true";
 
 private _codeOnStart = {
-	// params ["_target", "_caller", "_actionId", "_arguments"];
 	allPlayers apply {["DacCongCapturingFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
 };
 private _codeOnTick = {
-	// params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
-	[cursorObject, (_maxProgress - _progress) / _maxProgress, false] call BIS_fnc_animateFlag;
+	params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
+	private _startingFlagHeight = cursorObject getVariable ["currentHeight", flagAnimationPhase cursorObject];
+	private _newHeight = _startingFlagHeight * (1 - (_progress / _maxProgress));
+	cursorObject setFlagAnimationPhase _newHeight;
 };
 private _codeOnComplete = {
-	// params ["_target", "_caller", "_actionId", "_arguments"];
 	[cursorObject] remoteExec ["deleteVehicle", 2];
 	allPlayers apply {["DacCongCapturedFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
 };
 private _codeOnInterrupted = {
-	// params ["_target", "_caller", "_actionId", "_arguments"];
-
-	/*
-	do not reset the flag -- make bluefor reraise it
-
-	if bluefor do not reraise the flag then Dac Cong
-	have a better chance of stealing it (flag is sat
-	at 50% because bluefor never re-raised it!)
-
-	this line below is here in case the above idea
-	doesn't work and I need to revert it back quickly.
-
-	[cursorObject, 1, true] call BIS_fnc_animateFlag;
-	*/
+	cursorObject setVariable ["currentHeight", flagAnimationPhase cursorObject];
 };
 private _extraArgsArr = [];
-private _actionDurationSeconds = 5;
+private _actionDurationSeconds = 20;
 private _actionPriority = 100;
 private _actionRemoveOnComplete = false;
 private _showWhenUncon = false;

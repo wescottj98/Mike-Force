@@ -15,13 +15,11 @@
 		call vn_mf_fnc_action_capture_player;
 */
 
-private _startingFlagHeight = flagAnimationPhase cursorObject;
-
 private _actionText = format ["<t color='#0000FF'>%1</t>", "Re-Raise The Flag"];
 private _actionIdleIcon = "custom\holdactions\holdAction_interact_ca.paa";
 private _actionProgressIcon = "custom\holdactions\holdAction_interact_ca.paa";
 
-private _isOpfor = "side player == west";
+private _isNotOpfor = "side player == west";
 private _isInRangeOf = "player distance cursorObject < 5";
 private _isValidObjectType = "typeOf cursorObject in ['vn_flag_usa', 'vn_flag_aus', 'vn_flag_arvn', 'vn_flag_nz']";
 private _isObjectiveFlag = "(flagAnimationPhase cursorObject) != 1";
@@ -34,40 +32,26 @@ private _conditionToShow = format [
         _isObjectiveFlag
 ];
 
-private _conditionToProgress = _conditionToShow;
+private _conditionToProgress = "true";
 
 private _codeOnStart = {
-	// params ["_target", "_caller", "_actionId", "_arguments"];
-	// allPlayers apply {["DacCongCapturingFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
-};
-7private _codeOnTick = {
-	// params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
-	// max progress always 24
-	// divide by 25 so we can remove the attached flag on completion rhater than at end of progress
 	allPlayers apply {["BlueforRaisingFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
-
-	// (progress * (1 - currHeight)) + currHeight
-	private _newFlagPos = (1 - _startingFlagHeight) * (_progress / _maxProgress)) + _startingFlagHeight;
-	[cursorObject, _newFlagPos, false] call BIS_fnc_animateFlag;
+};
+private _codeOnTick = {
+	params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
+	private _startingFlagHeight = cursorObject getVariable ["currentHeight", flagAnimationPhase cursorObject];
+	private _newHeight = _startingFlagHeight + ((1 - _startingFlagHeight) * (_progress / _maxProgress));
+	cursorObject setFlagAnimationPhase _newHeight;
 };
 private _codeOnComplete = {
-	// params ["_target", "_caller", "_actionId", "_arguments"];
-	// will this work?
+	cursorObject setVariable ["currentHeight", flagAnimationPhase cursorObject];
 	allPlayers apply {["BlueforRaisedFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
 };
 private _codeOnInterrupted = {
-	// params ["_target", "_caller", "_actionId", "_arguments"];
-
-	/*
-	do nothing -- bluefor have raised to a certain height
-	so that's where the flag stays now.
-
-	line below is only if we need to revert back to not doing this
-	[cursorObject, _startingFlagHeight, true] call BIS_fnc_animateFlag;
-	*/
+	cursorObject setVariable ["currentHeight", flagAnimationPhase cursorObject];
 };
-private _extraArgsArr = [];
-private _actionDurationSeconds = 5;
+private _extraArgsArr = [flagAnimationPhase cursorObject];
+private _actionDurationSeconds = 20;
 private _actionPriority = 100;
 private _actionRemoveOnComplete = false;
 private _showWhenUncon = false;
