@@ -52,7 +52,6 @@ _taskDataStore setVariable ["INIT", {
 	// default attack position is centre of the zone
 	private _attackPos = _markerPos;
 	private _areaSize = markerSize _marker;
-	private _flagDefend = objNull;
 
 	// search for candidate FOBs within the zone's area.
 	private _base_search_area = [_markerPos, _areaSize select 0, _areaSize select 1, 0, false];
@@ -71,16 +70,20 @@ _taskDataStore setVariable ["INIT", {
 		// overwrite the default attack position
 		_attackPos = getPos _base_to_attack;
 
-	        private _possibleFlags = nearestObjects [
-		        _attackPos,
+		_taskDataStore setVariable ["fob_exists", true];
+
+		// nearest objects might be buggy
+
+		private _possibleFlags = nearestObjects [
+			[_attackPos select 0, _attackPos select 1],
 			["vn_flag_usa", "vn_flag_aus", "vn_flag_arvn", "vn_flag_nz"],
-	                200
-	        ];
+			para_g_max_base_radius
+		];
+
 		if (count _possibleFlags > 0) then {
 			private _flag = _possibleFlags select 0;
-			// used in the player action to check if DC are looking at the right flag.
-			_flag setVariable ["canLower", true];
 			_taskDataStore setVariable ["flag", _flag];
+			_taskDataStore setVariable ["flag_exists", true];
 		};
 
 	};
@@ -99,18 +102,7 @@ _taskDataStore setVariable ["INIT", {
 		["Counterattack In", _attackTime, true] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 	};
 
-	private _initialTasks = [];
-
-	if (
-		(_taskDataStore getVariable ["flag", []]) isEqualTo []
-	) then {
-		_initialTasks pushBack ["prepare_zone", _markerPos];
-	} else {
-		_initialTasks pushBack ["prepare_zone", _markerPos];
-		_initialTasks pushBack ["defend_flag",  getPos (_taskDataStore getVariable "flag")];
-	};
-
-	[_initialTasks] call _fnc_initialSubtasks;
+	[[["prepare_zone", _markerPos]]] call _fnc_initialSubtasks;
 }];
 
 _taskDataStore setVariable ["prepare_zone", {
@@ -143,7 +135,18 @@ _taskDataStore setVariable ["prepare_zone", {
 	_taskDataStore setVariable ["attackObjective", _attackObjective];
 	_taskDataStore setVariable ["startTime", serverTime];
 
-	["SUCCEEDED", [["defend_zone", _taskDataStore getVariable "attackPos"]]] call _fnc_finishSubtask;
+	private _nextSubTasks = [];
+
+	if (_taskDataStore getVariable ["fob_exists", false]) then {
+		_nextSubTasks pushBack ["defend_fob", _taskDataStore getVariable "attackPos"];
+		if (_taskDataStore getVariable ["flag_exists", false]) then {
+			_nextSubTasks pushBack ["defend_flag",  getPos (_taskDataStore getVariable "flag")];
+		};
+	} else {
+		_nextSubTasks pushBack ["defend_zone", _taskDataStore getVariable "attackPos"];
+	};
+
+	["SUCCEEDED", _nextSubTasks] call _fnc_finishSubtask;
 }];
 
 _taskDataStore setVariable ["defend_zone", {
@@ -192,8 +195,9 @@ _taskDataStore setVariable ["defend_zone", {
 	private _garrisonStrength = _taskDataStore getVariable ["attackObjective", objNull] getVariable ["reinforcements_remaining", 0];
 
 	//Zone has been held long enough, or they've killed enough attackers for the AI objective to complete.
-	if (serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 60 * 30]) ||
-		isNull (_taskDataStore getVariable "attackObjective") ) exitWith 
+	if (
+		serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 60 * 30]) 
+		|| isNull (_taskDataStore getVariable "attackObjective") ) exitWith 
 	{ //exitWith here to prevent a tie causing the zone to turn green but have new tasks for its capture spawn
 		_taskDataStore setVariable ["zoneDefended", true];
 
@@ -211,10 +215,17 @@ _taskDataStore setVariable ["defend_zone", {
 	};
 }];
 
+// this is just a duplicate of defend base, but using different configs for titles
+// TODO: Need to test this is failing correectly as dsoesn;t look like it is
+_taskDataStore setVariable ["defend_fob", {
+	[_taskDataStore] call (_taskDataStore getVariable "defend_fob");
+}];
+
 _taskDataStore setVariable ["defend_flag", {
 	params ["_taskDataStore"];
 
 	private _flag = _taskDataStore getVariable "flag";
+	private _startTime = _taskDataStore getVariable "startTime";
 
 	/*
 	failure -- flag objected has been deleteVehicle'd
@@ -226,16 +237,21 @@ _taskDataStore setVariable ["defend_flag", {
 	TODO: How to deal with trolls hammering away the flag?
 	*/
 
-	if (_flag isNull) exitWith {
+	if (isNull _flag) exitWith {
 		private _zone = _taskDataStore getVariable "taskMarker";
 		["CounterAttackLost", ["", [_zone] call vn_mf_fnc_zone_marker_to_name]] remoteExec ["para_c_fnc_show_notification", 0];
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;
 	};
 
+	// used in the players action to check if players are looking at the right flag.
+	// otherwise any flag could be lowered/raised and trigger a notification
+	// this sets the variable on every tick, but that's fine for now and avoids people
+	// removing the flag too early.
+	_flag setVariable ["canLower", true];
+
 	// finished -- successful defence
 	// (30 minutes passed or AI objective has been wiped out)
-	private _startTime = _taskDataStore getVariable "startTime";
 	if (
 		serverTime - _startTime > (_taskDataStore getVariable ["holdDuration", 60 * 30])
 		|| isNull (_taskDataStore getVariable "attackObjective")

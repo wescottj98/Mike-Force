@@ -347,7 +347,7 @@ class CfgNotifications
 		description = "Bluefor have raised the flag!";
 		priority = 6;
 		color[] = {0.2,0.3,1,1};
-		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 	};
 
 };
