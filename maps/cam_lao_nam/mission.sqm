@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17315;
+		nextID=17422;
 	};
 	class Camera
 	{
-		pos[]={17275.209,124.46103,5701.3916};
-		dir[]={-0.50739485,-0.49520296,0.70522922};
-		up[]={-0.2892147,0.86877126,0.40198252};
-		aside[]={0.81174737,9.307405e-008,0.58403045};
+		pos[]={16420.398,45.665089,6534.7593};
+		dir[]={0.20291218,-0.65546197,-0.72761935};
+		up[]={0.17608717,0.75516367,-0.63141149};
+		aside[]={-0.96336776,-1.0485091e-006,-0.26865914};
 	};
 };
 binarizationWanted=0;
@@ -601,8 +601,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -652,8 +652,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -13407,8 +13407,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14818.406,101.21897,6920.9409};
-				angles[]={0,4.9534531,0};
+				position[]={14818.406,101.21872,6920.9409};
+				angles[]={0,4.953454,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13418,7 +13418,24 @@ class Mission
 			};
 			id=4222;
 			type="vn_c_wheeled_m151_02";
-			atlOffset=0.086250305;
+			atlOffset=0.085998535;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[""vn_b_item_toolkit"",""vn_b_item_firstaidkit""],[1,4]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item308
 		{
@@ -34551,7 +34568,7 @@ class Mission
 				};
 			};
 			id=7173;
-			atlOffset=45.001804;
+			atlOffset=118.27123;
 		};
 		class Item616
 		{
@@ -45051,7 +45068,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14848.913,102.49049,6915.3623};
+				position[]={14848.913,102.49087,6915.3623};
 				angles[]={0,1.74224,0};
 			};
 			side="Empty";
@@ -45063,7 +45080,23 @@ class Mission
 			};
 			id=10315;
 			type="vn_b_air_uh1b_01_09";
-			atlOffset=-0.00037384033;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[""vn_m18_yellow_mag"",""vn_m18_red_mag"",""vn_m18_purple_mag"",""vn_prop_drink_03"",""vn_prop_food_lrrp_01_01""],[2,2,2,2,2]],[[""vn_b_item_firstaidkit"",""vn_b_item_toolkit""],[2,1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item929
 		{
@@ -71798,7 +71831,7 @@ class Mission
 																	};
 																	id=16087;
 																	type="Land_vn_usaf_fueltank_75_01";
-																	atlOffset=0.082701683;
+																	atlOffset=0.082700729;
 																};
 															};
 															id=14161;
@@ -73220,7 +73253,7 @@ class Mission
 			};
 			id=14793;
 			type="vn_i_armor_m113_acav_05";
-			atlOffset=0.017000198;
+			atlOffset=0.01667881;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -73269,7 +73302,7 @@ class Mission
 			};
 			id=14794;
 			type="vn_i_armor_m113_acav_06";
-			atlOffset=-0.0070009232;
+			atlOffset=-0.0077371597;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -81214,7 +81247,7 @@ class Mission
 			};
 			id=15394;
 			type="vn_i_armor_m48_01_01";
-			atlOffset=-0.083999634;
+			atlOffset=-0.084462166;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -89674,7 +89707,7 @@ class Mission
 			};
 			id=16086;
 			type="vn_i_air_ch34_02_01";
-			atlOffset=-0.043999672;
+			atlOffset=-0.04460144;
 		};
 		class Item1540
 		{
@@ -89730,7 +89763,7 @@ class Mission
 			};
 			id=16090;
 			type="vn_i_static_m101_01";
-			atlOffset=0.062999725;
+			atlOffset=0.043652534;
 		};
 	};
 	class Connections
