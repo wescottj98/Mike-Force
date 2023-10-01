@@ -34,14 +34,13 @@ class defend_counterattack : task
 	class defend_fob
 	{
 		taskname = "Defend the FOB";
-		taskdesc = "Defend the FOB from counterattack for 30 minutes or hostile forces are all eliminated.";
+		taskdesc = "Defend the FOB from counterattack for 30 minutes, or hostile forces are eliminated.";
 	};
-
 
 	class defend_flag
 	{
 		taskname = "Defend the Flag";
-		taskdesc = "Don't let the flag get taken down or we will lose the zone!";
+		taskdesc = "Don't let the flag get taken down!";
 	};
 };
 
