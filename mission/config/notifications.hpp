@@ -56,6 +56,16 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 
+	class CounterAttackExtended
+	{
+		title = $STR_vn_mf_notification_title_counter_attack;
+		description = $STR_vn_mf_notification_desc_counter_attack_extended;
+		priority = 7;
+		color[] = {0.8,0.5,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
+
+
 	class NewSupportRequest
 	{
 		title = $STR_vn_mf_notification_title_new_support_request;
