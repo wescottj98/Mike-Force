@@ -24,9 +24,9 @@ params ["_taskDataStore"];
 
 /*
 Constants
+*/
 _taskDataStore setVariable ["holdDuration", 60 * 30];
 _taskDataStore setVariable ["failureTime", 5 * 60];
-*/
 
 
 /*
