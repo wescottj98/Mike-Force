@@ -126,43 +126,45 @@ _taskDataStore setVariable ["build_fob", {
 		so use 2D positions instead for later nearestObjects
 		*/
 		private _fobPos3DASL = getPos (_possibleBases select 0);
+
+		_taskDataStore setVariable ["fob", _possibleBases select 0];
 		_taskDataStore setVariable ["fob_position_2d", [_fobPos3DASL select 0, _fobPos3DASL select 1]];
 		private _nextTasks = [
-			["build_respawn", (_taskDataStore getVariable "fob_position") getPos [50, 90]],
-			["build_flag", (_taskDataStore getVariable "fob_position") getPos [50, 270]]
+			["build_respawn", (_taskDataStore getVariable "fob_position_2d") getPos [50, 90]],
+			["build_flag", (_taskDataStore getVariable "fob_position_2d") getPos [50, 270]]
 		];
                 ["SUCCEEDED", _nextTasks] call _fnc_finishSubtask;
         };
 }];
 
 _taskDataStore setVariable ["build_respawn", {
-        params ["_taskDataStore"];
+	params ["_taskDataStore"];
 
-        private _possibleRespawns = nearestObjects [
+	private _candidates = nearestObjects [
 		_taskDataStore getVariable "fob_position_2d",
 		["Land_vn_guardhouse_01", "Land_vn_b_trench_bunker_01_01", "Land_vn_hootch_01_01"],
 		para_g_max_base_radius
 	];
 
-        if !(_possibleRespawns isEqualTo []) then {
-		_taskDataStore setVariable ["respawn_built", true];
-                ["SUCCEEDED"] call _fnc_finishSubtask;
-        };
+	if !(_candidates isEqualTo []) then {
+		_taskDataStore setVariable ["flag_built", true];
+		["SUCCEEDED"] call _fnc_finishSubtask;
+	};
 }];
 
 _taskDataStore setVariable ["build_flag", {
-        params ["_taskDataStore"];
+	params ["_taskDataStore"];
 
-        private _possibleFlags = nearestObjects [
+	private _candidates = nearestObjects [
 		_taskDataStore getVariable "fob_position_2d",
 		["vn_flag_usa", "vn_flag_aus", "vn_flag_arvn", "vn_flag_nz"],
 		para_g_max_base_radius
 	];
 
-        if !(_possibleFlags isEqualTo []) then {
+	if !(_candidates isEqualTo []) then {
 		_taskDataStore setVariable ["flag_built", true];
-                ["SUCCEEDED"] call _fnc_finishSubtask;
-        };
+		["SUCCEEDED"] call _fnc_finishSubtask;
+	};
 }];
 
 _taskDataStore setVariable ["AFTER_STATES_RUN", {
