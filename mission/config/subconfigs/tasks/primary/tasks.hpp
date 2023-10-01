@@ -32,13 +32,13 @@ class capture_zone : task
 	class build_fob
 	{
 		taskname = "Build FOB";
-		taskdesc = "Build a situation room/bunker to establish a Forward Operating Base.";
+		taskdesc = "Build a situation room to establish a Forward Operating Base.";
 	};
 
 	class build_respawn
 	{
 		taskname = "Build FOB Respawn Point";
-		taskdesc = "Build a checkpoint so we can reinforce the Forward Operating Base.";
+		taskdesc = "Build a respawn so we can reinforce the Forward Operating Base.";
 	};
 
 	class build_flag
