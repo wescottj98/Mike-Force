@@ -78,6 +78,17 @@ if (_taskIsCompleted) then {
 
 	if (_currentState isEqualTo "counterattack") exitWith {
 
+		if (_taskResult isEqualTo "FAILED") exitWith {
+
+			["INFO", format ["Zone '%1' defend against counterattack failed, restarting 'counterattack' phase", _zone]] call para_g_fnc_log;
+
+			private _counterattackReTask = ((["defend_counterattack", _zone, [["prepTime", 180]]] call vn_mf_fnc_task_create) # 1);
+			_zoneInfo set ["state", "counterattack"];
+			_zoneInfo set ["currentTask", _counterattackReTask];
+		};
+
+		// the counterattacked was defended against successfully
+
 		// delete DC spawns etc.
 		{
 		    private _marker = _x # 0;
@@ -92,21 +103,6 @@ if (_taskIsCompleted) then {
 		    deleteVehicle _x;
 		} forEach vn_site_objects;
 
-		if (_taskResult isEqualTo "FAILED") exitWith {
-
-			/*
-			TODO -- this is probably going to cause us problems with site generation
-			and might require a new intermediate phase to ask players to leave the AO.
-			*/
-
-			["INFO", format ["Zone '%1' defend against counterattack failed, moving to 'prepare' phase", _zone]] call para_g_fnc_log;
-			// private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
-			// [[_zoneData]] call vn_mf_fnc_sites_generate;
-
-			private _prepareTask = ((["prepare_zone", _zone] call vn_mf_fnc_task_create) # 1);
-			_zoneInfo set ["state", "prepare"];
-			_zoneInfo set ["currentTask", _prepareTask];
-		};
 
 		["INFO", format ["Zone '%1' counterattack successfully defended against, completing zone", _zone]] call para_g_fnc_log;
 		// Task is finished, and hasn't failed
