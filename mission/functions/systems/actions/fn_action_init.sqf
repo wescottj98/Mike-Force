@@ -31,6 +31,8 @@ if (isNil "vn_mf_actions_initialized" || vn_mf_actions_player != player) then //
 	call vn_mf_fnc_action_destroy_task;
 	call vn_mf_fnc_action_gather_intel;
 	call vn_mf_fnc_action_radiotap;
+	call vn_mf_fnc_action_lower_flag;
+	call vn_mf_fnc_action_reraise_flag;
 	"vn_holdActionAdd_layer" cutText ["","PLAIN"];
 };
 

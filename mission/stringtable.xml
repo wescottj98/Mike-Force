@@ -722,6 +722,10 @@
         <Original>The enemy counter-attack was successful. Zone %1 has been lost.</Original>
         <English>The enemy counter-attack was successful. Zone %1 has been lost.</English>
       </Key>
+      <Key ID="STR_vn_mf_notification_desc_counter_attack_extended">
+        <Original>Enemy counter-attack is succeeding. Timer extended!</Original>
+        <English>Enemy counter-attack is succeeding. Timer extended!</English>
+      </Key>
       <Key ID="STR_vn_mf_notification_desc_no_sandbag">
         <Original>No sandbags in inventory</Original>
         <English>No sandbags in inventory</English>

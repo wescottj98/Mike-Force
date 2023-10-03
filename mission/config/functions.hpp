@@ -167,6 +167,8 @@ class CfgFunctions
 			class action_release_from_arrest_player {};
 			class action_drink_water {};
 			class action_eat_food {};
+			class action_lower_flag {};
+			class action_reraise_flag {};
 		};
 
 		class system_actives {
