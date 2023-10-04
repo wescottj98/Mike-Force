@@ -21,84 +21,132 @@
 
 params ["_taskDataStore"];
 
-_taskDataStore setVariable ["INIT", {
-	params ["_taskDataStore"];
+/*
+CONSTANTS
+*/
 
-	private _candidateRespawnPositionsToAttack = (
+// anywhere from 25 to 35 minutes
+_taskDataStore setVariable [
+	"attackEndTime",
+	serverTime + (60 * (25 min (random 35)))
+];
+
+// setup the default nAttacks variable
+// 2 <= n <= 4
+_taskDataStore setVariable [
+	"nAttacks", 
+	1 + ceil (random 3)
+];
+
+// setup available respawns
+_taskDataStore setVariable [
+	"availableRespawns",
+	(
 		[west, false] call BIS_fnc_getRespawnPositions
 	) select {
+		// only respawns deliberately placed down on map in editor,
+		// not spawns placed down as part of building
 		(_x find "mf_respawn") != -1
 	} select {
+		// not press as non combatants
 		_x != "mf_respawn_presscorp"
+		// not monties because arma players can be toxic 
+		&& _x != "mf_respawn_montagnard"
 	} apply {
 		getMarkerPos _x
 	} inAreaArray [
 		getMarkerPos "starting_point",
-		vn_mf_bn_s_zone_radius * 2,
-		vn_mf_bn_s_zone_radius * 2, 
+		2500,
+		2500, 
 		0, 
 		false
-	];
+	]
+];
 
-	// setup the default nAttacks variable
-	_taskDataStore setVariable [
-		"nAttacks", 
-		9 min (_taskDataStore getVariable ["nAttacks", 3])
-	];
-	_taskDataStore setVariable ["attackEndTime", serverTime + (60 * 5)];
+/*
+TASK LOGIC
+*/
 
-	private _attackPositions = (
+_taskDataStore setVariable ["INIT", {
+	params ["_taskDataStore"];
+
+	private _subTaskIds = (
 		[1, _taskDataStore getVariable "nAttacks"] call vn_mf_fnc_range
 	) apply {
-		_taskDataStore setVariable [format ["defend_respawn_subtask_%1", _x], {
-			params ["_taskDataStore"];
-			if (_taskDataStore getVariable "attackEndTime" > serverTime) exitWith {};
-			_taskDataStore setVariable ["nDefended", (_taskDataStore getVariable ["nDefended", 0]) + 1];
-			["SUCCEEDED"] call _fnc_finishSubtask;
-		}];
-	} apply {
-		selectRandom _candidateRespawnPositionsToAttack
+		format ["defend_respawn_%1", _x]
 	};
 
-	diag_log format ["POSITIONS: %1", _attackPositions];
+	_subTaskIds apply {
+		// generate the actual subtask code here with incrementing IDs 
+		// up to a maximum of 9 (increase the number of config subtasks 
+		// if you want to go above this maximum ... i hope you have a 
+		// lot of headless clients if that is the case!)
+		_taskDataStore setVariable [
+			_x, 
+			{
+				params ["_taskDataStore"];
+				if (_taskDataStore getVariable "attackEndTime" > serverTime) exitWith {};
+				// TODO: Add a failure condition like no bluefor in the area for 5+ minutes
+				_taskDataStore setVariable ["nDefended", (_taskDataStore getVariable ["nDefended", 0]) + 1];
+				["SUCCEEDED"] call _fnc_finishSubtask;
+			}
+		];
+	};
+
+	private _attackPositions = _subTaskIds apply {
+		selectRandom (_taskDataStore getVariable "availableRespawns")
+	};
 
 	_taskDataStore setVariable [
 		"attackObjectives", 
 		_attackPositions apply {
-			[_x, 1, 10] call para_s_fnc_ai_obj_request_attack
+			// keep sending reinforcements no matter what
+			[_x, 1, 20] call para_s_fnc_ai_obj_request_attack
 		}
 	];
 
-	[
-		"CounterAttackPreparing", ["", 0 toFixed 0]
-	] remoteExec ["para_c_fnc_show_notification", 0];
+	private _fnc_zip = {
+		params ["_a", "_b"];
+		private _res = [];
+		{
+			_res pushBack [_x, _b select _forEachIndex];
+		} forEach _a;
 
+		_res
+	};
+
+	private _subTaskArgs = [_subTaskIds, _attackPositions] call _fnc_zip;
+
+	_taskDataStore setVariable ["subtasks", _subTaskArgs];
+
+	diag_log format [
+		"Defend Main Base: SubTasks: %1", _subTaskArgs
+	];
+
+	["MainBaseAttackStarting"] remoteExec ["para_c_fnc_show_notification", 0];
 	[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
-
 	[
-		"Counter-Attack at Main Base", 
+		"Main Base Counter-Attack", 
 		_taskDataStore getVariable "attackEndTime", 
 		true
 	] call vn_mf_fnc_timerOverlay_setGlobalTimer;
 
-	private _i = 0;
-	private _subtasksArgs = _attackPositions apply {
-		_i = _i + 1;
-		[format ["defend_respawn_%1", _i], _x]
-	};
+	[_subTaskArgs] call _fnc_initialSubtasks;
 
-	[_subtasksArgs] call _fnc_initialSubtasks;
 }];
-
 
 _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
-	if ((_taskDataStore getVariable ["nDefended", 0]) == (_taskDataStore getVariable "nAttacks")) then {
+	if (
+		(_taskDataStore getVariable ["nDefended", 0]) == (_taskDataStore getVariable "nAttacks")
+	) then {
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
 }];
 
 _taskDataStore setVariable ["FINISH", {
 	params ["_taskDataStore"];
-	(_taskDataStore getVariable ["attackObjectives", []]) call para_s_fnc_ai_obj_finish_objective;
+	(_taskDataStore getVariable ["attackObjectives", []]) apply {
+		[_x] call para_s_fnc_ai_obj_finish_objective
+	};
 }];
