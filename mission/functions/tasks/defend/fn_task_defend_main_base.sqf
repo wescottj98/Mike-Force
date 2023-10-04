@@ -28,7 +28,7 @@ CONSTANTS
 // anywhere from 25 to 35 minutes
 _taskDataStore setVariable [
 	"attackEndTime",
-	serverTime + (60 * (25 min (random 35)))
+	serverTime + (60 * (25 max (random 35)))
 ];
 
 // setup the default nAttacks variable
