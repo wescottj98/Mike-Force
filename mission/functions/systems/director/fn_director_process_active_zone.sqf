@@ -103,9 +103,20 @@ if (_taskIsCompleted) then {
 		    deleteVehicle _x;
 		} forEach vn_site_objects;
 
+		if (random 1 > 0.20) then {
+			["INFO", format ["Zone '%1' counterattack successfully defended against, completing zone", _zone]] call para_g_fnc_log;
+			// Task is finished, and hasn't failed and not doing main base task
+			[_zone] call vn_mf_fnc_director_complete_zone;
+		} else {
+			["INFO", format ["Zone '%1' counterattack successfully defended against, starting defend main base task", _zone]] call para_g_fnc_log;
+			private _defendMainBaseTask = ((["defend_main_base", _zone] call vn_mf_fnc_task_create) # 1);
+			_zoneInfo set ["state", "defend_main_base"];
+			_zoneInfo set ["currentTask", _defendMainBaseTask];
 
-		["INFO", format ["Zone '%1' counterattack successfully defended against, completing zone", _zone]] call para_g_fnc_log;
-		// Task is finished, and hasn't failed
+		};
+	};
+	if (_currentState isEqualTo "defend_main_base") exitWith {
+		["INFO", format ["Zone '%1' Defend main base task completed, completing zone", _zone]] call para_g_fnc_log;
 		[_zone] call vn_mf_fnc_director_complete_zone;
 	};
 };
