@@ -65,6 +65,14 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 
+	class MainBaseAttackStarting
+	{
+		title = "Defend The Main Base"
+		description = "The enemy are attacking main base, get back and defend it!"
+		priority = 7;
+		color[] = {0.8,0.06,0,1};
+		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
+	};
 
 	class NewSupportRequest
 	{
