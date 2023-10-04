@@ -94,7 +94,7 @@ _taskDataStore setVariable ["INIT", {
 	};
 
 	private _attackPositions = _subTaskIds apply {
-		selectRandom (_taskDataStore getVariable "availableRespawns")
+		(selectRandom (_taskDataStore getVariable "availableRespawns")) getPos [25, random 360]
 	};
 
 	_taskDataStore setVariable [
@@ -116,8 +116,6 @@ _taskDataStore setVariable ["INIT", {
 	};
 
 	private _subTaskArgs = [_subTaskIds, _attackPositions] call _fnc_zip;
-
-	_taskDataStore setVariable ["subtasks", _subTaskArgs];
 
 	diag_log format [
 		"Defend Main Base: SubTasks: %1", _subTaskArgs
