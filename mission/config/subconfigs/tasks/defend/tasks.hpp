@@ -102,55 +102,55 @@ class defend_main_base : task
 
 	class defend_respawn_1
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 1";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_2
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 2";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_3
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 3";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_4
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 4";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_5
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 5";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_6
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 6";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_7
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 7";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_8
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 8";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 
 	class defend_respawn_9
 	{
-		taskname = "Defend Base";
+		taskname = "Defend Base 9";
 		taskdesc = "Enemy forces are attacking the base. Defend it!";
 	};
 };
