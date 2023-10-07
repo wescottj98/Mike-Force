@@ -347,7 +347,7 @@ class vn_tr_disp_taskRoster_Main
 			h = UIH(1);
 			tooltip = "";
 			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
-			onButtonClick = "3 radioChannelAdd [player];8 enableChannel [true, true];['TaskSucceeded',['','ACAV communication enabled!']] call para_c_fnc_show_notification;";
+			onButtonClick = "3 radioChannelAdd [player];8 enableChannel [true, true];['TaskSucceeded',['','Call for Fire communication enabled!']] call para_c_fnc_show_notification;";
 		};
 		
 		class ccacoff_btn: vn_mf_RscButton_ImgSwitch
@@ -359,7 +359,7 @@ class vn_tr_disp_taskRoster_Main
 			h = UIH(1);
 			tooltip = "";
 			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV.paa";
-			onButtonClick = "3 radioChannelRemove [player];['TaskSucceeded',['','ACAV communication disabled!']] call para_c_fnc_show_notification;";
+			onButtonClick = "3 radioChannelRemove [player];['TaskSucceeded',['','Call for Fire communication disabled!']] call para_c_fnc_show_notification;";
 		};
 
 		class ccgh_btn: vn_mf_RscButton_ImgSwitch
