@@ -31,7 +31,7 @@ if(_airChat == 0) then
 private _acavChat = radioChannelCreate [[1, 0.59, 0, 1], "Call for Fire", "%UNIT_GRP_NAME (%UNIT_NAME)", []]; 
 if(_acavChat == 0) then
 {
-    diag_log "ACAV channel failed to init";
+    diag_log "Call for Fire channel failed to init";
 };
 
 // Add MACV chat
