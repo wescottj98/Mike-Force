@@ -65,16 +65,16 @@ switch(_team) do
 {
 	case "MikeForce" : {
 		1 radioChannelAdd [player];
+		3 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
-		8 enableChannel [true, true];
 	};
 
 	case "SpikeTeam" : {
 		1 radioChannelAdd [player];
+		3 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
-		8 enableChannel [true, true];
 	};
 
 	case "ACAV" : {
@@ -126,18 +126,18 @@ switch(_team) do
 	case "Muskets" : {
 		1 radioChannelAdd [player];
 		2 radioChannelAdd [player];
+		3 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
-		8 enableChannel [true, true];
 		7 enableChannel [true, true];
 	};
 
 	case "SatansAngels" : {
 		1 radioChannelAdd [player];
 		2 radioChannelAdd [player];
+		3 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
-		8 enableChannel [true, true];
 		7 enableChannel [true, true];
 	};
 
