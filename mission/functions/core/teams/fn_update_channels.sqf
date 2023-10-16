@@ -68,6 +68,7 @@ switch(_team) do
 		3 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
+		8 enableChannel [true, true];
 	};
 
 	case "SpikeTeam" : {
@@ -75,6 +76,7 @@ switch(_team) do
 		3 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
+		8 enableChannel [true, true];
 	};
 
 	case "ACAV" : {
@@ -130,6 +132,7 @@ switch(_team) do
 
 		6 enableChannel [true, true];
 		7 enableChannel [true, true];
+		8 enableChannel [true, true];
 	};
 
 	case "SatansAngels" : {
@@ -139,6 +142,7 @@ switch(_team) do
 
 		6 enableChannel [true, true];
 		7 enableChannel [true, true];
+		8 enableChannel [true, true];
 	};
 
 	case "633rdCSG" : {
