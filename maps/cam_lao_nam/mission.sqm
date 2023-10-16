@@ -8,7 +8,7 @@ class EditorData
 	toggles=586;
 	class ItemIDProvider
 	{
-		nextID=16117;
+		nextID=16118;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17636;
+		nextID=17743;
 	};
 	class Camera
 	{
-		pos[]={17401.465,64.000244,5633.7378};
-		dir[]={-0.72760594,-0.58195031,-0.36321285};
-		up[]={-0.52068102,0.81322426,-0.25991821};
-		aside[]={-0.44663298,0,0.89471734};
+		pos[]={17248.801,40.323334,5592.1323};
+		dir[]={0.8993305,-0.42786458,0.090752222};
+		up[]={0.42573813,0.90382004,0.042963382};
+		aside[]={0.1004062,1.343913e-006,-0.9949953};
 	};
 };
 binarizationWanted=0;
@@ -602,8 +602,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -653,8 +653,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -710,7 +710,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1536;
+		items=1537;
 		class Item0
 		{
 			dataType="Marker";
@@ -89246,17 +89246,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17263.676,30.77503,5579.7505};
+				position[]={17263.799,30.77503,5579.6118};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=16116;
 			type="vn_b_ammobox_full_01";
-			atlOffset=0.00041770935;
+			atlOffset=0.00042915344;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -89268,7 +89267,40 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[],[]],[[""vn_b_pack_static_m2_01"",""vn_b_pack_static_m29_01""],[50,50]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[""vn_b_pack_static_m2_01"",""vn_b_pack_static_m29_01""],[25,25]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1536
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17260.004,30.793921,5581.0195};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=16117;
+			type="vn_b_ammobox_full_01";
+			atlOffset=0.018758774;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[""vn_b_pack_static_m2_01"",""vn_b_pack_static_m29_01""],[25,25]]],false]";
 						};
 					};
 				};

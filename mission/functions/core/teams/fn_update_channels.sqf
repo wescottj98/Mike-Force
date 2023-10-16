@@ -67,12 +67,14 @@ switch(_team) do
 		1 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
+		8 enableChannel [true, true];
 	};
 
 	case "SpikeTeam" : {
 		1 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
+		8 enableChannel [true, true];
 	};
 
 	case "ACAV" : {
@@ -126,6 +128,7 @@ switch(_team) do
 		2 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
+		8 enableChannel [true, true];
 		7 enableChannel [true, true];
 	};
 
@@ -134,6 +137,7 @@ switch(_team) do
 		2 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
+		8 enableChannel [true, true];
 		7 enableChannel [true, true];
 	};
 
