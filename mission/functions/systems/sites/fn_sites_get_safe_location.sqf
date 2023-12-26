@@ -95,7 +95,11 @@ private _blacklistedMapZones = vn_mf_markers_no_sites apply {
 private _playerBases = para_g_bases apply {
 	private _baseRadius = _x getVariable "para_g_base_radius";
 	[
-		getPos _x,
+		[
+			(getPos _x) select 0, 
+			(getPos _x) select 1, 
+			0
+		],
 		_baseRadius,
 		_baseRadius,
 		0,
