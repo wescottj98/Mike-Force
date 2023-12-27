@@ -296,7 +296,14 @@ class CfgFunctions
 			class reveal_supply_line {};
 			class reveal_radiotap_nearest_sites {};
 		};
-		
+
+		class system_sites_utils
+		{
+			file = "functions\systems\sites\utils";
+			class sites_utils_std_teardown {};
+			class sites_utils_std_check_teardown {};
+		}
+
 		class system_supplies {
 			file = "functions\systems\supplies";
 			class action_supplies {};
