@@ -295,6 +295,7 @@ class CfgFunctions
 
 			class reveal_supply_line {};
 			class reveal_radiotap_nearest_sites {};
+			class sites_hide_unsafe_terrain_objects {};
 		};
 		
 		class system_supplies {
