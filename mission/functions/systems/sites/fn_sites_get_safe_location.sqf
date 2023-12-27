@@ -149,12 +149,7 @@ if (_finalPosition isEqualTo [0, 0, 0]) then {
 	_finalPosition = _position getPos [random _radius, random 360];
 };
 
-if(!(_terrainObjects isEqualTo [])) then 
-{
-	{
-		_x hideObjectGlobal true;
-	} forEach (nearestTerrainObjects [_finalPosition, _terrainObjects, _gradientRadius, false, true]);
-};
+[_finalPosition, _gradientRadius, _terrainObjects] call vn_mf_fnc_sites_hide_unsafe_terrain_objects;
 
 _finalPosition = _finalPosition + [0];
 _finalPosition;
