@@ -25,11 +25,11 @@ private _size = markerSize (_zoneData select struct_zone_m_marker);
 private _sizeX = _size select 0;
 
 //Create zone factory
-private _factoryPosition = [_center, vn_mf_bn_s_zone_radius, 0, 35, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+private _factoryPosition = [_center, vn_mf_bn_s_zone_radius, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 [_factoryPosition, _zone] call vn_mf_fnc_sites_create_factory;
 
 //Create zone HQ
-private _hqPosition = [_center, vn_mf_bn_s_zone_radius, 0, 35, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
+private _hqPosition = [_center, vn_mf_bn_s_zone_radius, 0, 55, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 [_hqPosition, _zone] call vn_mf_fnc_sites_create_hq;
 
 // for "_i" from 1 to (1 + ceil random (vn_mf_s_max_radars_per_zone - 1)) do
