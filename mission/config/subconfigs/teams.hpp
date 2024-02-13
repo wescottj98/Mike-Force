@@ -483,43 +483,43 @@ class TigerForce
     onLeave = "";
 };
 
-class Montagnard
-{
-    name = "Montagnard [5th SFG]";
-    icon = "custom\taskroster\montagnard_HL.paa";
-    shortname = "Montagnard";
-    unit = "vn_b_men_army_01";
-    color = "ColorUNKNOWN";
-    colorRGBA[] = {0.7,0.6,0,1};
+// class Montagnard
+// {
+//     name = "Montagnard [5th SFG]";
+//     icon = "custom\taskroster\montagnard_HL.paa";
+//     shortname = "Montagnard";
+//     unit = "vn_b_men_army_01";
+//     color = "ColorUNKNOWN";
+//     colorRGBA[] = {0.7,0.6,0,1};
     
-    class rolelimits 
-    {
-        medic = 20;
-        engineer = 40;
-        explosiveSpecialist = 40;
-        vn_artillery = 0;
-    };
+//     class rolelimits 
+//     {
+//         medic = 20;
+//         engineer = 40;
+//         explosiveSpecialist = 40;
+//         vn_artillery = 0;
+//     };
     
-    class defaultTraits
-    {
-        camouflageCoef = 1;
-        audibleCoef = 0.3;
-        loadCoef = 0.5;
-        engineer = true;
-        explosiveSpecialist = true;
-        medic = true;
-        UAVHacker = false;
-        vn_artillery = false;
-        harassable = true;
-        scout = true;
-        scout_multiple = true;
-        increasedBuildRate = true;
-    };
+//     class defaultTraits
+//     {
+//         camouflageCoef = 1;
+//         audibleCoef = 0.3;
+//         loadCoef = 0.5;
+//         engineer = true;
+//         explosiveSpecialist = true;
+//         medic = true;
+//         UAVHacker = false;
+//         vn_artillery = false;
+//         harassable = true;
+//         scout = true;
+//         scout_multiple = true;
+//         increasedBuildRate = true;
+//     };
 
-    //Function Calls on team Join
-    onJoin = "";
-    onLeave = "";
-};
+//     //Function Calls on team Join
+//     onJoin = "";
+//     onLeave = "";
+// };
 
 class SASR
 {

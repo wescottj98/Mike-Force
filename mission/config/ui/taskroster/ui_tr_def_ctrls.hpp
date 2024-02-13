@@ -320,21 +320,21 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			onButtonClick = "['SASR'] call vn_mf_fnc_tr_selectTeam;";
 		};
 
-		class logoMontagnard: vn_mf_RscButton_ImgSwitch
-		{
-			idc = VN_TR_SELECTTEAM_TEAM_LOGO_MO_IDC;
-			x = UIW(5); //(9.75);
-			y = UIH(15.75); //(12);
-			w = UIW(2);
-			h = UIH(2);
+		// class logoMontagnard: vn_mf_RscButton_ImgSwitch
+		// {
+		// 	idc = VN_TR_SELECTTEAM_TEAM_LOGO_MO_IDC;
+		// 	x = UIW(5); //(9.75);
+		// 	y = UIH(15.75); //(12);
+		// 	w = UIW(2);
+		// 	h = UIH(2);
 			
-			tooltip = "";
+		// 	tooltip = "";
 			
-			text = "custom\taskroster\montagnard_gray.paa";
-			textUp = "custom\taskroster\montagnard_HL.paa";
+		// 	text = "custom\taskroster\montagnard_gray.paa";
+		// 	textUp = "custom\taskroster\montagnard_HL.paa";
 			
-			onButtonClick = "['Montagnard'] call vn_mf_fnc_tr_selectTeam;";
-		};
+		// 	onButtonClick = "['Montagnard'] call vn_mf_fnc_tr_selectTeam;";
+		// };
 
 		class logoTigerForce: vn_mf_RscButton_ImgSwitch
 		{
