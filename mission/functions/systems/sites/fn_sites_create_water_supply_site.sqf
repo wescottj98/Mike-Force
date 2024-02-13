@@ -47,7 +47,7 @@ params ["_pos"];
 		_siteStore setVariable ["markers", [_supplyMarker]];
 		_siteStore setVariable ["supplys", [_tunnelWS]];
 		_siteStore setVariable ["vehicles", [_tunnelWS]]; 
-		_siteStore setVariable ["objectsToDestroy", _tunnelWS];
+		_siteStore setVariable ["objectsToDestroy", [_tunnelWS]];
 	},
 	//Teardown condition check code
 	{
@@ -57,23 +57,11 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-		//Teardown when destroyed
-		(_siteStore getVariable "supplys" findIf {alive _x} == -1)
+		[_siteStore] call vn_mf_fnc_sites_utils_std_check_teardown;
 	},
 	//Teardown code
 	{
 		params ["_siteStore"];
-
-		{
-			deleteMarker _x;
-		} forEach (_siteStore getVariable "markers");
-
-		{
-			deleteVehicle _x;
-		} forEach (_siteStore getVariable "vehicles");
-
-		{
-			[_x] call para_s_fnc_ai_obj_finish_objective;
-		} forEach (_siteStore getVariable ["aiObjectives", []]);
+		[_siteStore] call vn_mf_fnc_sites_utils_std_teardown;
 	}
 ] call vn_mf_fnc_sites_create_site;

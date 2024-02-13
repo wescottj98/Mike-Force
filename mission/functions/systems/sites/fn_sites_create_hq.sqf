@@ -109,26 +109,11 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-
-		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
+		[_siteStore] call vn_mf_fnc_sites_utils_std_check_teardown;
 	},
 	//Teardown code
 	{
 		params ["_siteStore"];
-
-		private _objectsToDestroy = _siteStore getVariable "objectsToDestroy";
-		private _respawnToDelete = _siteStore getVariable "respawnPointsDC";
-
-		{
-			deleteVehicle _x;
-		} forEach _objectsToDestroy;
-
-		{
-			deleteMarker _x;
-		} forEach (_siteStore getVariable "markers");
-
-		// release AI from associated objectives
-		// note -- AI can vanish in front of players when this is executed
-		_siteStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
+		[_siteStore] call vn_mf_fnc_sites_utils_std_teardown;
 	}
 ] call vn_mf_fnc_sites_create_site;
