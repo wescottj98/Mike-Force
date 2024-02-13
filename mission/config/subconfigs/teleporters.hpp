@@ -42,7 +42,7 @@ class objects
 
 	class vn_mf_macv_WL1_teleporter
 	{
-		destinations[] = {  "quarterhorse_base",  "sasr_base",  "frogmen_base", "tigerforce_base", "7th_cav_base", "montagnards_base"};
+		destinations[] = {  "quarterhorse_base",  "sasr_base",  "frogmen_base", "tigerforce_base", "7th_cav_base"};//, "montagnards_base"};
 	};
 
 	class vn_mf_macv_WL2_teleporter
@@ -75,10 +75,10 @@ class objects
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
 	};
 	
-	class vn_mf_montagnard_teleporter
-	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
-	};
+	// class vn_mf_montagnard_teleporter
+	// {
+	// 	destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+	// };
 	
 	class vn_mf_frogmen_teleporter
 	{
@@ -300,11 +300,11 @@ class destinations
 		position_marker = "mf_respawn_muskets";
 	};
 	
-	class montagnards_base
-	{
-		image = "custom\taskroster\montagnard_HL.paa"; 
-		position_marker = "mf_respawn_montagnard";
-	};
+	// class montagnards_base
+	// {
+	// 	image = "custom\taskroster\montagnard_HL.paa"; 
+	// 	position_marker = "mf_respawn_montagnard";
+	// };
 	
 	class satansangels_base
 	{
