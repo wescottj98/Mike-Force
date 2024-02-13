@@ -53,12 +53,16 @@ class AmmoCrateLight
 		{"vn_m1897_buck_mag",20},
 		{"vn_m1897_fl_mag",20},
 		{"vn_l1a1_20_mag", 30},
+		{"vn_l1a1_30_02_mag",30},
 		{"vn_f1_smg_mag", 30},
 		{"vn_m1918_mag", 30},
 		{"vn_m1_garand_mag", 30},
 		{"vn_mpu_mag", 30},
 		{"vn_m1928_mag", 30},
-		{"vn_m72_mag", 30}
+		{"vn_m72_mag", 30},
+		{"vn_m20a1b1_01", 5},
+		{"vn_m20a1b1_heat_mag",	20},
+		{"vn_m20a1b1_wp_mag", 3}
 	};
 	items[] = {};
 	backpacks[] = {{"vn_b_pack_static_base_01", 5},{"vn_b_pack_static_tow",5},{"vn_b_pack_static_ammo_01",2}};
@@ -69,10 +73,12 @@ class AmmoCrateSupport
 	objectClassname = "vn_b_ammobox_supply_01";
 	weapons[] = {
 		{"vn_m79",2},
-		{"vn_m127",15}
+		{"vn_m127",15},
+		{"vn_m20a1b1_01", 5}
 	};
 	magazines[] = {
 		{"vn_m60_100_mag",50},
+		{"vn_l1a1_30_02_mag",30},
 		{"vn_rpd_100_mag",10},
 		{"vn_m63a_100_mag", 20},
 		{"vn_m63a_150_t_mag",30},
@@ -100,7 +106,9 @@ class AmmoCrateSupport
 		{"vn_40mm_m682_smoke_r_mag",20},
 		{"vn_40mm_m715_smoke_g_mag",20},
 		{"vn_40mm_m716_smoke_y_mag",20},
-		{"vn_40mm_m717_smoke_p_mag",20}};
+		{"vn_40mm_m717_smoke_p_mag",20},
+		{"vn_m20a1b1_heat_mag",	20},
+		{"vn_m20a1b1_wp_mag", 3}};
 	items[] = {{"vn_b_item_trapkit",5}};
 	backpacks[] = {
 		{"vn_b_pack_static_base_01", 10},
@@ -148,7 +156,10 @@ class AmmoCrateExplosives
 		{"vn_mine_m112_remote_mag",15},
 		{"vn_mine_m18_x3_mag",10},
 		{"vn_mine_m18_x3_range_mag",10},
-		{"vn_mine_satchel_remote_02_mag",10}};
+		{"vn_mine_satchel_remote_02_mag",10},
+		{"vn_m20a1b1_01", 5},
+		{"vn_m20a1b1_heat_mag",	20},
+		{"vn_m20a1b1_wp_mag", 3}};
 	items[] = {};
 	backpacks[] = {{"vn_b_pack_static_base_01", 5}};
 };
