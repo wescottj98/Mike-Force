@@ -67,7 +67,7 @@ class AmmoCrateLight
         {"vn_m1a1_30_mag",30},
         {"vn_hp_mag",30},
         {"vn_m14_10_mag",30},
-        {"vn_l1a1_30_mag",60}
+        {"vn_l1a1_30_mag",60},
 	};
 	items[] = {};
 	backpacks[] = {{"vn_b_pack_static_base_01", 5},{"vn_b_pack_static_tow",5},{"vn_b_pack_static_ammo_01",2}};
@@ -126,13 +126,15 @@ class AmmoCrateSupport
         {"vn_ppsh41_71_mag",10},
         {"vn_22mm_lume_mag",20},
         {"vn_22mm_m22_smoke_mag",20},
-        {"vn_22mm_cs_mag",20}};};
+        {"vn_22mm_cs_mag",20}
+	};
 	items[] = {{"vn_b_item_trapkit",5}};
 	backpacks[] = {
 		{"vn_b_pack_static_base_01", 10},
 		{"vn_b_pack_static_m2_high_01",3},
 		{"vn_b_pack_static_m60_high_01",5},
-		{"vn_b_pack_static_mk18",2}};
+		{"vn_b_pack_static_mk18",2}
+	};
 };
 
 class AmmoCrateExplosives
@@ -183,7 +185,8 @@ class AmmoCrateExplosives
         {"vn_22mm_m9_heat_mag",20},
         {"vn_22mm_m19_wp_mag",20},
         {"vn_22mm_m61_frag_mag",20},
-        {"vn_22mm_n94_heat_mag",20}};
+        {"vn_22mm_n94_heat_mag",20}
+	};
 	items[] = {};
 	backpacks[] = {{"vn_b_pack_static_base_01", 5}};
 };
