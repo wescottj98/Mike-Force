@@ -85,6 +85,9 @@ private _other_messages = [
     "Sites: At Factory sites you need to destroy the large shipping container.",
     "Radio Tap: Radio sets at certain sites can be wire-tapped to reveal up to three other sites (need wiretap kit and explosives role).",
     "Radio Tap: Wiretapping radio sets at sites *does not guarantee* you will reveal all AO sites. Find the intel documents to be sure!",
+    "Camps: Watch out for traps at campsites ...",
+    "Camps: Mine Detectors have a 15m detection radius while Trap Kits only have a 5m detection radius. Morale of the story: use Mine Detectors!",
+    "Camps: Always remember to turn on your Mine Detector before you step off!",
     // misc
     "Be a bro.",
     "Be a bro, be like John the GI.",
