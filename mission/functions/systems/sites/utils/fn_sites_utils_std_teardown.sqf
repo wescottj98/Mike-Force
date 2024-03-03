@@ -9,6 +9,7 @@
 	Parameter(s):
 		_siteStore - Site store object.
 		_markers - [OPTIONAL] Boolean whether to remove markers or not.
+		_partialMarkers - [OPTIONAL] Boolean whether to remove any partial markers or not (radio tap).
 		_objects - [OPTIONAL] Boolean whether to remove objects or not.
 		_ai - [OPTIONAL] Boolean whether to remove ai objectives or not.
 	
@@ -17,20 +18,27 @@
 	
 	Example(s):
  		[_siteStore] call vn_mf_fnc_sites_utils_do_teardown;
-		[_siteStore, true, false, false] call vn_mf_fnc_sites_utils_do_teardown;
-		[_siteStore, true, true, false] call vn_mf_fnc_sites_utils_do_teardown;
+ 		// only remove markers on completion
+ 		[_siteStore, true, true, false, false] call vn_mf_fnc_sites_utils_do_teardown;
+ 		// don't remove ai objectives on completion
+		[_siteStore, true, true, true, false] call vn_mf_fnc_sites_utils_do_teardown;
 */
 
 
 params [
 	"_siteStore", 
 	["_markers", true], 
+	["_partialMarkers", true],
 	["_objects", true], 
 	["_ai", true]
 ];
 
 if (_markers) then {
 	((_siteStore getVariable "markers") apply {deleteMarker _x})
+};
+
+if (_partialMarkers) then {
+	((_siteStore getVariable ["partialMarkers", []]) apply {deleteMarker _x})
 };
 
 if (_objects) then {
