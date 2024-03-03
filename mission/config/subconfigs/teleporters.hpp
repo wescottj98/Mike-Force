@@ -278,7 +278,7 @@ class destinations
 	
 	class quarterhorse_base
 	{
-		image = "custom\taskroster\quarterhorse_HL.paa"; 
+		image = "custom\taskroster\blackhorse_HL.paa";
 		position_marker = "mf_respawn_quarterhorse";
 	};
 
@@ -290,7 +290,7 @@ class destinations
 
 	class quarterhorse_fsb
 	{
-		image = "custom\taskroster\quarterhorse_HL.paa"; 
+		image = "custom\taskroster\blackhorse_HL.paa";
 		position_marker = "mf_respawn_quarterhorse_fsb";
 	};
 	
