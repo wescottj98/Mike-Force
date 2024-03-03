@@ -250,7 +250,9 @@ call vn_mf_fnc_display_location_time;
 };
 
 // Marker Discovery
-[] call vn_mf_fnc_sites_subsystem_client_init;
+// @dijksterhuis: Disabled in favour of radio wiretap feature.
+// [] call vn_mf_fnc_sites_subsystem_client_init;
+
 // Tutorial System
 [] call vn_mf_fnc_tutorial_subsystem_client_init;
 
