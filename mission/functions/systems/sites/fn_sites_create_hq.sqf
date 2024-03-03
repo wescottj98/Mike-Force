@@ -87,6 +87,11 @@ params ["_pos"];
 		_hqMarker setMarkerText "HQ";
 		_hqMarker setMarkerAlpha 0;
 
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialHQ_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		private _hqRespawnMarker = createMarker [format ["dc_respawn_adhoc_%1", _siteId], _markerPos];
 		_hqRespawnMarker setMarkerType "o_hq";
 		_hqRespawnMarker setMarkerAlpha 0;
@@ -98,6 +103,7 @@ params ["_pos"];
 		vn_dc_adhoc_respawns pushBack [_hqRespawnMarker,_respawnID];
 		_siteStore setVariable ["aiObjectives", _objectives];
 		_siteStore setVariable ["markers", [_hqMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["vehicles", _hqObjects]; 
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},

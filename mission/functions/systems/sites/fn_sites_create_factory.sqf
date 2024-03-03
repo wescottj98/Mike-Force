@@ -75,6 +75,11 @@ params ["_pos"];
 		_factoryMarker setMarkerText "Factory";
 		_factoryMarker setMarkerAlpha 0;
 
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialFactory_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		private _factoryRespawnMarker = createMarker [format ["dc_respawn_adhoc_%1", _siteId], _markerPos];
 		_factoryRespawnMarker setMarkerType "o_Ordnance";
 		_factoryRespawnMarker setMarkerAlpha 0;
@@ -93,6 +98,7 @@ params ["_pos"];
 
 		_siteStore setVariable ["aiObjectives", _objectives];
 		_siteStore setVariable ["markers", [_factoryMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["staticGuns", _factoryObjects select {_x isKindOf "StaticWeapon"}];
 		_siteStore setVariable ["vehicles", _factoryObjects]; 
 		_siteStore setVariable ["objectsToDestroy", _factoryObjects select {typeOf _x in _objectTypesToDestroy}];

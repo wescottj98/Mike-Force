@@ -57,6 +57,11 @@ params ["_pos"];
 		_radarMarker setMarkerText "Radar";
 		_radarMarker setMarkerAlpha 0;
 
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialRadar_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		private _staticWeapons = _radarObjs select {
 			_x isKindOf "StaticWeapon" && !(typeof _x == "vn_o_static_rsna75") && !(typeof _x == "vn_sa2");
 		};
@@ -65,6 +70,7 @@ params ["_pos"];
 
 		_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
 		_siteStore setVariable ["markers", [_radarMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
 	//Teardown condition check code

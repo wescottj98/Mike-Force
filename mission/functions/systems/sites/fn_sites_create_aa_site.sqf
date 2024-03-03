@@ -47,8 +47,14 @@ params ["_pos"];
 		_aaMarker setMarkerText "AA";
 		_aaMarker setMarkerAlpha 0;
 
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialAA_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		_siteStore setVariable ["aiObjectives", []];
 		_siteStore setVariable ["markers", [_aaMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["objectsToDestroy", _objects];
 	},
 	//Teardown condition check code

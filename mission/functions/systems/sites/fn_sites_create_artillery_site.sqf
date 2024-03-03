@@ -85,6 +85,11 @@ params ["_pos"];
 		_artilleryMarker setMarkerText "Arty";
 		_artilleryMarker setMarkerAlpha 0;
 
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialArtillery_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		_objectsToDestroy apply {
 
 			// Disable weapon dissassembly as statics aren't deleted properly
@@ -102,6 +107,7 @@ params ["_pos"];
 		_staticWeaponsOther apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 		_siteStore setVariable ["aiObjectives", [[_spawnPos, 1, 1] call para_s_fnc_ai_obj_request_defend]];
 		_siteStore setVariable ["markers", [_artilleryMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
 	//Teardown condition check code
