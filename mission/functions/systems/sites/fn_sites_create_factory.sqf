@@ -32,7 +32,7 @@ params ["_pos"];
 		missionNamespace getVariable ["current_factory", _siteStore];
 
 		private _factoryObjects = [_spawnPos] call vn_mf_fnc_create_factory_buildings;
-		private _intel = _factoryObjects select {typeOf _x == "Land_Map_unfolded_Malden_F"};
+		private _intel = _factoryObjects select {typeOf _x == "Land_Map_unfolded_Malden_F" || typeOf _x == "vn_b_prop_cabinet_02" };
 		missionNamespace setVariable ["factory_intel", _intel];
 		missionNamespace setVariable ["factoryPosition", _pos];
 
@@ -45,6 +45,7 @@ params ["_pos"];
 		
 		private _objectTypesForDynamicSim = [
 			"Land_Map_unfolded_Malden_F",
+			"vn_b_prop_cabinet_02",
 			"Land_vn_wf_vehicle_service_point_east",
 			"Land_vn_fuel_tank_stairs",
 			"Land_Net_Fence_Gate_F"
