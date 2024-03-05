@@ -45,16 +45,17 @@ private _isPlayerExplosiveSpecialist = "player getUnitTrait 'explosiveSpecialist
 private _isPlayerHasWiretapKit = "'vn_b_item_wiretap' in (backpackItems player)";
 
 private _conditionToProgress = format [
-	"(%1 && %2 && %3)",
+	"(%1 && %2)",
+	// "(%1 && %2 && %3)",
 	_conditionToShow,
-	_isPlayerExplosiveSpecialist,
+	// _isPlayerExplosiveSpecialist,
 	_isPlayerHasWiretapKit
 ];
 
 private _codeOnStart = {
-	private _playerIsExplosiveSpecialist = player getUnitTrait 'explosiveSpecialist';
+	// private _playerIsExplosiveSpecialist = player getUnitTrait 'explosiveSpecialist';
 	private _playerHasWiretapKit = 'vn_b_item_wiretap' in (backpackItems player);
-	if (not _playerHasWiretapKit || not _playerIsExplosiveSpecialist) exitWith {
+	if (not _playerHasWiretapKit) exitWith {
 	    ["RadioTapFailed", []] remoteExec ["para_c_fnc_show_notification", player];
 	};
 	if (true) exitWith {
