@@ -68,7 +68,7 @@ private _codeOnComplete = {
 };
 private _codeOnInterrupted = {};
 private _extraArgsArr = [];
-private _actionDurationSeconds = 20;
+private _actionDurationSeconds = 10;
 private _actionPriority = 100;
 private _actionRemoveOnComplete = false;
 private _showWhenUncon = false;
