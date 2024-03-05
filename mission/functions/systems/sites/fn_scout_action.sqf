@@ -155,7 +155,7 @@ if (player getUnitTrait "scout_multiple") then {
     };
 };
 
-targetClassNames = ["Land_Map_unfolded_F","Land_Map_unfolded_Malden_F"];
+targetClassNames = ["Land_Map_unfolded_F","Land_Map_unfolded_Malden_F", "vn_b_prop_cabinet_02"];
 nearbyObjects = nearestObjects [_playerRef, ["all"], 100]; 
  
 {  
