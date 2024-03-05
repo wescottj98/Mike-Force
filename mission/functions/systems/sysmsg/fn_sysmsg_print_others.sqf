@@ -22,8 +22,6 @@ private _other_messages = [
     "7th Cav: Air cavalry based unit that focuses on rapid and mobile assaults, using Heuy's, Chinhooks, and Cayuse's with the occasional use of mechanized infantry.",
     "7th Cav: We are the jack of all trades and Master of one, that being Air Assault.",
     "7th Cav: We get called in to be the Spearhead of an assault or the Reinforcements for one.",
-    "Montagnards: Elite indigenous forces that served with MACV-SOG on Spike and Recon teams throughout the Vietnam war.",
-    "Montagnards: A french term for mountain people and a blanket term used to describe many indigenous tribes.",
     // bn specific
     "Dac Cong: Been captured? Try to escape the tunnels and get rescued. Respawning is for cowards!",
     "Dac Cong: Been captured? Escape and grab a shovel... You're going to need it.",
