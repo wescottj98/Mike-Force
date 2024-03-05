@@ -78,3 +78,5 @@ private _radios = vn_site_objects select {
 };
 
 _radios apply {_x call vn_mf_fnc_action_radiotap};
+
+missionNamespace setVariable ["siteRadios", _radios];

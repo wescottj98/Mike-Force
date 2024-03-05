@@ -65,6 +65,11 @@ params ["_pos"];
 		_campMarker setMarkerText "Camp";
 		_campMarker setMarkerAlpha 0;
 
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialCamp_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		private _staticWeapons = _campObjs select {_x isKindOf "StaticWeapon"};
 		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
 
@@ -101,6 +106,7 @@ params ["_pos"];
 		};
 
 		_siteStore setVariable ["markers", [_campMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["objectsToDestroy", _objectsToDestroy];
 	},
 	//Teardown condition check code

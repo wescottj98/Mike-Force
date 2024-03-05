@@ -35,6 +35,11 @@ params ["_pos"];
 		_supplyMarker setMarkerText "Water Supply";
 		_supplyMarker setMarkerAlpha 0;
 		
+		private _partialMarkerPos = _spawnPos getPos [10 + random 40, random 360];
+		private _markerPartial = createMarker [format ["PartialTunnel_WaterSupply_%1", _siteId], _partialMarkerPos];
+		_markerPartial setMarkerType "o_unknown";
+		_markerPartial setMarkerAlpha 0;
+
 		[_tunnelWS, true] call para_s_fnc_enable_dynamic_sim;
 		
 		// 70% chance to spawn an ambush
@@ -45,6 +50,7 @@ params ["_pos"];
 		};
 
 		_siteStore setVariable ["markers", [_supplyMarker]];
+		_siteStore setVariable ["partialMarkers", [_markerPartial]];
 		_siteStore setVariable ["supplys", [_tunnelWS]];
 		_siteStore setVariable ["vehicles", [_tunnelWS]]; 
 		_siteStore setVariable ["objectsToDestroy", [_tunnelWS]];
