@@ -275,6 +275,9 @@
       <Key ID="STR_vn_mf_respawn_7thcav">
         <Original>GARRYOWEN</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_golfcourse">
+        <Original>The Golf Course</Original>
+      </Key>
 	    <Key ID="STR_vn_mf_respawn_3rdMEU">
         <Original>31ST MEU</Original>
       </Key>

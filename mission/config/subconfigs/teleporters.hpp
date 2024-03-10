@@ -19,25 +19,30 @@ class objects
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "macv_base"};
 	};
+
+	class vn_mf_golfcourse_teleporter
+	{
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "macv_base"};
+	};
 	
 	class vn_mf_tigerforce_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "militarypolice_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "militarypolice_base", "macv_base"};
 	};
 	
 	class vn_mf_militarypolice_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 	
 	class vn_mf_gunrange_teleporter
 	{
-		destinations[] = {"satansangels_base", "militarypolice_base", "quarterhorse_base", "3rdMEU_base", "sasr_base", "muskets_base", "macv_base", "frogmen_base"};
+		destinations[] = {"satansangels_base_1", "militarypolice_base", "quarterhorse_base", "3rdMEU_base", "sasr_base", "muskets_base", "macv_base", "frogmen_base"};
 	};
 	
 	class vn_mf_macv_teleporter
 	{
-		destinations[] = {"mikeforce_base","spiketeam_base", "acav_base", "greenhornets_base"};
+		destinations[] = {"mikeforce_base","spiketeam_base", "acav_base", "greenhornets_base","golfcourse",};
 	};
 
 	class vn_mf_macv_WL1_teleporter
@@ -47,12 +52,12 @@ class objects
 
 	class vn_mf_macv_WL2_teleporter
 	{
-		destinations[] = {"satansangels_base", "muskets_base", "arvn_base", "3rdMEU_base", "militarypolice_base"};
+		destinations[] = {"satansangels_base_1", "muskets_base", "arvn_base", "3rdMEU_base", "militarypolice_base"};
 	};
 
 	class vn_mf_quarterhorse_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 
 	class vn_mf_quarterhorse_teleporter_fsb
@@ -62,17 +67,17 @@ class objects
 
 	class vn_mf_7thcav_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 	
 	class vn_mf_3rdMEU_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_fsb", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 	
 	class vn_mf_muskets_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 	
 	// class vn_mf_montagnard_teleporter
@@ -82,7 +87,7 @@ class objects
 	
 	class vn_mf_frogmen_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 
 	class vn_mf_arvn_teleporter
@@ -92,17 +97,17 @@ class objects
 
 	class vn_mf_berch_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "quarterhorse_base", "3rdMEU_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "quarterhorse_base", "3rdMEU_base", "macv_base"};
 	};
 	
 	class vn_mf_633rdcsg_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base","golfcourse", "macv_base"};
 	};
 	
 	class vn_mf_sasr_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "golfcourse", "macv_base"};
 	};
 
 	class vn_mf_satansangels_teleporter
@@ -306,10 +311,10 @@ class destinations
 	// 	position_marker = "mf_respawn_montagnard";
 	// };
 	
-	class satansangels_base
+	class satansangels_base_1
 	{
 		image = "custom\taskroster\satansangels_HL.paa"; 
-		position_marker = "mf_respawn_satansangels";
+		position_marker = "mf_respawn_satansangel_land_hangars";
 	};
 
 	class sasr_base
@@ -328,6 +333,12 @@ class destinations
 	{
 		image = "custom\taskroster\ARVN_HL.paa"; 
 		position_marker = "mf_respawn_arvn";
+	};
+
+	class golfcourse
+	{
+		image = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tel_airbase_ca.paa"; 
+		position_marker = "mf_respawn_golfcourse";
 	};
 
 	class vacang { image = "custom\daccong_team.paa"; position_marker = "zone_vacang"; };
