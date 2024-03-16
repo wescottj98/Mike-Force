@@ -38,7 +38,11 @@ class wreck_long
 {
 	respawnType = "WRECK";
 	time = 60;
+
 };
+
+
+// comment from dev 101 meeting 3/16/2024
 
 //Jeeps + Small Cars
 class vn_b_wheeled_m151_01 : respawn_short {};
