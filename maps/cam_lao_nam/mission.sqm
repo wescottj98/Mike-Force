@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=18171;
+		nextID=18278;
 	};
 	class Camera
 	{
-		pos[]={1716.9004,32.688053,19200.617};
-		dir[]={-0.75454688,-0.44932443,-0.47834763};
-		up[]={-0.37951151,0.89335561,-0.24059297};
-		aside[]={-0.5354417,5.2410178e-007,0.84460479};
+		pos[]={11772.502,142.11861,14320.979};
+		dir[]={-0.83578068,-0.35751757,0.41674644};
+		up[]={-0.31995848,0.93390054,0.15954246};
+		aside[]={0.44624001,-9.2206756e-007,0.89492458};
 	};
 };
 binarizationWanted=0;
@@ -585,8 +585,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -636,8 +636,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -80031,11 +80031,10 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						isPlayer=1;
 					};
 					id=15537;
 					type="vn_o_men_nva_navy_03";
-					atlOffset=1.8608704;
+					atlOffset=1.8610001;
 					class CustomAttributes
 					{
 						class Attribute0
