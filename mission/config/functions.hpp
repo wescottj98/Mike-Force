@@ -309,9 +309,9 @@ class CfgFunctions
 		class system_sites_object_atl_fixer
 		{
 			file = "functions\systems\sites\object_atl_fixer";
-			class sites_object_atl_fixer_init {};
-			class sites_object_atl_fixer_job {};
-			class sites_object_atl_fixer_add_object {};
+			class sites_object_zfixer_init {};
+			class sites_object_zfixer_job {};
+			class sites_object_zfixer_add_object {};
 		}
 
 		class system_supplies {

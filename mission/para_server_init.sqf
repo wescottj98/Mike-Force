@@ -321,9 +321,9 @@ diag_log "VN MikeForce: Initialising Zones";
 // Initialise the zones
 [] call vn_mf_fnc_zones_init;
 
-diag_log "VN MikeForce: Initialising Sites ATL-Z Fixer Job";
+diag_log "VN MikeForce: Initialising Sites Object Z-Fixer";
 // stop mortars etc. falling under terrain
-[] call vn_mf_fnc_sites_object_atl_fixer_init;
+[] call vn_mf_fnc_sites_object_zfixer_init;
 
 diag_log "VN MikeForce: Initialising Sites";
 // Initialise sites - must be done after zones.
