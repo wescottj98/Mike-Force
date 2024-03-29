@@ -303,6 +303,7 @@ class CfgFunctions
 			file = "functions\systems\sites\utils";
 			class sites_utils_std_teardown {};
 			class sites_utils_std_check_teardown {};
+			class sites_utils_normalise_object_placement {};
 		}
 
 		class system_sites_object_atl_fixer
