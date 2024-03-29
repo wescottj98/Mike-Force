@@ -305,6 +305,14 @@ class CfgFunctions
 			class sites_utils_std_check_teardown {};
 		}
 
+		class system_sites_object_atl_fixer
+		{
+			file = "functions\systems\sites\object_atl_fixer";
+			class sites_object_atl_fixer_init {};
+			class sites_object_atl_fixer_job {};
+			class sites_object_atl_fixer_add_object {};
+		}
+
 		class system_supplies {
 			file = "functions\systems\supplies";
 			class action_supplies {};
