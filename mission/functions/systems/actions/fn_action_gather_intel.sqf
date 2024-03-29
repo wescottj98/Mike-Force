@@ -12,7 +12,7 @@
 	},// Code executed on completion
 	{},	// Code executed on interrupted
 	[],													// Arguments passed to the scripts as _this select 3
-	45,													// Action duration [s]
+	15,													// Action duration [s]
 	100,													// Priority
 	false,											// Remove on completion
 	false												// Show in unconscious state
