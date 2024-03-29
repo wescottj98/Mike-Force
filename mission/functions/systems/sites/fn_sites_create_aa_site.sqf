@@ -36,6 +36,8 @@ params ["_pos"];
 		vn_site_objects append _objects;
 
 		_objects apply {
+			[_x] call vn_mf_fnc_sites_utils_normalise_object_placement;
+			[_x] call vn_mf_fnc_sites_object_atl_fixer_add_object;
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 			createVehicleCrew _x;
 		};

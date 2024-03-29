@@ -44,15 +44,5 @@ vn_mf_aa_compositions = [
 private _randomAngle = [0,360] call BIS_fnc_randomInt;
 
 private _aaObjects = [_position, _randomAngle, selectRandom vn_mf_aa_compositions] call BIS_fnc_objectsMapper;
-{
-
-	if (_x isKindOf "StaticWeapon") then {
-		_x allowDamage false;
-		_x setPos [getPos _x # 0, getPos _x # 1, 0];
-		_x setVectorUp (surfaceNormal getPos _x);
-		_x allowDamage true;
-	};
-	
-} forEach _aaObjects;
 
 _aaObjects
