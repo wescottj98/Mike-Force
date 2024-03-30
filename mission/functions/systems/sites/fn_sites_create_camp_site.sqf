@@ -57,7 +57,12 @@ params ["_pos"];
 		];
 
 		private _objectsToDestroy = _campObjs select {typeOf _x in _campObjectiveTypes};
-		_objectsToDestroy apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
+
+		_objectsToDestroy apply {
+			[_x] call vn_mf_fnc_sites_utils_normalise_object_placement;
+			[_x] call vn_mf_fnc_sites_object_zfixer_add_object;
+			[_x, true] call para_s_fnc_enable_dynamic_sim
+		};
 
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
 		private _campMarker = createMarker [format ["Camp_%1", _siteId], _markerPos];
@@ -70,8 +75,10 @@ params ["_pos"];
 		_markerPartial setMarkerType "o_unknown";
 		_markerPartial setMarkerAlpha 0;
 
-		private _staticWeapons = _campObjs select {_x isKindOf "StaticWeapon"};
-		_staticWeapons apply {[_x, true] call para_s_fnc_enable_dynamic_sim};
+		// Building Kind of includes bushes and the DC wallfoliage fences
+		_campObjs select {_x isKindOf "Building"} apply {
+			[_x] call vn_mf_fnc_sites_utils_normalise_object_placement;
+		};
 
 		// 30% chance to spawn an ambush
 		// @dijksterhuis: we don't assign AI to every camp site to save AI budget on other assignments
