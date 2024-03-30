@@ -21,4 +21,4 @@ params ["_obj"];
 _obj setVectorUp (surfaceNormal getPos _obj);
 
 // place objects SLIGHTLY above ground to account for gradient variations
-_obj setPosATL [getPosATL _obj # 0, getPosATL _obj # 1, 0.1];
+_obj setPos [getPos _obj # 0, getPos _obj # 1, 0.1];
