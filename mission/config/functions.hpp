@@ -306,9 +306,9 @@ class CfgFunctions
 			class sites_utils_normalise_object_placement {};
 		}
 
-		class system_sites_object_atl_fixer
+		class system_sites_object_zfixer
 		{
-			file = "functions\systems\sites\object_atl_fixer";
+			file = "functions\systems\sites\object_zfixer";
 			class sites_object_zfixer_init {};
 			class sites_object_zfixer_job {};
 			class sites_object_zfixer_add_object {};
