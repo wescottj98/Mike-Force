@@ -1,5 +1,5 @@
 /*
-	File: fn_sites_object_atl_zadd_object.sqf
+	File: fn_sites_object_zfixer_add_object.sqf
 	Author: 'Dj' Dijksterhuis
 	Public: Yes
 
