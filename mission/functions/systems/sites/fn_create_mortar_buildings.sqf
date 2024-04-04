@@ -614,16 +614,4 @@ vn_mf_arty_compositions_v3 = [
 
 private _randAngle = [1, 360] call BIS_fnc_randomInt;
 private _site_objs = [_position, _randAngle, selectRandom vn_mf_arty_compositions_v3, 0] call BIS_fnc_objectsMapper;
-
-{
-
-	if (_x isKindOf "StaticWeapon") then {
-		_x allowDamage false;
-		_x setPos [getPos _x # 0, getPos _x # 1, 0];
-		_x setVectorUp (surfaceNormal getPos _x);
-		_x allowDamage true;
-	};
-	
-} forEach _site_objs;
-
 _site_objs

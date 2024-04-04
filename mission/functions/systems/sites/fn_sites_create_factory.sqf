@@ -56,10 +56,19 @@ params ["_pos"];
 			(_x isKindOf "StaticWeapon" || _x isKindOf "Building" || _x isKindOf "House" || _x isKindOf "LandVehicle" || _x isKindOf "Air")
 		};
 
-		_factoryObjects apply {
-			if(typeOf _x in _objectTypesToDestroy + _objectTypesForDynamicSim || [_x] call _fnc_dynSimKindOfChecker) then {
-				[_x, true] call para_s_fnc_enable_dynamic_sim;
-			};
+		// normalise z-coord and up vector for vehicles, static weapons, weapon creates and the intel associated objects
+		_factoryObjects select {typeOf _x in _objectTypesToDestroy || _x isKindOf "StaticWeapon" || _x isKindOf "LandVehicle"} apply {
+			[_x] call vn_mf_fnc_sites_utils_normalise_object_placement;
+		};
+
+		// keep an eye on anything we definitely don't want to fall under the floor
+		_factoryObjects select {typeOf _x in _objectTypesToDestroy || _x isKindOf "StaticWeapon"} apply {
+			[_x] call vn_mf_fnc_sites_object_zfixer_add_object;
+		};
+
+		// enable dynamic sim for a bunch of stuff
+		_factoryObjects select {typeOf _x in _objectTypesToDestroy + _objectTypesForDynamicSim || [_x] call _fnc_dynSimKindOfChecker} apply {
+			[_x, true] call para_s_fnc_enable_dynamic_sim;
 		};
 
 		_factoryObjects apply {

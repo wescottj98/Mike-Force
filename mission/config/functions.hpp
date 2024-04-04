@@ -303,6 +303,15 @@ class CfgFunctions
 			file = "functions\systems\sites\utils";
 			class sites_utils_std_teardown {};
 			class sites_utils_std_check_teardown {};
+			class sites_utils_normalise_object_placement {};
+		}
+
+		class system_sites_object_zfixer
+		{
+			file = "functions\systems\sites\object_zfixer";
+			class sites_object_zfixer_init {};
+			class sites_object_zfixer_job {};
+			class sites_object_zfixer_add_object {};
 		}
 
 		class system_supplies {
