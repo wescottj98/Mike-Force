@@ -4,16 +4,22 @@
 	Public: No
 	
 	Description:
-		
+		Given a object:
+			1. set the correct 'up' vector (perpendiculalr to the terrain's gradient).
+			2. set the z-coord AGSL pos SLIGHTLY above ground so that
+				a. on terrain with changing graidents, the object doesn't clip through ground.
+				b. when sim kicks in the object is flat on ground.
+
 	
 	Parameter(s):
-		_zone - Zone marker name [STRING]
+		_obj - object to normalise placement
 	
 	Returns:
-		Task Data store [NAMESPACE]
+		Nothing
 	
 	Example(s):
-		["zone_saigon"] call vn_mf_fnc_zones_create_artillery_site
+		[_myObj] call vn_mf_fnc_sites_utils_normalise_object_placement;
+		_myObjs apply {[_x] call vn_mf_fnc_sites_utils_normalise_object_placement};
 */
 
 params ["_obj"];
