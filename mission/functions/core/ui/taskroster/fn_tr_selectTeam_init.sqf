@@ -22,7 +22,7 @@ disableSerialization;
 VN_TR_SELECTTEAM_TEAM_LOGO_CTRL ctrlSetText "";
 
 // _text = composeText ["The Viet Cong controls this province.", lineBreak, "Your Mobile Strike Force must take control of the populace and destroy the Viet Cong"];
-VN_TR_SELECTTEAM_TEAM_DESC_CTRL ctrlSetStructuredText parseText "MISSION STRATEGY</t>";
+// VN_TR_SELECTTEAM_TEAM_DESC_CTRL ctrlSetStructuredText parseText "MISSION STRATEGY</t>";
 
 _text = "
 The Viet Cong controls this province.<br/>
@@ -41,4 +41,4 @@ There are 4 teams:<br/>
 - Working together as a unified force will secure the province more quickly.<br/>
 - So choose your team. Good luck out there, you’re going to need it!</t>";
 
-VN_TR_SELECTTEAM_TEAM_TEXT_CTRL ctrlSetStructuredText parseText _text;
+// VN_TR_SELECTTEAM_TEAM_TEXT_CTRL ctrlSetStructuredText parseText _text;

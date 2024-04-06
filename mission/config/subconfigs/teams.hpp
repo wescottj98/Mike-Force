@@ -7,6 +7,7 @@ class MikeForce
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0, 1, 1};
+    description = "Sweep and clear areas; assault objectives and defend friendly positions.";
 
     class rolelimits 
     {
@@ -44,6 +45,7 @@ class SpikeTeam
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
     colorRGBA[] = {0.7,0.6,0,1};
+    description = "Reconnaissance; ambushing and assaulting objectives.";
 
     class rolelimits 
     {
@@ -82,6 +84,7 @@ class ACAV
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
     colorRGBA[] = {0.85, 0.4, 0, 1};
+    description = "Combat engineering, artillery fire support and armour support.";
 
     class rolelimits 
     {
@@ -119,6 +122,7 @@ class GreenHornets
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
     colorRGBA[] = {0, 1, 0, 1};
+    description = "Helicopter based troop transport, resupply and reconnaissance.";
     
     class rolelimits 
     {
@@ -156,6 +160,7 @@ class 3rdMEU
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0.3, 0.6, 1};
+    description = "Forged in the crucible of history and honed through decades of service, the 31st MEU stands as a symbol of unwavering dedication and prowess in the world of military operations.";
 
     class rolelimits 
     {
@@ -193,6 +198,7 @@ class MilitaryPolice
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0, 1, 1};
+    description = "We are a tribute unit for the 716th Military Police Battalion (Saigon Warriors) that focus on Military Police action in combat and in a garrison role.";
 
     class rolelimits 
     {
@@ -224,12 +230,13 @@ class MilitaryPolice
 
 class QuarterHorse
 {
-    name = "Quarter Horse [1st Squadron, 4th Cav]";
-    icon = "custom\taskroster\quarterhorse_HL.paa";
-    shortname = "Quarter Horse";
+    name = "Black Horse [11th ACR]";
+    icon = "custom\taskroster\blackhorse_HL.paa";
+    shortname = "Black Horse";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
     colorRGBA[] = {0.85, 0.4, 0, 1};
+    description = "11th ACR is a multi-component combat brigade with a special emphasis on combat engineering, armored warfare, and firesupport.";
 
     class rolelimits 
     {
@@ -267,6 +274,7 @@ class Frogmen
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
     colorRGBA[] = {0.85, 0.4, 0, 1};
+    description = "UDT is a USN based spike team. Before there were SEALs, there was UDT.";
 
     class rolelimits 
     {
@@ -305,6 +313,7 @@ class Muskets
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
     colorRGBA[] = {0, 1, 0, 1};
+    description = "The 176th Assault Helicopter Company, 3rd Gunship Platoon, also known as the 'Muskets' is a Close Air Support (CAS) unit that provides air support using a variety of attack helicopters.";
     
     class rolelimits 
     {
@@ -342,6 +351,7 @@ class SatansAngels
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";
     colorRGBA[] = {0, 1, 0, 1};
+    description = "An advanced air superiority squadron providing close air support and air superiority.";
     
     class rolelimits 
     {
@@ -379,6 +389,7 @@ class 633rdCSG
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 1, 0, 1};
+    description = "Support functions with a focus on aviation support and logistics. We do what others don't want to do or are deemed dangerous.";
     
     class rolelimits 
     {
@@ -416,6 +427,7 @@ class 7thCAV
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
     colorRGBA[] = {0.85, 0.4, 0, 1};
+    description = "The 7th Cavalry Regiment is an air cavalry based unit that focuses on rapid and mobile assaults.";
     
     class rolelimits 
     {
@@ -453,6 +465,7 @@ class TigerForce
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
     colorRGBA[] = {0.7,0.6,0,1};
+    description = "Tiger Force is a Long Range Reconnaissance Patrol comprised of 45 Paratroopers from the 1st Battalion 327th Infantry Regiment of the 101st Airborne.";
     
     class rolelimits 
     {
@@ -529,6 +542,7 @@ class SASR
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
     colorRGBA[] = {0.7,0.6,0,1};
+    description = "NZ-SAS are an New Zealand and Australian themed Small Unit Tactics (SUT) Offshoot of the SAS.";
     
     class rolelimits 
     {
@@ -561,12 +575,13 @@ class SASR
 
 class ARVN
 {
-    name = "Army of the Repulic of Vietnam";
+    name = "Army of the Republic of Vietnam";
     icon = "custom\taskroster\ARVN_HL.paa";
     shortname = "ARVNR";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
     colorRGBA[] = {0.7,0.6,0,1};
+    description = "A light infantry unit with different elements: recon team; armored corps and traditional infantry.";
 
     class rolelimits 
     {
@@ -605,6 +620,7 @@ class MACV
     unit = "vn_b_men_army_01";
     color = "ColorYellow";
     colorRGBA[] = {0.85, 0.85, 0, 1};
+    description = "Military Assistance Command, Vietnam.";
     
     class rolelimits 
     {
@@ -679,7 +695,8 @@ class PressCorp
     unit = "C_journalist_F";
     color = "ColorCIV";
     colorRGBA[] = {0.4, 0, 0.5, 1};
-    
+    description = "The Department of the Army Special Photographic Office was a unit of the United States Department of the Army from 1962 to 1974.";
+
     class rolelimits 
     {
         medic = 40;

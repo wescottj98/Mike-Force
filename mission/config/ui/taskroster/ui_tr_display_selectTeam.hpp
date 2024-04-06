@@ -64,14 +64,14 @@ class vn_tr_disp_selectTeam
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_DESC_IDC;
 			x = UIX_CL(17.5);
-			y = UIY_CU(4.125);
+			y = UIY_CU(3.5);
 			w = UIW(16);
-			h = UIH(1);
-			
+			h = UIH(3);
+
 			colorText[] = {0,0,0,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			sizeEx = TXT_S;
-			text = "";
+			text = "Team Selection";
 			tooltip = "";
 			class Attributes
 			{
@@ -83,31 +83,32 @@ class vn_tr_disp_selectTeam
 				shadow = 0;
 			};
 		};
-		
+
+		// Text for the team's description field.
 		class activeTeam_text: vn_mf_RscStructuredText
 		{
 			idc = VN_TR_SELECTTEAM_TEAM_TEXT_IDC;
+
 			x = UIX_CL(17.5);
-			y = UIY_CU(3);
+			y = UIY_CU(0.5);
 			w = UIW(16);
-			h = UIH(12);
-			
+			h = UIH(6);
+
 			colorText[] = {0,0,0,1};
 			colorBackground[] = {0,0,0,0.0};
 			sizeEx = TXT_XS;
-			text = "";
+			text = "Click an image on the opposite page to choose a team.<br/><br/>Confirm that you can join the team by checking the text at the bottom of that page.<br/><br/>Click the accept button below when ready.";
 			tooltip = "";
 			class Attributes
 			{
-				align = "left";
+				align = "center";
 				color = "#000000";
 				colorLink = "#D09B43";
 				font = USEDFONT;
-				size = 0.625;
+				size = 0.8;
 				shadow = 0;
 			};
 		};
-		
 		
 		class btn_accept: vn_mf_RscButton
 		{
