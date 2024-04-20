@@ -56,14 +56,8 @@ private _codeOnStart = {
 	allPlayers apply {["DacCongCapturingFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
 };
 private _codeOnTick = {
-
 	params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
-
-	// only run this script 4 times to reduce network bandwith usage
-	if ((_progress mod (_maxProgress / 4 )) == 0) then {
-		// runs globally on all machines!
-		[vn_mf_bn_dc_target_flag, 4] remoteExec ["vn_mf_fnc_ctf_opfor_lower_flag", 0];
-	};
+	[vn_mf_bn_dc_target_flag, _maxProgress] remoteExec ["vn_mf_fnc_ctf_opfor_lower_flag", 2];
 };
 /*
 private _codeOnComplete = {
