@@ -129,12 +129,14 @@ _taskDataStore setVariable ["build_fob", {
 
 		_taskDataStore setVariable ["fob", _possibleBases select 0];
 		_taskDataStore setVariable ["fob_position_2d", [_fobPos3DASL select 0, _fobPos3DASL select 1]];
+
 		private _nextTasks = [
 			["build_respawn", (_taskDataStore getVariable "fob_position_2d") getPos [50, 0]],
 			["build_flag", (_taskDataStore getVariable "fob_position_2d") getPos [50, 90]],
 			["build_landing_pad", (_taskDataStore getVariable "fob_position_2d") getPos [50, 180]],
-			["build_latrine", (_taskDataStore getVariable "fob_position_2d") getPos [50, 270]]
+			["build_rearm_resupply", (_taskDataStore getVariable "fob_position_2d") getPos [50, 270]]
 		];
+
                 ["SUCCEEDED", _nextTasks] call _fnc_finishSubtask;
         };
 }];
@@ -189,10 +191,15 @@ _taskDataStore setVariable ["build_landing_pad", {
 	};
 }];
 
-_taskDataStore setVariable ["build_latrine", {
+_taskDataStore setVariable ["build_rearm_repair_refuel", {
 	params ["_tds"];
 
-	private _building_types = ["Land_vn_latrine_01"];
+	private _building_types = [
+		"vn_b_ammobox_supply_07",
+		"vn_b_ammobox_supply_08",
+		"vn_b_ammobox_supply_09",
+		"Land_vn_usaf_fueltank_75_01"
+	];
 	private _building_exists = [_tds, _building_types] call (_tds getVariable "_fnc_have_built_buildings");
 
 	if (_building_exists) then {

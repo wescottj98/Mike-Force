@@ -47,10 +47,10 @@ class capture_zone : task
 		taskdesc = "Build a landing pad so helos can land near the FOB. Emphasis on near!";
 	};
 
-	class build_latrine
+	class build_rearm_repair_refuel
 	{
-		taskname = "Build FOB Latrine";
-		taskdesc = "Build a latrine. When you gotta go, you gotta go.";
+		taskname = "Build FOB Rearm/Repair/Refuel Station";
+		taskdesc = "Build a Vehicle Rearm/Repair/Refuel location at the FOB. Possibly next to the helipad.";
 	};
 
 	class build_flag
