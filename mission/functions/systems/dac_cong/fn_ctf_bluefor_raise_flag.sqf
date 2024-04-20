@@ -4,17 +4,20 @@
     Public: No
 
     Description:
-	   TODO
+	   Raise the flag on clients and server simulateneously.
+
+       Flags raised on server are not visibly raised on client and vice versa.
+
+       So this script has to be executed on every machine.
 
     Parameter(s):
-        - _target
-        - _progress
-        - _maxProgress
+        - _target -- flag we'll be raising
+        - _maxProgress -- maximum number of steps to raise the flag height with
 
-    Returns: TODO
+    Returns: nothing
 
     Example(s):
-	[_target] call vn_mf_fnc_capture_player;
+	[_target, 4] call vn_mf_fnc_ctf_bluefor_raise_flag;
 */
 
 
@@ -24,7 +27,6 @@ private _startingFlagHeight = flagAnimationPhase _target;
 private _newHeight = _startingFlagHeight + (1 / _maxProgress);
 
 if (_newHeight >= 1) exitWith {
-    allPlayers apply {["BlueforRaisedFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
     _target setFlagAnimationPhase 1;
 };
 
