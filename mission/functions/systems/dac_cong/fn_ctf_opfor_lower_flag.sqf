@@ -20,11 +20,6 @@
 
 params ["_target", "_maxProgress"];
 
-diag_log format [
-    "FlagLower: target=%1 maxProgress=%2 start=%3", 
-    _target, _maxProgress, flagAnimationPhase _target
-];
-
 private _startingFlagHeight = flagAnimationPhase _target;
 private _newHeight = _startingFlagHeight - (1 / _maxProgress);
 

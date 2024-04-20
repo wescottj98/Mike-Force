@@ -54,7 +54,6 @@ private _conditionToProgress = "true";
 private _codeOnStart = {
 	params ["_target", "_caller", "_actionId", "_arguments"];
 	allPlayers apply {["DacCongCapturingFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
-	diag_log "YUP";
 };
 private _codeOnTick = {
 	params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
