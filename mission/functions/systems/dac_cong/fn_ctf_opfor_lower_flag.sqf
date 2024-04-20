@@ -4,30 +4,29 @@
     Public: No
 
     Description:
-	   TODO
+       Lower the flag on clients and server simulateneously.
+
+       Flags lowered on server are not visibly lowered on client and vice versa.
+
+       So this script has to be executed on every machine.
 
     Parameter(s):
-        - _target
-        - _progress
-        - _maxProgress
+        - _target -- flag we'll be raising
+        - _maxProgress -- maximum number of steps to lower the flag height with
 
-    Returns: TODO
+    Returns: nothing
 
     Example(s):
-	[_target] call vn_mf_fnc_capture_player;
+	[_target, 4] call vn_mf_fnc_ctf_opfor_lower_flag;
 */
-
 
 params ["_target", "_maxProgress"];
 
 private _startingFlagHeight = flagAnimationPhase _target;
 private _newHeight = _startingFlagHeight - (1 / _maxProgress);
 
-if (_newHeight <= 0) exitWith {
+if (isServer && _newHeight <= 0) exitWith {
     deleteVehicle _target;
-    allPlayers apply {["DacCongCapturedFlag", []] remoteExec ["para_c_fnc_show_notification", _x]};
 };
 
 _target setFlagAnimationPhase _newHeight;
-
-
