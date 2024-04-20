@@ -41,6 +41,18 @@ class capture_zone : task
 		taskdesc = "Build a respawn so we can reinforce the Forward Operating Base.";
 	};
 
+	class build_landing_pad
+	{
+		taskname = "Build FOB Landing Pad";
+		taskdesc = "Build a landing pad so helos can land near the FOB. Emphasis on near!";
+	};
+
+	class build_latrine
+	{
+		taskname = "Build FOB Latrine";
+		taskdesc = "Build a latrine. When you gotta go, you gotta go.";
+	};
+
 	class build_flag
 	{
 		taskname = "Build FOB Flag";
