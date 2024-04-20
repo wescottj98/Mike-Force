@@ -111,8 +111,8 @@ _taskDataStore setVariable ["build_fob", {
 
         private _possibleBases = para_g_bases inAreaArray [
 		getMarkerPos (_taskDataStore getVariable "taskMarker"),
-		selectMax ((getMarkerSize "activeZoneCircle") apply {abs _x}),
-		selectMax ((getMarkerSize "activeZoneCircle") apply {abs _x}),
+		selectMax (getMarkerSize (_taskDataStore getVariable "taskMarker") apply {abs _x}),
+		selectMax (getMarkerSize (_taskDataStore getVariable "taskMarker") apply {abs _x}),
 		0
 	];
 
@@ -129,100 +129,43 @@ _taskDataStore setVariable ["build_fob", {
 
 		_taskDataStore setVariable ["fob", _possibleBases select 0];
 		_taskDataStore setVariable ["fob_position_2d", [_fobPos3DASL select 0, _fobPos3DASL select 1]];
-
 		private _nextTasks = [
-			["build_respawn", (_taskDataStore getVariable "fob_position_2d") getPos [50, 0]],
-			["build_flag", (_taskDataStore getVariable "fob_position_2d") getPos [50, 90]],
-			["build_landing_pad", (_taskDataStore getVariable "fob_position_2d") getPos [50, 180]],
-			["build_rearm_resupply", (_taskDataStore getVariable "fob_position_2d") getPos [50, 270]]
+			["build_respawn", (_taskDataStore getVariable "fob_position_2d") getPos [50, 90]],
+			["build_flag", (_taskDataStore getVariable "fob_position_2d") getPos [50, 270]]
 		];
-
                 ["SUCCEEDED", _nextTasks] call _fnc_finishSubtask;
         };
 }];
 
-_taskDataStore setVariable ["_fnc_have_built_buildings", {
-	params ["_tds", "_types"];
+_taskDataStore setVariable ["build_respawn", {
+	params ["_taskDataStore"];
 
 	private _candidates = nearestObjects [
-		_tds getVariable "fob_position_2d",
-		_types,
+		_taskDataStore getVariable "fob_position_2d",
+		["Land_vn_guardhouse_01", "Land_vn_b_trench_bunker_01_01", "Land_vn_hootch_01_01"],
 		para_g_max_base_radius
 	];
 
-	/*
-	need to check if they are a paradigm built object!
-	otherwise the objective disappears in places like MSS leghorn
-	once FOB is built
-
-	the para_g_building variable is a simple object assigned to
-	the actual arma object, housing all the paradigm building variables.
-	*/
-
-	private _para_built_object_first_idx = _candidates findIf {not isNull (_x getVariable ["para_g_building", objNull])};
-
-	(_para_built_object_first_idx > -1)
-}];
-
-
-_taskDataStore setVariable ["build_respawn", {
-	params ["_tds"];
-
-	private _building_types = [
-		"Land_vn_guardhouse_01",
-		"Land_vn_b_trench_bunker_01_01",
-		"Land_vn_hootch_01_01"
-	];
-	private _building_exists = [_tds, _building_types] call (_tds getVariable "_fnc_have_built_buildings");
-
-	if (_building_exists) then {
-		["SUCCEEDED"] call _fnc_finishSubtask;
-	};
-}];
-
-_taskDataStore setVariable ["build_landing_pad", {
-	params ["_tds"];
-
-	private _building_types = ["Land_vn_b_helipad_01"];
-	private _building_exists = [_tds, _building_types] call (_tds getVariable "_fnc_have_built_buildings");
-
-	if (_building_exists) then {
-		["SUCCEEDED"] call _fnc_finishSubtask;
-	};
-}];
-
-_taskDataStore setVariable ["build_rearm_repair_refuel", {
-	params ["_tds"];
-
-	private _building_types = [
-		"vn_b_ammobox_supply_07",
-		"vn_b_ammobox_supply_08",
-		"vn_b_ammobox_supply_09",
-		"Land_vn_usaf_fueltank_75_01"
-	];
-	private _building_exists = [_tds, _building_types] call (_tds getVariable "_fnc_have_built_buildings");
-
-	if (_building_exists) then {
+	if !(_candidates isEqualTo []) then {
+		_taskDataStore setVariable ["flag_built", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 }];
 
 _taskDataStore setVariable ["build_flag", {
-	params ["_tds"];
+	params ["_taskDataStore"];
 
-	private _building_types = [
-		"vn_flag_usa",
-		"vn_flag_aus",
-		"vn_flag_arvn",
-		"vn_flag_nz"
+	private _candidates = nearestObjects [
+		_taskDataStore getVariable "fob_position_2d",
+		["vn_flag_usa", "vn_flag_aus", "vn_flag_arvn", "vn_flag_nz"],
+		para_g_max_base_radius
 	];
-	private _building_exists = [_tds, _building_types] call (_tds getVariable "_fnc_have_built_buildings");
 
-	if (_building_exists) then {
+	if !(_candidates isEqualTo []) then {
+		_taskDataStore setVariable ["flag_built", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 	};
 }];
-
 
 _taskDataStore setVariable ["AFTER_STATES_RUN", {
 	params ["_taskDataStore"];
