@@ -204,16 +204,16 @@
         <Original>This vehicle slot can't be used by your team.</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force">
-        <Original>PLEI MEI SF CAMP - MIKE FORCE</Original>
+        <Original>MIKE FORCE</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_green_hornets">
-        <Original>PLEIKU - GREEN HORNETS</Original>
+        <Original>GREEN HORNETS</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_spike_team">
-        <Original>FOB2 KONTUM - SPIKE TEAM</Original>
+        <Original>SPIKE TEAM</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_acav">
-        <Original>FOB 5 BAN ME THUOT - ACAV</Original>
+        <Original>ACAV</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force_khe_sanh">
         <Original>KHE SANH SF CAMP - MIKE FORCE</Original>
@@ -282,7 +282,7 @@
         <Original>BLACK HORSE</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_quarterhorse_fsb">
-        <Original>WHITELISTED ARTILLERY</Original>
+        <Original>BLACK HORSE ARTILLERY</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_muskets">
         <Original>MUSKETS</Original>
@@ -297,7 +297,7 @@
         <Original>633RD CSG</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_sasr">
-        <Original>NZ-SAS</Original>
+        <Original>ANZAC</Original>
       </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>
@@ -308,11 +308,17 @@
       <Key ID="STR_vn_mf_light_helicopters">
         <Original>Light Helicopters</Original>
       </Key>
+      <Key ID="STR_vn_mf_motor_pool">
+        <Original>Motor Pool</Original>
+      </Key>
       <Key ID="STR_vn_mf_helicopters">
         <Original>Helicopters</Original>
       </Key>
       <Key ID="STR_vn_mf_cas_helicopters">
-        <Original>CAS Helicopters</Original>
+        <Original>CAS Helicopters (Whitelisted)</Original>
+      </Key>
+      <Key ID="STR_vn_mf_planes_land">
+        <Original>CAS Planes (Whitelisted)</Original>
       </Key>
       <Key ID="STR_vn_mf_wreck_recovery">
         <Original>Wreck Recovery</Original>
@@ -390,7 +396,7 @@
         <Original>RVN Wound Medal</Original>
       </Key>
       <Key ID="STR_vn_mf_supply_drops">
-        <Original>Supply Drops</Original>
+        <Original>Supply Drop</Original>
       </Key>
       <Key ID="STR_vn_mf_distinguished_service_cross">
         <Original>Distinguished Service Cross</Original>

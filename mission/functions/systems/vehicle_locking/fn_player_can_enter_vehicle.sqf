@@ -5,6 +5,7 @@
 
 	Description:
 		Check if the player can enter the vehicle.
+		'DJ' Note -- this is a basic authorization/permissions check (AuthZ)
 
 	Parameter(s):
 	_player - Player that wants to enter [Object]
@@ -18,32 +19,44 @@
 */
 
 
+/* Local function to check player AuthZ */
+private _fnc_player_is_authorized = {
+	params ["_vehicle", "_player"];
+
+	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
+	private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
+
+	if (!(_teamsVehicleIsLockedTo isEqualTo [])) then {
+		_teamsVehicleIsLockedTo = _teamsVehicleIsLockedTo select 0;
+	};
+
+	if (
+		_playerGroup in _teamsVehicleIsLockedTo
+		|| typeName _teamsVehicleIsLockedTo != "ARRAY"
+		|| count(_teamsVehicleIsLockedTo) isEqualTo 0
+	) exitWith {true};
+
+	false
+};
+
 params ["_player", "_role", "_vehicle"];
 
+/* statics -- only AuthZ'd players */
+if (_vehicle isKindOf "StaticWeapon") exitWith {
+	[_vehicle, _player] call _fnc_player_is_authorized
+};
+
 private _isCopilot = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isCopilot") > 0);
-private _isTurret = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isPersonTurret") > 0);
-private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 
-//TODO: FIX THIS (DOES NOT WORK AS INTENDED, DOES NOT EVEN LET WHITELISTED BLACKHAWKS USE 105s)
-private _type = typeOf _vehicle;
+/*
+other vehicles
 
-if (_vehicle in vn_mf_dc_assets && side _player != east) exitWith
-{
-  ["VehicleLockedToTeamMessage", ["Your team cannot use this kind of vehicle."]] remoteExec ["para_c_fnc_show_notification", _player]; 
-  false 
-};
+- only authZ'd players can get in as pilot/driver/copilot
+- all players can get in as passangers
+*/
 
-if (_type == "vn_b_army_static_m101_02" && _playerGroup != "QuarterHorse") exitWith { 
-  ["VehicleLockedToTeamMessage", ["Black Horse artillery squadron members only; apply on Discord."]] remoteExec ["para_c_fnc_show_notification", _player]; 
-  false 
-};
-
-if (_role == "driver" || _isCopilot) exitWith {
-	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
-	if (_teamsVehicleIsLockedTo isEqualTo [] || _playerGroup in _teamsVehicleIsLockedTo) exitWith {
-		true
-	};
-	false
+if (_role == "driver" || _isCoPilot) exitWith {
+	[_vehicle, _player] call _fnc_player_is_authorized
 };
 
 true
