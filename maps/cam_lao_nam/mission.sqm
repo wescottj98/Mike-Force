@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=23302;
+		nextID=23406;
 	};
 	class Camera
 	{
-		pos[]={16425.795,154.32463,6214.0669};
-		dir[]={-0.1793166,-0.40875426,0.89485502};
-		up[]={-0.080312133,0.91264451,0.40078673};
-		aside[]={0.98050785,0,0.19648023};
+		pos[]={15776.355,69.497528,7142.7695};
+		dir[]={0.52002275,-0.85396075,-0.018298879};
+		up[]={0.85343748,0.52033067,-0.030031167};
+		aside[]={-0.035166923,-1.3658791e-008,-0.99938554};
 	};
 };
 binarizationWanted=0;
@@ -384,8 +384,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -435,8 +435,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -18631,7 +18631,7 @@ class Mission
 						};
 					};
 					id=18318;
-					atlOffset=-0.048920631;
+					atlOffset=-0.20605659;
 				};
 				class Item2
 				{
@@ -34249,13 +34249,13 @@ class Mission
 						class Item33
 						{
 							dataType="Marker";
-							position[]={15805.859,14.97998,7159.8794};
+							position[]={15806.327,0,7147.4165};
 							name="mf_respawn_greenhornets";
 							text="@STR_vn_mf_respawn_green_hornets";
 							type="Empty";
 							angle=132.40651;
 							id=597;
-							atlOffset=-1.9073486e-005;
+							atlOffset=-14.98;
 						};
 						class Item34
 						{
@@ -34501,7 +34501,7 @@ class Mission
 						};
 					};
 					id=18332;
-					atlOffset=0.072746277;
+					atlOffset=0.058116913;
 				};
 				class Item15
 				{
@@ -35618,13 +35618,13 @@ class Mission
 						class Item26
 						{
 							dataType="Marker";
-							position[]={16015.418,74.510002,7121.6089};
+							position[]={16006.432,74.510002,7104.2671};
 							name="mf_respawn_tigerforce";
 							text="@STR_vn_mf_respawn_tigerforce";
 							type="Empty";
 							angle=311.54019;
 							id=7610;
-							atlOffset=49.474186;
+							atlOffset=59.530003;
 						};
 						class Item27
 						{
@@ -35740,7 +35740,7 @@ class Mission
 				};
 			};
 			id=18339;
-			atlOffset=1.6355171;
+			atlOffset=1.6336861;
 		};
 		class Item297
 		{
