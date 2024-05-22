@@ -27,7 +27,7 @@ class objects
 	
 	class vn_mf_militarypolice_teleporter
 	{
-		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base"};
+		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base"};
 	};
 	
 	class vn_mf_macv_teleporter

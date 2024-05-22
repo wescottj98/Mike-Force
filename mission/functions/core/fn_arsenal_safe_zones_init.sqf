@@ -26,19 +26,17 @@ if (isNil "_previousMessageTime") then {
 
 vn_mf_arsenal_circles = [];
 {
-	if (vehicleVarName _x == 'mp_arsenal') then {
-		continue
-	};
-	if (vehicleVarName _x == 'udt_docks_arsenal') then {
-		continue
-	};
-	private _markerName = format["vn_mf_arsenal_%1", _forEachIndex];
-	private _marker = createMarker [_markerName, getPos _x];
-	_markerName setMarkerAlpha 0;
-	_markerName setMarkerSize [25, 25];
-	_markerName setMarkerShape "ELLIPSE";
 
-	vn_mf_arsenal_circles pushBack _markerName;
+	if ((vehicleVarName _x) find 'freefire_arsenal_' == -1) then {
+
+		private _markerName = format["vn_mf_arsenal_%1", _forEachIndex];
+		private _marker = createMarker [_markerName, getPos _x];
+		_markerName setMarkerAlpha 0;
+		_markerName setMarkerSize [25, 25];
+		_markerName setMarkerShape "ELLIPSE";
+
+		vn_mf_arsenal_circles pushBack _markerName;
+	};
 } forEach _arsenals;
 
 publicVariable "vn_mf_arsenal_circles";
