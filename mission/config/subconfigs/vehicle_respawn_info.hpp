@@ -17,7 +17,7 @@ class vehicles {
 		tags[] = {"ch47", "transport", "helicopter", "7th"};
 	};
 	class vn_b_air_ch47_02_01 {
-		tags[] = {"ch47","armed","transport","helicopter","dustoff"};
+		tags[] = {"ch47","armed","transport","helicopter","dustoff","medical"};
 	};
 	class vn_b_air_ch47_03_01 {
 		tags[] = {"ch47","armed","transport","helicopter","cargo","army"};
@@ -47,7 +47,7 @@ class vehicles {
 		tags[] = {"ch34","armed","transport","helicopter","arvn"};
 	};
 	class vn_b_air_ch34_01_01 {
-		tags[] = {"ch34","armed","transport","helicopter","usmc"};
+		tags[] = {"ch34","armed","transport","helicopter"};
 	};
 	class vn_b_air_ch34_03_01 {
 		tags[] = {"ch34","armed","transport","helicopter","usmc"};
@@ -208,6 +208,39 @@ class vehicles {
 	class vn_b_armor_m577_02 {
 		tags[] = {"m577","medical","apc"};
 	};	
+	class vn_i_armor_m113_01 {
+		tags[] = {"m113","armed","transport","apc","arvn"};
+	};
+	class vn_i_armor_m113_acav_01 {
+		tags[] = {"m113","armed","transport","apc","arvn"};
+	};
+	class vn_i_armor_m113_acav_02 {
+		tags[] = {"m113","armed","transport","apc","arvn"};
+	};
+	class vn_i_armor_m113_acav_03 {
+		tags[] = {"m113","armed","transport","apc","arvn"};
+	};
+	class vn_i_armor_m113_acav_04 {
+		tags[] = {"m113","armed","transport","apc","arvn"};
+	};
+	class vn_i_armor_m113_acav_05 {
+		tags[] = {"m113","armed","transport","apc","arvn"};
+	};
+	class vn_i_armor_m113_acav_06 {
+		tags[] = {"m113","armed","firesupport","apc","antitank","arvn"};
+	};
+	class vn_i_armor_m125_01 {
+		tags[] = {"m113","armed","firesupport","apc","artillery","arvn"};
+	};
+	class vn_i_armor_m132_01 {
+		tags[] = {"m113","armed","firesupport","apc","flamethrower","arvn"};
+	};
+	class vn_i_armor_m577_01 {
+		tags[] = {"m577","transport","apc","arvn"};
+	};
+	class vn_i_armor_m577_02 {
+		tags[] = {"m577","medical","apc","arvn"};
+	};	
 
 	//Armor
 	class vn_b_armor_m41_01_01 {
@@ -230,6 +263,15 @@ class vehicles {
 	};
 	class vn_i_armor_type63_01 {
 		tags[] = {"type63","armed","firesupport","tank","lighttank","arvn"};
+	};
+	class vn_i_armor_m41_01 {
+	tags[] = {"type63","armed","firesupport","tank","lighttank","arvn"};
+	};
+	class vn_i_armor_m67_01_01 {
+	tags[] = {"type63","armed","firesupport","tank","lighttank","arvn"};
+	};
+	class vn_i_armor_m48_01_01 {
+	tags[] = {"type63","armed","firesupport","tank","lighttank","arvn"};
 	};
 
 	//Car
@@ -364,6 +406,36 @@ class vehicles {
 	};
 	class vn_b_wheeled_m54_repair {
 		tags[] = {"m54","repair","truck"};
+	};
+	class vn_i_wheeled_m151_01 {
+		tags[] = {"m151a1","transport","car","arvn"};
+	};
+	class vn_i_wheeled_m151_02 {
+		tags[] = {"m151a1","transport","car","arvn"};
+	};
+	class vn_i_wheeled_m151_mg_01 {
+		tags[] = {"m151a1","armed","firesupport","car","arvn"};
+	};
+	class vn_i_wheeled_m151_mg_06 {
+		tags[] = {"m151a1","armed","firesupport","car","antitank","arvn"};
+	};
+	class vn_i_wheeled_m54_01 {
+		tags[] = {"m54","transport","truck","arvn"};
+	};
+	class vn_i_wheeled_m54_02 {
+		tags[] = {"m54","transport","truck","arvn"};
+	};
+	class vn_i_wheeled_m54_03 {
+		tags[] = {"m109","transport","truck","arvn"};
+	};
+	class vn_i_wheeled_m54_ammo {
+		tags[] = {"m54","ammo","truck","arvn"};
+	};
+	class vn_i_wheeled_m54_fuel {
+		tags[] = {"m49","fuel","truck","arvn"};
+	};
+	class vn_i_wheeled_m54_repair {
+		tags[] = {"m54","repair","truck","arvn"};
 	};
 
 	//Airport Car
@@ -819,6 +891,19 @@ class spawn_point_types {
 		};
 	};
 
+	class arvn_patrol {
+		name = "Patrol";
+		RESPAWN_MEDIUM;
+		class categories {
+			class m151 {
+				name = "M151A1";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { { "m151a1","armed","arvn" } };
+				exclude[] = { { "transport","army","firesupport" } };
+			};
+		};
+	};
+
 	class transport_heavy {
 		name = "Heavy transport";
 		RESPAWN_LONG;
@@ -836,6 +921,20 @@ class spawn_point_types {
 				icon = VEHICLE_ICON_TRUCK;
 				include[] = { { "truck", "transport" } };
 				exclude[] = { { "airport" } };
+			};
+		};
+	};
+
+	class arvn_transport_heavy {
+		name = "Heavy transport";
+		RESPAWN_LONG;
+
+		class categories {
+			class m113 {
+				name = "M113";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "m113", "transport","arvn" } };
+				exclude[] = { { "firesupport" } };
 			};
 		};
 	};
@@ -900,6 +999,32 @@ class spawn_point_types {
 		};
 	};
 
+	class arvn_light_fire_support {
+		name = "Light fire support";
+		WRECK_SHORT;
+
+		class categories {
+			class m151 {
+				name = "M151A1";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { { "m151a1","armed","antitank","arvn" } };
+				exclude[] = { { "transport","usmc","mp","army"} };
+			};
+			class trucks {
+				name = "Trucks";
+				icon = VEHICLE_ICON_TRUCK;
+				include[] = { { "truck", "firesupport","arvn" } };
+				exclude[] = { { "pavn" } };
+			};
+			class armor {
+				name = "Armor";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "apc","firesupport","arvn" } };
+				exclude[] = { { "pavn" } };
+			};
+		};
+	};
+
 	class heavy_fire_support {
 		name = "Heavy fire support";
 		WRECK_LONG;
@@ -913,6 +1038,21 @@ class spawn_point_types {
 			};
 		};
 	};
+
+	class arvn_heavy_fire_support {
+		name = "Heavy fire support";
+		WRECK_LONG;
+
+		class categories {
+			class tanks {
+				name = "Tanks";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "tank","arvn" } };
+				exclude[] = { { "army","usmc","pavn" } };
+			};
+		};
+	};
+
 
 	class utility {
 		name = "Utility";
@@ -1042,7 +1182,7 @@ class spawn_point_types {
 			class m151a {
 				name = "M151A1";
 				icon = VEHICLE_ICON_CAR;
-				include[] = { { "m151a", "usmc" } };
+				include[] = { { "m151a1", "usmc" } };
 				exclude[] = { { "pavn" } };
 			};
 		};
@@ -1055,7 +1195,7 @@ class spawn_point_types {
 			class m113 {
 				name = "APC";
 				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "m113", "transport", "firesupport" } };
+				include[] = { { "m113","armed","firesupport","apc" } };
 				exclude[] = { { "artillery","pavn" } };
 			}
 			class usmctank {
@@ -1109,7 +1249,7 @@ class spawn_point_types {
 			class cayuse {
 				name = "OH-6A";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { {"oh6a","transport","scout"} };
+				include[] = { {"oh6a","transport"} };
 				exclude[] = { {"firesupport","GL","pavn"} };
 			};
 			class uh1 {
@@ -1175,7 +1315,7 @@ class spawn_point_types {
 
 	class air_arvn {
 		name = "ARVN Helicopters";
-		WRECK_MEDIUM;
+		RESPAWN_SHORT;
 
 		class categories {
 			class uh1 {
@@ -1252,7 +1392,7 @@ class spawn_point_types {
 
 	class air_dustoff {
 		name = "Dust-off and Medevac";
-		RESPAWN_MEDIUM;
+		RESPAWN_SHORT;
 		class categories {
 			class uh1 {
 				name = "UH-1 Medical";
@@ -1332,7 +1472,13 @@ class spawn_point_types {
 				name = "UH-1";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { {"uh1","transport","army"} };
-				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","army","pavn","7th","frogmen","anzac"} };
+				exclude[] = { {"firesupport","usmc","medical","cia","arvn","usaf","pavn","7th","frogmen","anzac"} };
+			};
+			class ch34 {
+				name = "CH-34";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { {"ch34","transport"} };
+				exclude[] = { {"firesupport"} };
 			};
 			class ch47 {
 				name = "CH-47";
@@ -1343,8 +1489,6 @@ class spawn_point_types {
 		};
 	};
 
-
-
 	class air_fire_support {
 		name = "Close Air Support";
 		WRECK_LONG;
@@ -1353,8 +1497,8 @@ class spawn_point_types {
 			class cayuse {
 				name = "OH-6A";
 				icon = VEHICLE_ICON_HELO;
-				include[] = { { "oh6a", "armed", :"firesupport" } };
-				exclude[] = { { "pavn" } };
+				include[] = { { "oh6a","armed" } };
+				exclude[] = { { "transport","pavn" } };
 			};
 			class ah1g {
 				name = "AH-1G";
@@ -1366,19 +1510,19 @@ class spawn_point_types {
 				name = "UH-1";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { { "uh1", "firesupport" } };
-				exclude[] = { { "pavn" } };
+				exclude[] = { { "transport","pavn" } };
 			};
 			class ch34 {
 				name = "CH-34";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { { "ch34", "firesupport" } };
-				exclude[] = { { "pavn" } };
+				exclude[] = { { "transport","pavn" } };
 			};
 			class ch47 {
-				name = "CH-47";
+				name = "ACH-47";
 				icon = VEHICLE_ICON_HELO;
 				include[] = { { "ch47", "firesupport" } };
-				exclude[] = { { "pavn" } };
+				exclude[] = { { "transport","pavn" } };
 			};
 
 		};

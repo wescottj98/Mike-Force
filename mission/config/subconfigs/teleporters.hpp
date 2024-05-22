@@ -27,7 +27,7 @@ class objects
 	
 	class vn_mf_militarypolice_teleporter
 	{
-		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base"};
+		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base"}};
 	};
 	
 	class vn_mf_macv_teleporter
@@ -37,7 +37,7 @@ class objects
 
 	class vn_mf_macv_WL1_teleporter
 	{
-		destinations[] = {"quarterhorse_base", "7th_cav_base", "3rdMEU_base",  "arvn_base", "633rd_base", "quarterhorse_fsb"};
+		destinations[] = {"quarterhorse_base", "7th_cav_base", "3rdMEU_base",  "arvn_base", "633rd_base"};
 	};
 
 	class vn_mf_macv_WL2_teleporter
@@ -47,13 +47,13 @@ class objects
 
 	class vn_mf_quarterhorse_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "macv_base", "quarterhorse_fsb"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "macv_base"};
 	};
 
-	class vn_mf_quarterhorse_teleporter_fsb
-	{
-		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base", "quarterhorse_base"};
-	};
+	//class vn_mf_quarterhorse_teleporter_fsb
+	//{
+	//	destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base", "quarterhorse_base"};
+	//};
 
 	class vn_mf_7thcav_teleporter
 	{
@@ -85,10 +85,10 @@ class objects
 		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base"};
 	};
 
-	class vn_mf_berch_teleporter
-	{
-		destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base", "quarterhorse_base"};
-	};
+	//class vn_mf_berch_teleporter
+	//{
+	//	destinations[] = {"mikeforce_base", "acav_base", "spiketeam_base", "greenhornets_base", "macv_base", "quarterhorse_base"};
+	//};
 	
 	class vn_mf_633rdcsg_teleporter
 	{
@@ -127,7 +127,7 @@ class objects
 
 	class dc_tunnel_1_low_W
 	{
-		destinations[] = {"daccong_fsb"};
+		destinations[] = {"daccong_base"};
 	};
 
 	class dc_tunnel_1_mid_E
@@ -189,7 +189,7 @@ class objects
 //MODERN MP DAC HELPER
 	class dc_tunnel_1_top_S
 	{
-		destinations[] = {"daccong_fsb", "daccong_base"};
+		destinations[] = { "daccong_base"};
 	};
 
 	class dc_tunnel_1_top_S_2
@@ -240,11 +240,11 @@ class destinations
 		position_marker = "mf_dc_respawn_daccong";
 	};
 
-	class daccong_fsb
-	{
-		image = "custom\taskroster\daccong_team.paa"; 
-		position_marker = "mf_dc_respawn_daccong_fsb";
-	};
+	//class daccong_fsb
+	//{
+	//	image = "custom\taskroster\daccong_team.paa"; 
+	//	position_marker = "mf_dc_respawn_daccong_fsb";
+	//};
 	
 	class tigerforce_base
 	{
@@ -282,11 +282,11 @@ class destinations
 		position_marker = "mf_respawn_7thcav";
 	}
 
-	class quarterhorse_fsb
-	{
-		image = "custom\taskroster\blackhorse_HL.paa";
-		position_marker = "mf_respawn_quarterhorse_fsb";
-	};
+	//class quarterhorse_fsb
+	//{
+	//	image = "custom\taskroster\blackhorse_HL.paa";
+	//	position_marker = "mf_respawn_quarterhorse_fsb";
+	//};
 	
 	class muskets_base
 	{

@@ -77,6 +77,12 @@ class aircav
 	lockTeam[] = {"MACV","DacCong","7thCAV"};
 };
 
+// WL SCOUT MG
+class scoutmg
+{
+	lockTeam[] = {"MACV","DacCong","7thCAV", "Muskets"};
+};
+
 // WL ANZAC
 class anzac
 {
@@ -114,6 +120,16 @@ class vn_c_car_01_01 : unlocked {};
 class vn_c_car_02_01 : unlocked {};
 class vn_c_car_03_01 : unlocked {};
 class vn_c_car_04_01 : unlocked {};
+class vn_i_wheeled_m151_01 : arvn {};
+class vn_i_wheeled_m151_02 : arvn {};
+class vn_i_wheeled_m151_mg_01 : arvn {};
+class vn_i_wheeled_m151_mg_06 : arvn {};
+class vn_i_wheeled_m54_01 : arvn {};
+class vn_i_wheeled_m54_02 : arvn {};
+class vn_i_wheeled_m54_03 : arvn {};
+class vn_i_wheeled_m54_ammo : arvn {};
+class vn_i_wheeled_m54_fuel : arvn {};
+class vn_i_wheeled_m54_repair : arvn {};
 
 //APC
 class vn_b_armor_m113_01 : acav {};
@@ -123,27 +139,41 @@ class vn_b_armor_m113_acav_03 : acav {};
 class vn_b_armor_m113_acav_04 : acav {};
 class vn_b_armor_m113_acav_05 : acav {};
 class vn_b_armor_m113_acav_06 : acav {};
+class vn_i_armor_m113_01 : arvn {};
+class vn_i_armor_m113_acav_01 : arvn {};
+class vn_i_armor_m113_acav_02 : arvn {};
+class vn_i_armor_m113_acav_03 : arvn {};
+class vn_i_armor_m113_acav_04 : arvn {};
+class vn_i_armor_m113_acav_05 : arvn {};
+class vn_i_armor_m113_acav_06 : arvn {};
 
 // M113 command and ambulance variants
 class vn_b_armor_m577_01 : acav {};
 class vn_b_armor_m577_02 : acav {};
+class vn_i_armor_m577_01 : arvn {};
+class vn_i_armor_m577_02 : arvn {};
 
 // M113 mortar and flamethrower
 class vn_b_armor_m125_01 : armor {};
 class vn_b_armor_m132_01 : armor {};
+class vn_i_armor_m125_01 : arvn {};
+class vn_i_armor_m132_01 : arvn {};
 
 //M41 Walker bulldog
 class vn_b_armor_m41_01_01 : armor {};
 class vn_b_armor_m41_01_02 : usmc {};
+class vn_i_armor_m41_01 : arvn {};
 //Type 63 tank
 class vn_i_armor_type63_01 : arvn {};
 
 // M48 Patton
 class vn_b_armor_m48_01_01 : armor {};
 class vn_b_armor_m48_01_02 : usmc {};
+class vn_i_armor_m48_01_01 : arvn {};
 // M67 flame tank
 class vn_b_armor_m67_01_01 : armor {};
 class vn_b_armor_m67_01_02 : usmc {};
+class vn_i_armor_m67_01_01 : arvn {};
 //Transport trucks
 class vn_b_wheeled_m54_01 : unlocked {};
 class vn_b_wheeled_m54_01_airport : unlocked {};
@@ -267,7 +297,7 @@ class vn_b_air_ch47_04_01 : green_hornet {};
 class vn_b_air_ch47_03_02 : aircav {};
 class vn_b_air_ch47_01_02 : aircav {};
 //Choctaw
-class vn_b_air_ch34_01_01 : usmc {};
+class vn_b_air_ch34_01_01 : green_hornet {};
 class vn_b_air_ch34_03_01 : usmc {};
 //CH34 - Heavy Transport
 class vn_i_air_ch34_01_02 : arvn {};
@@ -275,12 +305,12 @@ class vn_i_air_ch34_02_01 : arvn {};
 //Littlebird
 class B_Heli_Light_01_F : dac_cong {};
 class vn_b_air_oh6a_01 : green_hornet {};
-class vn_b_air_oh6a_02 : green_hornet {};
-class vn_b_air_oh6a_03 : green_hornet {};
-class vn_b_air_oh6a_04 : green_hornet {};
-class vn_b_air_oh6a_05 : green_hornet {};
-class vn_b_air_oh6a_06 : green_hornet {};
-class vn_b_air_oh6a_07 : green_hornet {};
+class vn_b_air_oh6a_02 : scoutmg {};
+class vn_b_air_oh6a_03 : musket {};
+class vn_b_air_oh6a_04 : musket {};
+class vn_b_air_oh6a_05 : musket {};
+class vn_b_air_oh6a_06 : musket {};
+class vn_b_air_oh6a_07 : musket {};
 //UH1B - Dustoff
 class vn_b_air_uh1b_01_01 : green_hornet {};
 //UH1B - Slick
