@@ -26,14 +26,17 @@ if (!isClass (configFile >> "CfgVehicles" >> _classToSpawn)) exitWith {
 	diag_log format ["VN MikeForce: [ERROR] Unable to respawn vehicle, class %1 is invalid", _classToSpawn];
 };
 
-// @dijksterhuis: TODO tidy up.
+// @dijksterhuis: if we're already respawning something for this spawn point, do not continue.
 if ((_spawnPoint get "bn_is_respawning_count") > 0) exitWith {
 	diag_log format [
-		"VehAssetRespawn: Skipping duplicate vehicle respawn request: spawnPointId=%1 count=%2", 
-		_spawnPoint get "id", 
+		"VehAssetRespawn: Skipping duplicate vehicle respawn request: spawnPointId=%1 count=%2",
+		_spawnPoint get "id",
 		_spawnPoint get "bn_is_respawning_count"
 	];
 };
+
+// @dijksterhuis: mark this spawn point as actively respawning something
+_spawnPoint set ["bn_is_respawning_count", (_spawnPoint get "bn_is_respawning_count") + 1];
 
 private _vehicle = objNull;
 private _oldVehicle = _spawnPoint getOrDefault ["currentVehicle", objNull];
@@ -71,4 +74,5 @@ if (getNumber (configfile >> "CfgVehicles" >> _classToSpawn >> "isUAV") > 0 && c
 
 [_spawnPoint, _vehicle] call vn_mf_fnc_veh_asset_assign_vehicle_to_spawn_point;
 
+// @dijksterhuis: we've spawned the vehicle, we can open this up for further respawn requests
 _spawnPoint set ["bn_is_respawning_count", 0];
