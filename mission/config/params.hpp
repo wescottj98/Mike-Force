@@ -81,7 +81,7 @@ class ai_scaling
     title = $STR_vn_mf_param_ai_scaling;
     values[] = {25, 50, 75, 100, 150, 200, 250, 300};
     texts[] = {"25%", "50%", "75%", "100%", "150%", "200%", "250%", "300%"};
-    default = 5000;
+    default = 150;
 };
 
 class ai_scaling_desc
