@@ -19,7 +19,7 @@ private _spawnPointId = vn_mf_spawn_points_to_respawn deleteAt 0;
 private _spawnPoint = vn_mf_veh_asset_spawn_points get _spawnPointId;
 
 // @dijksterhuis: See asset respawn job for why this needs to exist! (race condition hotfix).
-if (_spawnPoint getOrDefault ["bn_is_respawning_count", -1] < 0) then {
+if (_spawnPoint getOrDefault ["bn_is_respawning_count", -1] <= 0) then {
 	_spawnPoint set ["bn_is_respawning_count", 0];
 } else {
 	_spawnPoint set ["bn_is_respawning_count", (_spawnPoint get "bn_is_respawning_count") + 1];
