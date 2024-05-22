@@ -28,7 +28,11 @@ if (!isClass (configFile >> "CfgVehicles" >> _classToSpawn)) exitWith {
 
 // @dijksterhuis: TODO tidy up.
 if ((_spawnPoint get "bn_is_respawning_count") > 0) exitWith {
-	diag_log format ["VehAssetRespawn: Duplicate vehicle respawn request. Skipping this respawn request."];
+	diag_log format [
+		"VehAssetRespawn: Skipping duplicate vehicle respawn request: spawnPointId=%1 count=%2", 
+		_spawnPoint get "id", 
+		_spawnPoint get "bn_is_respawning_count"
+	];
 };
 
 private _vehicle = objNull;
